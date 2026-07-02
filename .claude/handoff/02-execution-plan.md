@@ -10,15 +10,32 @@ https://github.com/F4cu/design-systems-101, currently only a stub README on `mai
 - [x] Original brief recovered; repo cloned locally
 - [x] Source A cloned at pin `a4b11ef` and read: all 12 knowledge notes + README +
       2-WHATS-INCLUDED (digest §Source A)
-- [ ] Source A's 14 command files + 43 skills/ entries — skim titles/frontmatter only, for
-      "what problem each solves"
-- [ ] External sources for pages 07–09 — `WebFetch`/`WebSearch` on
-      `learn.thedesignsystem.guide` and `blog.murphytrueman.com`; start from the 4
-      already-verified posts in the digest, find at least one more per page (Challenge-Rating
-      / effort-calibration angle, layered-MCP angle for page 09)
-- [ ] Write site (steps below)
-- [ ] Verify locally + mobile widths
-- [ ] Push, enable GitHub Pages, confirm live URL
+- [x] Source A's 14 command files + 43 skills/ entries — skimmed titles/frontmatter,
+      folded into 01-foundations and the digest
+- [x] External sources for pages 07–09 — found and cited: Kavcic's "Design tokens that
+      AI can actually read," "Should you build an agent for your design system," "5 MCP
+      Connections Every Design System Team Needs Right Now"; Trueman's "Your next design
+      system user is an agent," "The bidirectional design system" (digest has quotes)
+- [x] Write site — all 11 pages written (00-start-here through 10-glossary), Docsify
+      shell with Mermaid diagrams on pages 02/04/08, delegated to Fable per
+      `03-fable-delegation-note.md` (if present) — pages 01–09 written by Fable, 00/10
+      drafted directly
+- [x] Verify locally + mobile widths — `docsify-cli serve` confirmed all pages/sidebar
+      return 200, internal links resolve; user reviewed at localhost and requested two
+      fixes (mermaid rendering broken under mermaid@10 + docsify-mermaid@2.0.1
+      incompatibility — replaced with a custom doneEach-hook plugin using mermaid's
+      current API; sidebar reverted from custom 44px-tap-target CSS to stock Docsify
+      styling; page 08's diagram capped at 800px and switched from a TD column to LR)
+- [x] Committed and pushed to `main` (commit `b3fe4f0`)
+- [x] GitHub Pages enabled via `gh api repos/F4cu/design-systems-101/pages` — returned
+      `html_url: https://f4cu.github.io/design-systems-101/`, `build_type: legacy`
+- [ ] **TODO — confirm the Pages build finished and the URL serves 200.** Enabling
+      Pages returns immediately but the actual build is async; this was mid-poll
+      (`gh api repos/F4cu/design-systems-101/pages --jq .status`, waiting for `built`)
+      when the session ended. Just needs: `gh api repos/F4cu/design-systems-101/pages
+      --jq .status` until it says `built`, then `curl -I
+      https://f4cu.github.io/design-systems-101/` for a 200. No further content or code
+      changes should be needed — this is a status check, not a build step.
 
 Sources may still exist at
 `/private/tmp/claude-501/-Users-facundorosales-projects-upskill-design-system/56923623-fb1b-4418-be0b-10f87f745b03/scratchpad/sources/repoB`
