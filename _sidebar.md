@@ -1,0 +1,13 @@
+- [Start here](00-start-here.md)
+- **Foundations**
+  - [What a design system is](01-foundations.md)
+  - [Token architecture](02-token-architecture.md)
+  - [The design-to-code contract](03-design-to-code-contract.md)
+  - [Component governance](04-component-governance.md)
+  - [Adoption & measurement](05-adoption-measurement.md)
+  - [Documentation coverage](06-documentation-coverage.md)
+- **AI & agentic systems**
+  - [AI context & readiness](07-ai-context-and-readiness.md)
+  - [Agentic workflow design](08-agentic-workflow-design.md)
+  - [Scaling AI effort](09-scaling-ai-effort.md)
+- [Glossary](10-glossary.md)

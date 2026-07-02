@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Design Systems 101</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="A field guide to running design systems — token architecture, governance, adoption, and AI-readiness.">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    :root { --base-font-size: 16px; }
+    body { -webkit-text-size-adjust: 100%; }
+
+    /* Keep long inline code/URLs from forcing horizontal page scroll on narrow viewports */
+    .markdown-section code {
+      word-break: break-word;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+    }
+    .markdown-section pre code {
+      white-space: pre;
+    }
+    .markdown-section pre {
+      overflow-x: auto;
+    }
+    .markdown-section table {
+      display: block;
+      overflow-x: auto;
+    }
+
+    /* Mermaid diagrams don't reflow — scroll them within their own box instead of the page */
+    .mermaid-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 1em 0;
+    }
+    .mermaid-wrap .mermaid {
+      display: block;
+    }
+    .mermaid-wrap svg {
+      max-width: 800px;
+      height: auto;
+      display: block;
+    }
+
+    @media screen and (max-width: 480px) {
+      .markdown-section { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Design Systems 101',
+      repo: 'https://github.com/F4cu/design-systems-101',
+      loadSidebar: true,
+      homepage: '00-start-here.md',
+      subMaxLevel: 2,
+      auto2top: true,
+      search: {
+        depth: 2,
+        noData: 'No results.',
+        placeholder: 'Search'
+      },
+      mermaidConfig: {
+        theme: 'neutral'
+      }
+    };
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    // docsify-mermaid@2.0.1 targets mermaid's pre-v10 init API; mermaid 10 is ESM-first
+    // and dropped that global surface, so the plugin silently no-ops. Render manually
+    // via a docsify lifecycle hook instead, using mermaid 10's current API.
+    mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
+    window.$docsify.plugins = (window.$docsify.plugins || []).concat(function (hook) {
+      hook.doneEach(function () {
+        var blocks = document.querySelectorAll('.markdown-section pre > code.lang-mermaid, .markdown-section pre > code.language-mermaid');
+        blocks.forEach(function (code) {
+          var div = document.createElement('div');
+          div.className = 'mermaid';
+          div.textContent = code.textContent;
+          code.parentElement.replaceWith(div);
+        });
+        if (blocks.length) mermaid.run({ querySelector: '.mermaid' });
+      });
+    });
+  </script>
+</body>
+</html>

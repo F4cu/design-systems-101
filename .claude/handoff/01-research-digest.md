@@ -139,9 +139,41 @@ verified four posts — reusable as a head start, but the digest below is not ex
   governance decisions too. Good fit for **04-component-governance** or
   **08-agentic-workflow-design**, whichever ends up covering feedback loops.
 
-**Still needed:** at least one more post per page 09 (Challenge-Rating-style effort
-calibration, layered-MCP connection model) — search both blogs for relevant posts rather
-than assuming these four cover every AI-section page.
+**Found (2026-07-02):**
+- Romina Kavcic, "5 MCP Connections Every Design System Team Needs Right Now" —
+  https://learn.thedesignsystem.guide/p/5-mcp-connections-every-design-system —
+  practical layered/phased-adoption argument: connects AI to Figma, docs, code repos,
+  analytics platforms one at a time; "start small: pick one tool, set up MCP, and
+  automate one repetitive task. Once you see the value, expand from there"; "you control
+  exactly what data and tools AI can access... creating specific, controlled bridges."
+  Good fit for **09-scaling-ai-effort**, pairing with source A's `mcp-setup-guide`
+  three-layer model — both argue for deliberately scoped/incremental agent access
+  rather than maximal connection.
+
+## Source A — commands/skills title-only skim (2026-07-02)
+
+Per brief, skimmed for "what problem each solves," not implementation. 14 commands map
+1:1 to audit/report skills (component-audit, token-audit, docs-coverage, drift-check,
+governance-review, release-check, migration, cicd-integration, codemod-generator,
+describe-component, system-benchmark, system-health, visual-report, full-diagnostic) —
+these are the CLI-level entry points into the skill pack.
+
+43 skills fall into five categories matching source A's own framing (Audit, Govern,
+Document, Validate, Communicate): audits (component/token/theme/naming/API/a11y/drift),
+governance (decision-record, deprecation-process, contribution-workflow,
+governance-encoder, component-decision-tree), documentation (usage-guidelines,
+pattern-documentation, token-documentation, ai-component-description,
+metadata-schema-generator, context-engine-builder, codebase-index), communication
+(change-communication, stakeholder-brief, system-pitch, adoption-report, visual-report,
+release-retrospective), plus cross-cutting (triage, session-memory, schema-validator,
+version-bump-advisor, figma-variable-audit). 4 chained "agent" files
+(full-system-diagnostic-agent, governance-review-agent, migration-agent,
+component-to-release-agent) compose multiple skills into end-to-end workflows — concrete
+referents for source A's `agent-orchestration-guide` sequential/supervisor patterns on
+page 08. Useful mainly as evidence for **01-foundations** (five-category framing of "what
+running a system actually involves") and as a real example set for **08** (each agent
+file's frontmatter names which skills it chains and why, matching the orchestration
+note's patterns).
 
 ## Section thesis (pages 07–09, replaces the old two-repo "opposite bets" framing)
 
