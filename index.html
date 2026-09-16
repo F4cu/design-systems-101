@@ -19,10 +19,47 @@
     .markdown-section {
       font-size: 16px;
       line-height: 1.7;
+      color: #1f2328;
     }
     .markdown-section code,
     .markdown-section pre {
       font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+
+    /* WCAG 1.4.8: cap line length at ~75 characters and give paragraphs breathing
+       room (>= 1.5x line spacing) — measure applies only to running text, not to
+       headings, tables, or code, which need to use the full available width. */
+    .markdown-section p,
+    .markdown-section li,
+    .markdown-section blockquote {
+      max-width: 75ch;
+    }
+    .markdown-section p,
+    .markdown-section ul,
+    .markdown-section ol,
+    .markdown-section blockquote {
+      margin: 0 0 1.2em;
+    }
+    .markdown-section li + li {
+      margin-top: 0.4em;
+    }
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3,
+    .markdown-section h4 {
+      max-width: 75ch;
+      line-height: 1.35;
+    }
+
+    /* Don't rely on color alone to mark a link (WCAG 1.4.1) */
+    .markdown-section a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .markdown-section a:focus-visible,
+    .sidebar a:focus-visible {
+      outline: 2px solid #42b883;
+      outline-offset: 2px;
     }
 
     /* Keep long inline code/URLs from forcing horizontal page scroll on narrow viewports */
