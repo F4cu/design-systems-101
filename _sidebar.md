@@ -11,6 +11,7 @@
 - **Adoption & documentation**
   - [Operating cadence & advocacy](operating-cadence.md)
   - [Adoption & measurement](adoption-measurement.md)
+  - [Component performance in context](contextual-component-performance.md)
   - [Documentation coverage](documentation-coverage.md)
 - **Communicating value & business alignment**
   - [Communicating value](communicating-value.md)

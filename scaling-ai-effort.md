@@ -1,10 +1,14 @@
 # Scaling AI Effort to Risk
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## Effort and AI access should scale with risk, not apply uniformly
 
 Not every component deserves the same documentation depth, audit rigor, or level of AI access. Effort should scale with implementation risk, and agent access with demonstrated value — deliberately scoped, not maximized by default. Knowing where to spend depth is itself a design-system skill.
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Uniform effort starves your riskiest components
 
 Time and attention are scarce. An over-documented badge burns the same hours that an under-documented date picker desperately needs — a uniform bar applied to everything quietly starves your riskiest components. The same logic applies to AI access: an agent wired into every possible tool at once is harder to reason about and debug, because you can't tell which connection produced which behavior. In both cases, "more" isn't safer. Calibrated is safer.
 
@@ -12,6 +16,8 @@ Time and attention are scarce. An over-documented badge burns the same hours tha
 
 One team's knowledge notes borrow a mechanic from a companion project (the Component Bestiary, which catalogues UI components as D&D-style creatures): a **Challenge Rating (CR)** that ranks *implementation danger*, not visual complexity. A high-CR component "is not necessarily large or visually complex — it is dangerous to implement incorrectly." Badges sit around CR 1–2: misuse creates minor inconsistency, so basic usage guidelines suffice. Modals land at CR 5–7, where misuse causes genuine user harm through accessibility regressions. Date pickers and data tables reach CR 7–9 and should trigger a mandatory accessibility audit before release. The rating calibrates everything downstream: documentation depth ("the cost of an AI tool getting a modal wrong is higher than the cost of it getting a badge wrong"), audit order, and contribution standards — a high-CR component contributed without adequate expertise "is worse than no component, because it provides false confidence while introducing real risk."
 — design-system-ops, knowledge-notes/component-bestiary-reference.md
+
+That rating is usually treated as fixed per component. It isn't: the same component's effective CR shifts with where it's placed — see [Component performance in context](contextual-component-performance.md).
 
 The same notes apply calibrated scoping to agent access through **MCP** (Model Context Protocol — the interface that lets an AI agent read component definitions and token values directly from their real sources instead of a stale copy-paste). Rather than one giant connection, the setup is three deliberately separated layers: a design MCP like Figma's (design source of truth — names, variants, token values, but no code-level props), the system's own MCP server (machine-readable inventory, governance rules, decision trees — but no raw source code), and Code Connect (mapping "this design uses a Button" to `import { Button } from '@system/components'` — but not the full source). Cross-layer questions like "what code component should I use for this Figma frame?" resolve layer by layer; no single server becomes a bottleneck.
 — design-system-ops, knowledge-notes/mcp-setup-guide.md

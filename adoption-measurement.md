@@ -1,10 +1,14 @@
 # Adoption Measurement
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## Coverage measures supply; adoption measures demand
 
 Coverage and adoption answer two different questions. Coverage asks whether the system *provides* what teams need; adoption asks whether teams *actually use* what's provided. A system can score high on one and low on the other, and the fixes are opposites: low coverage is a supply problem (build more), while low adoption with high coverage is a demand problem (figure out why teams aren't consuming what already exists).
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Confusing the two means fixing the wrong problem
 
 Without this distinction, teams misdiagnose the problem and pour effort into the wrong fix. The classic failure: a system has 100% component coverage but 20% adoption, because product teams keep building custom implementations instead of consuming the library. The instinctive response is "we need more components" — more supply — when the real question is why nobody wants the supply that's already there. That question might lead to onboarding gaps, API friction, or missing documentation, none of which get solved by shipping component number forty-one.
 
@@ -39,3 +43,5 @@ It's worth knowing the naive approaches fail in specific, well-documented ways r
 ## Common mistake
 
 Turning team-level breakdowns into a competitive ranking. Publishing a league table of "best adopters" and "worst adopters" creates political dynamics that undermine trust — and it flattens context that matters. A team building a custom data-visualization library isn't failing to adopt; the system may simply not cover their domain. A good adoption report distinguishes "chose not to use" from "needed something the system doesn't provide," because only the first one is an adoption problem at all. — design-system-ops, knowledge-notes/adoption-measurement.md
+
+These numbers also stop at "is it used" — they don't say whether a used, adopted component is actually helping or hurting once it's live in a specific flow. See [Component performance in context](contextual-component-performance.md) for that next layer.
