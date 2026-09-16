@@ -23,11 +23,13 @@ contribution criteria, and component-API design; zeroheight's annual Design Syst
 Report for survey data across 147 practitioners; Figma's Design Executive Council
 research and named companies (Freshworks, SAP, Grammarly, Wise, Mews, and others) who've
 published specifics about what worked and what didn't; and, for the AI section,
-[Romina Kavcic](https://learn.thedesignsystem.guide/) and
-[Murphy Trueman](https://blog.murphytrueman.com/), two people writing independently
-about AI and design systems today. Every claim is attributed to the specific source it
-came from — see the [references page](references.md) for the full list, or
-[start here](start-here.md) for the sourcing philosophy in more detail.
+[Romina Kavcic](https://learn.thedesignsystem.guide/),
+[Murphy Trueman](https://blog.murphytrueman.com/), and
+[Shane P Williams](https://designsystemscollective.substack.com/), three people writing
+independently about AI and design systems today. Every claim is
+attributed to the specific source it came from — see the [references page](references.md)
+for the full list, or [start here](start-here.md) for the sourcing philosophy in more
+detail.
 
 No component code, no real token values, and no API keys or repo-specific config are
 included as "the standard" — sources here are cited for the ideas behind them, not

@@ -67,13 +67,17 @@ prose.
 - [Mike Fortuna, "How I Calculated the Business Case for a Design System"](https://medium.com/@m4tuna/how-i-calculated-the-business-case-for-a-design-system-549def283eb5)
 - [Adobe XD, "20 levers for communicating the value/ROI of design"](https://xd.adobe.com/ideas/perspectives/leadership-insights/20-levers-communicating-value-roi-design)
 
-## AI context & readiness, agentic workflow design, scaling AI effort
+## AI context & readiness, governance under AI consumption, agentic workflow design, scaling AI effort
 
 - [Romina Kavcic, "Design tokens that AI can actually read"](https://learn.thedesignsystem.guide/p/design-tokens-that-ai-can-actually)
 - [Romina Kavcic, "Should you build an agent for your design system"](https://learn.thedesignsystem.guide/p/should-you-build-an-agent-for-your)
 - [Murphy Trueman, "Your next design system user is an agent"](https://blog.murphytrueman.com/your-next-design-system-user/)
 - Murphy Trueman, `design-system-ops` — `knowledge-notes/ai-readiness.md`, `context-engine-blueprints.md`, `agent-orchestration-guide.md`, `human-oversight-framework.md`, `output-discipline.md`, `mcp-setup-guide.md`
 - Spotify Encore, Siemens Industrial Experience, Mitsubishi Electric Serendie — named production systems publishing MCP servers for design-system consumption, referenced in [AI context & readiness](ai-context-and-readiness.md)
+- [Shane P Williams, "Legibility Is the New Governance"](https://designsystemscollective.substack.com/p/legibility-is-the-new-governance) — Design Systems Collective
+- [Shane P Williams, "The Informal Contract Is Over"](https://designsystemscollective.substack.com/p/the-informal-contract-is-over) — Design Systems Collective
+- [Shane P Williams, "Drift Doesn't Announce Itself"](https://designsystemscollective.substack.com/p/drift-doesnt-announce-itself) — Design Systems Collective
+- [Shane P Williams, "The Job Nobody Is Hiring For Yet"](https://designsystemscollective.substack.com/p/the-job-nobody-is-hiring-for-yet) — Design Systems Collective
 
 ## A note on sourcing discipline
 

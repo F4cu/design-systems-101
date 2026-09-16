@@ -1,22 +1,23 @@
 - [Start here](start-here.md)
-- **Part 1 — Foundations**
+- **Foundations**
   - [What a design system is](foundations.md)
   - [Token architecture](token-architecture.md)
   - [The design-to-code contract](design-to-code-contract.md)
-- **Part 2 — Governance & contribution**
+- **Governance & contribution**
   - [Component governance](component-governance.md)
   - [Contribution models](contribution-models.md)
   - [Component API design](component-api-design.md)
   - [Governance case studies](governance-case-studies.md)
-- **Part 3 — Adoption & documentation**
+- **Adoption & documentation**
   - [Operating cadence & advocacy](operating-cadence.md)
   - [Adoption & measurement](adoption-measurement.md)
   - [Documentation coverage](documentation-coverage.md)
-- **Part 4 — Communicating value & business alignment**
+- **Communicating value & business alignment**
   - [Communicating value](communicating-value.md)
   - [Business alignment](business-alignment.md)
-- **Part 5 — AI & agentic systems**
+- **AI & agentic systems**
   - [AI context & readiness](ai-context-and-readiness.md)
+  - [Governance under AI consumption](governance-under-ai-consumption.md)
   - [Agentic workflow design](agentic-workflow-design.md)
   - [Scaling AI effort](scaling-ai-effort.md)
 - [Glossary](glossary.md)

@@ -31,6 +31,7 @@ You'll also meet, cited individually by name and post/report title:
 - **Nathan Curtis**, EightShapes — team models, contribution criteria, and component-API design (the "configuration collapse" problem).
 - **zeroheight's annual Design Systems Report** — survey data from 147 practitioners, used where a claim benefits from being backed by numbers rather than one person's experience.
 - **Figma's Design Executive Council research** and a handful of named companies (Freshworks, SAP, Grammarly, Wise, Mews, and others) who've published specifics about what worked and what broke for them.
+- **Shane P Williams**, founding editor of the [Design Systems Collective](https://designsystemscollective.substack.com/) — governance and documentation under AI consumption, and the emerging job of reconciling design, code, and production as separate sources of truth.
 
 No source is blended into a single "what the industry thinks" voice — each claim is
 attributed to whoever made it, by name, with a link. Where sources agree, that's noted
@@ -53,7 +54,7 @@ The wiki is organized into five Parts, roughly in reading order:
 2. **Governance & contribution** — how decisions get made and recorded, which contribution model fits which context, and the practical component-API judgment calls (when to add a variant vs. reach for composition, how to avoid prop bloat).
 3. **Adoption & documentation** — the operating rhythm that keeps a system visible (cadence, office hours, stewardship, advocacy, feedback loops), whether it's actually being used, and how documentation either supports or undermines that.
 4. **Communicating value & business alignment** — the org-facing skill of building a business case and keeping the system funded, distinct from running it well.
-5. **AI & agentic systems** — where AI-assisted workflows help and where they just add a new kind of mess.
+5. **AI & agentic systems** — where AI-assisted workflows help and where they just add a new kind of mess, and how governance and documentation gaps that were tolerable for human readers stop being tolerable once agents read them too.
 
 Start with [Foundations](foundations.md), or jump straight to whatever section you need
 using the sidebar. A [glossary](glossary.md) at the end collects every term introduced
