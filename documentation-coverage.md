@@ -1,10 +1,14 @@
 # Documentation Coverage
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## Docs are measured against code, never the reverse
 
 Documentation is a derived surface, not a parallel one. The code is the authoritative answer to "what components exist," and the documentation is measured *against* it — never the other way around. When the two disagree, that's drift, and it runs in two directions with two different fixes: a component in code with no docs is a coverage gap (the docs fell behind), while a doc page for a component that no longer exists is an orphan (the docs didn't keep up with a removal).
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Auditing the docs platform instead of the code hides the real gaps
 
 Without this framing, teams audit the wrong thing. The tempting shortcut is to treat the documentation platform's own component list as the inventory — but platforms lag, and a missing platform entry is the very thing being audited. Measure docs against the platform and you'll confidently report full coverage while three shipped components sit undocumented and two doc pages describe components that were deleted last quarter.
 

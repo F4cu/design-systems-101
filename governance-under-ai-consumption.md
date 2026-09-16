@@ -1,10 +1,14 @@
 # Governance Under AI Consumption
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## Agents treat every documentation gap as load-bearing
 
 [AI context & readiness](ai-context-and-readiness.md) is about whether a system's metadata is explicit enough for an agent to consume. This page is about a sharper, related claim: an agent doesn't just need explicit metadata, it treats every gap, every stale doc, and every "everyone just knows" convention as load-bearing — because it has no instinct to fall back on when the written rule and the real one disagree. A human contributor papers over that gap without noticing. An agent doesn't paper over anything; it executes exactly what's written, or exactly what it can infer from the code, whichever is more concrete. Shane P Williams, founding editor of the Design Systems Collective, has spent a 2026 run of essays on exactly this shift — governance and documentation problems that were tolerable when only humans read them, and stop being tolerable once agents do. — [Shane P Williams, "Legibility Is the New Governance"](https://designsystemscollective.substack.com/p/legibility-is-the-new-governance)
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## An agent bypassing your library is a legibility failure, not a tool failure
 
 Williams frames the failure mode precisely: "When an agent is handed your documentation and still reaches for freshly generated code instead of your component library, the system failed a legibility test, not a tool test." The instinct is to blame the tool or the model. The actual cause is almost always upstream — an ambiguous name, an undocumented exception, a rule that only lived in one engineer's head. "If your design system cannot be understood without a human translator, it was never really infrastructure. It was craft, maintained by goodwill." — [Shane P Williams, "Legibility Is the New Governance"](https://designsystemscollective.substack.com/p/legibility-is-the-new-governance)
 

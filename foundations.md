@@ -1,10 +1,14 @@
 # Foundations: What a Design System Actually Is
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## A design system is three jobs, not one library
 
 A design system is not a component library. It is three distinct jobs that happen to live under one name: **tokens** (the raw vocabulary — colors, spacing, type sizes), **components** (the assembled units built from that vocabulary), and **governance** (the decisions about what belongs, how it changes, and how it leaves). Most designers only ever touch the middle layer. The other two are separate disciplines, and each one fails in its own way when neglected.
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Neglect any one layer and it fails invisibly
 
 Design systems drift. One team's practitioner notes put it bluntly: tokens go stale, components fall out of spec, and governance documentation gets written once and never updated. — design-system-ops, README.md
 

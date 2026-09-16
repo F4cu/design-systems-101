@@ -1,10 +1,14 @@
 # Agentic Workflow Design
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## Agentic workflows live or die on coordination, not agent intelligence
 
 Agentic workflows are a coordination problem, not a magic-more-capability problem. When you chain AI agents together — small automated workers, each doing one job — the hard part isn't making any single agent smarter. It's defining how they hand work to each other, and exactly where a human steps in. Skip either definition and you get output nobody can trust or explain.
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Skipped failures and complexity without payoff come from the same root cause
 
 Two independent voices point at the same failure mode from different angles. One team's knowledge notes warn: "Never silently skip a failed step — a skipped audit is worse than a failed audit because the consumer assumes the audit passed" (— design-system-ops, knowledge-notes/agent-orchestration-guide.md). That's opacity without accountability. Romina Kavcic attacks it from the economics side: "find the simplest solution possible, and only increase complexity when needed" — if a task follows the same steps every time, you want a workflow, not an agent, and if a run saves less than $0.10 of human time, an agent doesn't pay for itself (— [Romina Kavcic, "Should you build an agent for your design system"](https://learn.thedesignsystem.guide/p/should-you-build-an-agent-for-your)). Complexity without payoff on one side, hidden failures on the other — both come from building the automation before designing the coordination.
 

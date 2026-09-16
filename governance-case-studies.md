@@ -1,10 +1,14 @@
 # Governance Case Studies
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## Governance failures and successes only make sense in context
 
 Governance advice tends to arrive as universal rules, but almost every real governance failure — and every real success — is legible only in context: what worked for one team's size, stage, and structure would have failed for another's. These three scenarios are worked examples, not templates, and each ends with what made the outcome context-dependent rather than universal.
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Abstract principles alone can't tell you what to do in your situation
 
 Without concrete cases, governance principles stay abstract enough to agree with and hard enough to apply that teams reach for the nearest generic best-practice list instead of reasoning about their own situation. A worked example — including the ones that went wrong — gives you something to reason *from*.
 

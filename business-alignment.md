@@ -1,10 +1,14 @@
 # Business Alignment
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## A roadmap should stay legible against what the business cares about now
 
 A design system's roadmap should be legible against what the company actually cares about *right now* — not run as a self-contained backlog the rest of the org has to take on faith. [Communicating value](communicating-value.md) is about making the case; business alignment is about keeping that case true over time, as company priorities shift underneath it.
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## A case made once at launch drifts out of sync with shifting priorities
 
 A system pitched once at launch and never re-justified drifts out of sync with what the business is actually optimizing for. A cost-cutting year and a growth year call for a different emphasis in the same roadmap — the work might not change much, but which parts of it get talked about should. Supernova's guidance on getting buy-in puts this plainly: map your roadmap to company-level priorities, and flag the parts of your budget request that are mission-critical in the eyes of the people who currently hold the purse strings — not the parts that are mission-critical to the system team internally. — [Supernova, "How to Build a Business Case for Your Design System"](https://www.supernova.io/blog/how-to-build-a-business-case-for-your-design-system)
 

@@ -1,10 +1,14 @@
 # Token Architecture: The Three-Tier Model
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## Tokens work in three layers, referenced strictly downward
 
 Tokens work best in layers. **Primitives** hold raw values and are named for what they are (`color.blue.500`). **Semantic tokens** encode intent — what a value is *for* (`color.action.primary`, `color.feedback.error`) — and get that value by pointing at a primitive. **Component tokens**, an optional third tier, scope semantic intent to one component. References flow strictly downward: component → semantic → primitive, never sideways or skipping levels. — design-system-ops, knowledge-notes/token-architecture.md
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Layers keep rebrands and theme changes cheap
 
 The layers exist so change stays cheap. If a button's background is hardcoded — or points straight at `color.blue.500` — then a rebrand or a dark theme means hunting down every place that value was used. If it points at `color.action.primary` instead, you change one semantic mapping and everything downstream follows.
 

@@ -1,10 +1,14 @@
 # AI Context & Readiness
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## AI readiness means nothing is left implicit
 
 An AI-ready design system is one that can be consumed, reasoned about, and generated from by AI agents and tooling without requiring implicit knowledge that was never written down. Most systems weren't built for this — they assume a human who can infer intent from visual context or ask a colleague. An AI agent can't infer or ask; it works only with what's explicit. But the gap AI exposes isn't new: the same implicit knowledge that confuses an agent has always confused new team members and external contributors. AI readiness is design-system quality, applied with more precision. — design-system-ops, knowledge-notes/ai-readiness.md
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Bad context compounds through every downstream consumer
 
 Without explicit context, errors compound. One team's knowledge notes call this the **context cascade**: context quality at the source compounds through every downstream consumer. Strong metadata in a Figma component leads to accurate AI-generated code, correct implementation, and reliable testing. Weak metadata leads to hallucinated props (properties the AI invents because the real ones weren't documented), broken implementation, and failed tests. Every layer either inherits good context or amplifies bad context — there is no neutral handoff. The practical implication is simple: invest in context quality at the source, because that investment compounds downstream. — design-system-ops, knowledge-notes/ai-readiness.md
 

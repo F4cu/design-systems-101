@@ -1,10 +1,14 @@
 # Operating Cadence & Advocacy
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## Governance decides what's true; cadence makes sure people know it
 
 [Governance](component-governance.md) decides what's in the system and why. Operating cadence is the separate, ongoing practice of making sure people actually *know* that — through channels, a release rhythm, a standing door to ask questions, a named person to guide bigger work, a program to build advocates, and a route for feedback to get back in. A system can be perfectly governed and still fail in practice if nobody outside the core team ever hears about a change, knows who to ask, or has anywhere to send a complaint.
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## An undesigned rhythm defaults to whoever's in the room
 
 Nathan Curtis observes that "not every system team runs a predictable cadence... but every system has some kind of cadence to plan, work, critique, demo, and release things" — the question isn't whether a rhythm exists, it's whether it's designed or accidental. — [Nathan Curtis, "Design System Communications"](https://medium.com/eightshapes-llc/design-system-communications-ca679ffc36d3)
 

@@ -35,6 +35,7 @@
     .sidebar-nav > ul > li > strong {
       font-size: 14px;
       font-weight: 600;
+      margin-left: 16px;
     }
 
     /* WCAG 1.4.8: cap line length at ~75 characters and give paragraphs breathing
@@ -84,10 +85,16 @@
     }
 
     /* Keep long inline code/URLs from forcing horizontal page scroll on narrow viewports */
+
+    .markdown-section em {
+      color: #666666;
+    }
     .markdown-section code {
       word-break: break-word;
       overflow-wrap: break-word;
       white-space: pre-wrap;
+      color: #005292;
+      background-color: #e4f2f8;
     }
     .markdown-section pre code {
       white-space: pre;
@@ -99,6 +106,16 @@
       display: block;
       overflow-x: auto;
     }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin: 2em 0 0.25em !important;
+    }
+    .eyebrow + h2 { margin-top: 0.2em; }
 
     /* Mermaid diagrams don't reflow — scroll them within their own box instead of the page */
     .mermaid-wrap {

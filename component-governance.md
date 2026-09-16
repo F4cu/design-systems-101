@@ -1,10 +1,14 @@
 # Component Governance
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## Governance is deciding on purpose, not accumulating by default
 
 Governance is how a design system decides things on purpose: what gets in, what gets removed, and how those decisions are remembered. A governed system can tell you *why* it looks the way it does; an ungoverned one just accumulates. And governance itself matures in stages — most teams aren't at the end state, and that's fine, as long as they know which stage they're at.
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Undocumented decisions get re-litigated forever
 
 Without recorded decisions, teams re-litigate the same questions forever. One team's knowledge notes put it plainly: "A team that has maintained records for two years knows why their system looks the way it does. A team that has not is perpetually re-litigating the same questions." The fix is lightweight — a decision record needs only context, options considered, the decision, and its consequences — but it has to cover the decisions a new team member would need to understand, including *declined* proposals, so a future team doesn't reverse something without knowing it was already considered.
 

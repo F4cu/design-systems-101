@@ -1,10 +1,14 @@
 # The Design-to-Code Contract
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## "Done" means something different at every stage
 
 "Done" is not one thing. A component can be done in the sense of "design approved," "built," "documented," or "accessible" — and each of those is a different bar. A design-to-code contract makes each sense of done explicit, so a component isn't declared finished until every stage has met its own standard.
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Ambiguous "done" lets accessibility and docs quietly slip
 
 When "done" stays ambiguous, everyone fills in their own definition. The designer means "the happy path looks right in Figma." The developer means "it renders and passed review." Nobody meant "accessible" or "documented," so those quietly don't happen — and the gap surfaces later as production bugs, accessibility regressions, and documentation debt that someone has to pay down under pressure. A contract catches those gaps at the stage where they're cheapest to fix.
 

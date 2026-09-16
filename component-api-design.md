@@ -1,10 +1,14 @@
 # Component API Design
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## Every prop is a permanent promise or a future breaking change
 
 Every prop you ship is a promise you keep forever, or a breaking change you'll have to schedule later. Whether a component stays durable under real product pressure or slowly turns into an unmaintainable pile of conditional flags comes down to a handful of recurring decisions: when to add a new component versus extend an existing one, when to reach for a variant versus composition, when a new property is warranted, and how to keep a component flexible across surfaces without letting its API sprawl.
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Unchecked prop growth ends in configuration collapse
 
 Left unchecked, components accrete props one product request at a time, and each addition feels reasonable in isolation. Nathan Curtis calls the end state "configuration collapse": a component with layout props, visibility toggles, and deeply nested subcomponent trees that exist only to control what's shown and where. The fix isn't a rule against adding props — it's a standing discipline about *which* props earn a permanent place in the API. — [Nathan Curtis, "Configuration Collapse"](https://nathanacurtis.substack.com/p/configuration-collapse)
 

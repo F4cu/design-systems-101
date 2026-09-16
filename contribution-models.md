@@ -1,10 +1,14 @@
 # Contribution Models
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## A contribution model decides who gets to make the call, not how it's recorded
 
 A contribution model answers a different question than [component governance](component-governance.md) does. Governance is about how a decision gets recorded once someone's made it. A contribution model is about who structurally gets to *make* it — one central team, a federation of product teams, or something in between — and what counts as a contribution worth accepting in the first place.
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## The wrong model produces a bottleneck or an unmaintained free-for-all
 
 Pick the wrong model for your org's size and maturity and you get one of two failures: a centralized team that becomes a bottleneck everyone routes around, or an open, federated free-for-all that produces components nobody maintains. Nathan Curtis's 2015 taxonomy is still the reference point: **solitary** (one team builds mostly for itself and makes the result available — Bootstrap, from an outside designer's perspective, works this way), **centralized** (a dedicated team produces and supports the system for others), and **federated** (designers from multiple product teams decide on it together) — [Nathan Curtis, "Team Models for Scaling a Design System"](https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0). Jina Anne's extension, drawn from her time at Salesforce, adds a fourth: **cyclical**, where a centralized core team and a federated contributor group continuously inform each other rather than one replacing the other.
 

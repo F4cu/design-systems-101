@@ -1,10 +1,14 @@
 # Communicating Value
 
-## The principle
+<p class="eyebrow">The Principle</p>
+
+## A design system has to justify itself in the funder's terms
 
 A design system is funded the same way any other internal investment is: it has to justify itself in terms the funder cares about. "It's more consistent" and "it's more efficient" are true, but they read as nice-to-haves to a stakeholder who doesn't operate the system day to day. The bar here is currently low industry-wide — zeroheight's 2026 survey of 147 practitioners found only **5%** of teams measure ROI at all — which means a team that can tell a credible value story is already ahead of most of the field. — zeroheight, *Design Systems Report 2026*
 
-## Why it exists
+<p class="eyebrow">Why It Exists</p>
+
+## Systems that can't show value are the first cut in a budget squeeze
 
 Systems that can't articulate value beyond "it's tidier" are the first thing cut in a budget squeeze, because nobody outside the system team can see what's actually at stake in losing it. Figma's Design Executive Council research frames the historical version of this conversation as centered almost entirely on productivity — less rework, faster handoffs — and argues that's only part of the picture: organizations increasingly invest in design systems to scale product offerings, improve retention, expand into new markets, and raise the craft bar, not just to move faster internally. — Figma / Design Executive Council, "The new business case for design systems"
 
