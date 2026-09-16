@@ -4,7 +4,10 @@
 
 ## A design system has to justify itself in the funder's terms
 
-A design system is funded the same way any other internal investment is: it has to justify itself in terms the funder cares about. "It's more consistent" and "it's more efficient" are true, but they read as nice-to-haves to a stakeholder who doesn't operate the system day to day. The bar here is currently low industry-wide — zeroheight's 2026 survey of 147 practitioners found only **5%** of teams measure ROI at all — which means a team that can tell a credible value story is already ahead of most of the field. — zeroheight, *Design Systems Report 2026*
+> "A style guide is an artifact of design process. A design system is a living, funded product with a roadmap & backlog, serving an ecosystem."
+> — Nathan Curtis, EightShapes, quoted in Brad Frost, *Atomic Design*, Chapter 5
+
+Curtis's distinction is the reason this page exists: a style guide can just sit there and still be useful. A design system can't — it has to keep earning its funding, which means someone has to make the case for it in language a funder recognizes. A design system is funded the same way any other internal investment is: it has to justify itself in terms the funder cares about. "It's more consistent" and "it's more efficient" are true, but they read as nice-to-haves to a stakeholder who doesn't operate the system day to day. The bar here is currently low industry-wide — zeroheight's 2026 survey of 147 practitioners found only **5%** of teams measure ROI at all — which means a team that can tell a credible value story is already ahead of most of the field. — zeroheight, *Design Systems Report 2026*
 
 <p class="eyebrow">Why It Exists</p>
 

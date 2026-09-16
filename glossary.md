@@ -25,6 +25,18 @@ letting different tools read and write the same token files. See
 stage (design, build, documentation, release) of building a component. See
 [The design-to-code contract](design-to-code-contract.md).
 
+**Interface inventory** — a screenshot-and-catalog pass over every distinct treatment of every UI element already shipping, done before designing new tokens or components. See [UI audit & heuristic evaluation](ui-audit.md).
+
+**Heuristic evaluation** — an expert usability review of an interface against a fixed set of principles (Nielsen's 10 heuristics), run by a small panel independently before findings are consolidated; not a substitute for user research. See [UI audit & heuristic evaluation](ui-audit.md).
+
+**Pilot** (design system) — a real, already-planned product project used to build and
+test a design system's first components against actual work, before they're locked in
+as v1. See [Pilot strategy & launch prioritization](pilot-strategy.md).
+
+**Scorecard** (pilot scorecard) — a shared, numerically scored set of criteria used to
+choose which candidate project to pilot a design system on, so the choice isn't made by
+gut feel or seniority. See [Pilot strategy & launch prioritization](pilot-strategy.md).
+
 **Governance** (component governance) — the decisions and processes that determine what
 belongs in a design system, how it gets added, how it changes, and how it's removed. See
 [Component governance](component-governance.md).
@@ -59,6 +71,20 @@ build the system together, rather than one team owning it centrally. See
 **Cyclical model** — a centralized core team and a federated contributor group that
 continuously inform each other, rather than one model replacing the other. See
 [Contribution models](contribution-models.md).
+
+**Community backlog** — a public, working-group-reviewed queue of proposed components
+and patterns anyone can contribute to, used by GOV.UK's Design System as a fifth
+contribution model alongside Curtis's four. See
+[Contribution models](contribution-models.md).
+
+**Rule of three** — the software-engineering principle that a duplicated pattern doesn't
+earn a shared abstraction until it's needed a third independent time; applied to design
+systems as a bar for when a one-off component becomes a system candidate. See
+[Contribution models](contribution-models.md).
+
+**Canonical Vanilla Framework** — Inayaili de León Persson's decision tree for sorting
+an incoming pattern request into modification, addition, or removal before debating its
+merits. See [Component governance](component-governance.md).
 
 **Contribution vs. participation** — a contribution is a proposal, design, code, doc, or
 asset released through the system for others to reuse; participation (feedback, bug

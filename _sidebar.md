@@ -3,6 +3,8 @@
   - [What a design system is](foundations.md)
   - [Token architecture](token-architecture.md)
   - [The design-to-code contract](design-to-code-contract.md)
+  - [UI audit & heuristic evaluation](ui-audit.md)
+  - [Pilot strategy & launch prioritization](pilot-strategy.md)
 - **Governance & contribution**
   - [Component governance](component-governance.md)
   - [Contribution models](contribution-models.md)
@@ -16,6 +18,7 @@
 - **Communicating value & business alignment**
   - [Communicating value](communicating-value.md)
   - [Business alignment](business-alignment.md)
+  - [Stakeholder alignment & planning horizons](stakeholder-alignment.md)
 - **AI & agentic systems**
   - [AI context & readiness](ai-context-and-readiness.md)
   - [Governance under AI consumption](governance-under-ai-consumption.md)

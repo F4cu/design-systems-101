@@ -18,11 +18,14 @@ glossary and a consolidated references page. The foundational pages are grounded
 real toolkit's knowledge notes —
 [`murphytrueman/design-system-ops`](https://github.com/murphytrueman/design-system-ops)
 — used as evidence for general principles, not copied as a template. From there the
-source pool widens deliberately: Nathan Curtis (EightShapes) on team models,
+source pool widens deliberately: Dan Mall (Superfriendly) on pilot strategy and
+launch prioritization; Nathan Curtis (EightShapes) on team models,
 contribution criteria, and component-API design; zeroheight's annual Design Systems
 Report for survey data across 147 practitioners; Figma's Design Executive Council
 research and named companies (Freshworks, SAP, Grammarly, Wise, Mews, and others) who've
-published specifics about what worked and what didn't; and, for the AI section,
+published specifics about what worked and what didn't; Marianne Ashton-Booth
+(ITVX) on stakeholder mapping, planning horizons, and applying Stafford Beer's Viable
+System Model to design systems; and, for the AI section,
 [Romina Kavcic](https://learn.thedesignsystem.guide/),
 [Murphy Trueman](https://blog.murphytrueman.com/), and
 [Shane P Williams](https://designsystemscollective.substack.com/), three people writing

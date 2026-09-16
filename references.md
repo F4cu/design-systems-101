@@ -8,6 +8,24 @@ prose.
 ## Foundations, token architecture, design-to-code contract
 
 - Murphy Trueman, [`design-system-ops`](https://github.com/murphytrueman/design-system-ops) — `knowledge-notes/*.md`, the primary source for Part 1 and most of Part 2's governance mechanics.
+- Alla Kholmatova, *Design Systems: A Practical Guide to Creating Design Languages for Digital Products* (O'Reilly, 2017)
+
+## UI audit & heuristic evaluation
+
+- [Brad Frost, "Conducting an Interface Inventory"](https://bradfrost.com/blog/post/conducting-an-interface-inventory/)
+- [18F Methods, "Interface audit"](https://methods.18f.gov/decide/interface-audit/)
+- [Obvious University, "How to audit a design system"](https://university.obvious.in/product-design/design-system/how-to-audit-a-design-system)
+- [Nielsen Norman Group, "How to Conduct a Heuristic Evaluation"](https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/)
+- [Clearly Design, "Audit before you scaffold: meeting projects where they are"](https://clearly.design/articles/ai-ready-ds-3-design-system-audit)
+
+## Pilot strategy & launch prioritization
+
+- [Dan Mall](https://danmall.com) — Superfriendly; primary site for the pilots-and-scorecards methodology cited below via secondary write-ups
+- [Dan Mall, via UXPin, "On Design Systems: Dan Mall of Superfriendly"](https://www.uxpin.com/studio/blog/design-systems-dan-mall-superfriendly/)
+- [Dan Mall, scorecard reproduced by Obvious University, "How to run a design system pilot"](https://university.obvious.in/product-design/design-system/how-to-run-a-design-system-pilot)
+- [Big Medium, "Design Systems: Pilots & Scorecards"](https://bigmedium.com/ideas/links/design-systems-pilots-scorecards.html) — summarizing Dan Mall's original pilots-and-scorecards article
+- [Dan Mall, via NTT Data, "Design that scales: Unlocking design system success with Dan Mall"](https://launch.nttdata.com/insights/design-that-scales-unlocking-design-system-success-with-dan-mall)
+- [Dan Mall, "Dan Mall: creating a sustainable design system practice,"](https://ellessmedia.com/csi/dan-mall/) Content Strategy Interviews
 
 ## Component governance & contribution
 
@@ -18,6 +36,9 @@ prose.
 - Jina Anne, "The Salesforce Team Model for Scaling a Design System" — Salesforce UX
 - zeroheight, *Design Systems Report 2026* (147 practitioners) — [report.zeroheight.com](https://report.zeroheight.com)
 - IBM Carbon — deprecation and migration-guide practice, cited as the standard reference for sunsetting
+- Martin Fowler, *Refactoring: Improving the Design of Existing Code* (1999) — the rule of three, credited there to Don Roberts
+- Chris Ballantine-Thomas, GOV.UK Design System, ["Iterating the GOV.UK Design System contribution model"](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/)
+- Brad Frost, *Atomic Design*, Chapter 5 — Inayaili de León Persson's Canonical Vanilla Framework (modification/addition/removal decision tree); Alex Schleifer and Jina Bolton quotes; Nathan Curtis's "living, funded product" line
 
 ## Component API design
 
@@ -66,6 +87,15 @@ prose.
 - [Supernova, "How to Build a Business Case for Your Design System"](https://www.supernova.io/blog/how-to-build-a-business-case-for-your-design-system)
 - [Mike Fortuna, "How I Calculated the Business Case for a Design System"](https://medium.com/@m4tuna/how-i-calculated-the-business-case-for-a-design-system-549def283eb5)
 - [Adobe XD, "20 levers for communicating the value/ROI of design"](https://xd.adobe.com/ideas/perspectives/leadership-insights/20-levers-communicating-value-roi-design)
+- Nathan Curtis, quoted in Brad Frost, *Atomic Design*, Chapter 5 — "a living, funded product with a roadmap & backlog"
+
+## Stakeholder alignment & planning horizons
+
+- [Marianne Ashton-Booth, "From Silos to Systems"](https://marianneashtonbooth.com) — UXDX Berlin 2026 talk; ITVX Mosaic design system case study, stakeholder influence/frequency quadrant, Now/Next/Future planning horizons, LeanDS framework
+- [Marianne Ashton-Booth, "LeanDS Framework"](https://marianneab.substack.com/p/leands-framework) — `marianneab.substack.com`
+- Stafford Beer, *Diagnosing the System for Organisations* (1985) — the Viable System Model, applied to design systems by Ashton-Booth
+- Simon Sinek's Golden Circle (Why/How/What), applied to stakeholder levels by Ashton-Booth
+- zeroheight, *Design Systems Report 2026*
 
 ## AI context & readiness, governance under AI consumption, agentic workflow design, scaling AI effort
 

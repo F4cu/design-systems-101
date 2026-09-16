@@ -22,6 +22,13 @@ Notice how little of that list is "design a component." Most of the work is the 
 
 On the governance job specifically, the same notes offer a framing worth memorizing: governance is "the set of decisions and processes that determine what belongs in a design system, how it gets there, how it changes, and how it leaves. Without it, a design system accumulates components by inertia rather than by intent... Governance is not bureaucracy. The goal is not to make contribution harder — it is to make the system trustworthy. A system that accepts anything is a system nobody trusts." — design-system-ops, knowledge-notes/component-governance.md
 
+Alla Kholmatova's book on design systems names the payoff of getting all three layers right, not just the middle one:
+
+> "Without a shared design language and practices, collaboration is difficult."
+> — Alla Kholmatova, *Design Systems: A Practical Guide to Creating Design Languages for Digital Products* (O'Reilly, 2017)
+
+Tokens and governance are what make that shared language durable — without them, "the library" is just a folder of components that happen to look similar today and will quietly stop matching each other as soon as nobody's watching.
+
 ## Common mistake
 
 Equating "the design system" with "the Figma library." If your mental model is component-shaped, you'll invest all your effort in the middle layer while the vocabulary underneath it rots and the decision-making around it never gets defined. When something then goes wrong — a rebrand that touches five hundred files, a library full of near-duplicate buttons nobody trusts — it looks like a component problem, but it started one layer up or one layer down. The next pages take each layer in turn, starting with tokens.
