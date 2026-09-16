@@ -16,7 +16,7 @@ When "done" stays ambiguous, everyone fills in their own definition. The designe
 
 One team's knowledge notes structure this as four contracts, one per stage:
 
-**The design contract.** The spec is implementable without clarification questions: every state is designed (default, hover, active, focus, disabled, loading, error), responsive behaviour is specified, and edge cases like long strings and empty states are addressed. Token usage is explicit in the file, the component API — its props, types, and defaults — is agreed before build, and accessibility (focus indicators, contrast, touch targets) is handled at design stage rather than deferred.
+**The design contract.** The spec is implementable without clarification questions: every state is designed (default, hover, active, focus, disabled, loading, error), responsive behaviour is specified, and edge cases like long strings and empty states are addressed. Token usage is explicit in the file. The component API — its props, types, and defaults — is agreed before build. Accessibility (focus indicators, contrast, touch targets) is handled at design stage rather than deferred.
 
 **The build contract.** All specified states are implemented, not just the happy path. Token references are correct at every tier with no hardcoded values, accessibility is implemented *and tested* (not just reviewed), the result is checked against the spec rather than built from memory, and unit tests and Storybook coverage exist.
 

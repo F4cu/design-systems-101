@@ -14,12 +14,24 @@ Time and attention are scarce. An over-documented badge burns the same hours tha
 
 ## How it shows up in practice
 
-One team's knowledge notes borrow a mechanic from a companion project (the Component Bestiary, which catalogues UI components as D&D-style creatures): a **Challenge Rating (CR)** that ranks *implementation danger*, not visual complexity. A high-CR component "is not necessarily large or visually complex — it is dangerous to implement incorrectly." Badges sit around CR 1–2: misuse creates minor inconsistency, so basic usage guidelines suffice. Modals land at CR 5–7, where misuse causes genuine user harm through accessibility regressions. Date pickers and data tables reach CR 7–9 and should trigger a mandatory accessibility audit before release. The rating calibrates everything downstream: documentation depth ("the cost of an AI tool getting a modal wrong is higher than the cost of it getting a badge wrong"), audit order, and contribution standards — a high-CR component contributed without adequate expertise "is worse than no component, because it provides false confidence while introducing real risk."
+One team's knowledge notes borrow a mechanic from a companion project (the Component Bestiary, which catalogues UI components as D&D-style creatures): a **Challenge Rating (CR)** that ranks *implementation danger*, not visual complexity. A high-CR component "is not necessarily large or visually complex — it is dangerous to implement incorrectly."
+
+- Badges sit around CR 1–2: misuse creates minor inconsistency, so basic usage guidelines suffice.
+- Modals land at CR 5–7, where misuse causes genuine user harm through accessibility regressions.
+- Date pickers and data tables reach CR 7–9 and should trigger a mandatory accessibility audit before release.
+
+The rating calibrates everything downstream: documentation depth ("the cost of an AI tool getting a modal wrong is higher than the cost of it getting a badge wrong"), audit order, and contribution standards. A high-CR component contributed without adequate expertise "is worse than no component, because it provides false confidence while introducing real risk."
 — design-system-ops, knowledge-notes/component-bestiary-reference.md
 
 That rating is usually treated as fixed per component. It isn't: the same component's effective CR shifts with where it's placed — see [Component performance in context](contextual-component-performance.md).
 
-The same notes apply calibrated scoping to agent access through **MCP** (Model Context Protocol — the interface that lets an AI agent read component definitions and token values directly from their real sources instead of a stale copy-paste). Rather than one giant connection, the setup is three deliberately separated layers: a design MCP like Figma's (design source of truth — names, variants, token values, but no code-level props), the system's own MCP server (machine-readable inventory, governance rules, decision trees — but no raw source code), and Code Connect (mapping "this design uses a Button" to `import { Button } from '@system/components'` — but not the full source). Cross-layer questions like "what code component should I use for this Figma frame?" resolve layer by layer; no single server becomes a bottleneck.
+The same notes apply calibrated scoping to agent access through **MCP** (Model Context Protocol — the interface that lets an AI agent read component definitions and token values directly from their real sources instead of a stale copy-paste). Rather than one giant connection, the setup is three deliberately separated layers:
+
+- a design MCP like Figma's — design source of truth: names, variants, token values, but no code-level props
+- the system's own MCP server — machine-readable inventory, governance rules, decision trees, but no raw source code
+- Code Connect — mapping "this design uses a Button" to `import { Button } from '@system/components'`, but not the full source
+
+Cross-layer questions like "what code component should I use for this Figma frame?" resolve layer by layer; no single server becomes a bottleneck.
 — design-system-ops, knowledge-notes/mcp-setup-guide.md
 
 Romina Kavcic, writing independently, makes the adoption-side argument: "With MCP, you control exactly what data and tools AI can access. It's not about giving AI free rein, but about creating specific, controlled bridges." Her advice: "Start small: Pick one tool, set up MCP, and automate one repetitive task. Once you see the value, expand from there" — one connection first (she suggests Figma), not everything at once.

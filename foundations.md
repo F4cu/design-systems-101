@@ -16,7 +16,15 @@ Each of those is a different failure at a different layer. Stale tokens mean the
 
 ## How it shows up in practice
 
-The same practitioner's toolkit organizes design-systems work into five categories — not a universal taxonomy, but a useful picture of what running a system actually involves day to day: **audit** (understand what you actually have — token audits, drift detection, naming checks), **govern** (run the system as infrastructure — contribution workflows, deprecation processes, decision records), **document** (make the system legible to humans and machines), **validate** (verify quality before it ships — accessibility checks, token compliance), and **communicate** (adoption reports, stakeholder briefs — moving people and decisions). — design-system-ops, README.md
+The same practitioner's toolkit organizes design-systems work into five categories — not a universal taxonomy, but a useful picture of what running a system actually involves day to day:
+
+- **Audit** — understand what you actually have: token audits, drift detection, naming checks.
+- **Govern** — run the system as infrastructure: contribution workflows, deprecation processes, decision records.
+- **Document** — make the system legible to humans and machines.
+- **Validate** — verify quality before it ships: accessibility checks, token compliance.
+- **Communicate** — adoption reports, stakeholder briefs; moving people and decisions.
+
+— design-system-ops, README.md
 
 Notice how little of that list is "design a component." Most of the work is the invisible scaffolding around the components.
 

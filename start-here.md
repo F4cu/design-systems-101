@@ -22,10 +22,10 @@ evidence for the *principles* behind running a system, not a set of settings to 
 wholesale. Every claim traced to it carries a citation at the end of the example so you
 can go read the original.
 
-The rest of the wiki widens the source pool deliberately, because a single toolkit
-can't cover contribution models, component-API judgment calls, or how to argue for a
-system's budget — those need more than one practitioner's experience to triangulate.
-You'll also meet, cited individually by name and post/report title:
+The rest of the wiki widens the source pool deliberately. A single toolkit can't cover
+contribution models, component-API judgment calls, or how to argue for a system's
+budget — those need more than one practitioner's experience to triangulate. You'll also
+meet, cited individually by name and post/report title:
 
 - **Romina Kavcic**, [learn.thedesignsystem.guide](https://learn.thedesignsystem.guide/) — design tokens as machine-readable assets, how AI agents consume design systems.
 - **Nathan Curtis**, EightShapes — team models, contribution criteria, and component-API design (the "configuration collapse" problem).
@@ -51,10 +51,10 @@ rather than inventing an answer.
 The wiki is organized into five Parts, roughly in reading order:
 
 1. **Foundations** — what a design system actually is: tokens, the design-to-code handoff.
-2. **Governance & contribution** — how decisions get made and recorded, which contribution model fits which context, and the practical component-API judgment calls (when to add a variant vs. reach for composition, how to avoid prop bloat).
+2. **Governance & contribution** — how decisions get made and recorded, which contribution model fits which context, and the practical component-API judgment calls: when to add a variant vs. reach for composition, how to avoid prop bloat.
 3. **Adoption & documentation** — the operating rhythm that keeps a system visible (cadence, office hours, stewardship, advocacy, feedback loops), whether it's actually being used, and how documentation either supports or undermines that.
 4. **Communicating value & business alignment** — the org-facing skill of building a business case and keeping the system funded, distinct from running it well.
-5. **AI & agentic systems** — where AI-assisted workflows help and where they just add a new kind of mess, and how governance and documentation gaps that were tolerable for human readers stop being tolerable once agents read them too.
+5. **AI & agentic systems** — where AI-assisted workflows help and where they just add a new kind of mess. Also: how governance and documentation gaps that were tolerable for human readers stop being tolerable once agents read them too.
 
 Start with [Foundations](foundations.md), or jump straight to whatever section you need
 using the sidebar. A [glossary](glossary.md) at the end collects every term introduced

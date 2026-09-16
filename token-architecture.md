@@ -16,7 +16,7 @@ That's why skipping a tier is so damaging. The same team's notes call cross-tier
 
 ## How it shows up in practice
 
-There's now a shared standard for how tokens are written down: the Design Tokens Community Group format, whose first stable spec (DTCG 2025.10, released October 2025) defines 13 token types (color, dimension, fontFamily, and so on), composite tokens like typography and shadow — whose sub-values must themselves reference tokens correctly, not just the top-level value — and resolver files that compose token sets into modes like light/dark or brand variants for theming. — design-system-ops, knowledge-notes/token-architecture.md
+There's now a shared standard for how tokens are written down: the Design Tokens Community Group format. Its first stable spec (DTCG 2025.10, released October 2025) defines 13 token types (color, dimension, fontFamily, and so on) and composite tokens like typography and shadow, whose sub-values must themselves reference tokens correctly, not just the top-level value. It also defines resolver files, which compose token sets into modes like light/dark or brand variants for theming. — design-system-ops, knowledge-notes/token-architecture.md
 
 The same notes cover cross-platform naming: platform differences (web pixels vs. iOS points, different typefaces) are handled by transformation tooling — software like Style Dictionary that converts one token file into each platform's native format — never encoded into the name itself. It's `spacing.4`, not `spacing.web.4`.
 
@@ -39,4 +39,6 @@ graph TD
 
 ## Common mistake
 
-Naming a semantic token after its appearance. The notes are blunt about this: "A semantic token that describes visual appearance has failed its purpose. `color.semantic.blue` is a primitive with extra steps." — design-system-ops, knowledge-notes/token-architecture.md. The moment the brand shifts to purple, `color.semantic.blue` is either a lie or a mass rename. Semantic names should describe role and intent (`category.role.variant.state`), never colour names, ambiguous size terms, or generic qualifiers. Related traps from the same notes: primitives-only systems (theming becomes impossible), and token counts growing faster than the product — usually a sign of one-off tokens instead of reused intent.
+Naming a semantic token after its appearance. The notes are blunt about this: "A semantic token that describes visual appearance has failed its purpose. `color.semantic.blue` is a primitive with extra steps." — design-system-ops, knowledge-notes/token-architecture.md. The moment the brand shifts to purple, `color.semantic.blue` is either a lie or a mass rename. Semantic names should describe role and intent (`category.role.variant.state`), never colour names, ambiguous size terms, or generic qualifiers.
+
+Two related traps from the same notes: primitives-only systems, where theming becomes impossible, and token counts growing faster than the product — usually a sign of one-off tokens instead of reused intent.

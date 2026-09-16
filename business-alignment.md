@@ -14,7 +14,13 @@ A system pitched once at launch and never re-justified drifts out of sync with w
 
 ## How it shows up in practice
 
-Two real examples sit at opposite ends of formality, and both work for the scale they're operating at. SAP's version is heavyweight and deliberate: its Chief Design Officer surfaced the design system at board level and made it a KPI tracked through OKRs, with over a million user data points feeding back into the system and roughly ten hours a week of the CDO's own time spent on design reviews. Notion's version is lightweight and continuous: it tracks "sentiment signals" anchored in ordinary workflows rather than formal review cycles — a quick emoji or note of appreciation moving through a shared channel is treated as a real signal of whether a change landed well, not just a nice gesture. Same underlying discipline — keep the system's story tied to what the organization is actually paying attention to — expressed at two very different scales. — Figma / Design Executive Council, "The new business case for design systems"
+Two real examples sit at opposite ends of formality, and both work for the scale they're operating at.
+
+SAP's version is heavyweight and deliberate: its Chief Design Officer surfaced the design system at board level and made it a KPI tracked through OKRs, with over a million user data points feeding back into the system and roughly ten hours a week of the CDO's own time spent on design reviews.
+
+Notion's version is lightweight and continuous: it tracks "sentiment signals" anchored in ordinary workflows rather than formal review cycles. A quick emoji or note of appreciation moving through a shared channel is treated as a real signal of whether a change landed well, not just a nice gesture.
+
+Same underlying discipline — keep the system's story tied to what the organization is actually paying attention to — expressed at two very different scales. — Figma / Design Executive Council, "The new business case for design systems"
 
 The practical version of "mapping to company priorities": before a planning cycle, ask what the company's current top-line goals actually are, and check whether the system's proposed roadmap visibly serves at least one of them in language a non-design stakeholder would recognize. If a system's roadmap can't be connected to any current company priority, that's worth noticing before a budget conversation forces the question.
 

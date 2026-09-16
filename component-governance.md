@@ -30,7 +30,13 @@ Jina Bolton, describing the same dynamic from her time at Salesforce, puts it as
 
 Two practitioners at different companies landing on the same shape of answer independently is worth noticing — it suggests this isn't a house style, it's what a governance process looks like once it's actually working in both directions.
 
-**A concrete decision tree for what happens to a proposal**, rather than a general principle about recording decisions: Inayaili de León Persson's Canonical Vanilla Framework sorts every incoming pattern change into one of three lanes before it goes anywhere — **modification** (feature additions, bug fixes, visual tweaks, performance improvements to something that already exists), **addition** (a genuinely new pattern filling a gap, with explicit safeguards against bloat), or **removal** (deprecation shipped with advance notice, not a surprise). Sorting the request into a lane first, before debating its merits, keeps a "should we add a new component" conversation from accidentally being argued as if it were a five-minute bug-fix review, or vice versa. — Brad Frost, *Atomic Design*, Chapter 5
+**A concrete decision tree for what happens to a proposal**, rather than a general principle about recording decisions: Inayaili de León Persson's Canonical Vanilla Framework sorts every incoming pattern change into one of three lanes before it goes anywhere:
+
+- **Modification** — feature additions, bug fixes, visual tweaks, performance improvements to something that already exists.
+- **Addition** — a genuinely new pattern filling a gap, with explicit safeguards against bloat.
+- **Removal** — deprecation shipped with advance notice, not a surprise.
+
+Sorting the request into a lane first, before debating its merits, keeps a "should we add a new component" conversation from accidentally being argued as if it were a five-minute bug-fix review, or vice versa. — Brad Frost, *Atomic Design*, Chapter 5
 
 This page covers the mechanics of recording and maturing decisions. The separate question of *who* gets to propose and decide — and the specific criteria for what enters or leaves the system — is covered in [Contribution models](contribution-models.md), where it can get the depth it deserves rather than being squeezed into a subsection here.
 
