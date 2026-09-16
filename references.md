@@ -32,6 +32,20 @@ prose.
 - zeroheight, *Design Systems Report 2026*
 - Figma / Design Executive Council — Grammarly champions-network anecdote, via "The new business case for design systems"
 
+## Operating cadence & advocacy
+
+- [Nathan Curtis, "Design System Communications"](https://medium.com/eightshapes-llc/design-system-communications-ca679ffc36d3)
+- [Nathan Curtis, "Design System Release Cadence"](https://medium.com/eightshapes-llc/design-system-release-cadence-2e3e6694ba21)
+- [Nathan Curtis, "Stewarding Design System Contributions"](https://medium.com/eightshapes-llc/stewarding-design-system-contributions-817665b6c7dd)
+- [Twilio Paste, GitHub Discussions: Office Hours](https://github.com/twilio-labs/paste/discussions/categories/office-hours)
+- [GOV.UK Design System, "A guide to the design system monthly chat"](https://team-playbook.design-system.service.gov.uk/community/a-guide-to-the-design-system-monthly-chat)
+- [Acorn Design System (Mozilla), "Office hours"](https://acorn.firefox.com/latest/support/help-and-support/office-hours-UePgrNIe)
+- Brad Frost, *Atomic Design*, Chapter 5 — office hours, state-of-the-union meetings, the Shyp/Micah Sivitz PR-notification example
+- [Figma / Design Executive Council, "The Future of Design Systems is Marketing"](https://www.figma.com/blog/the-future-of-design-systems-is-marketing/) — Spotify, News UK examples
+- [Catriona Shedd, "Design Systems Ambassador at Salesforce"](http://www.catrionashedd.com/portfolio/design-systems-ambassador-at-salesforce/)
+- [Omlet, "Scaling adoption and advocacy for an enterprise-wide design system with Guy Segal"](https://omlet.dev/blog/scaling-design-system-adoption-and-advocacy-with-guy-segal/) — Thomson Reuters ambassador pods
+- zeroheight, *Design Systems Report 2026* — staffing data
+
 ## Adoption measurement
 
 - [Murphy Trueman, "The component adoption gap: understanding the psychology behind design system success"](https://murphytrueman.substack.com/p/the-component-adoption-gap-understanding)

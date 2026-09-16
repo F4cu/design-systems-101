@@ -51,7 +51,7 @@ The wiki is organized into five Parts, roughly in reading order:
 
 1. **Foundations** — what a design system actually is: tokens, the design-to-code handoff.
 2. **Governance & contribution** — how decisions get made and recorded, which contribution model fits which context, and the practical component-API judgment calls (when to add a variant vs. reach for composition, how to avoid prop bloat).
-3. **Adoption & documentation** — whether the system is actually being used, and how documentation either supports or undermines that.
+3. **Adoption & documentation** — the operating rhythm that keeps a system visible (cadence, office hours, stewardship, advocacy, feedback loops), whether it's actually being used, and how documentation either supports or undermines that.
 4. **Communicating value & business alignment** — the org-facing skill of building a business case and keeping the system funded, distinct from running it well.
 5. **AI & agentic systems** — where AI-assisted workflows help and where they just add a new kind of mess.
 

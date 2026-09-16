@@ -9,6 +9,7 @@
   - [Component API design](component-api-design.md)
   - [Governance case studies](governance-case-studies.md)
 - **Part 3 — Adoption & documentation**
+  - [Operating cadence & advocacy](operating-cadence.md)
   - [Adoption & measurement](adoption-measurement.md)
   - [Documentation coverage](documentation-coverage.md)
 - **Part 4 — Communicating value & business alignment**
