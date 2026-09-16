@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --base-font-size: 16px; }
+    :root { --base-font-size: 16px; --theme-color: #0006bd; }
     body { -webkit-text-size-adjust: 100%; }
 
     body, .markdown-section, .sidebar {
@@ -24,6 +24,17 @@
     .markdown-section code,
     .markdown-section pre {
       font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+
+    /* Sidebar section labels (bold, link-less list items) default to 15px/700 while
+       the page links under them sit at 14px — same left edge, different size. Match
+       the label size/weight down to the links so the list reads as one level. */
+    .sidebar-nav {
+      font-size: 14px;
+    }
+    .sidebar-nav > ul > li > strong {
+      font-size: 14px;
+      font-weight: 600;
     }
 
     /* WCAG 1.4.8: cap line length at ~75 characters and give paragraphs breathing
@@ -51,14 +62,24 @@
       line-height: 1.35;
     }
 
-    /* Don't rely on color alone to mark a link (WCAG 1.4.1) */
+    /* Don't rely on color alone to mark a link (WCAG 1.4.1) — but docsify wraps
+       every heading's text in its own anchor link (for the #id deep-link), so an
+       unscoped rule underlines every title/subtitle too. Exclude those. */
     .markdown-section a {
       text-decoration: underline;
       text-underline-offset: 2px;
     }
+    .markdown-section h1 a,
+    .markdown-section h2 a,
+    .markdown-section h3 a,
+    .markdown-section h4 a,
+    .markdown-section h5 a,
+    .markdown-section h6 a {
+      text-decoration: none;
+    }
     .markdown-section a:focus-visible,
     .sidebar a:focus-visible {
-      outline: 2px solid #42b883;
+      outline: 2px solid var(--theme-color);
       outline-offset: 2px;
     }
 
@@ -95,7 +116,14 @@
     }
 
     @media screen and (max-width: 480px) {
-      .markdown-section { padding: 16px; }
+      .markdown-section {
+        /* vue.css's base rule sets max-width: 80%, which caps width below —
+           override both so 90% actually takes effect on mobile. */
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 16px 0;
+      }
     }
   </style>
 </head>
