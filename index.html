@@ -6,9 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="A field guide to running design systems — token architecture, governance, adoption, and AI-readiness.">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root { --base-font-size: 16px; }
     body { -webkit-text-size-adjust: 100%; }
+
+    body, .markdown-section, .sidebar {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .markdown-section {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .markdown-section code,
+    .markdown-section pre {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
 
     /* Keep long inline code/URLs from forcing horizontal page scroll on narrow viewports */
     .markdown-section code {
