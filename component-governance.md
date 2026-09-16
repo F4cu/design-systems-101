@@ -12,13 +12,9 @@ Without recorded decisions, teams re-litigate the same questions forever. One te
 
 ## How it shows up in practice
 
-Two decisions come up constantly, and the same team's notes give criteria for both.
+Governance also matures in *direction*, not just rigor. Murphy Trueman argues that in a bidirectional system, "when a developer implements better error handling, that pattern informs the design system" — knowledge flows upstream from implementation, not only downstream from design. — [Murphy Trueman, "The bidirectional design system: When code talks back to design"](https://blog.murphytrueman.com/the-bidirectional-design-system/)
 
-**What gets in.** A contribution earns a place in the system only if it meets *all* of: **recurrence** (multiple teams need it, not one), **generality** (it solves the category of problem, not one instance), **accessibility** (achievable without design compromise), **ownership** (someone will own its build, docs, and maintenance), and **fit** (it's consistent with existing patterns — "a contribution that requires the system to contradict itself... is not a contribution, it is a fork"). A team building something locally isn't automatically drifting, either: a healthy local implementation is documented, intentional, doesn't conflict with system patterns, and gets flagged as a contribution candidate if the need turns out to be general.
-
-**What gets out.** Deprecation is triggered by any of: a better alternative exists with a clear migration path; usage is at or near zero; accessibility debt can't be resolved; maintenance cost is disproportionate to value; or the component no longer fits the system's direction. Deprecation always ships with a timeline and a migration path, not just a warning.
-
-As a brief aside — governance also matures in *direction*, not just rigor. Murphy Trueman argues that in a bidirectional system, "when a developer implements better error handling, that pattern informs the design system" — knowledge flows upstream from implementation, not only downstream from design. — [Murphy Trueman, "The bidirectional design system: When code talks back to design"](https://blog.murphytrueman.com/the-bidirectional-design-system/)
+This page covers the mechanics of recording and maturing decisions. The separate question of *who* gets to propose and decide — and the specific criteria for what enters or leaves the system — is covered in [Contribution models](contribution-models.md), where it can get the depth it deserves rather than being squeezed into a subsection here.
 
 ## Diagram
 

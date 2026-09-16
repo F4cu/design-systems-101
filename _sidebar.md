@@ -1,13 +1,22 @@
-- [Start here](00-start-here.md)
-- **Foundations**
-  - [What a design system is](01-foundations.md)
-  - [Token architecture](02-token-architecture.md)
-  - [The design-to-code contract](03-design-to-code-contract.md)
-  - [Component governance](04-component-governance.md)
-  - [Adoption & measurement](05-adoption-measurement.md)
-  - [Documentation coverage](06-documentation-coverage.md)
-- **AI & agentic systems**
-  - [AI context & readiness](07-ai-context-and-readiness.md)
-  - [Agentic workflow design](08-agentic-workflow-design.md)
-  - [Scaling AI effort](09-scaling-ai-effort.md)
-- [Glossary](10-glossary.md)
+- [Start here](start-here.md)
+- **Part 1 — Foundations**
+  - [What a design system is](foundations.md)
+  - [Token architecture](token-architecture.md)
+  - [The design-to-code contract](design-to-code-contract.md)
+- **Part 2 — Governance & contribution**
+  - [Component governance](component-governance.md)
+  - [Contribution models](contribution-models.md)
+  - [Component API design](component-api-design.md)
+  - [Governance case studies](governance-case-studies.md)
+- **Part 3 — Adoption & documentation**
+  - [Adoption & measurement](adoption-measurement.md)
+  - [Documentation coverage](documentation-coverage.md)
+- **Part 4 — Communicating value & business alignment**
+  - [Communicating value](communicating-value.md)
+  - [Business alignment](business-alignment.md)
+- **Part 5 — AI & agentic systems**
+  - [AI context & readiness](ai-context-and-readiness.md)
+  - [Agentic workflow design](agentic-workflow-design.md)
+  - [Scaling AI effort](scaling-ai-effort.md)
+- [Glossary](glossary.md)
+- [References](references.md)

@@ -12,15 +12,22 @@ projects it cites.
 
 ## What this is
 
-Ten short pages (roughly 300–600 words each) plus a glossary, written as a learning
-path from foundations through to AI/agentic design systems. Every claim in the
-foundational pages (01–06) is drawn from and cited to one real toolkit's knowledge
-notes — [`murphytrueman/design-system-ops`](https://github.com/murphytrueman/design-system-ops)
-— used as evidence for general principles, not copied as a template. The AI section
-(07–09) additionally draws on and cites specific posts by
+A learning path in five Parts — Foundations; Governance & Contribution; Adoption &
+Documentation; Communicating Value & Business Alignment; AI & Agentic Systems — plus a
+glossary and a consolidated references page. The foundational pages are grounded in one
+real toolkit's knowledge notes —
+[`murphytrueman/design-system-ops`](https://github.com/murphytrueman/design-system-ops)
+— used as evidence for general principles, not copied as a template. From there the
+source pool widens deliberately: Nathan Curtis (EightShapes) on team models,
+contribution criteria, and component-API design; zeroheight's annual Design Systems
+Report for survey data across 147 practitioners; Figma's Design Executive Council
+research and named companies (Freshworks, SAP, Grammarly, Wise, Mews, and others) who've
+published specifics about what worked and what didn't; and, for the AI section,
 [Romina Kavcic](https://learn.thedesignsystem.guide/) and
 [Murphy Trueman](https://blog.murphytrueman.com/), two people writing independently
-about AI and design systems today.
+about AI and design systems today. Every claim is attributed to the specific source it
+came from — see the [references page](references.md) for the full list, or
+[start here](start-here.md) for the sourcing philosophy in more detail.
 
 No component code, no real token values, and no API keys or repo-specific config are
 included as "the standard" — sources here are cited for the ideas behind them, not
