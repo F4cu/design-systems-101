@@ -43,11 +43,13 @@ prose.
 - Chris Ballantine-Thomas, GOV.UK Design System, ["Iterating the GOV.UK Design System contribution model"](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/)
 - Brad Frost, *Atomic Design*, Chapter 5 — Inayaili de León Persson's Canonical Vanilla Framework (modification/addition/removal decision tree); Alex Schleifer and Jina Bolton quotes; Nathan Curtis's "living, funded product" line
 - [Cathy Dutton, "The Problem with Patterns,"](https://alistapart.com/article/problem-with-patterns/) A List Apart
+- [Ness Grixti, "Rethinking Contribution: Lessons from the Messy Middle of Design Systems"](https://nessgrixti.com/articles/rethinking-contribution-lessons-from-the-messy-middle-of-design-systems/)
 
 ## Fostering contribution
 
 - [Amy Hupe, "5 Lessons on Enabling Design System Contribution"](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)
 - [Inayaili de León, "Design Systems: How to Foster Participation,"](https://www.youtube.com/watch?v=6xZHHHgTt9A) Design Systems London, 2018
+- [Ness Grixti, "Rethinking Contribution: Lessons from the Messy Middle of Design Systems"](https://nessgrixti.com/articles/rethinking-contribution-lessons-from-the-messy-middle-of-design-systems/)
 - zeroheight, *Design Systems Report 2026*
 
 ## Component API design
@@ -101,10 +103,13 @@ prose.
 - David Vera / zeroheight help centre, "How to measure the dev side of a design system" — Pinterest FigStats, Atlassian's adoption scanner
 - [Productboard, "How we measure adoption of a design system at Productboard"](https://www.productboard.com/blog/how-we-measure-adoption-of-a-design-system-at-productboard/)
 - [Mews Developers, "Building a design system adoption metric from production data"](https://developers.mews.com/design-system-adoption-metric-building/)
+- [Ness Grixti, "The Hidden Work Behind Design System Adoption"](https://nessgrixti.com/articles/the-hidden-work-behind-design-system-adoption/)
 
 ## Documentation coverage
 
 - zeroheight, *Design Systems Report 2026*
+- [Ness Grixti, "The Hidden Work Behind Design System Adoption"](https://nessgrixti.com/articles/the-hidden-work-behind-design-system-adoption/)
+- [Ness Grixti, "Wise Design System Onboarding"](https://nessgrixti.com/portfolio/wise-design-onboarding/)
 
 ## Communicating value & business alignment
 
