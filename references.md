@@ -39,6 +39,13 @@ prose.
 - Martin Fowler, *Refactoring: Improving the Design of Existing Code* (1999) — the rule of three, credited there to Don Roberts
 - Chris Ballantine-Thomas, GOV.UK Design System, ["Iterating the GOV.UK Design System contribution model"](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/)
 - Brad Frost, *Atomic Design*, Chapter 5 — Inayaili de León Persson's Canonical Vanilla Framework (modification/addition/removal decision tree); Alex Schleifer and Jina Bolton quotes; Nathan Curtis's "living, funded product" line
+- [Cathy Dutton, "The Problem with Patterns,"](https://alistapart.com/article/problem-with-patterns/) A List Apart
+
+## Fostering contribution
+
+- [Amy Hupe, "5 Lessons on Enabling Design System Contribution"](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)
+- [Inayaili de León, "Design Systems: How to Foster Participation,"](https://www.youtube.com/watch?v=6xZHHHgTt9A) Design Systems London, 2018
+- zeroheight, *Design Systems Report 2026*
 
 ## Component API design
 
@@ -46,6 +53,23 @@ prose.
 - [Supernova, "Building Durable Component APIs for Design Systems"](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems)
 - [MUI, "API design approach"](https://mui.com/material-ui/guides/api/)
 - Wealthfront Engineering, "Building Wealthfront's multi-platform design system"
+
+## Release management: versioning, changelogs & migration guides
+
+- [Nathan Curtis, "Versioning Design Systems"](https://medium.com/eightshapes-llc/versioning-design-systems-48cceb5ace4d)
+- [Supernova, "8 Examples of Versioning in Leading Design Systems"](https://www.supernova.io/blog/8-examples-of-versioning-in-leading-design-systems)
+- [Design Tokens Substack, "How to Manage Breaking Changes in Design Tokens"](https://designtokens.substack.com/p/how-to-manage-breaking-changes-in)
+- [zeroheight, "Handling breaking changes in a design system without causing chaos"](https://zeroheight.com/blog/handling-breaking-changes-in-a-design-system-without-causing-chaos/) — Shaun Bent
+- [zeroheight, "Deprecating in design systems: When it's time to say goodbye"](https://help.zeroheight.com/hc/en-us/articles/36474257606555-Deprecating-in-design-systems-When-it-s-time-to-say-goodbye)
+- [Carbon Design System, migration guide](https://v10.carbondesignsystem.com/help/migration-guide/design/)
+- [Keep a Changelog](https://keepachangelog.com)
+- [UXPin, "How to Create a Design System Changelog"](https://www.uxpin.com/studio/blog/how-to-create-a-design-system-changelog/)
+
+## Dependency observability
+
+- [Murphy Trueman, "We know how to build design systems, but we don't know how to operate them"](https://blog.murphytrueman.com/we-know-how-to-build-design-systems-but-we-dont-know-how-to-operate-them/)
+- Spotify Encore — daily version-usage statistics and slot/prop-override analytics, referenced via [Murphy Trueman](https://blog.murphytrueman.com/we-know-how-to-build-design-systems-but-we-dont-know-how-to-operate-them/) and [Figma, "How Spotify's design system goes beyond platforms"](https://www.figma.com/blog/creating-coherence-how-spotifys-design-system-goes-beyond-platforms/)
+- [Dependency-Track documentation](https://docs.dependencytrack.org/) — SBOM-based component analysis, the supply-chain-security analogue of this practice
 
 ## Governance case studies
 
