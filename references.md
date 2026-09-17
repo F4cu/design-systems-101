@@ -44,6 +44,8 @@ prose.
 - Brad Frost, *Atomic Design*, Chapter 5 — Inayaili de León Persson's Canonical Vanilla Framework (modification/addition/removal decision tree); Alex Schleifer and Jina Bolton quotes; Nathan Curtis's "living, funded product" line
 - [Cathy Dutton, "The Problem with Patterns,"](https://alistapart.com/article/problem-with-patterns/) A List Apart
 - [Ness Grixti, "Rethinking Contribution: Lessons from the Messy Middle of Design Systems"](https://nessgrixti.com/articles/rethinking-contribution-lessons-from-the-messy-middle-of-design-systems/)
+- [Design System Tactics, "RACI"](https://www.designsystemtactics.com/tactics/raci)
+- [DesignX, "Design System Governance: An Enterprise Guide"](https://designx.co/design-system-governance-enterprise/)
 
 ## Fostering contribution
 
