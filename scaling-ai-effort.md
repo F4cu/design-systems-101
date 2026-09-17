@@ -34,7 +34,15 @@ The same notes apply calibrated scoping to agent access through **MCP** (Model C
 Cross-layer questions like "what code component should I use for this Figma frame?" resolve layer by layer; no single server becomes a bottleneck.
 — design-system-ops, knowledge-notes/mcp-setup-guide.md
 
-Romina Kavcic, writing independently, makes the adoption-side argument: "With MCP, you control exactly what data and tools AI can access. It's not about giving AI free rein, but about creating specific, controlled bridges." Her advice: "Start small: Pick one tool, set up MCP, and automate one repetitive task. Once you see the value, expand from there" — one connection first (she suggests Figma), not everything at once.
+Romina Kavcic, writing independently, makes the adoption-side argument: "With MCP, you control exactly what data and tools AI can access. It's not about giving AI free rein, but about creating specific, controlled bridges." Her advice: "Start small: Pick one tool, set up MCP, and automate one repetitive task. Once you see the value, expand from there" — one connection first (she suggests Figma), not everything at once. Each bridge she names is scoped to a single job, not general-purpose access:
+
+- **Figma** — reads components, tokens, and variants for spec generation and design-token review
+- **Mintlify** — turns published docs into a queryable knowledge base without leaving the editor
+- **GitHub** — reviews PRs and diffs token definitions to catch design-code drift, the same failure mode covered in [Dependency observability](dependency-observability.md)
+- **GitLab** — manages issues, merge requests, and CI pipelines through AI workflows
+- **PostHog** — checks design decisions against real adoption and conversion data, the same evidence [Adoption & measurement](adoption-measurement.md) argues for
+- **Slack** — makes chat history searchable for decision tracking and adoption signals
+
 — Romina Kavcic, ["5 MCP Connections Every Design System Team Needs Right Now"](https://learn.thedesignsystem.guide/p/5-mcp-connections-every-design-system)
 
 ## Common mistake

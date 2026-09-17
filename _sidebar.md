@@ -3,24 +3,27 @@
   - [What a design system is](foundations.md)
   - [Token architecture](token-architecture.md)
   - [The design-to-code contract](design-to-code-contract.md)
-  - [UI audit & heuristic evaluation](ui-audit.md)
-  - [Pilot strategy & launch prioritization](pilot-strategy.md)
-- **Governance & contribution**
+  - [UI audit](ui-audit.md)
+  - [Pilot strategy](pilot-strategy.md)
+- **Governance**
   - [Component governance](component-governance.md)
   - [Contribution models](contribution-models.md)
+  - [Fostering contribution](fostering-contribution.md)
   - [Component API design](component-api-design.md)
+  - [Release management](release-management.md)
   - [Governance case studies](governance-case-studies.md)
-- **Adoption & documentation**
-  - [Operating cadence & advocacy](operating-cadence.md)
-  - [Adoption & measurement](adoption-measurement.md)
+- **Adoption**
+  - [Operating cadence](operating-cadence.md)
+  - [Measurement](adoption-measurement.md)
   - [Component performance in context](contextual-component-performance.md)
+  - [Dependency observability](dependency-observability.md)
   - [Documentation coverage](documentation-coverage.md)
-- **Communicating value & business alignment**
+- **Business alignment**
   - [Communicating value](communicating-value.md)
   - [Business alignment](business-alignment.md)
-  - [Stakeholder alignment & planning horizons](stakeholder-alignment.md)
-- **AI & agentic systems**
-  - [AI context & readiness](ai-context-and-readiness.md)
+  - [Stakeholder alignment](stakeholder-alignment.md)
+- **Agentic AI**
+  - [AI readiness](ai-context-and-readiness.md)
   - [Governance under AI consumption](governance-under-ai-consumption.md)
   - [Agentic workflow design](agentic-workflow-design.md)
   - [Scaling AI effort](scaling-ai-effort.md)
