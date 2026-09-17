@@ -10,7 +10,7 @@ Tokens work best in layers. **Primitives** hold raw values and are named for wha
 
 ## Layers keep rebrands and theme changes cheap
 
-The layers exist so change stays cheap. If a button's background is hardcoded — or points straight at `color.blue.500` — then a rebrand or a dark theme means hunting down every place that value was used. If it points at `color.action.primary` instead, you change one semantic mapping and everything downstream follows.
+The layers exist so change stays cheap. If a button's background is hardcoded — or points straight at `color.blue.500` — then a rebrand or a dark theme means hunting down every place that value was used. If it points at `color.action.primary` instead, you change one semantic mapping and everything downstream follows. See [Brand alignment](brand-alignment.md) for how this three-tier structure is where a real brand refresh actually meets the product system.
 
 That's why skipping a tier is so damaging. The same team's notes call cross-tier references at the wrong level "the most architecturally damaging token violation": `button.background.default: {color.blue.500}` *appears* to work — the right colour shows up — but "a rebrand or theme change that correctly updates the semantic tier will not reach this component." It breaks silently, and you only find out mid-rebrand. — design-system-ops, knowledge-notes/token-architecture.md
 

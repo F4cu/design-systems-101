@@ -9,6 +9,7 @@ prose.
 
 - Murphy Trueman, [`design-system-ops`](https://github.com/murphytrueman/design-system-ops) — `knowledge-notes/*.md`, the primary source for Part 1 and most of Part 2's governance mechanics.
 - Alla Kholmatova, *Design Systems: A Practical Guide to Creating Design Languages for Digital Products* (O'Reilly, 2017)
+- [Jina Anne, "Design Systems are for People"](https://www.aiga.org/inspiration/talks/jina-anne-design-systems-are-for-people), AIGA
 
 ## UI audit & heuristic evaluation
 
@@ -33,7 +34,9 @@ prose.
 - [Nathan Curtis, "Team Models for Scaling a Design System"](https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0)
 - [Nathan Curtis, "The Fallacy of Federated Design Systems"](https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542)
 - [Nathan Curtis, "Defining Design System Contributions"](https://medium.com/eightshapes-llc/defining-design-system-contributions-eb48e00e8898)
-- Jina Anne, "The Salesforce Team Model for Scaling a Design System" — Salesforce UX
+- [Jina Anne, "The Salesforce Team Model for Scaling a Design System"](https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b) — Salesforce UX
+- [Jina Anne, "Design Systems and Hybrids"](https://24ways.org/2017/design-systems-and-hybrids/), 24ways
+- [Jina Anne, "There Is No Design System"](https://24ways.org/2019/there-is-no-design-system/), 24ways
 - zeroheight, *Design Systems Report 2026* (147 practitioners) — [report.zeroheight.com](https://report.zeroheight.com)
 - IBM Carbon — deprecation and migration-guide practice, cited as the standard reference for sunsetting
 - Martin Fowler, *Refactoring: Improving the Design of Existing Code* (1999) — the rule of three, credited there to Don Roberts
@@ -52,7 +55,7 @@ prose.
 - [Nathan Curtis, "Configuration Collapse"](https://nathanacurtis.substack.com/p/configuration-collapse)
 - [Supernova, "Building Durable Component APIs for Design Systems"](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems)
 - [MUI, "API design approach"](https://mui.com/material-ui/guides/api/)
-- Wealthfront Engineering, "Building Wealthfront's multi-platform design system"
+- [Wealthfront Engineering, "Building Wealthfront's multi-platform design system"](https://eng.wealthfront.com/2022/05/10/building-wealthfronts-multi-platform-design-system/)
 
 ## Release management: versioning, changelogs & migration guides
 
@@ -73,7 +76,7 @@ prose.
 
 ## Governance case studies
 
-- Ness Grixti, "Wise Multi-Brand Design System — Case Study"
+- [Ness Grixti, "Wise Multi-Brand Design System — Case Study"](https://nessgrixti.com/portfolio/wise-multi-brand/)
 - zeroheight, *Design Systems Report 2026*
 - Figma / Design Executive Council — Grammarly champions-network anecdote, via "The new business case for design systems"
 
@@ -96,8 +99,8 @@ prose.
 - [Murphy Trueman, "The component adoption gap: understanding the psychology behind design system success"](https://murphytrueman.substack.com/p/the-component-adoption-gap-understanding)
 - zeroheight, *Design Systems Report 2026*
 - David Vera / zeroheight help centre, "How to measure the dev side of a design system" — Pinterest FigStats, Atlassian's adoption scanner
-- Productboard, "How we measure adoption of a design system at Productboard"
-- Mews Developers, "Building a design system adoption metric from production data"
+- [Productboard, "How we measure adoption of a design system at Productboard"](https://www.productboard.com/blog/how-we-measure-adoption-of-a-design-system-at-productboard/)
+- [Mews Developers, "Building a design system adoption metric from production data"](https://developers.mews.com/design-system-adoption-metric-building/)
 
 ## Documentation coverage
 
@@ -112,6 +115,13 @@ prose.
 - [Mike Fortuna, "How I Calculated the Business Case for a Design System"](https://medium.com/@m4tuna/how-i-calculated-the-business-case-for-a-design-system-549def283eb5)
 - [Adobe XD, "20 levers for communicating the value/ROI of design"](https://xd.adobe.com/ideas/perspectives/leadership-insights/20-levers-communicating-value-roi-design)
 - Nathan Curtis, quoted in Brad Frost, *Atomic Design*, Chapter 5 — "a living, funded product with a roadmap & backlog"
+
+## Brand alignment
+
+- [userQ, "Design Systems vs. Brand Guidelines"](https://userq.com/design-systems-vs-brand-guidelines-understanding-the-key-differences/)
+- [Smashing Magazine, "The Case For Brand Systems"](https://www.smashingmagazine.com/2019/06/case-brand-systems-align-teams/)
+- [Ness Grixti, "Wise Multi-Brand Design System — Case Study"](https://nessgrixti.com/portfolio/wise-multi-brand/) — also cited in [Governance case studies](governance-case-studies.md)
+- [DHL Brand Hub](https://www.dpdhl-brands.com/en/group/); [MetaDesign — DHL](https://metadesign.com/en/work/dhl) — brand-management platform, cited as a boundary example rather than a design-system case study
 
 ## Stakeholder alignment & planning horizons
 

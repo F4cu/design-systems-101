@@ -28,6 +28,8 @@ The same practitioner's toolkit organizes design-systems work into five categori
 
 Notice how little of that list is "design a component." Most of the work is the invisible scaffolding around the components.
 
+**The reason for that scaffolding is human, not technical.** Jina Anne draws a parallel to McDonald's assembly-line process and NYC Transit's sign standards: both succeed by eliminating noise so people can focus on what actually matters, not by imposing order for its own sake. Applied to a design system, a token, a component, or a governance process is a means to an end, not the end itself — the point is to give designers and engineers a toolbox that frees up energy for real problems, not a set of handcuffs restricting what they can build. A system judged only by technical metrics (less duplicated code, faster delivery) is being measured on the mechanism instead of the purpose it exists to serve. — [Jina Anne, "Design Systems are for People"](https://www.aiga.org/inspiration/talks/jina-anne-design-systems-are-for-people), AIGA
+
 On the governance job specifically, the same notes offer a framing worth memorizing: governance is "the set of decisions and processes that determine what belongs in a design system, how it gets there, how it changes, and how it leaves. Without it, a design system accumulates components by inertia rather than by intent... Governance is not bureaucracy. The goal is not to make contribution harder — it is to make the system trustworthy. A system that accepts anything is a system nobody trusts." — design-system-ops, knowledge-notes/component-governance.md
 
 Alla Kholmatova's book on design systems names the payoff of getting all three layers right, not just the middle one:

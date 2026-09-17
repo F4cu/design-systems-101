@@ -20,7 +20,9 @@ Nathan Curtis's 2015 taxonomy is still the reference point:
 
 — [Nathan Curtis, "Team Models for Scaling a Design System"](https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0)
 
-Jina Anne's extension, drawn from her time at Salesforce, adds a fourth: **cyclical**, where a centralized core team and a federated contributor group continuously inform each other rather than one replacing the other.
+Jina Anne's extension, drawn from her time at Salesforce, adds a fourth: **cyclical**, where a centralized core team and a federated contributor group continuously inform each other rather than one replacing the other. — [Jina Anne, "The Salesforce Team Model for Scaling a Design System"](https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b)
+
+Her other writing adds a complementary point about who fills these teams, not just how authority is structured between them: design-systems work is often the natural home for "hybrid" practitioners — designer-coders who straddle disciplines and don't fit neatly into a pure design team or a pure engineering one. Structuring the model around explicitly cross-functional roles (design, code, content, accessibility, product) gives those hybrids a place to stand, instead of leaving them organizationally homeless between two teams that each consider them slightly not their own. — [Jina Anne, "Design Systems and Hybrids"](https://24ways.org/2017/design-systems-and-hybrids/), 24ways
 
 ## How it shows up in practice
 

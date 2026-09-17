@@ -4,7 +4,7 @@
 
 ## A roadmap should stay legible against what the business cares about now
 
-A design system's roadmap should be legible against what the company actually cares about *right now* — not run as a self-contained backlog the rest of the org has to take on faith. [Communicating value](communicating-value.md) is about making the case; business alignment is about keeping that case true over time, as company priorities shift underneath it.
+A design system's roadmap should be legible against what the company actually cares about *right now* — not run as a self-contained backlog the rest of the org has to take on faith. [Communicating value](communicating-value.md) is about making the case; business alignment is about keeping that case true over time, as company priorities shift underneath it. [Brand alignment](brand-alignment.md) covers a related but distinct axis: staying in sync with the brand and marketing teams, not just the business priorities.
 
 <p class="eyebrow">Why It Exists</p>
 
@@ -20,7 +20,7 @@ SAP's version is heavyweight and deliberate: its Chief Design Officer surfaced t
 
 Notion's version is lightweight and continuous: it tracks "sentiment signals" anchored in ordinary workflows rather than formal review cycles. A quick emoji or note of appreciation moving through a shared channel is treated as a real signal of whether a change landed well, not just a nice gesture.
 
-Same underlying discipline — keep the system's story tied to what the organization is actually paying attention to — expressed at two very different scales. — Figma / Design Executive Council, "The new business case for design systems"
+Same underlying discipline — keep the system's story tied to what the organization is actually paying attention to — expressed at two very different scales. — [Figma / Design Executive Council, "The new business case for design systems"](https://www.figma.com/blog/the-new-business-case-for-design-systems/)
 
 The practical version of "mapping to company priorities": before a planning cycle, ask what the company's current top-line goals actually are, and check whether the system's proposed roadmap visibly serves at least one of them in language a non-design stakeholder would recognize. If a system's roadmap can't be connected to any current company priority, that's worth noticing before a budget conversation forces the question.
 

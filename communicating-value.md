@@ -15,7 +15,7 @@ The bar here is currently low industry-wide — zeroheight's 2026 survey of 147 
 
 ## Systems that can't show value are the first cut in a budget squeeze
 
-Systems that can't articulate value beyond "it's tidier" are the first thing cut in a budget squeeze, because nobody outside the system team can see what's actually at stake in losing it. Figma's Design Executive Council research frames the historical version of this conversation as centered almost entirely on productivity — less rework, faster handoffs. It argues that's only part of the picture: organizations increasingly invest in design systems to scale product offerings, improve retention, expand into new markets, and raise the craft bar, not just to move faster internally. — Figma / Design Executive Council, "The new business case for design systems"
+Systems that can't articulate value beyond "it's tidier" are the first thing cut in a budget squeeze, because nobody outside the system team can see what's actually at stake in losing it. Figma's Design Executive Council research frames the historical version of this conversation as centered almost entirely on productivity — less rework, faster handoffs. It argues that's only part of the picture: organizations increasingly invest in design systems to scale product offerings, improve retention, expand into new markets, and raise the craft bar, not just to move faster internally. — [Figma / Design Executive Council, "The new business case for design systems"](https://www.figma.com/blog/the-new-business-case-for-design-systems/)
 
 ## How it shows up in practice
 
@@ -30,7 +30,7 @@ Systems that can't articulate value beyond "it's tidier" are the first thing cut
 - **Linear** frames its system's value less as rigid rules and more as enabling the craft and quality that drives loyalty and retention.
 - **Notion** tracks lightweight "sentiment signals" — feedback moving naturally through team channels — as an ongoing value indicator, rather than only relying on formal reviews.
 
-— Figma / Design Executive Council, "The new business case for design systems"
+— [Figma / Design Executive Council, "The new business case for design systems"](https://www.figma.com/blog/the-new-business-case-for-design-systems/)
 
 **A worked example of the math**, for teams that want the arithmetic rather than the anecdote: Mike Fortuna's account of calculating a business case walks through how to turn design-system time savings into an actual dollar figure a finance stakeholder can evaluate, rather than a directional claim. — [Mike Fortuna, "How I Calculated the Business Case for a Design System"](https://medium.com/@m4tuna/how-i-calculated-the-business-case-for-a-design-system-549def283eb5)
 

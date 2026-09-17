@@ -44,6 +44,8 @@ This page covers the mechanics of recording and maturing decisions. The separate
 
 **Clear roles prevent contribution friction from compounding at scale.** The same failure mode shows up whenever a role is implied rather than stated: if it isn't written down who owns a proposal once it's submitted, who can approve a deprecation, or who a contributor asks when a request stalls, every one of those questions gets re-decided informally, differently, each time it comes up. That's the enterprise-scale version of the point [Contribution models](contribution-models.md) makes about stewardship — the ambiguity that's tolerable with five product teams compounds into real friction once a system serves dozens of them across a large org.
 
+**Ownership should be shared, not assigned to an isolated team.** Jina Anne argues that a design system shouldn't be controlled by a small team dictating rules to everyone else — it works when the wider organization feels real ownership of it: people can see how it works, learn from it, adopt it, contribute to it, and help it evolve, rather than just receive it from above. That's the same instinct behind the Common mistake below, stated as a positive practice instead of a failure mode: a governance process that reads as one team protecting the system from everyone else produces exactly the avoidance it's trying to prevent. — [Jina Anne, "There Is No Design System"](https://24ways.org/2019/there-is-no-design-system/), 24ways
+
 ## Diagram
 
 The knowledge notes describe five stages of governance maturity — a progression, not a scorecard:

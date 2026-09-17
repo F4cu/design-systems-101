@@ -21,6 +21,7 @@
 - **Business alignment**
   - [Communicating value](communicating-value.md)
   - [Business alignment](business-alignment.md)
+  - [Brand alignment](brand-alignment.md)
   - [Stakeholder alignment](stakeholder-alignment.md)
 - **Agentic AI**
   - [AI readiness](ai-context-and-readiness.md)

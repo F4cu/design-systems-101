@@ -46,7 +46,7 @@ Mews went further and tried building adoption measurement from production data, 
 - visual coverage is distorted because large container components dominate the visible area while representing a small fraction of actual component count
 - complexity goes unweighted — a simple tag counts the same as a complex datepicker in most naive metrics
 
-Citing these honestly, including where they failed, is more useful than presenting adoption measurement as solved. — Productboard, "How we measure adoption of a design system at Productboard"; Mews Developers, "Building a design system adoption metric from production data"
+Citing these honestly, including where they failed, is more useful than presenting adoption measurement as solved. — [Productboard, "How we measure adoption of a design system at Productboard"](https://www.productboard.com/blog/how-we-measure-adoption-of-a-design-system-at-productboard/); [Mews Developers, "Building a design system adoption metric from production data"](https://developers.mews.com/design-system-adoption-metric-building/)
 
 ## Common mistake
 

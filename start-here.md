@@ -27,8 +27,14 @@ contribution models, component-API judgment calls, or how to argue for a system'
 budget — those need more than one practitioner's experience to triangulate. You'll also
 meet, cited individually by name and post/report title:
 
-- **Romina Kavcic**, [learn.thedesignsystem.guide](https://learn.thedesignsystem.guide/) — design tokens as machine-readable assets, how AI agents consume design systems.
-- **Nathan Curtis**, EightShapes — team models, contribution criteria, and component-API design (the "configuration collapse" problem).
+- **Romina Kavcic**, [learn.thedesignsystem.guide](https://learn.thedesignsystem.guide/) — design tokens as machine-readable assets, how AI agents consume design systems, and scoping MCP access deliberately.
+- **Nathan Curtis**, EightShapes — team models, contribution criteria, component-API design (the "configuration collapse" problem), and operating cadence.
+- **Jina Anne**, Salesforce UX / 24ways — the "cyclical" team model, structuring teams around cross-functional "hybrid" practitioners, and the case for treating a design system as something the org owns together rather than a rulebook handed down from one team.
+- **Marianne Ashton-Booth** — stakeholder mapping by influence and frequency, planning on three horizons at once, and borrowing frameworks (LeanDS, Stafford Beer's Viable System Model) to keep a system legible to the organization around it.
+- **Dan Mall**, Superfriendly — pilot strategy and the scorecard method for deciding what to build first.
+- **Brad Frost**, *Atomic Design* — decision-tree governance, feedback-loop mechanics, and office-hours/cadence practice, cited across several pages.
+- **Amy Hupe** and **Inayaili de León** — what actually gets people to contribute once a contribution model exists, not just whether the door is open.
+- **Cathy Dutton** — the case against mistaking organizational convenience for genuine reusability when deciding what becomes a shared pattern.
 - **zeroheight's annual Design Systems Report** — survey data from 147 practitioners, used where a claim benefits from being backed by numbers rather than one person's experience.
 - **Figma's Design Executive Council research** and a handful of named companies (Freshworks, SAP, Grammarly, Wise, Mews, and others) who've published specifics about what worked and what broke for them.
 - **Shane P Williams**, founding editor of the [Design Systems Collective](https://designsystemscollective.substack.com/) — governance and documentation under AI consumption, and the emerging job of reconciling design, code, and production as separate sources of truth.
@@ -51,10 +57,10 @@ rather than inventing an answer.
 The wiki is organized into five Parts, roughly in reading order:
 
 1. **Foundations** — what a design system actually is: tokens, the design-to-code handoff.
-2. **Governance & contribution** — how decisions get made and recorded, which contribution model fits which context, how to actually build a culture that contributes to it, and the practical component-API judgment calls: when to add a variant vs. reach for composition, how to avoid prop bloat.
-3. **Adoption & documentation** — the operating rhythm that keeps a system visible (cadence, office hours, stewardship, advocacy, feedback loops), whether it's actually being used, and how documentation either supports or undermines that.
-4. **Communicating value & business alignment** — the org-facing skill of building a business case and keeping the system funded, distinct from running it well.
-5. **AI & agentic systems** — where AI-assisted workflows help and where they just add a new kind of mess. Also: how governance and documentation gaps that were tolerable for human readers stop being tolerable once agents read them too.
+2. **Governance** — how decisions get made and recorded, which contribution model fits which context, how to actually build a culture that contributes to it, and the practical component-API judgment calls: when to add a variant vs. reach for composition, how to avoid prop bloat.
+3. **Adoption** — the operating rhythm that keeps a system visible (cadence, office hours, stewardship, advocacy, feedback loops), whether it's actually being used, and how documentation either supports or undermines that.
+4. **Business alignment** — the org-facing skill of building a business case, staying in sync with brand and marketing, and keeping the system funded, distinct from running it well.
+5. **Agentic AI** — where AI-assisted workflows help and where they just add a new kind of mess. Also: how governance and documentation gaps that were tolerable for human readers stop being tolerable once agents read them too.
 
 Start with [Foundations](foundations.md), or jump straight to whatever section you need
 using the sidebar. A [glossary](glossary.md) at the end collects every term introduced
