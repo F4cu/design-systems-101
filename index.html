@@ -37,14 +37,25 @@
       font-weight: 600;
       margin-left: 16px;
     }
+    /* Give each section (a bold label + its nested list) breathing room from the
+       sections above and below it, so the sidebar reads as grouped lists rather
+       than one long run of links. */
+    .sidebar-nav > ul > li:has(> strong) {
+      margin: 1.5em 0;
+    }
 
     /* WCAG 1.4.8: cap line length at ~75 characters and give paragraphs breathing
        room (>= 1.5x line spacing) — measure applies only to running text, not to
-       headings, tables, or code, which need to use the full available width. */
+       tables or code, which need to use the full available width. Headings share
+       the same cap so titles wrap at the same point as body text: `ch` is relative
+       to the element's own font-size, so applying 75ch directly to h1–h4 (which
+       render larger than the 16px body) would resolve to a wider pixel value and
+       wrap later than paragraphs — use the body's fixed pixel equivalent instead. */
+    :root { --measure: 600px; }
     .markdown-section p,
     .markdown-section li,
     .markdown-section blockquote {
-      max-width: 75ch;
+      max-width: var(--measure);
     }
     .markdown-section p,
     .markdown-section ul,
@@ -60,7 +71,7 @@
     .markdown-section h2 span,
     .markdown-section h3,
     .markdown-section h4 {
-      max-width: 75ch;
+      max-width: var(--measure);
       line-height: 1.35;
     }
 
