@@ -68,6 +68,14 @@ Other conventions:
   sources don't support, flag it as an open question rather than asserting it. See
   `start-here.md` for the full list of named sources and `references.md` for the citation
   index.
+- **Research boundary**: when doing research for this wiki (new claims, new pages, filling
+  an open question), draw only from professionals/sources already used somewhere in the
+  site — don't pull in a new author, blog, or report just because it's a good source on
+  the topic. Before researching, scan `start-here.md`'s source list and every page's
+  citations (or `references.md`, which mirrors them) to know who's already in bounds. This
+  keeps the source pool deliberately narrow rather than widening with every new page. If a
+  claim genuinely needs a source outside that pool, flag it to the user and ask before
+  adding a new name — don't add one silently.
 - **Voice**: explain the *why* before the *what*; assume Figma/design fluency but zero
   assumed knowledge of build tooling, CI, or agent orchestration — define such terms on
   first use. Prefer plain prose over bullet-dense reference tables except in the
