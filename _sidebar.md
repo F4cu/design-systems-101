@@ -28,7 +28,7 @@
   - [Context engineering](context-engineering.md)
   - [Documentation for agents](documentation-for-agents.md)
   - [Designing agentic UI patterns](agentic-ui-patterns.md)
-  - [Feedback loops](feedback-loops.md)
+  - [Generative loops](feedback-loops.md)
   - [Governance for AI](governance-under-ai-consumption.md)
   - [Agentic workflow design](agentic-workflow-design.md)
   - [CI for agentic workflows](ci-for-agentic-workflows.md)

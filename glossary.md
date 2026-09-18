@@ -169,8 +169,9 @@ directly instead of parsing documentation pages. See
 [AI context & readiness](ai-context-and-readiness.md).
 
 **Agentic workflow pattern** — one of several ways multiple AI agents coordinate on a
-task: sequential chain, parallel fan-out, supervisor, or feedback loop. See
-[Agentic workflow design](agentic-workflow-design.md).
+task: sequential chain, parallel agents (what design-system-ops calls a parallel
+fan-out), supervisor, or generator/critic loop (what design-system-ops calls the
+feedback loop). See [Agentic workflow design](agentic-workflow-design.md).
 
 **Autonomy level** — how much human review an AI agent's action requires before it takes
 effect, ranging from fully autonomous to human-only. See
@@ -203,21 +204,26 @@ treated as its own artifact rather than assumed to fall out of good docs; arrive
 independently by two practitioners in the same shape. See
 [Context engineering](context-engineering.md).
 
-**Generator/critic loop** — the feedback-loop orchestration pattern: a generator agent
-produces work, a critic agent reviews it and sends it back for revision, capped at a
-defined number of iterations so it can't run indefinitely. See
-[Feedback loops](feedback-loops.md).
+**Generative loop** — any orchestration shape where an agent's output feeds back into
+another round of generation; not every generative loop includes a review step. See
+[Generative loops](feedback-loops.md).
 
-**Format-evaluation loop** — a feedback loop applied to infrastructure rather than a
+**Generator/critic loop** — the type of generative loop that includes review: a generator
+agent produces work, a critic agent reviews it and sends it back for revision, capped at a
+defined number of iterations so it can't run indefinitely. This is what design-system-ops
+calls the feedback-loop orchestration pattern. See
+[Generative loops](feedback-loops.md).
+
+**Format-evaluation loop** — a generative loop applied to infrastructure rather than a
 single piece of output: propose a context format or metadata schema, measure how
 agents actually perform against it, revise. Diana Wolosin's benchmark of eight MCP
 configurations against 1,056 prompts is the concrete example. See
-[Feedback loops](feedback-loops.md).
+[Generative loops](feedback-loops.md).
 
-**Response regeneration** — AWS Cloudscape's shippable UI pattern for feedback loops:
+**Response regeneration** — AWS Cloudscape's shippable UI pattern for generative loops:
 thumbs-up/thumbs-down controls plus a dedicated regenerate action, putting the same
 discipline in front of the user instead of keeping it as an internal step between two
-agents. See [Feedback loops](feedback-loops.md).
+agents. See [Generative loops](feedback-loops.md).
 
 **AI label / explainability popover** — Carbon for AI's required, component-level
 disclosure that marks content as AI-generated and explains it, so the transparency

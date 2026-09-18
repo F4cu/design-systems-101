@@ -24,7 +24,11 @@ Complexity without payoff on one side, hidden failures on the other — both com
 
 #### 1. Orchestration patterns
 
-The design-system-ops notes describe four orchestration patterns — what the [glossary](glossary.md) calls agentic workflow patterns, named ways agents pass work around. One is worth calling out here: a **sequential chain** runs agents in order, each feeding the next (Component Generator → Description Writer → Accessibility Auditor). It's easy to debug, but slow and fragile to early failures. A second pattern, the **feedback loop** — pairing a generator with a reviewer that sends work back — gets its own page: [Feedback loops](feedback-loops.md).
+The design-system-ops notes describe four orchestration patterns — what the [glossary](glossary.md) calls agentic workflow patterns, named ways agents pass work around (— design-system-ops, knowledge-notes/agent-orchestration-guide.md).
+
+A **sequential chain** runs agents in order, each feeding the next (Component Generator → Description Writer → Accessibility Auditor). It's easy to debug, but slow, and fragile to early failures — one broken step blocks everything behind it. **Parallel agents** — what design-system-ops calls a parallel fan-out — run at once on separate pieces of the same task instead: an Accessibility Auditor and a Performance Auditor working the same component simultaneously, trading the chain's slowness for a new problem — someone still has to reconcile what each branch found. A **supervisor** puts one agent in charge of delegating subtasks to others and deciding when enough has been delegated, rather than following a fixed order or splitting the work up front.
+
+The fourth pattern, what design-system-ops calls the **feedback loop** — pairing a generator with a reviewer that sends work back — is different from the other three in one important way: it's the only one of the four with no built-in stopping point. This wiki calls it by its more specific name, a **generator/critic loop**, one type of a broader category — the **generative loop** — covered on its own page for that reason: [Generative loops](feedback-loops.md).
 
 #### 2. Autonomy levels per action
 

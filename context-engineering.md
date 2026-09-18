@@ -20,7 +20,7 @@ Prose written for a human reader relies on things a model doesn't have: the abil
 
 #### 1. Treat context quality as an empirical question, not a guess
 
-Wolosin didn't assume a metadata format would work — she tested it. At Indeed, she benchmarked eight different MCP (Model Context Protocol) configurations against 1,056 prompts to find which structure agents actually resolved correctly. That's the difference between context engineering as a one-time write-up and context engineering as a practice with a feedback loop of its own — see [Feedback loops](feedback-loops.md) for how that same discipline applies to workflow orchestration.
+Wolosin didn't assume a metadata format would work — she tested it. At Indeed, she benchmarked eight different MCP (Model Context Protocol) configurations against 1,056 prompts to find which structure agents actually resolved correctly. That's the difference between context engineering as a one-time write-up and context engineering as a practice with a generative loop of its own — see [Generative loops](feedback-loops.md) for how the same propose-measure-revise discipline shows up again in agent orchestration, where it has to answer a harder question: when does the loop stop.
 
 #### 2. Agents need an environment, not just instructions
 

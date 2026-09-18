@@ -63,7 +63,7 @@ The wiki is organized into five Parts, roughly in reading order:
 2. **Governance** — how decisions get made and recorded, which contribution model fits which context, how to actually build a culture that contributes to it, and the practical component-API judgment calls: when to add a variant vs. reach for composition, how to avoid prop bloat.
 3. **Adoption** — the operating rhythm that keeps a system visible (cadence, office hours, stewardship, advocacy, feedback loops), whether it's actually being used, and how documentation either supports or undermines that.
 4. **Business alignment** — the org-facing skill of building a business case, staying in sync with brand and marketing, and keeping the system funded, distinct from running it well.
-5. **Agentic AI** — two directions at once: making the system legible to AI as a consumer (context engineering, documentation built for agents, governance under AI consumption), and designing AI as a product surface the system has to support (agentic UI patterns, feedback loops, workflow orchestration, scaling access to risk).
+5. **Agentic AI** — two directions at once: making the system legible to AI as a consumer (context engineering, documentation built for agents, governance under AI consumption), and designing AI as a product surface the system has to support (agentic UI patterns, generative loops, workflow orchestration, scaling access to risk).
 
 Start with [Foundations](foundations.md), or jump straight to whatever section you need
 using the sidebar. A [glossary](glossary.md) at the end collects every term introduced
