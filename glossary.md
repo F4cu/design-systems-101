@@ -145,6 +145,12 @@ objective with a small number of measurable key results, commonly used by compan
 track priorities a design system's roadmap can be mapped against. See
 [Business alignment](business-alignment.md).
 
+**Metadata** — data *about* something, rather than the thing itself: not the component,
+but the facts describing it (its name, its props, its variants, its accessibility role)
+that let a person or an AI agent understand and use it correctly without having to
+inspect the real thing directly. A book's title and author on the spine is metadata; the
+book's contents aren't. See [AI context & readiness](ai-context-and-readiness.md).
+
 **Context cascade** — the way context quality compounds through every handoff in a
 system; strong metadata at the source produces reliable AI output downstream, weak
 metadata produces hallucinated or broken output. See
@@ -175,3 +181,52 @@ See [Scaling AI effort](scaling-ai-effort.md).
 design tool, the system's own metadata, the code-mapping bridge), kept apart so no
 single connection becomes a bottleneck or a single point of failure. See
 [Scaling AI effort](scaling-ai-effort.md).
+
+**Context engineering** — building a structured, machine-readable layer of scoped
+blueprints or metadata that gives an AI agent what prose documentation alone can't,
+treated as its own artifact rather than assumed to fall out of good docs; arrived at
+independently by two practitioners in the same shape. See
+[Context engineering](context-engineering.md).
+
+**Generator/critic loop** — the feedback-loop orchestration pattern: a generator agent
+produces work, a critic agent reviews it and sends it back for revision, capped at a
+defined number of iterations so it can't run indefinitely. See
+[Feedback loops](feedback-loops.md).
+
+**Format-evaluation loop** — a feedback loop applied to infrastructure rather than a
+single piece of output: propose a context format or metadata schema, measure how
+agents actually perform against it, revise. Diana Wolosin's benchmark of eight MCP
+configurations against 1,056 prompts is the concrete example. See
+[Feedback loops](feedback-loops.md).
+
+**Response regeneration** — AWS Cloudscape's shippable UI pattern for feedback loops:
+thumbs-up/thumbs-down controls plus a dedicated regenerate action, putting the same
+discipline in front of the user instead of keeping it as an internal step between two
+agents. See [Feedback loops](feedback-loops.md).
+
+**AI label / explainability popover** — Carbon for AI's required, component-level
+disclosure that marks content as AI-generated and explains it, so the transparency
+requirement ships with the component instead of living in a guidelines page a team can
+skip. See [Designing agentic UI patterns](agentic-ui-patterns.md).
+
+**User-authorized actions** — AWS Cloudscape's scoped permission model ("Allow this
+time," "Allow for this chat," "Always allow") for granting an agent authority to act,
+matched to the risk and reversibility of the action instead of one blanket prompt. See
+[Designing agentic UI patterns](agentic-ui-patterns.md).
+
+**Agents vs. Flows** — GitLab Pajamas' distinction between conversational, iterative AI
+interaction (Agents) and automated, repeatable AI interaction (Flows), each carrying
+different risk tiers and opt-in requirements. See
+[Designing agentic UI patterns](agentic-ui-patterns.md).
+
+**Schema** — a fixed template that says what fields a piece of metadata must have and
+what counts as a valid value in each one (a prop's type, a variant's allowed values),
+so the data has "explicit keys, explicit values, explicit boundaries" and a program can
+parse it without guessing. A restaurant menu's format — name, price, allergens, in that
+order, every time — is a schema; the specific dish is the data filled into it. See
+[Documentation for agents](documentation-for-agents.md).
+
+**Tokens/components as an API** — the framing that a design system's tokens and
+components are already an API contract, read by AI as much as by humans, and should be
+named and structured by function (`OnboardingStep`) rather than appearance (`BlueCard`).
+See [Documentation for agents](documentation-for-agents.md).
