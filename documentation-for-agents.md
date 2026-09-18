@@ -12,7 +12,7 @@ A page of prose with a sidebar is a good shape for a human skimming for the one 
 
 Diana Wolosin's practical split: JSON for component APIs — props, sizes, variants — because a contract needs to be unambiguous, and Markdown for natural-language rules, because rules need nuance a strict schema can't hold. The distinction isn't about which audience gets more care; it's about which format actually serves the claim being made.
 
-Atlassian's design system team made the same bet, and measured it: after shipping an MCP server plus structured content schemas for components, icons, tokens, and lint rules, they reported "52% accuracy improvement in AI calls, 34% faster on average across ADS specific tasks, 26% reduction in AI tooling calls, 16% reduction in AI token usage." — [Atlassian, "Atlassian Design System: building the context engine for the AI era"](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era)
+Atlassian's design system team made the same bet, and measured it: after shipping an MCP server plus structured content schemas for components, icons, tokens, and lint rules, they reported "52% accuracy improvement in AI calls, 34% faster on average across ADS specific tasks, 26% reduction in AI tooling calls, 16% reduction in AI token usage." — [Atlassian, "Atlassian Design System: building the context engine for the AI era"](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era), 2026
 
 ---
 
@@ -24,7 +24,7 @@ Wolosin's rule of thumb: component APIs — the things that need to be exact, li
 
 #### 2. The same structuring work serves both audiences
 
-Atlassian's sharpest line on why this isn't AI-only busywork: "To identify the rules that help LLMs, you also uncover the rules that help explain these concepts to humans — and that's a good thing." — [Atlassian, "Atlassian Design System: building the context engine for the AI era"](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era). This is the same claim [Governance for AI](governance-under-ai-consumption.md) makes from Shane P Williams's side — legibility work for agents is quality work for everyone, not a separate track.
+Atlassian's sharpest line on why this isn't AI-only busywork: "To identify the rules that help LLMs, you also uncover the rules that help explain these concepts to humans — and that's a good thing." — [Atlassian, "Atlassian Design System: building the context engine for the AI era"](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era), 2026. This is the same claim [Governance for AI](governance-under-ai-consumption.md) makes from Shane P Williams's side — legibility work for agents is quality work for everyone, not a separate track.
 
 #### 3. Tokens and components as an API contract, not a wall of nested objects
 

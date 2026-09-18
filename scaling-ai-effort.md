@@ -53,7 +53,7 @@ Romina Kavcic, writing independently, makes the adoption-side argument: "With MC
 - **PostHog** — checks design decisions against real adoption and conversion data, the same evidence [Adoption & measurement](adoption-measurement.md) argues for
 - **Slack** — makes chat history searchable for decision tracking and adoption signals
 
-— Romina Kavcic, ["5 MCP Connections Every Design System Team Needs Right Now"](https://learn.thedesignsystem.guide/p/5-mcp-connections-every-design-system)
+— Romina Kavcic, ["5 MCP Connections Every Design System Team Needs Right Now"](https://learn.thedesignsystem.guide/p/5-mcp-connections-every-design-system), 2025
 
 ---
 

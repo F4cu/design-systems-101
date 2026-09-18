@@ -159,7 +159,7 @@ prose.
 - [Romina Kavcic, "Should you build an agent for your design system"](https://learn.thedesignsystem.guide/p/should-you-build-an-agent-for-your)
 - [Murphy Trueman, "Your next design system user is an agent"](https://blog.murphytrueman.com/your-next-design-system-user/)
 - Murphy Trueman, `design-system-ops` — `knowledge-notes/ai-readiness.md`, `context-engine-blueprints.md`, `agent-orchestration-guide.md`, `human-oversight-framework.md`, `output-discipline.md`, `mcp-setup-guide.md`
-- Spotify Encore, Siemens Industrial Experience, Mitsubishi Electric Serendie — named production systems publishing MCP servers for design-system consumption, referenced in [AI context & readiness](ai-context-and-readiness.md)
+- [Romina Kavcic, "5 MCP Connections Every Design System Team Needs Right Now"](https://learn.thedesignsystem.guide/p/5-mcp-connections-every-design-system), 2025
 - [Shane P Williams, "Legibility Is the New Governance"](https://designsystemscollective.substack.com/p/legibility-is-the-new-governance) — Design Systems Collective
 - [Shane P Williams, "The Informal Contract Is Over"](https://designsystemscollective.substack.com/p/the-informal-contract-is-over) — Design Systems Collective
 - [Shane P Williams, "Drift Doesn't Announce Itself"](https://designsystemscollective.substack.com/p/drift-doesnt-announce-itself) — Design Systems Collective
@@ -180,7 +180,7 @@ prose.
 - [AWS Cloudscape, "User-authorized actions"](https://cloudscape.design/gen-ai/patterns/user-authorized-actions/)
 - [AWS Cloudscape, "Response regeneration"](https://cloudscape.design/gen-ai/patterns/response-regeneration/)
 - [GitLab Pajamas, "AI-human interaction"](https://design.gitlab.com/patterns/ai-human-interaction/) — patterns explicitly flagged by GitLab as still in development
-- [Atlassian, "Atlassian Design System: building the context engine for the AI era"](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era)
+- [Atlassian, "Atlassian Design System: building the context engine for the AI era"](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era), 2026
 - [Microsoft Learn, "Human-centered design for agents"](https://learn.microsoft.com/en-us/agents/design-guidelines/human-centered-design) — flagged on the source page as AI-generated content on an official Microsoft doc, not an individually authored piece
 
 ## A note on sourcing discipline

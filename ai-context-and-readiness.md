@@ -24,16 +24,6 @@ The same team's notes describe a **machine-readable component manifest**: a stru
 
 A task-specific version of this same manifest — Murphy Trueman's seven-blueprint **context engine**, and a second, independently built one from Diana Wolosin — gets its own room in [Context engineering](context-engineering.md). Structuring tokens and components themselves as an API (Romina Kavcic, Murphy Trueman) is covered in [Documentation for agents](documentation-for-agents.md).
 
-#### 2. Production systems exposed via MCP
-
-This isn't only a forward-looking argument — a handful of named systems already expose themselves this way in production:
-
-- **Spotify** has been publicly working on making its Encore system AI-ready via an MCP server, machine-readable documentation, and a layered architecture.
-- **Siemens** ships an MCP server for its Industrial Experience system covering documentation, component APIs, examples, and icons.
-- **Mitsubishi Electric's** Serendie design system publishes an MCP endpoint and documents combining it with Figma's own MCP server, so an agent can read a design and implement it using the system's real components rather than inventing lookalikes.
-
-These are early, but they're concrete evidence that "machine-readable manifest" isn't a hypothetical — it's a shape multiple production systems have already converged on independently.
-
 ---
 
 ## Common mistakes
