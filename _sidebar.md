@@ -2,6 +2,8 @@
 - **Foundations**
   - [What a design system is](foundations.md)
   - [Token architecture](token-architecture.md)
+  - [Component taxonomy](component-taxonomy.md)
+  - [Component building](component-building.md)
   - [The design-to-code contract](design-to-code-contract.md)
   - [UI audit](ui-audit.md)
   - [Pilot strategy](pilot-strategy.md)

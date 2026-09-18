@@ -35,6 +35,9 @@ meet, cited individually by name and post/report title:
 - **Brad Frost**, *Atomic Design* — decision-tree governance, feedback-loop mechanics, and office-hours/cadence practice, cited across several pages.
 - **Amy Hupe** and **Inayaili de León** — what actually gets people to contribute once a contribution model exists, not just whether the door is open.
 - **Cathy Dutton** — the case against mistaking organizational convenience for genuine reusability when deciding what becomes a shared pattern.
+- **Radix Primitives** and **Workday Canvas Design System** — named, citable code-level implementations of subcomponents (as "parts" and "compound components," respectively), used to show how the design-facing vocabulary maps onto a real codebase.
+- **story.to.design** — a design-tooling perspective on subcomponents and slots, cited for how the same pattern shows up as a Figma detachment problem rather than a code problem.
+- **fourzerothree.in** — the Figma-side mechanics of nested instances and exposed properties: how subcomponents actually get built and wired up inside a component file.
 - **zeroheight's annual Design Systems Report** — survey data from 147 practitioners, used where a claim benefits from being backed by numbers rather than one person's experience.
 - **Figma's Design Executive Council research** and a handful of named companies (Freshworks, SAP, Grammarly, Wise, Mews, and others) who've published specifics about what worked and what broke for them.
 - **Shane P Williams**, founding editor of the [Design Systems Collective](https://designsystemscollective.substack.com/) — governance and documentation under AI consumption, and the emerging job of reconciling design, code, and production as separate sources of truth.

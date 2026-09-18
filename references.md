@@ -11,6 +11,22 @@ prose.
 - Alla Kholmatova, *Design Systems: A Practical Guide to Creating Design Languages for Digital Products* (O'Reilly, 2017)
 - [Jina Anne, "Design Systems are for People"](https://www.aiga.org/inspiration/talks/jina-anne-design-systems-are-for-people), AIGA
 
+## Component taxonomy
+
+- [Nathan Curtis, "Subcomponents"](https://medium.com/eightshapes-llc/subcomponents-753ce9f6600a)
+- [Nathan Curtis, "Slots in Design Systems"](https://nathanacurtis.substack.com/p/slots-in-design-systems)
+- [Nathan Curtis, "Configuration Collapse"](https://nathanacurtis.substack.com/p/configuration-collapse)
+- Brad Frost, *Atomic Design*, [Chapter 2](https://atomicdesign.bradfrost.com/chapter-2/) — atoms, molecules, organisms
+- [Radix Primitives, "Composition"](https://www.radix-ui.com/primitives/docs/guides/composition) — parts and the `asChild` pattern
+- [Workday Canvas Design System, "Compound Components"](https://github.com/Workday/canvas-kit/blob/master/modules/docs/mdx/COMPOUND_COMPONENTS.mdx)
+- [story.to.design, "Subcomponents: How to make your design system more flexible"](https://story.to.design/blog/subcomponents-more-flexible-design-systems)
+
+## Component building
+
+- [Nathan Curtis, "Architecting Subcomponents"](https://www.youtube.com/watch?v=NiDoqI_ZhvY), Schema by Figma, 2022
+- [Figma, "Taking cues from code"](https://www.figma.com/blog/taking-cues-from-code/)
+- [fourzerothree.in, "Crafting Components with Subcomponents and Nested Instances"](https://www.fourzerothree.in/p/crafting-components-with-subcomponents)
+
 ## UI audit & heuristic evaluation
 
 - [Brad Frost, "Conducting an Interface Inventory"](https://bradfrost.com/blog/post/conducting-an-interface-inventory/)
