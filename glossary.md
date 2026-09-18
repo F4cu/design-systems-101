@@ -176,6 +176,14 @@ task: sequential chain, parallel fan-out, supervisor, or feedback loop. See
 effect, ranging from fully autonomous to human-only. See
 [Agentic workflow design](agentic-workflow-design.md).
 
+**Safe outputs** — a CI pattern where an agent runs with no write permissions and can only
+emit a structured request (open an issue, propose a PR); a separate, permission-controlled
+job decides whether to act on it. See [CI for agentic workflows](ci-for-agentic-workflows.md).
+
+**Trust tier** (CI) — one of three levels a CI-triggered agent change is sorted into by
+confidence and risk — auto-merge, draft PR, or suggest-only — assigned per action, not per
+agent. See [CI for agentic workflows](ci-for-agentic-workflows.md).
+
 **Challenge Rating (CR)** — a difficulty rating for a UI component based on how dangerous
 it is to implement incorrectly, used to calibrate how much documentation and audit rigor
 it deserves. See [Scaling AI effort](scaling-ai-effort.md).

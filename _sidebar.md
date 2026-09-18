@@ -31,6 +31,7 @@
   - [Feedback loops](feedback-loops.md)
   - [Governance for AI](governance-under-ai-consumption.md)
   - [Agentic workflow design](agentic-workflow-design.md)
+  - [CI for agentic workflows](ci-for-agentic-workflows.md)
   - [Scaling AI effort](scaling-ai-effort.md)
 - [Glossary](glossary.md)
 - [References](references.md)

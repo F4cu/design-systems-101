@@ -149,6 +149,12 @@ prose.
 - [Shane P Williams, "Drift Doesn't Announce Itself"](https://designsystemscollective.substack.com/p/drift-doesnt-announce-itself) — Design Systems Collective
 - [Shane P Williams, "The Job Nobody Is Hiring For Yet"](https://designsystemscollective.substack.com/p/the-job-nobody-is-hiring-for-yet) — Design Systems Collective
 
+## CI for agentic workflows
+
+- [GitHub, "Safe Outputs"](https://github.github.com/gh-aw/reference/safe-outputs/) — GitHub Agentic Workflows documentation
+- [Sil Bormüller, "Your Design System Is Not Ready for AI Agents"](https://www.intodesignsystems.com/blog/design-system-not-ready-for-ai-agents) — conference write-up carrying Romina Kavcic's CI trust-tier framework, Jan Six's GitHub Primer safe-outputs example, and Diana Wolosin's Indeed pipeline figures, from the AI Design Systems Conference 2026
+- Murphy Trueman, `design-system-ops` — `knowledge-notes/ai-readiness.md`
+
 ## Context engineering, documentation for agents, designing agentic UI patterns, feedback loops
 
 - [Diana Wolosin, "Design Systems for AI: Introducing the Context Engine"](https://www.designsystemscollective.com/design-systems-for-ai-introducing-the-context-engine-777726da6a01)
