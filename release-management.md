@@ -22,7 +22,7 @@ These are a real tradeoff, not a right-and-wrong choice. System-wide versioning 
 
 #### 2. Design tokens need their own version discipline
 
-Tokens sit underneath every component, so a token change has the widest blast radius of any change type in the system — a renamed or re-scoped color token can silently break dozens of components downstream that never touched the components' own code. Treat token changes as release events in their own right, with their own major/minor/patch reasoning, rather than folding them quietly into a component release where their impact is easy to miss. ([Design Tokens Substack, "How to Manage Breaking Changes in Design Tokens"](https://designtokens.substack.com/p/how-to-manage-breaking-changes-in))
+Tokens sit underneath every component, so a token change affects the largest number of components of any change type in the system — a renamed or re-scoped color token can silently break dozens of components downstream that never touched the components' own code. Treat token changes as release events in their own right, with their own major/minor/patch reasoning, rather than folding them quietly into a component release where their impact is easy to miss. ([Design Tokens Substack, "How to Manage Breaking Changes in Design Tokens"](https://designtokens.substack.com/p/how-to-manage-breaking-changes-in))
 
 #### 3. Deprecation-to-removal lifecycle
 
@@ -64,5 +64,5 @@ A changelog that requires a consumer to remember to go check it will get missed 
 
 - **Treating the version bump as the deliverable and the migration guide as optional polish.** A major version with no migration guide forces every consuming team to independently reverse-engineer the same diff — the cost of writing the guide once is far lower than the aggregate cost of dozens of teams doing that discovery work in parallel. If a release is significant enough to warrant a major version, it's significant enough to warrant the guide that makes that version usable.
 - **Skipping straight to removal instead of deprecating first.** A breaking change that lands as a surprise removal is a design failure, not just a communication one — deprecation has to be discoverable at the point of use, with advance notice, before it disappears.
-- **Folding a token change quietly into a component release.** Tokens have the widest blast radius of any change type; bundling them in without their own versioning makes their impact easy to miss until it breaks something downstream.
+- **Folding a token change quietly into a component release.** Tokens affect the largest number of components of any change type; bundling them in without their own versioning makes their impact easy to miss until it breaks something downstream.
 - **Letting the changelog go stale.** A changelog that isn't kept current reads to consuming teams exactly like an unmaintained system, whether or not the system itself is actually healthy.

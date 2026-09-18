@@ -48,7 +48,7 @@ Trust isn't usually the bottleneck people assume it is. zeroheight's 2026 survey
 
 #### 4. Common measurement pitfalls
 
-It's worth knowing the naive approaches fail in specific, well-documented ways rather than just "being hard." **Productboard** tried coloring every design-system component on a screen to see visual coverage at a glance — genuinely informative, but they found it couldn't be cleanly quantified as a single metric, because almost no real screen uses *only* system components. Every screen needed a manually-set, somewhat arbitrary coverage threshold.
+The naive approaches fail in specific, well-documented ways, not just because it's hard. **Productboard** tried coloring every design-system component on a screen to see visual coverage at a glance — genuinely informative, but they found it couldn't be cleanly quantified as a single metric, because almost no real screen uses *only* system components. Every screen needed a manually-set, somewhat arbitrary coverage threshold.
 
 **Mews** went further and tried building adoption measurement from production data, and found three specific reasons the obvious approaches broke:
 
@@ -72,4 +72,4 @@ Turning team-level breakdowns into a competitive ranking. Publishing a league ta
 - **Flattens context that matters.** A team building a custom data-visualization library isn't failing to adopt; the system may simply not cover their domain.
 - **Conflates two different findings.** A good adoption report distinguishes "chose not to use" from "needed something the system doesn't provide," because only the first one is an adoption problem at all. — design-system-ops, knowledge-notes/adoption-measurement.md
 
-These numbers also stop at "is it used" — they don't say whether a used, adopted component is actually helping or hurting once it's live in a specific flow. See [Component performance in context](contextual-component-performance.md) for that next layer.
+These numbers also stop at "is it used" — they don't say whether a used, adopted component is actually helping or hurting once it's live in a specific flow. See [Performance in context](contextual-component-performance.md) for that next layer.

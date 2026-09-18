@@ -126,7 +126,6 @@ prose.
 ## Brand alignment
 
 - [userQ, "Design Systems vs. Brand Guidelines"](https://userq.com/design-systems-vs-brand-guidelines-understanding-the-key-differences/)
-- [Smashing Magazine, "The Case For Brand Systems"](https://www.smashingmagazine.com/2019/06/case-brand-systems-align-teams/)
 - [Ness Grixti, "Wise Multi-Brand Design System — Case Study"](https://nessgrixti.com/portfolio/wise-multi-brand/) — also cited in [Governance case studies](governance-case-studies.md)
 - [DHL Brand Hub](https://www.dpdhl-brands.com/en/group/); [MetaDesign — DHL](https://metadesign.com/en/work/dhl) — brand-management platform, cited as a boundary example rather than a design-system case study
 

@@ -24,7 +24,7 @@ Complexity without payoff on one side, hidden failures on the other — both com
 
 #### 1. Orchestration patterns
 
-The design-system-ops notes describe four orchestration patterns — named ways agents pass work around. One is worth calling out here: a **sequential chain** runs agents in order, each feeding the next (Component Generator → Description Writer → Accessibility Auditor). It's easy to debug, but slow and fragile to early failures. A second pattern, the **feedback loop** — pairing a generator with a reviewer that sends work back — gets its own page: [Feedback loops](feedback-loops.md).
+The design-system-ops notes describe four orchestration patterns — what the [glossary](glossary.md) calls agentic workflow patterns, named ways agents pass work around. One is worth calling out here: a **sequential chain** runs agents in order, each feeding the next (Component Generator → Description Writer → Accessibility Auditor). It's easy to debug, but slow and fragile to early failures. A second pattern, the **feedback loop** — pairing a generator with a reviewer that sends work back — gets its own page: [Feedback loops](feedback-loops.md).
 
 #### 2. Autonomy levels per action
 

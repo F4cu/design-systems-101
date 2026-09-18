@@ -1,10 +1,10 @@
-# Governance Under AI Consumption
+# Governance for AI
 
 <p class="eyebrow">The Principle</p>
 
-## Agents treat every documentation gap as load-bearing
+## Agents treat every documentation gap as a rule to follow literally
 
-[AI context & readiness](ai-context-and-readiness.md) is about whether a system's metadata is explicit enough for an agent to consume. This page makes a sharper, related claim: an agent doesn't just need explicit metadata. It treats every gap, every stale doc, and every "everyone just knows" convention as load-bearing, because it has no instinct to fall back on when the written rule and the real one disagree.
+[AI context & readiness](ai-context-and-readiness.md) is about whether a system's metadata is explicit enough for an agent to consume. This page makes a sharper, related claim: an agent doesn't just need explicit metadata. It treats every gap, every stale doc, and every "everyone just knows" convention as a rule to follow literally, because it has no instinct to fall back on when the written rule and the real one disagree.
 
 A human contributor papers over that gap without noticing. An agent doesn't paper over anything — it executes exactly what's written, or exactly what it can infer from the code, whichever is more concrete. Shane P Williams, founding editor of the Design Systems Collective, has spent a 2026 run of essays on exactly this shift: governance and documentation problems that were tolerable when only humans read them, and stop being tolerable once agents do. — [Shane P Williams, "Legibility Is the New Governance"](https://designsystemscollective.substack.com/p/legibility-is-the-new-governance)
 

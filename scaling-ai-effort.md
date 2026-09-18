@@ -27,7 +27,7 @@ One team's knowledge notes borrow a mechanic from a companion project (the Compo
 The rating calibrates everything downstream: documentation depth ("the cost of an AI tool getting a modal wrong is higher than the cost of it getting a badge wrong"), audit order, and contribution standards. A high-CR component contributed without adequate expertise "is worse than no component, because it provides false confidence while introducing real risk."
 — design-system-ops, knowledge-notes/component-bestiary-reference.md
 
-That rating is usually treated as fixed per component. It isn't: the same component's effective CR shifts with where it's placed — see [Component performance in context](contextual-component-performance.md).
+That rating is usually treated as fixed per component. It isn't: the same component's effective CR shifts with where it's placed — see [Performance in context](contextual-component-performance.md).
 
 #### 2. Layered MCP access
 

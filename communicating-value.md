@@ -42,7 +42,7 @@ This is more persuasive than abstract advice because the numbers are attached to
 
 For teams that want the arithmetic rather than the anecdote: Mike Fortuna's account of calculating a business case walks through how to turn design-system time savings into an actual dollar figure a finance stakeholder can evaluate, rather than a directional claim. — [Mike Fortuna, "How I Calculated the Business Case for a Design System"](https://medium.com/@m4tuna/how-i-calculated-the-business-case-for-a-design-system-549def283eb5)
 
-One more illustration worth having in your pocket, used explicitly as an illustration and not a measurement: if a moderately complex component takes three days to design, build, and test, and fifty product teams each build their own version independently, that's 150 days of duplicated work for something that costs a fraction of that built once and shared. The arithmetic is crude and directional, but executives find it persuasive precisely because it's easy to hold in your head.
+One more illustration, used explicitly to persuade rather than measure: if a moderately complex component takes three days to design, build, and test, and fifty product teams each build their own version independently, that's 150 days of duplicated work for something that costs a fraction of that built once and shared. The arithmetic is crude and directional, but executives find it persuasive precisely because it's easy to hold in your head.
 
 ---
 

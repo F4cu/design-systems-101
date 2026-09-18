@@ -1,4 +1,4 @@
-# Component Performance in Context
+# Performance in Context
 
 <p class="eyebrow">The Principle</p>
 
@@ -65,7 +65,7 @@ No team appears to be doing this publicly yet — this section is a speculative 
 
 The instrumentation gap described above — product analytics is context-aware but component-blind, component analytics is usage-aware but context-blind — has historically required stitching together two separate vendors (a product-analytics tool and a component/design-tooling scanner) by hand.
 
-Platforms like [PostHog](https://posthog.com/docs/llm-analytics) have recently started closing that gap natively. They unify product analytics — funnels, session replay, feature flags (toggles that turn a feature on for some users without a new deploy) — with LLM/agent observability: traces (a step-by-step record of what an AI agent did), evaluations, and cost and latency per model call. In that combined system, "every trace has a person behind it" — an LLM call and the human session around it already share one identity graph (a single record linking everything tied to that person), natively. That's a materially different starting point than wiring two disconnected tools together, and it opens up a few concrete possibilities worth naming even though nobody has written them up as a pattern yet:
+Platforms like [PostHog](https://posthog.com/docs/llm-analytics) have recently started closing that gap natively. They unify product analytics — funnels, session replay, feature flags (toggles that turn a feature on for some users without a new deploy) — with LLM/agent observability: traces (a step-by-step record of what an AI agent did), evaluations, and cost and latency per model call. In that combined system, "every trace has a person behind it" — an LLM call and the human session around it already share a single record linking everything tied to that person, natively. That's a materially different starting point than wiring two disconnected tools together, and it opens up a few concrete possibilities worth naming even though nobody has written them up as a pattern yet:
 
 **Tag component instances the same way you'd tag an LLM trace.** If a design system's runtime components already emit an analytics event on mount or interaction (many do, for adoption tracking — see [Adoption measurement](adoption-measurement.md)), extending that event with a `journey_stage` or `page_type` property costs almost nothing and immediately makes the existing funnel and session-replay tooling component-aware, without needing a separate contextual-analytics product.
 

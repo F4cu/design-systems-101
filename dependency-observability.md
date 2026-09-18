@@ -18,7 +18,7 @@ Without this visibility, a team shipping a breaking change has no way to know, b
 
 #### 1. Version fragmentation tracking
 
-Before a design system can reason about the blast radius of a release, it needs to know who's on what. **Spotify's** Encore team treats this as foundational infrastructure rather than a nice-to-have: they run low-level daily statistics gathering on precisely which teams are using precisely which version of the library. That single dataset is what turns "we're deprecating this in the next major" from a guess into a targeted rollout — the team knows in advance which consumers are still on the affected version and can reach them directly instead of broadcasting to everyone.
+Before a design system can reason about how many consumers a release will break, it needs to know who's on what. **Spotify's** Encore team treats this as foundational infrastructure rather than a nice-to-have: they run low-level daily statistics gathering on precisely which teams are using precisely which version of the library. That single dataset is what turns "we're deprecating this in the next major" from a guess into a targeted rollout — the team knows in advance which consumers are still on the affected version and can reach them directly instead of broadcasting to everyone.
 
 #### 2. Usage-pattern and prop-override analytics
 

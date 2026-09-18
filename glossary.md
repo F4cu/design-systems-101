@@ -21,6 +21,9 @@ referenced. See [Token architecture](token-architecture.md).
 letting different tools read and write the same token files. See
 [Token architecture](token-architecture.md).
 
+**Resolver file** — a DTCG file that composes token sets into modes, such as light/dark
+or brand variants, for theming. See [Token architecture](token-architecture.md).
+
 **Design-to-code contract** — an explicit agreement about what "done" means at each
 stage (design, build, documentation, release) of building a component. See
 [The design-to-code contract](design-to-code-contract.md).
@@ -48,6 +51,10 @@ was made, so it doesn't get silently re-litigated later. See
 **Maturity stage** — where a design system sits on a five-level spectrum from ad-hoc to
 optimised, describing the sophistication of its practices, not just its current health.
 See [Component governance](component-governance.md).
+
+**RACI matrix** — a table assigning each governance decision one Responsible, one
+Accountable, and any number of Consulted or Informed parties, so it's clear who decides
+versus who's just weighing in. See [Component governance](component-governance.md).
 
 **Contribution model** — the structural answer to *who* gets to propose and build
 changes to a system, distinct from the mechanics of recording a decision once it's made.

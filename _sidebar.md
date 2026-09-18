@@ -15,7 +15,7 @@
 - **Adoption**
   - [Communication](operating-cadence.md)
   - [Measurement](adoption-measurement.md)
-  - [Component performance in context](contextual-component-performance.md)
+  - [Performance in context](contextual-component-performance.md)
   - [Dependency observability](dependency-observability.md)
   - [Documentation coverage](documentation-coverage.md)
 - **Business alignment**
@@ -29,7 +29,7 @@
   - [Documentation for agents](documentation-for-agents.md)
   - [Designing agentic UI patterns](agentic-ui-patterns.md)
   - [Feedback loops](feedback-loops.md)
-  - [Governance under AI consumption](governance-under-ai-consumption.md)
+  - [Governance for AI](governance-under-ai-consumption.md)
   - [Agentic workflow design](agentic-workflow-design.md)
   - [Scaling AI effort](scaling-ai-effort.md)
 - [Glossary](glossary.md)
