@@ -14,6 +14,8 @@
   - [Component API design](component-api-design.md)
   - [Release management](release-management.md)
   - [Governance case studies](governance-case-studies.md)
+  - [Scaling across decades](scaling-across-decades.md)
+  - [Inheriting a legacy system](inheriting-a-legacy-system.md)
 - **Adoption**
   - [Communication](operating-cadence.md)
   - [Measurement](adoption-measurement.md)

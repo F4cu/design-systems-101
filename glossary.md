@@ -289,6 +289,40 @@ parse it without guessing. A restaurant menu's format — name, price, allergens
 order, every time — is a schema; the specific dish is the data filled into it. See
 [Documentation for agents](documentation-for-agents.md).
 
+**Design language** — the shared visual and interaction vocabulary a design system
+expresses; used at industrial scale to describe the single, unifying layer that holds
+together products built on different tech stacks, by different teams, sometimes
+decades apart. See [Scaling across decades](scaling-across-decades.md).
+
+**RFC** (Request for Comments) — a written proposal for a significant change, circulated
+so people can weigh in before it's decided rather than after; part of a system's
+contribution history worth reading when inheriting it. See
+[Inheriting a legacy system](inheriting-a-legacy-system.md).
+
+**Design system archaeology** — the discipline of reading and understanding an existing
+design system you didn't build, distinct from an audit: an audit asks what's broken,
+archaeology asks what was meant. See
+[Inheriting a legacy system](inheriting-a-legacy-system.md).
+
+**Load-bearing lore** — an undocumented decision in an inherited system that still
+matters (an accessibility fix, a cross-team compromise); the default assumption for
+anything you can't explain, until proven otherwise. See
+[Inheriting a legacy system](inheriting-a-legacy-system.md).
+
+**Vestigial lore** — an undocumented decision in an inherited system that was a
+workaround for a problem that no longer exists. See
+[Inheriting a legacy system](inheriting-a-legacy-system.md).
+
+**Generation** (design system) — an overhaul large enough to touch colors, typography,
+spacing, and components all at once — closer to a revolution than a refinement — as
+distinct from an incremental release. See
+[Inheriting a legacy system](inheriting-a-legacy-system.md).
+
+**Kickstart** — a hands-on session where the design-system team migrates a sample
+product alongside an adopter, in the adopter's own environment, instead of handing over
+a migration guide and leaving them to it. See
+[Inheriting a legacy system](inheriting-a-legacy-system.md).
+
 **Tokens/components as an API** — the framing that a design system's tokens and
 components are already an API contract, read by AI as much as by humans, and should be
 named and structured by function (`OnboardingStep`) rather than appearance (`BlueCard`).

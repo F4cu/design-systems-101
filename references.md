@@ -100,6 +100,18 @@ prose.
 - zeroheight, *Design Systems Report 2026*
 - Figma / Design Executive Council — Grammarly champions-network anecdote, via "The new business case for design systems"
 
+## Scaling across decades
+
+- [Kathrin Schalber, "UXT to Siemens Industrial Experience Migration"](https://ix.siemens.io/blog/2025/09/31/uxt-eos), Siemens iX blog, October 2025
+- [Siemens iX documentation](https://ix.siemens.io/docs/home/overview) and [Siemens iX on GitHub](https://github.com/siemens/ix) — open-source, multi-framework (React, Angular, Vue, Blazor) design system
+- David Sward, "Solving the Design System Problem When Products Live for Decades," UXDX EMEA 2026 — cited from the published session description; no public transcript or recording was available at time of writing, so claims drawn from it are flagged inline as his framing rather than independently verified
+
+## Inheriting a legacy system
+
+- [Murphy Trueman, "Design system archaeology"](https://blog.murphytrueman.com/design-system-archaeology/), April 2026
+- [Nathan Curtis, "Adopting Design System Generations"](https://nathanacurtis.substack.com/p/adopting-design-system-generations-900535442a16)
+- Amy Hupe, "Renovating a design system: Why modernization should feel like turning dials, not flipping switches," zeroheight blog, June 2026 — cited from title/framing only; the post's body text was not retrievable at time of writing
+
 ## Communication
 
 - [Nathan Curtis, "Design System Communications"](https://medium.com/eightshapes-llc/design-system-communications-ca679ffc36d3)
