@@ -12,7 +12,11 @@ Not every component deserves the same documentation depth, audit rigor, or level
 
 Time and attention are scarce. An over-documented badge burns the same hours that an under-documented date picker desperately needs — a uniform bar applied to everything quietly starves your riskiest components. The same logic applies to AI access: an agent wired into every possible tool at once is harder to reason about and debug, because you can't tell which connection produced which behavior. In both cases, "more" isn't safer. Calibrated is safer.
 
-## How it shows up in practice
+---
+
+## In Practice
+
+#### 1. Challenge Rating scoring
 
 One team's knowledge notes borrow a mechanic from a companion project (the Component Bestiary, which catalogues UI components as D&D-style creatures): a **Challenge Rating (CR)** that ranks *implementation danger*, not visual complexity. A high-CR component "is not necessarily large or visually complex — it is dangerous to implement incorrectly."
 
@@ -25,6 +29,8 @@ The rating calibrates everything downstream: documentation depth ("the cost of a
 
 That rating is usually treated as fixed per component. It isn't: the same component's effective CR shifts with where it's placed — see [Component performance in context](contextual-component-performance.md).
 
+#### 2. Layered MCP access
+
 The same notes apply calibrated scoping to agent access through **MCP** (Model Context Protocol — the interface that lets an AI agent read component definitions and token values directly from their real sources instead of a stale copy-paste). Rather than one giant connection, the setup is three deliberately separated layers:
 
 - a design MCP like Figma's — design source of truth: names, variants, token values, but no code-level props
@@ -33,6 +39,8 @@ The same notes apply calibrated scoping to agent access through **MCP** (Model C
 
 Cross-layer questions like "what code component should I use for this Figma frame?" resolve layer by layer; no single server becomes a bottleneck.
 — design-system-ops, knowledge-notes/mcp-setup-guide.md
+
+#### 3. Scoped, incremental MCP rollout
 
 Romina Kavcic, writing independently, makes the adoption-side argument: "With MCP, you control exactly what data and tools AI can access. It's not about giving AI free rein, but about creating specific, controlled bridges." Her advice: "Start small: Pick one tool, set up MCP, and automate one repetitive task. Once you see the value, expand from there" — one connection first (she suggests Figma), not everything at once. Each bridge she names is scoped to a single job, not general-purpose access:
 

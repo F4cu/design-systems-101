@@ -12,13 +12,19 @@ A design system's roadmap should be legible against what the company actually ca
 
 A system pitched once at launch and never re-justified drifts out of sync with what the business is actually optimizing for. A cost-cutting year and a growth year call for a different emphasis in the same roadmap — the work might not change much, but which parts of it get talked about should. Supernova's guidance on getting buy-in puts this plainly: map your roadmap to company-level priorities, and flag the parts of your budget request that are mission-critical in the eyes of the people who currently hold the purse strings — not the parts that are mission-critical to the system team internally. — [Supernova, "How to Build a Business Case for Your Design System"](https://www.supernova.io/blog/how-to-build-a-business-case-for-your-design-system)
 
-## How it shows up in practice
+---
+
+## In Practice
 
 Two real examples sit at opposite ends of formality, and both work for the scale they're operating at.
 
-SAP's version is heavyweight and deliberate: its Chief Design Officer surfaced the design system at board level and made it a KPI tracked through OKRs, with over a million user data points feeding back into the system and roughly ten hours a week of the CDO's own time spent on design reviews.
+#### 1. SAP: heavyweight and deliberate
 
-Notion's version is lightweight and continuous: it tracks "sentiment signals" anchored in ordinary workflows rather than formal review cycles. A quick emoji or note of appreciation moving through a shared channel is treated as a real signal of whether a change landed well, not just a nice gesture.
+**SAP's** version surfaced the design system at board level: its Chief Design Officer made it a KPI tracked through OKRs, with over a million user data points feeding back into the system and roughly ten hours a week of the CDO's own time spent on design reviews.
+
+#### 2. Notion: lightweight and continuous
+
+**Notion's** version tracks "sentiment signals" anchored in ordinary workflows rather than formal review cycles. A quick emoji or note of appreciation moving through a shared channel is treated as a real signal of whether a change landed well, not just a nice gesture.
 
 Same underlying discipline — keep the system's story tied to what the organization is actually paying attention to — expressed at two very different scales. — [Figma / Design Executive Council, "The new business case for design systems"](https://www.figma.com/blog/the-new-business-case-for-design-systems/)
 

@@ -18,11 +18,19 @@ Romina Kavcic attacks it from the economics side: "find the simplest solution po
 
 Complexity without payoff on one side, hidden failures on the other — both come from building the automation before designing the coordination.
 
-## How it shows up in practice
+---
+
+## In Practice
+
+#### 1. Orchestration patterns
 
 The design-system-ops notes describe four orchestration patterns — named ways agents pass work around. Two are worth calling out here: a **sequential chain** runs agents in order, each feeding the next (Component Generator → Description Writer → Accessibility Auditor). It's easy to debug, but slow and fragile to early failures. A **feedback loop** pairs a generator with a reviewer that critiques and sends work back — higher quality than a single pass, but it "can loop indefinitely if convergence criteria are not defined," so cap it at about three iterations (— design-system-ops, knowledge-notes/agent-orchestration-guide.md).
 
+#### 2. Autonomy levels per action
+
 For the human side, the same practitioner's oversight framework starts from "Agents execute; humans are accountable," and assigns an autonomy level per *action*, not per agent. At one pole, Level 1 (fully autonomous) covers deterministic, programmatically verifiable work like generating a prop list from a TypeScript interface. At the other useful pole, Level 3 (human-in-the-loop) means the agent prepares the action but a human approves it before it executes — publishing a component update, applying a breaking token change (— design-system-ops, knowledge-notes/human-oversight-framework.md).
+
+#### 3. Scoped output claims
 
 One discipline applies to anything an agent publishes on its own: scope claims to what was actually inspected — "no X was found in the files scanned," never "the system has no X" (— design-system-ops, knowledge-notes/output-discipline.md).
 

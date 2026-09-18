@@ -14,19 +14,29 @@ A human contributor papers over that gap without noticing. An agent doesn't pape
 
 Williams frames the failure mode precisely: "When an agent is handed your documentation and still reaches for freshly generated code instead of your component library, the system failed a legibility test, not a tool test." The instinct is to blame the tool or the model. The actual cause is almost always upstream — an ambiguous name, an undocumented exception, a rule that only lived in one engineer's head. "If your design system cannot be understood without a human translator, it was never really infrastructure. It was craft, maintained by goodwill." — [Shane P Williams, "Legibility Is the New Governance"](https://designsystemscollective.substack.com/p/legibility-is-the-new-governance)
 
-## How it shows up in practice
+---
 
-**Informal agreements stop being informal.** Williams's sharpest claim: a lot of what teams call "governance" was never actually enforced. It was a shared understanding that humans navigated by instinct, tone, and relationship, not by a rule anyone could point to.
+## In Practice
+
+#### 1. Formalizing informal agreements
+
+Williams's sharpest claim: a lot of what teams call "governance" was never actually enforced. It was a shared understanding that humans navigated by instinct, tone, and relationship, not by a rule anyone could point to.
 
 "The informal contract that humans could navigate by instinct becomes a hard boundary an agent will test without mercy," because "when a machine consumes your design system, it does not interpret intent. It executes whatever you actually built, not what you meant to build." His conclusion about what that arrangement actually was: "That was never a system. It was a relationship" — and a relationship doesn't scale to a consumer that can't read tone. The fix isn't stricter enforcement of the old informal rule; it's admitting the rule was never written down, and writing it down now, before something tests it. — [Shane P Williams, "The Informal Contract Is Over"](https://designsystemscollective.substack.com/p/the-informal-contract-is-over)
 
-**Deferred maintenance doesn't disappear, it gets more expensive.** The corollary to the point above: gaps a team has been living with for years — an under-documented edge case, a component that technically has two conflicting "correct" usages — don't cause new damage the day an agent shows up. They were always a cost. Williams's framing: "the work that teams quietly deferred has not gone away. It has simply become more visible, and considerably more expensive." This connects directly to [documentation coverage](documentation-coverage.md)'s three-rung model — a component stuck at "exists" instead of "guided" was already a risk for new human contributors; an agent just removes the grace period.
+#### 2. Cost of deferred maintenance
 
-**A written record is not the same as a true one.** [Component governance](component-governance.md) already argues for decision records so a system doesn't re-litigate the same question every 18 months. Williams pushes past that: writing the record down solves the *memory* problem but not the *staleness* problem. "Every design system claims a source of truth. Fewer are honest about how long ago anyone last checked it," and — more bluntly — "writing something down is not the same as keeping it true."
+The corollary to the point above: gaps a team has been living with for years — an under-documented edge case, a component that technically has two conflicting "correct" usages — don't cause new damage the day an agent shows up. They were always a cost. Williams's framing: "the work that teams quietly deferred has not gone away. It has simply become more visible, and considerably more expensive." This connects directly to [documentation coverage](documentation-coverage.md)'s three-rung model — a component stuck at "exists" instead of "guided" was already a risk for new human contributors; an agent just removes the grace period.
+
+#### 3. Written records vs. true records
+
+[Component governance](component-governance.md) already argues for decision records so a system doesn't re-litigate the same question every 18 months. Williams pushes past that: writing the record down solves the *memory* problem but not the *staleness* problem. "Every design system claims a source of truth. Fewer are honest about how long ago anyone last checked it," and — more bluntly — "writing something down is not the same as keeping it true."
 
 What he found actually prevented drift in practice wasn't better documentation tooling — it was a habit: "one origin for a fact, checked against reality instead of copied from memory." A rule survives not because someone wrote it once, but because "someone rewrote it, in the open, reasoning intact," when reality (a browser update, a new edge case) proved the old version wrong. The practical takeaway: a decision record needs an owner who periodically re-checks it against the real system, not just an author who filed it once. — [Shane P Williams, "Drift Doesn't Announce Itself"](https://designsystemscollective.substack.com/p/drift-doesnt-announce-itself)
 
-**Multiple honest sources of truth still need a referee.** Design intent (Figma), documented behavior (Storybook), and what's actually running in production routinely disagree. Not because someone is lying, but because "none of the three is lying. They are each authoritative for a different question." Figma answers "what was intended," Storybook answers "what was built and documented," production answers "what's actually shipped."
+#### 4. A referee for competing sources of truth
+
+Design intent (Figma), documented behavior (Storybook), and what's actually running in production routinely disagree. Not because someone is lying, but because "none of the three is lying. They are each authoritative for a different question." Figma answers "what was intended," Storybook answers "what was built and documented," production answers "what's actually shipped."
 
 Williams argues this creates a job that mostly doesn't formally exist yet: "once truth lives in layers, who is actually responsible for keeping them honest with each other." Telling a healthy, deliberate divergence (production adapted for a real constraint) apart from unintentional decay (nobody updated Storybook after a change) "is judgment, and judgment needs an owner, not a dashboard."
 

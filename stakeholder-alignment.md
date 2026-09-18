@@ -12,9 +12,13 @@
 
 ITVX's Mosaic design system illustrates the scale problem concretely. What started in 2015 as ITV Hub grew into ITVX by 2022, and the design system's operating model grew with it. A centralized core of 3 people (1 head of design systems + 2 designers) now sits alongside a distributed layer of 14 cross-functional partners (2 tech managers, 7 engineers, 7 designers). Together they feed 13 product workstreams across 2 product pillars, which in turn support 6 platforms and roughly 15,000 devices (browser, CTV, tvOS, iOS, Android, Roku). At that scale, no core team — however good — can personally track what every stakeholder needs. The tools that follow are ways of making that tracking explicit instead of leaving it to whoever happens to be in the room. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
 
-## How it shows up in practice
+---
 
-**Map stakeholders on two axes: influence and frequency, not just seniority.** Ashton-Booth's quadrant crosses how often someone uses the system against how much influence they hold over its direction:
+## In Practice
+
+#### 1. Stakeholder mapping by influence and frequency
+
+Ashton-Booth's quadrant crosses how often someone uses the system against how much influence they hold over its direction:
 
 - High frequency + high influence is a **primary user** ("required" — the system has to work for them, full stop). Their default question: "how can I create the most value in my role and contribute back?"
 - High frequency + low influence is a **secondary user** ("consulted" — they feel every rough edge but don't set direction). Their default question: "how does the design system support our product strategy, and which metrics show its impact?"
@@ -23,9 +27,11 @@ ITVX's Mosaic design system illustrates the scale problem concretely. What start
 
 A pitch, an update, or a piece of documentation aimed at the wrong quadrant's question lands as noise even when the underlying information is correct. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
 
-**Reuse Simon Sinek's Golden Circle to separate stakeholder concerns by altitude, not just by role.** Layered onto the same four groups: primary users sit at the **What** layer (results, output, outcomes); product stakeholders sit at **How** (process and actions); secondary users sit at **Why** (purpose and motivation); business stakeholders sit at **Impact**, the combined output of all three layers together. The practical use: when a business stakeholder asks a "why" question, answering with a "what" — a list of shipped components — doesn't land, because they're asking from the Impact layer looking down, not the What layer looking up. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026, citing Simon Sinek's Golden Circle
+#### 2. Golden Circle for stakeholder altitude
 
-**Plan on three horizons at once, each with its own key question.**
+Layered onto the same four groups: primary users sit at the **What** layer (results, output, outcomes); product stakeholders sit at **How** (process and actions); secondary users sit at **Why** (purpose and motivation); business stakeholders sit at **Impact**, the combined output of all three layers together. The practical use: when a business stakeholder asks a "why" question, answering with a "what" — a list of shipped components — doesn't land, because they're asking from the Impact layer looking down, not the What layer looking up. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026, citing Simon Sinek's Golden Circle
+
+#### 3. Three-horizon planning
 
 - *Tactical* planning ("Now") moves quickly and removes friction: clear short-term priorities, daily support, fast blocker resolution. It answers "how do we support teams and keep delivery moving?"
 - *Strategic* planning ("Next") creates direction and alignment: clear priorities, cross-team alignment, longer-term thinking. It answers "how do we scale in the right direction?"
@@ -33,7 +39,9 @@ A pitch, an update, or a piece of documentation aimed at the wrong quadrant's qu
 
 Running only the tactical horizon is what produces a system that's always fighting fires. Running only the normative horizon is what produces a system with a beautiful mission statement and no delivery. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
 
-**Use a structured framework — LeanDS — to turn a system pitch into something that survives scrutiny.** The framework organizes 11 questions into three sections mirroring Why / What / How:
+#### 4. LeanDS framework for system pitches
+
+The framework organizes 11 questions into three sections mirroring Why / What / How:
 
 - *Why* (purpose): the wider organisation (how big, single- or multi-brand, who the system serves), business goals & objectives (what the business is focused on right now), and the system problem (what's working, what isn't).
 - *What* (drivers & motives, deliberately aligned with the Lean UX canvas): system users, user benefits & outcomes, metrics & measurements, solutions, and a hypothesis that stitches the rest together.
@@ -45,7 +53,9 @@ The hypothesis box is the framework's spine — it forces every other box into o
 
 A pitch that can't complete that sentence usually has a gap in one of the 11 boxes, not just a communication problem. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026 / [`marianneab.substack.com`](https://marianneab.substack.com), "LeanDS Framework"
 
-**Borrow a harder diagnostic from cybernetics when the org itself feels the misalignment: Stafford Beer's Viable System Model.** Beer's own framing of why any organization needs this: "An organisation is viable if it can survive in a particular sort of environment. For although its existence is separate, so that it enjoys some kind of autonomy, it cannot survive in a vacuum." Ashton-Booth maps a design system onto Beer's five subsystems:
+#### 5. Viable System Model diagnostic
+
+Beer's own framing of why any organization needs this: "An organisation is viable if it can survive in a particular sort of environment. For although its existence is separate, so that it enjoys some kind of autonomy, it cannot survive in a vacuum." Ashton-Booth maps a design system onto Beer's five subsystems:
 
 - **System 1** is core operations — the actual tokens, components & patterns, and guidelines being produced.
 - **System 2** is the communication channels that coordinate System 1 so its parts don't work at cross-purposes.
@@ -55,7 +65,9 @@ A pitch that can't complete that sentence usually has a gap in one of the 11 box
 
 The diagnostic value isn't the org chart, it's the question it forces: a system that's all System 1 (shipping components) with no System 4 (nobody watching what's coming) or System 5 (no stakeholder influence feeding back in) is optimizing the wrong thing at exactly the moment it most needs to adapt. — Stafford Beer, *Diagnosing the System for Organisations*, 1985; [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
 
-**Measure on three different clocks, matched to what's actually changing.** Awareness & perception — how the organization *feels* about the system — is qualitative and moves slowly enough to check every 6–9 months. Usability & discoverability is both quantitative and qualitative and moves fast enough to check quarterly. Adoption & contribution is quantitative and moves fast enough to check monthly. See [Adoption measurement](adoption-measurement.md) for the metrics themselves; the addition here is cadence — checking perception monthly produces noise, and checking adoption only twice a year is too slow to catch drift before it compounds. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
+#### 6. Three-clock measurement
+
+Awareness & perception — how the organization *feels* about the system — is qualitative and moves slowly enough to check every 6–9 months. Usability & discoverability is both quantitative and qualitative and moves fast enough to check quarterly. Adoption & contribution is quantitative and moves fast enough to check monthly. See [Adoption measurement](adoption-measurement.md) for the metrics themselves; the addition here is cadence — checking perception monthly produces noise, and checking adoption only twice a year is too slow to catch drift before it compounds. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
 
 ## Common mistake
 

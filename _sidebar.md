@@ -13,7 +13,7 @@
   - [Release management](release-management.md)
   - [Governance case studies](governance-case-studies.md)
 - **Adoption**
-  - [Operating cadence](operating-cadence.md)
+  - [Communication](operating-cadence.md)
   - [Measurement](adoption-measurement.md)
   - [Component performance in context](contextual-component-performance.md)
   - [Dependency observability](dependency-observability.md)

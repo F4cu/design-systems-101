@@ -14,19 +14,31 @@ Two of the most common measurement habits in a design system practice — isolat
 
 Without measuring in situ (in its actual place of use, not in isolation), a team makes one of two mistakes. It either misdiagnoses the fix — rebuilding a component that's actually fine in 9 of 10 contexts — or misses the fix entirely, because the component's aggregate numbers stay green while it bottlenecks the one journey the business cares most about.
 
-## How it shows up in practice
+---
 
-**The instrumentation gap is real, and nobody has fully closed it.** Product analytics tools built for measuring friction — funnel drop-off (where users abandon a multi-step flow), rage clicks (repeated fast clicks on something that isn't responding), dead clicks (a click that triggers no visible response), session replay (a recorded playback of a real user's screen) — are page- and flow-aware by design. But they have no native concept of "design system component."
+## In Practice
 
-Component usage tooling is the mirror image. Import scanners like Pinterest's FigStats or Atlassian's custom scanner (see [Adoption measurement](adoption-measurement.md)) are component-aware but context-blind: an import count doesn't know or care whether that instance sits in a checkout step or a settings panel. Closing the gap means deliberately tagging analytics events with both the component identity *and* its journey context — a practice that has to be built in-house, because no tool ships this connection out of the box.
+#### 1. The instrumentation gap
 
-**Risk is a function of component × context, not component alone.** [Scaling AI effort](scaling-ai-effort.md) borrows a Challenge Rating (CR) concept that ranks how dangerous a component is to implement incorrectly — badges low, date pickers and data tables high. That rating is usually treated as a fixed property of the component. In practice it isn't: the same dropdown can be CR 1 in a dashboard filter and effectively CR 6 in a payment step, because the cost of the same mistake scales with what the surrounding journey is trying to accomplish. A context-aware practice re-asks the CR question per placement, not just per component.
+Product analytics tools built for measuring friction — funnel drop-off (where users abandon a multi-step flow), rage clicks (repeated fast clicks on something that isn't responding), dead clicks (a click that triggers no visible response), session replay (a recorded playback of a real user's screen) — are page- and flow-aware by design. But they have no native concept of "design system component."
 
-**Detachment and override spikes are a signal worth slicing by page, not just by component.** Figma's design-system metrics research quotes athenahealth's Veronica Agne treating a rise in component detachment as a flag worth investigating — "it can mean one of three things: there's a bug, people want an enhancement, or..." — [Figma, "Design systems 104: Making metrics matter"](https://www.figma.com/blog/design-systems-104-making-metrics-matter/). That diagnosis sharpens considerably once it's sliced by *where* the detachment happens: a component detached everywhere points to a flaw in the component itself; a component detached only on one journey's screens points to a context mismatch the shared version doesn't handle — evidence for a variant or contract change, not a rebuild.
+Component usage tooling is the mirror image. Import scanners like **Pinterest's** FigStats or **Atlassian's** custom scanner (see [Adoption measurement](adoption-measurement.md)) are component-aware but context-blind: an import count doesn't know or care whether that instance sits in a checkout step or a settings panel. Closing the gap means deliberately tagging analytics events with both the component identity *and* its journey context — a practice that has to be built in-house, because no tool ships this connection out of the box.
 
-**Ask "bottleneck or accelerant," not just "used or not."** A component can be adopted, accessible, and on-brand, and still be the specific step where a critical journey slows down or drops users — checkout, onboarding, upgrade flows. That question is answerable with the same funnel and friction instrumentation product teams already run; the missing piece is connecting a drop-off step back to the specific component instance sitting at that step, so the finding routes to the design system team instead of dead-ending as a generic "step 3 has high abandonment."
+#### 2. Risk as component × context
 
-**The same measurement failure modes get worse once you slice by context.** Mews's account of building adoption metrics from production data found that import-based counts are unreliable once components get extended and re-exported, that large container components distort visual measurement, and that complexity goes unweighted in naive metrics (cited in [Adoption measurement](adoption-measurement.md)). Slicing any of those measurements down to a single journey or page type shrinks the sample further and amplifies the same noise — a context-level finding needs more evidence, not less, before it's trusted.
+[Scaling AI effort](scaling-ai-effort.md) borrows a Challenge Rating (CR) concept that ranks how dangerous a component is to implement incorrectly — badges low, date pickers and data tables high. That rating is usually treated as a fixed property of the component. In practice it isn't: the same dropdown can be CR 1 in a dashboard filter and effectively CR 6 in a payment step, because the cost of the same mistake scales with what the surrounding journey is trying to accomplish. A context-aware practice re-asks the CR question per placement, not just per component.
+
+#### 3. Slice detachment/override spikes by page
+
+**Figma's** design-system metrics research quotes **athenahealth's** Veronica Agne treating a rise in component detachment as a flag worth investigating — "it can mean one of three things: there's a bug, people want an enhancement, or..." — [Figma, "Design systems 104: Making metrics matter"](https://www.figma.com/blog/design-systems-104-making-metrics-matter/). That diagnosis sharpens considerably once it's sliced by *where* the detachment happens: a component detached everywhere points to a flaw in the component itself; a component detached only on one journey's screens points to a context mismatch the shared version doesn't handle — evidence for a variant or contract change, not a rebuild.
+
+#### 4. Bottleneck or accelerant, not just usage
+
+A component can be adopted, accessible, and on-brand, and still be the specific step where a critical journey slows down or drops users — checkout, onboarding, upgrade flows. That question is answerable with the same funnel and friction instrumentation product teams already run; the missing piece is connecting a drop-off step back to the specific component instance sitting at that step, so the finding routes to the design system team instead of dead-ending as a generic "step 3 has high abandonment."
+
+#### 5. Measurement failure modes worsen with context
+
+**Mews's** account of building adoption metrics from production data found that import-based counts are unreliable once components get extended and re-exported, that large container components distort visual measurement, and that complexity goes unweighted in naive metrics (cited in [Adoption measurement](adoption-measurement.md)). Slicing any of those measurements down to a single journey or page type shrinks the sample further and amplifies the same noise — a context-level finding needs more evidence, not less, before it's trusted.
 
 ## Diagram
 

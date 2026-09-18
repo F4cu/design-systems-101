@@ -14,13 +14,21 @@ The layers exist so change stays cheap. If a button's background is hardcoded �
 
 That's why skipping a tier is so damaging. The same team's notes call cross-tier references at the wrong level "the most architecturally damaging token violation": `button.background.default: {color.blue.500}` *appears* to work — the right colour shows up — but "a rebrand or theme change that correctly updates the semantic tier will not reach this component." It breaks silently, and you only find out mid-rebrand. — design-system-ops, knowledge-notes/token-architecture.md
 
-## How it shows up in practice
+---
 
-There's now a shared standard for how tokens are written down: the Design Tokens Community Group format. Its first stable spec (DTCG 2025.10, released October 2025) defines 13 token types (color, dimension, fontFamily, and so on) and composite tokens like typography and shadow, whose sub-values must themselves reference tokens correctly, not just the top-level value. It also defines resolver files, which compose token sets into modes like light/dark or brand variants for theming. — design-system-ops, knowledge-notes/token-architecture.md
+## In Practice
+
+#### 1. Shared token format standard
+
+There's now a shared standard: the Design Tokens Community Group format. Its first stable spec (DTCG 2025.10, released October 2025) defines 13 token types (color, dimension, fontFamily, and so on) and composite tokens like typography and shadow, whose sub-values must themselves reference tokens correctly, not just the top-level value. It also defines resolver files, which compose token sets into modes like light/dark or brand variants for theming. — design-system-ops, knowledge-notes/token-architecture.md
+
+#### 2. Platform-agnostic naming, tooling handles translation
 
 The same notes cover cross-platform naming: platform differences (web pixels vs. iOS points, different typefaces) are handled by transformation tooling — software like Style Dictionary that converts one token file into each platform's native format — never encoded into the name itself. It's `spacing.4`, not `spacing.web.4`.
 
-As a closing thought on naming: Murphy Trueman argues that "your design system is already an API; the question is whether it's a good one" — [Murphy Trueman, "Your next design system user is an agent"](https://blog.murphytrueman.com/your-next-design-system-user/). A token name isn't a label; it's a contract with every consumer, human or machine. (More on the machine consumers in pages 07–09.)
+#### 3. Token names as contracts
+
+Murphy Trueman argues that "your design system is already an API; the question is whether it's a good one" — [Murphy Trueman, "Your next design system user is an agent"](https://blog.murphytrueman.com/your-next-design-system-user/). A token name isn't a label; it's a contract with every consumer, human or machine. (More on the machine consumers in pages 07–09.)
 
 ## Diagram
 
