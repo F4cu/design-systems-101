@@ -34,6 +34,28 @@ finishing any page you write or edit, or when the user asks for a writing/conten
    same idea). If a genuinely new term is needed, it must be added to `glossary.md` in
    the same pass.
 
+   This matters most in the Agentic AI section, which synthesizes vocabulary from
+   several named sources (design-system-ops, Kavcic, Wolosin, Trueman, and others) who
+   each use their own words for the same idea — "parallel fan-out" vs. "parallel
+   agents," "feedback loop" vs. "generator/reviewer loop." The convention already
+   established there, and the one to enforce on any new page:
+   - Pick **one** canonical term for this wiki's own prose — prefer the plainest,
+     least jargon-heavy option a Figma-fluent, build-tooling-naive reader would
+     understand without translation (e.g. "reviewer" over "critic").
+   - The first time a page uses that term, gloss a source's different wording for the
+     same thing inline, once — "**parallel agents** — what design-system-ops calls a
+     parallel fan-out —" — so a reader coming from that source's own vocabulary can
+     still find the mapping. Don't repeat the gloss every time the term recurs on the
+     same page.
+   - Add or update the mapping in `glossary.md` so it's resolvable from one place
+     without having to find the page that first introduced it.
+   - If a term isn't attributed to any named source at all (an editorial word this
+     wiki invented to name a role or shape, not a quote or a source's own label),
+     don't research a new source to justify it — that's exactly the "widening the
+     pool" the research-boundary rule in `CLAUDE.md` warns against. Either pick the
+     plainest available word and use it consistently, or flag it to the user as an
+     open question if the choice actually matters.
+
 3. **Concrete over abstract, always.** Prefer a specific example, name, or number over a
    general claim. "Teams re-litigate decisions" is weaker than "teams without decision
    records re-litigate the same call every 18 months." This matches the existing page

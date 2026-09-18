@@ -31,13 +31,13 @@ That rating is usually treated as fixed per component. It isn't: the same compon
 
 #### 2. Layered MCP access
 
-The same notes apply calibrated scoping to agent access through **MCP** (Model Context Protocol — the interface that lets an AI agent read component definitions and token values directly from their real sources instead of a stale copy-paste). Rather than one giant connection, the setup is three deliberately separated layers:
+The same notes apply calibrated scoping to agent access through **MCP** (Model Context Protocol — the interface that lets an AI agent read component definitions and token values directly from their real sources instead of a stale copy-paste). Rather than one giant connection, the setup is three deliberately separated **MCP layers**:
 
 - a design MCP like Figma's — design source of truth: names, variants, token values, but no code-level props
 - the system's own MCP server — machine-readable inventory, governance rules, decision trees, but no raw source code
 - Code Connect — mapping "this design uses a Button" to `import { Button } from '@system/components'`, but not the full source
 
-Cross-layer questions like "what code component should I use for this Figma frame?" resolve layer by layer; no single server becomes a bottleneck.
+Cross-layer questions like "what code component should I use for this Figma frame?" resolve layer by layer; no single MCP layer becomes a bottleneck.
 — design-system-ops, knowledge-notes/mcp-setup-guide.md
 
 The same calibration shows up at the product-UI layer, not just the infrastructure layer. AWS Cloudscape's **user-authorized actions** pattern scopes an agent's permission to act on a per-decision basis — "Allow this time," "Allow for this chat," or "Always allow" — rather than one blanket grant. It's the same principle as layered MCP access, applied to what a user grants an agent inside a product rather than what a design system grants an agent reading it. See [Designing agentic UI patterns](agentic-ui-patterns.md). — [AWS Cloudscape, "User-authorized actions"](https://cloudscape.design/gen-ai/patterns/user-authorized-actions/)

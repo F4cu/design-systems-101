@@ -13,6 +13,10 @@ stands in for a hardcoded value in code. See [Token architecture](token-architec
 (`color.action.primary`), referencing a primitive underneath. See
 [Token architecture](token-architecture.md).
 
+**Component token** — an optional third tier that scopes a semantic token's intent to one
+specific component, referencing a semantic token underneath. See
+[Token architecture](token-architecture.md).
+
 **Alias** (token reference) — a token that points to another token instead of holding a
 raw value directly, so a single change at the source propagates everywhere it's
 referenced. See [Token architecture](token-architecture.md).
@@ -170,7 +174,7 @@ directly instead of parsing documentation pages. See
 
 **Agentic workflow pattern** — one of several ways multiple AI agents coordinate on a
 task: sequential chain, parallel agents (what design-system-ops calls a parallel
-fan-out), supervisor, or generator/critic loop (what design-system-ops calls the
+fan-out), supervisor, or generator/reviewer loop (what design-system-ops calls the
 feedback loop). See [Agentic workflow design](agentic-workflow-design.md).
 
 **Autonomy level** — how much human review an AI agent's action requires before it takes
@@ -204,12 +208,17 @@ treated as its own artifact rather than assumed to fall out of good docs; arrive
 independently by two practitioners in the same shape. See
 [Context engineering](context-engineering.md).
 
+**Context engine** — the machine-readable layer context engineering produces: scoped,
+loadable units (Murphy Trueman's seven YAML blueprints; Diana Wolosin's benchmarked
+metadata format) that give an agent what it needs for a given task without handing it
+everything at once. See [Context engineering](context-engineering.md).
+
 **Generative loop** — any orchestration shape where an agent's output feeds back into
 another round of generation; not every generative loop includes a review step. See
 [Generative loops](feedback-loops.md).
 
-**Generator/critic loop** — the type of generative loop that includes review: a generator
-agent produces work, a critic agent reviews it and sends it back for revision, capped at a
+**Generator/reviewer loop** — the type of generative loop that includes review: a generator
+agent produces work, a reviewer agent reviews it and sends it back for revision, capped at a
 defined number of iterations so it can't run indefinitely. This is what design-system-ops
 calls the feedback-loop orchestration pattern. See
 [Generative loops](feedback-loops.md).
