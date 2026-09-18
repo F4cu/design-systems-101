@@ -54,6 +54,13 @@ Grixti's version of the same point names the mechanism, not just the absence: if
 
 It's tempting to pitch contribution as a way to grow the system faster — more hands, more components shipped. Hupe is blunt that this usually isn't true: reviewing and integrating someone else's work is often slower than the core team just building it themselves. The real payoff is that a contributor brings context the core team doesn't have, so the result actually works for teams and users the core team never sees day to day. That's also the point [Contribution models](contribution-models.md) makes about throughput: don't sell contribution to leadership as a capacity play, because the data doesn't back it up, and the pitch collapses the first time someone checks the numbers. — [Amy Hupe, "5 Lessons on Enabling Design System Contribution"](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)
 
-## Common mistake
+## Common mistakes
 
-Treating "we accept external contributions" as a policy statement instead of an ongoing practice. A CONTRIBUTING.md file and an open GitHub repo satisfy the letter of an open contribution model without doing any of the work this page describes — nobody's modeling the behavior, nobody's seeking out the quiet ones, and nothing in progress gets shared until it's finished. The door being technically open isn't the same as someone believing it's worth walking through. See [Communication](operating-cadence.md) for the channels and stewardship structure that carry this culture day to day once it exists.
+Treating "we accept external contributions" as a policy statement instead of an ongoing practice. A CONTRIBUTING.md file and an open GitHub repo satisfy the letter of an open contribution model without doing any of the work this page describes:
+
+- **No one is modeling the behavior.** The core team isn't visibly writing docs or reporting bugs the way it wants contributors to, so newcomers have no real example to copy.
+- **Nobody's seeking out the quiet ones.** The process waits for people to show up rather than actively recruiting the contributors who'd never push through friction unprompted.
+- **Nothing in progress gets shared until it's finished.** Work stays invisible until it ships, so other teams only discover overlap or conflicting assumptions once it's too late to cheaply fix.
+- **The door being technically open isn't the same as someone believing it's worth walking through.** A repo that accepts PRs in principle but never triages them teaches people not to bother next time.
+
+See [Communication](operating-cadence.md) for the channels and stewardship structure that carry this culture day to day once it exists.

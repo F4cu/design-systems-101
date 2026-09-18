@@ -62,8 +62,12 @@ Citing these honestly, including where they failed, is more useful than presenti
 
 Ness Grixti frames it directly: adoption is "earned. Slowly, through trust, relevance and usefulness," not through a launch event or a mandate — trust compounds through consistency: responding to feedback, honoring promised updates, pairing with teams through problems, and being transparent about changes. The clearest evidence from her own work: **Wise's** rebuild — the same brand-driven token restructure covered in [Brand alignment](brand-alignment.md) — was built on deep audits and open conversation with the teams that would use it, and won Best Adoption at the 2023 zeroheight Design System Awards. The system that wins on adoption isn't necessarily the most polished one; it's the one people were involved in building. Her sharpest diagnostic for when it's slipping: fading adoption tends to show up as quiet disengagement — teams that stop asking questions or stop showing up — more than as active complaints. A team still complaining is still engaged enough to want the system to work; a team gone silent may have already built around it. — [Ness Grixti, "The Hidden Work Behind Design System Adoption"](https://nessgrixti.com/articles/the-hidden-work-behind-design-system-adoption/)
 
-## Common mistake
+## Common mistakes
 
-Turning team-level breakdowns into a competitive ranking. Publishing a league table of "best adopters" and "worst adopters" creates political dynamics that undermine trust — and it flattens context that matters. A team building a custom data-visualization library isn't failing to adopt; the system may simply not cover their domain. A good adoption report distinguishes "chose not to use" from "needed something the system doesn't provide," because only the first one is an adoption problem at all. — design-system-ops, knowledge-notes/adoption-measurement.md
+Turning team-level breakdowns into a competitive ranking. Publishing a league table of "best adopters" and "worst adopters":
+
+- **Undermines trust.** Ranking teams publicly creates political dynamics that make people defensive instead of honest about their numbers.
+- **Flattens context that matters.** A team building a custom data-visualization library isn't failing to adopt; the system may simply not cover their domain.
+- **Conflates two different findings.** A good adoption report distinguishes "chose not to use" from "needed something the system doesn't provide," because only the first one is an adoption problem at all. — design-system-ops, knowledge-notes/adoption-measurement.md
 
 These numbers also stop at "is it used" — they don't say whether a used, adopted component is actually helping or hurting once it's live in a specific flow. See [Component performance in context](contextual-component-performance.md) for that next layer.

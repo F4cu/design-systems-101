@@ -36,10 +36,9 @@ All three contracts above are met, affected teams get visibility before shipping
 
 — design-system-ops, knowledge-notes/design-to-code-contract.md
 
-## Common mistake
+## Common mistakes
 
 Two handoff habits quietly break the design contract:
 
-**Delivering designs as screenshots.** A developer can't inspect token references or verify spacing and states from a flat image. A screenshot is a visual reference, not a contract — the real spec lives in the Figma file, where every value can be inspected.
-
-**Saying "just copy the existing component."** That makes the previous implementation the spec, which means every problem in that component — missing states, hardcoded values, accessibility gaps — gets faithfully propagated into the new one. If the old component were a reliable spec, you probably wouldn't be building a new one.
+- **Delivering designs as screenshots.** A developer can't inspect token references or verify spacing and states from a flat image. A screenshot is a visual reference, not a contract — the real spec lives in the Figma file, where every value can be inspected.
+- **Saying "just copy the existing component."** That makes the previous implementation the spec, which means every problem in that component — missing states, hardcoded values, accessibility gaps — gets faithfully propagated into the new one. If the old component were a reliable spec, you probably wouldn't be building a new one.

@@ -30,6 +30,6 @@ Same underlying discipline — keep the system's story tied to what the organiza
 
 The practical version of "mapping to company priorities": before a planning cycle, ask what the company's current top-line goals actually are, and check whether the system's proposed roadmap visibly serves at least one of them in language a non-design stakeholder would recognize. If a system's roadmap can't be connected to any current company priority, that's worth noticing before a budget conversation forces the question.
 
-## Common mistake
+## Common mistakes
 
 Treating the business case as something you make once at launch and never revisit. A pitch that was compelling two years ago, in a different business climate, doesn't automatically stay compelling — the value story goes stale exactly as fast as the company's priorities change, and a system that keeps repeating its original pitch starts to sound out of touch with what the org currently cares about, even if the underlying work is still excellent. Revisit the mapping every planning cycle, not just when funding is at risk.

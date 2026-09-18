@@ -55,6 +55,11 @@ graph LR
 
 The left branch is Kavcic's workflow-vs-agent test; the autonomy levels on the right are from the design-system-ops oversight framework.
 
-## Common mistake
+## Common mistakes
 
-Treating "the agent *can* do X" as the same question as "the agent should be trusted to do X unsupervised." They're different questions — that's the opening argument of the oversight framework: teams that never define the boundary either over-trust agents (unchecked output quietly degrades the system) or under-trust them (so much review the productivity gain evaporates) (— design-system-ops, knowledge-notes/human-oversight-framework.md).
+Treating "the agent *can* do X" as the same question as "the agent should be trusted to do X unsupervised." They're different questions, and teams that never draw the boundary land on one of two failure modes:
+
+- **Over-trusting the agent.** Unchecked output quietly degrades the system over time.
+- **Under-trusting the agent.** So much review gets layered on that the productivity gain evaporates.
+
+— design-system-ops, knowledge-notes/human-oversight-framework.md

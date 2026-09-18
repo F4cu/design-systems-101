@@ -53,6 +53,11 @@ graph TD
 
 Each rung down is progressively less visible from standard adoption analytics — version tracking is a dashboard query; parallel implementations require deliberately looking for lookalikes outside the system's own codebase.
 
-## Common mistake
+## Common mistakes
 
-Building version and usage tracking, declaring the observability problem solved, and never instrumenting for token bypass or parallel implementations — the two hardest and most consequential signals. A team that only tracks what's easy to query (versions, import counts) gets a false sense of completeness: the dashboard looks thorough while the two failure modes most likely to indicate the system isn't actually serving a team's needs stay invisible.
+Building version and usage tracking, declaring the observability problem solved, and stopping there:
+
+- **Never instrumenting for token bypass.** Hardcoded values that skip the token layer entirely don't show up in an import-count dashboard.
+- **Never instrumenting for parallel implementations.** Teams quietly rebuilding a component locally instead of consuming it are invisible to version and usage tracking alike.
+
+A team that only tracks what's easy to query (versions, import counts) gets a false sense of completeness: the dashboard looks thorough while the two failure modes most likely to indicate the system isn't actually serving a team's needs stay invisible.

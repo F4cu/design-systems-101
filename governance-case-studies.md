@@ -38,6 +38,12 @@ The reading: weak governance is the explanation people reach for when a system i
 
 The context that made this work: ten people is a small, sustainable number, consistent with the finding in [Contribution models](contribution-models.md) that real contribution stays small regardless of company size. The network also spanned both design and engineering, so it had standing on both sides of the handoff, not just one. — cited via Figma / Design Executive Council research on design-system business value
 
-## Common mistake
+## Common mistakes
 
-Reading any one of these as "the" answer and copying its structure. The Wise story argues for registering changes centrally even when they look local; the adoption-paradox story argues against building governance apparatus a system hasn't earned yet; the Grammarly story argues for a small, named group over either a wide-open door or a purely centralized team. All three are true simultaneously, for different reasons, at different points in a system's life — which is the entire point of reading governance as contextual rather than as a checklist.
+Reading any one of these as "the" answer and copying its structure:
+
+- **The Wise story** argues for registering changes centrally even when they look local.
+- **The adoption-paradox story** argues against building governance apparatus a system hasn't earned yet.
+- **The Grammarly story** argues for a small, named group over either a wide-open door or a purely centralized team.
+
+All three are true simultaneously, for different reasons, at different points in a system's life — which is the entire point of reading governance as contextual rather than as a checklist.

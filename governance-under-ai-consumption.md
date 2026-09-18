@@ -58,6 +58,11 @@ graph TD
 
 </div>
 
-## Common mistake
+## Common mistakes
 
-Treating this as an AI-specific problem with an AI-specific fix — better prompts, a bigger context window, a smarter agent. Williams's own framing resists that reading: "legibility has become a design constraint, not just a documentation problem. The systems that will hold up are the ones built to be understood without a human in the loop." The gap an agent exposes was already a gap for a new hire, a contractor, or a contributor from another team — the agent just removes the last few people willing to quietly fill it in from memory. As he puts it, closing the loop on why this matters now rather than later: "the question is not whether to operate your design system. The question is whether you have been honest with yourself about what operating it actually requires." — [Shane P Williams, "Legibility Is the New Governance"](https://designsystemscollective.substack.com/p/legibility-is-the-new-governance)
+- **Treating this as an AI-specific problem with an AI-specific fix** — better prompts, a bigger context window, a smarter agent. "Legibility has become a design constraint, not just a documentation problem. The systems that will hold up are the ones built to be understood without a human in the loop." The gap an agent exposes was already a gap for a new hire, a contractor, or a contributor from another team — the agent just removes the last few people willing to quietly fill it in from memory.
+- **Relying on an informal, tribal understanding instead of a written rule.** "The informal contract that humans could navigate by instinct becomes a hard boundary an agent will test without mercy" — a relationship doesn't scale to a consumer that can't read tone.
+- **Treating a written record as permanently true.** Writing a decision down solves the memory problem, not the staleness problem — a rule survives because someone periodically re-checks it against reality, not because someone filed it once.
+- **Leaving no one accountable when Figma, docs, and production disagree.** Design intent, documented behavior, and what's actually shipped are each authoritative for a different question; telling healthy divergence apart from unintentional decay is judgment that needs an owner, not a dashboard.
+
+As Williams puts it, closing the loop on why this matters now rather than later: "the question is not whether to operate your design system. The question is whether you have been honest with yourself about what operating it actually requires." — [Shane P Williams, "Legibility Is the New Governance"](https://designsystemscollective.substack.com/p/legibility-is-the-new-governance)

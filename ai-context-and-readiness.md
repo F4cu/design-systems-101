@@ -44,6 +44,12 @@ This isn't only a forward-looking argument — a handful of named systems alread
 
 These are early, but they're concrete evidence that "machine-readable manifest" isn't a hypothetical — it's a shape multiple production systems have already converged on independently.
 
-## Common mistake
+## Common mistakes
 
-Assuming "AI readiness" means bolting a separate AI layer onto your system. It doesn't. Components with ambiguous names, undocumented anti-patterns, and vague purpose descriptions fail AI consumers first and human consumers next — so preparing for AI is a forcing function that pushes you to fix documentation and clarity problems that have existed for years. The work isn't AI-specific; it's quality work, done with more precision, that helps every consumer — including the humans. — design-system-ops, knowledge-notes/ai-readiness.md
+Assuming "AI readiness" means bolting a separate AI layer onto your system. It doesn't — the work is quality work, done with more precision, that helps every consumer, including the humans:
+
+- **Structuring tokens for humans only.** When an AI reads an undocumented token set, it sees "a wall of nested objects with no context about why these values exist or when to use them" — the same ambiguity a new team member would hit, just with no one to ask.
+- **Naming components by appearance instead of function.** `BlueCard` or `CardBase` tells a machine nothing about its role; `FeatureHighlight` or `OnboardingStep` does.
+- **Leaving anti-patterns and edge cases undocumented.** Components with ambiguous names, undocumented anti-patterns, and vague purpose descriptions fail AI consumers first and human consumers next.
+
+— design-system-ops, knowledge-notes/ai-readiness.md

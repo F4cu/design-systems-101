@@ -43,6 +43,9 @@ Alla Kholmatova's book on design systems names the payoff of getting all three l
 
 Tokens and governance are what make that shared language durable — without them, "the library" is just a folder of components that happen to look similar today and will quietly stop matching each other as soon as nobody's watching.
 
-## Common mistake
+## Common mistakes
 
-Equating "the design system" with "the Figma library." If your mental model is component-shaped, you'll invest all your effort in the middle layer while the vocabulary underneath it rots and the decision-making around it never gets defined. When something then goes wrong — a rebrand that touches five hundred files, a library full of near-duplicate buttons nobody trusts — it looks like a component problem, but it started one layer up or one layer down. The next pages take each layer in turn, starting with tokens.
+- **Equating "the design system" with "the Figma library."** If your mental model is component-shaped, you'll invest all your effort in the middle layer while the vocabulary underneath it rots and the decision-making around it never gets defined. When something then goes wrong — a rebrand that touches five hundred files, a library full of near-duplicate buttons nobody trusts — it looks like a component problem, but it started one layer up or one layer down.
+- **Measuring the system by technical metrics instead of the problems it solves for people.** Judging success purely on things like less duplicated code or faster delivery treats the token, component, or process as the end goal instead of the means to freeing up people's energy for real problems.
+
+The next pages take each layer in turn, starting with tokens.

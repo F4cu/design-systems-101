@@ -53,6 +53,9 @@ Romina Kavcic, writing independently, makes the adoption-side argument: "With MC
 
 — Romina Kavcic, ["5 MCP Connections Every Design System Team Needs Right Now"](https://learn.thedesignsystem.guide/p/5-mcp-connections-every-design-system)
 
-## Common mistake
+## Common mistakes
 
-Assuming that giving an agent *more* — more access, more documentation, more retries — is categorically better. The design-system-ops notes are blunt about failure handling: "Never retry a failed [Figma MCP] call in a loop. If the first call fails, note it, proceed without Figma, and let the user fix the connection for the next run." A well-scoped workflow treats a missing layer as an unavailable data source and says so, rather than pretending or breaking (— design-system-ops, knowledge-notes/mcp-setup-guide.md). Kavcic's controlled-bridges framing is the same corrective from the access side: scoped and honest beats maximal and opaque.
+Assuming that giving an agent *more* — more access, more documentation, more retries — is categorically better:
+
+- **Retrying failures in a loop instead of failing honestly.** "Never retry a failed [Figma MCP] call in a loop. If the first call fails, note it, proceed without Figma, and let the user fix the connection for the next run." A well-scoped workflow treats a missing layer as an unavailable data source and says so, rather than pretending or breaking. — design-system-ops, knowledge-notes/mcp-setup-guide.md
+- **Granting maximal access instead of scoped access.** Kavcic's controlled-bridges framing is the same corrective from the access side: scoped and honest beats maximal and opaque.

@@ -45,8 +45,8 @@ graph TD
 
 </div>
 
-## Common mistake
+## Common mistakes
 
-Naming a semantic token after its appearance. The notes are blunt about this: "A semantic token that describes visual appearance has failed its purpose. `color.semantic.blue` is a primitive with extra steps." — design-system-ops, knowledge-notes/token-architecture.md. The moment the brand shifts to purple, `color.semantic.blue` is either a lie or a mass rename. Semantic names should describe role and intent (`category.role.variant.state`), never colour names, ambiguous size terms, or generic qualifiers.
-
-Two related traps from the same notes: primitives-only systems, where theming becomes impossible, and token counts growing faster than the product — usually a sign of one-off tokens instead of reused intent.
+- **Naming a semantic token after its appearance.** "A semantic token that describes visual appearance has failed its purpose. `color.semantic.blue` is a primitive with extra steps." — design-system-ops, knowledge-notes/token-architecture.md. The moment the brand shifts to purple, `color.semantic.blue` is either a lie or a mass rename. Semantic names should describe role and intent (`category.role.variant.state`), never colour names, ambiguous size terms, or generic qualifiers.
+- **Running a primitives-only system.** Without a semantic layer, theming becomes impossible — every value change means hunting down every primitive reference instead of repointing one alias.
+- **Letting token count grow faster than the product.** That growth is usually a sign of one-off tokens getting created instead of intent being reused.

@@ -77,6 +77,9 @@ Platforms like [PostHog](https://posthog.com/docs/llm-analytics) have recently s
 
 The caution attached to all of this: this is custom instrumentation glue a team would have to build deliberately, not a turnkey feature any vendor ships today for design systems specifically. It's the same discipline [AI context & readiness](ai-context-and-readiness.md) argues for at the token and component-metadata level, applied one layer up — treat context quality in your analytics events as an investment that compounds, because right now almost no design system is making it.
 
-## Common mistake
+## Common mistakes
 
-Treating a single global number as the whole answer. "94% token compliance" or "imported in 40 repos" can be true system-wide while the component is actively working against the one journey leadership actually tracks. The inverse mistake is just as costly: seeing a component underperform in one high-visibility flow and rebuilding it outright, without first checking whether it's fine everywhere else and the real fix is a context-specific variant or guidance, not a system-wide change. Neither mistake is visible from aggregate metrics alone — both require asking the performance question at the level of a specific context and journey, not the system as a whole.
+- **Treating a single global number as the whole answer.** "94% token compliance" or "imported in 40 repos" can be true system-wide while the component is actively working against the one journey leadership actually tracks.
+- **Rebuilding on the strength of one bad flow.** Seeing a component underperform in a single high-visibility journey and rebuilding it outright, without first checking whether it's fine everywhere else — when the real fix is a context-specific variant or guidance, not a system-wide change.
+
+Neither mistake is visible from aggregate metrics alone — both require asking the performance question at the level of a specific context and journey, not the system as a whole.

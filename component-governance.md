@@ -92,6 +92,9 @@ graph TD
 
 — design-system-ops, knowledge-notes/component-governance.md
 
-## Common mistake
+## Common mistakes
 
-Treating governance as gatekeeping. A contribution process that exists to protect the system *from* contributors — rather than to help contributors build the system well — feels rigorous, but the signal it produces is the opposite: contribution rates drop, and teams quietly build locally instead. The system stays "pure" and becomes irrelevant. If nobody is contributing, the process isn't working; it's just being avoided.
+- **Treating governance as gatekeeping.** A contribution process that exists to protect the system *from* contributors — rather than to help contributors build the system well — feels rigorous, but the signal it produces is the opposite: contribution rates drop, and teams quietly build locally instead. The system stays "pure" and becomes irrelevant. If nobody is contributing, the process isn't working; it's just being avoided.
+- **Routing every accessibility question to one specialist.** Centralizing expertise doesn't centralize quality — everyone else stops treating accessibility as their job, the specialist becomes a bottleneck on every release, and issues that should've been caught earlier surface at a late review nobody can act on cheaply.
+- **Leaving roles implied instead of written down.** If it isn't stated who owns a proposal, who can approve a deprecation, or who a stalled contributor asks, every one of those questions gets re-decided informally, differently, each time it comes up.
+- **Letting everyone weigh in without anyone owning the final decision.** A proposal that gathers opinions from every stakeholder but never reaches someone empowered to decide is governance that never actually governs.

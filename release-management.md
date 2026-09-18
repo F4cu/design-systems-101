@@ -58,6 +58,9 @@ A visible, public changelog — even something as lightweight as a shared Notion
 
 A changelog that requires a consumer to remember to go check it will get missed by exactly the teams who most need the warning. Automated notification — a Slack post, a release email — on every release, not just major ones, is what converts a written record into something teams actually act on before they're broken by it.
 
-## Common mistake
+## Common mistakes
 
-Treating the version bump as the deliverable and the migration guide as optional polish. A major version with no migration guide forces every consuming team to independently reverse-engineer the same diff — the cost of writing the guide once is far lower than the aggregate cost of dozens of teams doing that discovery work in parallel. If a release is significant enough to warrant a major version, it's significant enough to warrant the guide that makes that version usable.
+- **Treating the version bump as the deliverable and the migration guide as optional polish.** A major version with no migration guide forces every consuming team to independently reverse-engineer the same diff — the cost of writing the guide once is far lower than the aggregate cost of dozens of teams doing that discovery work in parallel. If a release is significant enough to warrant a major version, it's significant enough to warrant the guide that makes that version usable.
+- **Skipping straight to removal instead of deprecating first.** A breaking change that lands as a surprise removal is a design failure, not just a communication one — deprecation has to be discoverable at the point of use, with advance notice, before it disappears.
+- **Folding a token change quietly into a component release.** Tokens have the widest blast radius of any change type; bundling them in without their own versioning makes their impact easy to miss until it breaks something downstream.
+- **Letting the changelog go stale.** A changelog that isn't kept current reads to consuming teams exactly like an unmaintained system, whether or not the system itself is actually healthy.

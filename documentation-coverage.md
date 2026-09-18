@@ -38,6 +38,10 @@ Staleness is computed from git change dates (git records when each file last cha
 
 Ness Grixti's observation on adoption applies directly here: a system isolated in a documentation site fails even when the docs themselves are good, because "guided" usage knowledge needs to show up where people are already working — tokens exposed inside the design tool, guidance embedded in code comments and editor autocomplete, starter templates that encode the anti-patterns rather than just listing them. A rung-three doc that nobody visits because the answer already reached them through the tool they were using isn't a documentation gap; it's the goal. — [Ness Grixti, "The Hidden Work Behind Design System Adoption"](https://nessgrixti.com/articles/the-hidden-work-behind-design-system-adoption/)
 
-## Common mistake
+## Common mistakes
 
-Crying wolf on low-confidence matches. When an audit pairs code components with doc pages by name, some matches are unconfirmed — and presenting an unconfirmed name-match as a hard gap "is the fastest way to lose a team's trust in the whole skill." This generalizes beyond docs audits: in any review, a finding you're unsure about should be labeled as a question, not asserted as a defect. Once a team catches one confident-sounding false alarm, they discount everything else the audit says — including the findings that were real. — design-system-ops, knowledge-notes/documentation-coverage.md
+Crying wolf on low-confidence matches:
+
+- **Asserting instead of asking.** When an audit pairs code components with doc pages by name, some matches are unconfirmed — presenting an unconfirmed name-match as a hard gap "is the fastest way to lose a team's trust in the whole skill."
+- **Treating this as docs-specific when it isn't.** In any review, a finding you're unsure about should be labeled as a question, not asserted as a defect.
+- **Underestimating the cost of one false alarm.** Once a team catches one confident-sounding false alarm, they discount everything else the audit says — including the findings that were real. — design-system-ops, knowledge-notes/documentation-coverage.md

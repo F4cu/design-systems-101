@@ -44,6 +44,8 @@ For teams that want the arithmetic rather than the anecdote: Mike Fortuna's acco
 
 One more illustration worth having in your pocket, used explicitly as an illustration and not a measurement: if a moderately complex component takes three days to design, build, and test, and fifty product teams each build their own version independently, that's 150 days of duplicated work for something that costs a fraction of that built once and shared. The arithmetic is crude and directional, but executives find it persuasive precisely because it's easy to hold in your head.
 
-## Common mistake
+## Common mistakes
 
-Leading with the system's internal health metrics when pitching outward. Component count, token compliance, and adoption percentage are the right numbers to track and improve — but they're meaningless to someone who's never opened the system's docs. Translate to the business metric the specific stakeholder cares about first, and keep the operational number as supporting detail, not the headline.
+- **Leading with the system's internal health metrics when pitching outward.** Component count, token compliance, and adoption percentage are the right numbers to track and improve — but they're meaningless to someone who's never opened the system's docs. Translate to the business metric the specific stakeholder cares about first, and keep the operational number as supporting detail, not the headline.
+- **Stating a general claim without showing specific numbers.** "It saves us time" is easy to dismiss; walking through an actual dollar figure — even a crude one, like fifty teams each spending three days rebuilding the same component — is what a finance stakeholder can actually evaluate and repeat to someone else.
+- **Not measuring at all, and treating that as normal.** Only 5% of teams measure ROI in the first place — so the biggest gap most systems have isn't a weak pitch, it's no pitch. Having any credible value story, even an imperfect one, already puts a team ahead of most of the field.

@@ -83,8 +83,10 @@ graph LR
 
 </div>
 
-## Common mistake
+## Common mistakes
 
-Designing a cadence for a team you don't have. Weekly office hours, three audience-split Slack channels, a formal advocate program with performance-review recognition, and a monthly state-of-the-union meeting is a reasonable operating model — for a team with the headcount to sustain it. zeroheight's 2026 survey of 147 practitioners found 56% name staffing as their single biggest challenge, ahead of buy-in or tooling. 16% of design systems are maintained by one person, 61% of teams have five or fewer people, and only 23% feel they have adequate resources for the work in front of them.
+- **Designing a cadence for a team you don't have.** Weekly office hours, three audience-split Slack channels, a formal advocate program with performance-review recognition, and a monthly state-of-the-union meeting is a reasonable operating model — for a team with the headcount to sustain it. zeroheight's 2026 survey of 147 practitioners found 56% name staffing as their single biggest challenge, ahead of buy-in or tooling. 16% of design systems are maintained by one person, 61% of teams have five or fewer people, and only 23% feel they have adequate resources for the work in front of them. Layering the full version of everything on this page onto a one- or two-person team doesn't produce a well-run system — it produces obligations that get quietly dropped within a month, which damages trust worse than never having promised them. Start with the smallest cadence that covers releases and a standing way to ask a question, and add channels only once the existing ones are actually running without heroics.
+- **Leaving larger contributions without a named steward.** Most prospective contributors don't know, or want to know, every step involved in shipping something bigger than a small fix — without someone assigned to guide them through it, that work stalls or never starts.
+- **Relying on people to remember to check for feedback instead of an automated route.** A notification the moment a PR lands, for instance, surfaces feedback where the team already is, instead of requiring someone to go looking for it.
 
-Layering the full version of everything on this page onto a one- or two-person team doesn't produce a well-run system — it produces obligations that get quietly dropped within a month, which damages trust worse than never having promised them. Start with the smallest cadence that covers releases and a standing way to ask a question, and add channels only once the existing ones are actually running without heroics. — zeroheight, *Design Systems Report 2026*
+— zeroheight, *Design Systems Report 2026*
