@@ -38,6 +38,8 @@ Staleness is computed from git change dates (git records when each file last cha
 
 Ness Grixti's observation on adoption applies directly here: a system isolated in a documentation site fails even when the docs themselves are good, because "guided" usage knowledge needs to show up where people are already working — tokens exposed inside the design tool, guidance embedded in code comments and editor autocomplete, starter templates that encode the anti-patterns rather than just listing them. A rung-three doc that nobody visits because the answer already reached them through the tool they were using isn't a documentation gap; it's the goal. — [Ness Grixti, "The Hidden Work Behind Design System Adoption"](https://nessgrixti.com/articles/the-hidden-work-behind-design-system-adoption/)
 
+---
+
 ## Common mistakes
 
 Crying wolf on low-confidence matches:

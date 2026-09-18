@@ -38,6 +38,9 @@ meet, cited individually by name and post/report title:
 - **zeroheight's annual Design Systems Report** — survey data from 147 practitioners, used where a claim benefits from being backed by numbers rather than one person's experience.
 - **Figma's Design Executive Council research** and a handful of named companies (Freshworks, SAP, Grammarly, Wise, Mews, and others) who've published specifics about what worked and what broke for them.
 - **Shane P Williams**, founding editor of the [Design Systems Collective](https://designsystemscollective.substack.com/) — governance and documentation under AI consumption, and the emerging job of reconciling design, code, and production as separate sources of truth.
+- **Diana Wolosin**, design systems practitioner (ex-Indeed) — the "context engine" as machine-readable infrastructure, and empirically benchmarking metadata formats against real agent behavior rather than assuming one is correct.
+- **Jan Six**, GitHub — designs agent experiences for Copilot and created Tokens Studio; on treating agent context as environment design, not just instructions.
+- Published AI-pattern guidance from **IBM Carbon**, **AWS Cloudscape**, **GitLab Pajamas**, **Atlassian Design System**, and **Microsoft** — named, citable examples of how mature systems design transparency, authorization, and agent-interaction patterns as shipped components.
 
 No source is blended into a single "what the industry thinks" voice — each claim is
 attributed to whoever made it, by name, with a link. Where sources agree, that's noted
@@ -60,7 +63,7 @@ The wiki is organized into five Parts, roughly in reading order:
 2. **Governance** — how decisions get made and recorded, which contribution model fits which context, how to actually build a culture that contributes to it, and the practical component-API judgment calls: when to add a variant vs. reach for composition, how to avoid prop bloat.
 3. **Adoption** — the operating rhythm that keeps a system visible (cadence, office hours, stewardship, advocacy, feedback loops), whether it's actually being used, and how documentation either supports or undermines that.
 4. **Business alignment** — the org-facing skill of building a business case, staying in sync with brand and marketing, and keeping the system funded, distinct from running it well.
-5. **Agentic AI** — where AI-assisted workflows help and where they just add a new kind of mess. Also: how governance and documentation gaps that were tolerable for human readers stop being tolerable once agents read them too.
+5. **Agentic AI** — two directions at once: making the system legible to AI as a consumer (context engineering, documentation built for agents, governance under AI consumption), and designing AI as a product surface the system has to support (agentic UI patterns, feedback loops, workflow orchestration, scaling access to risk).
 
 Start with [Foundations](foundations.md), or jump straight to whatever section you need
 using the sidebar. A [glossary](glossary.md) at the end collects every term introduced

@@ -77,6 +77,8 @@ Platforms like [PostHog](https://posthog.com/docs/llm-analytics) have recently s
 
 The caution attached to all of this: this is custom instrumentation glue a team would have to build deliberately, not a turnkey feature any vendor ships today for design systems specifically. It's the same discipline [AI context & readiness](ai-context-and-readiness.md) argues for at the token and component-metadata level, applied one layer up — treat context quality in your analytics events as an investment that compounds, because right now almost no design system is making it.
 
+---
+
 ## Common mistakes
 
 - **Treating a single global number as the whole answer.** "94% token compliance" or "imported in 40 repos" can be true system-wide while the component is actively working against the one journey leadership actually tracks.

@@ -83,6 +83,8 @@ graph LR
 
 </div>
 
+---
+
 ## Common mistakes
 
 - **Designing a cadence for a team you don't have.** Weekly office hours, three audience-split Slack channels, a formal advocate program with performance-review recognition, and a monthly state-of-the-union meeting is a reasonable operating model — for a team with the headcount to sustain it. zeroheight's 2026 survey of 147 practitioners found 56% name staffing as their single biggest challenge, ahead of buy-in or tooling. 16% of design systems are maintained by one person, 61% of teams have five or fewer people, and only 23% feel they have adequate resources for the work in front of them. Layering the full version of everything on this page onto a one- or two-person team doesn't produce a well-run system — it produces obligations that get quietly dropped within a month, which damages trust worse than never having promised them. Start with the smallest cadence that covers releases and a standing way to ask a question, and add channels only once the existing ones are actually running without heroics.

@@ -35,6 +35,8 @@ Smashing Magazine's model for building brand systems that stay aligned runs in f
 
 [Token architecture](token-architecture.md)'s three-tier model (primitive → semantic → component) is where brand and product actually meet in the code: a rebrand should mean updating primitive-tier values in one place — the colors, type, and spacing that encode the brand's visual identity — and having semantic and component tiers pick the change up automatically. A system where brand-driven values leak into semantic or component tiers is a system where the next rebrand means hunting down every hardcoded reference instead of changing one layer.
 
+---
+
 ## Common mistakes
 
 - **Assuming a large, polished brand-management platform is the same thing as a design system, or that a mature product design system automatically covers marketing's needs.** DHL's Brand Hub is a useful example of the former: a genuinely large brand-management platform (10,000+ templates, an AI layout generator, a custom typeface) built for global brand consistency across marketing and physical materials — but it's brand tooling for marketers and vendors, not a component library for product designers and engineers, and the two were never meant to merge into one system. The fix isn't picking one team to own both; it's the four-step process above, run on a recurring cadence, so brand identity and product implementation stay two things pointed at the same target instead of one team's tool quietly standing in for the other's.

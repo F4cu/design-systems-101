@@ -36,6 +36,8 @@ All three contracts above are met, affected teams get visibility before shipping
 
 — design-system-ops, knowledge-notes/design-to-code-contract.md
 
+---
+
 ## Common mistakes
 
 Two handoff habits quietly break the design contract:

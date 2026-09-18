@@ -92,6 +92,8 @@ graph TD
 
 — design-system-ops, knowledge-notes/component-governance.md
 
+---
+
 ## Common mistakes
 
 - **Treating governance as gatekeeping.** A contribution process that exists to protect the system *from* contributors — rather than to help contributors build the system well — feels rigorous, but the signal it produces is the opposite: contribution rates drop, and teams quietly build locally instead. The system stays "pure" and becomes irrelevant. If nobody is contributing, the process isn't working; it's just being avoided.

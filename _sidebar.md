@@ -25,6 +25,10 @@
   - [Stakeholder alignment](stakeholder-alignment.md)
 - **Agentic AI**
   - [AI readiness](ai-context-and-readiness.md)
+  - [Context engineering](context-engineering.md)
+  - [Documentation for agents](documentation-for-agents.md)
+  - [Designing agentic UI patterns](agentic-ui-patterns.md)
+  - [Feedback loops](feedback-loops.md)
   - [Governance under AI consumption](governance-under-ai-consumption.md)
   - [Agentic workflow design](agentic-workflow-design.md)
   - [Scaling AI effort](scaling-ai-effort.md)

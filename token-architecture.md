@@ -45,6 +45,8 @@ graph TD
 
 </div>
 
+---
+
 ## Common mistakes
 
 - **Naming a semantic token after its appearance.** "A semantic token that describes visual appearance has failed its purpose. `color.semantic.blue` is a primitive with extra steps." — design-system-ops, knowledge-notes/token-architecture.md. The moment the brand shifts to purple, `color.semantic.blue` is either a lie or a mass rename. Semantic names should describe role and intent (`category.role.variant.state`), never colour names, ambiguous size terms, or generic qualifiers.

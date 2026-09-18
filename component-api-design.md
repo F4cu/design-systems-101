@@ -53,6 +53,8 @@ The same component often needs to work on web, iOS, and Android without looking 
 
 Flexibility has a second axis worth naming explicitly: what a component can *guarantee* versus what it can only *guide*. A component can guarantee color contrast in its token pairings, focus visibility, keyboard operability, correct ARIA roles, and touch target sizing. It cannot guarantee heading hierarchy on the page it's placed in, reading order, or whether the surrounding content makes sense — those are composition-level and content-level decisions the component's consumer makes. Making a component more flexible should never mean loosening the guarantees it can actually make; it means being honest about which half of the problem the component owns.
 
+---
+
 ## Common mistakes
 
 - **Adding a prop as a pre-emptive escape hatch** — "just in case a team needs this later" — instead of waiting for a real second use case and reaching for composition. Every speculative prop is a permanent maintenance cost paid whether or not it ever gets used, and it usually can't be removed once someone depends on it. The better default: ship the narrow version, and when a genuine second need shows up, solve it with composition or a feature request rather than expanding the prop surface in advance.

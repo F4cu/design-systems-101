@@ -43,6 +43,8 @@ Alla Kholmatova's book on design systems names the payoff of getting all three l
 
 Tokens and governance are what make that shared language durable — without them, "the library" is just a folder of components that happen to look similar today and will quietly stop matching each other as soon as nobody's watching.
 
+---
+
 ## Common mistakes
 
 - **Equating "the design system" with "the Figma library."** If your mental model is component-shaped, you'll invest all your effort in the middle layer while the vocabulary underneath it rots and the decision-making around it never gets defined. When something then goes wrong — a rebrand that touches five hundred files, a library full of near-duplicate buttons nobody trusts — it looks like a component problem, but it started one layer up or one layer down.

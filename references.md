@@ -150,6 +150,18 @@ prose.
 - [Shane P Williams, "Drift Doesn't Announce Itself"](https://designsystemscollective.substack.com/p/drift-doesnt-announce-itself) — Design Systems Collective
 - [Shane P Williams, "The Job Nobody Is Hiring For Yet"](https://designsystemscollective.substack.com/p/the-job-nobody-is-hiring-for-yet) — Design Systems Collective
 
+## Context engineering, documentation for agents, designing agentic UI patterns, feedback loops
+
+- [Diana Wolosin, "Design Systems for AI: Introducing the Context Engine"](https://www.designsystemscollective.com/design-systems-for-ai-introducing-the-context-engine-777726da6a01)
+- Diana Wolosin — benchmark of 8 MCP configurations against 1,056 prompts at Indeed, referenced via [Into Design Systems conference](https://www.intodesignsystems.com/)
+- [Jan Six, Into Design Systems conference, "Build design systems with agents"](https://www.intodesignsystems.com/agenda/build-design-systems-with-agents)
+- [Carbon Design System, "Carbon for AI"](https://carbondesignsystem.com/guidelines/carbon-for-ai/)
+- [AWS Cloudscape, "User-authorized actions"](https://cloudscape.design/gen-ai/patterns/user-authorized-actions/)
+- [AWS Cloudscape, "Response regeneration"](https://cloudscape.design/gen-ai/patterns/response-regeneration/)
+- [GitLab Pajamas, "AI-human interaction"](https://design.gitlab.com/patterns/ai-human-interaction/) — patterns explicitly flagged by GitLab as still in development
+- [Atlassian, "Atlassian Design System: building the context engine for the AI era"](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era)
+- [Microsoft Learn, "Human-centered design for agents"](https://learn.microsoft.com/en-us/agents/design-guidelines/human-centered-design) — flagged on the source page as AI-generated content on an official Microsoft doc, not an individually authored piece
+
 ## A note on sourcing discipline
 
 Every claim on this site is attributed to a specific person, post, report, or named

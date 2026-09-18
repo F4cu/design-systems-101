@@ -92,6 +92,8 @@ It always ships with a timeline and a migration path, not just a warning — **I
 
 Again from zeroheight's 2026 data, 69% of teams say anyone on the product team can contribute, but 82% of teams actually receive contributions from ten or fewer designers. This doesn't improve with company size — even at 5,000+ employee companies, only 37% have more than ten contributing designers. Contribution stays small regardless of how open the door is.
 
+---
+
 ## Common mistakes
 
 - **Pitching open contribution to leadership as a way to scale capacity.** It isn't one — the data above shows contribution volume staying flat and small no matter how large the org gets, and reviewing a contribution is usually *more* expensive for the core team than building it yourself in the short term. The reason to run a contribution model isn't throughput; it's legitimacy, distributed knowledge, and surfacing real requirements the core team would otherwise never see. Treat it as a small, well-supported champions network rather than an open door with a README, and the model choice becomes a lot less fraught — it can flex with the org instead of being a one-time, load-bearing decision.

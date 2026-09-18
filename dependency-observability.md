@@ -53,6 +53,8 @@ graph TD
 
 Each rung down is progressively less visible from standard adoption analytics — version tracking is a dashboard query; parallel implementations require deliberately looking for lookalikes outside the system's own codebase.
 
+---
+
 ## Common mistakes
 
 Building version and usage tracking, declaring the observability problem solved, and stopping there:

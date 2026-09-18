@@ -22,19 +22,9 @@ Every layer either inherits good context or amplifies bad context — there is n
 
 The same team's notes describe a **machine-readable component manifest**: a structured JSON index of every component — name, category, description, props, variants, composition relationships, token bindings, accessibility role, status. An AI agent querying it can resolve "I need a component for user input with validation" to a specific component, variant, and configuration without reading documentation pages. That's the difference between a design system that works with AI and one that is *legible* to AI. — design-system-ops, knowledge-notes/ai-readiness.md
 
-#### 2. A context engine of task-specific blueprints
+A task-specific version of this same manifest — Murphy Trueman's seven-blueprint **context engine**, and a second, independently built one from Diana Wolosin — gets its own room in [Context engineering](context-engineering.md). Structuring tokens and components themselves as an API (Romina Kavcic, Murphy Trueman) is covered in [Documentation for agents](documentation-for-agents.md).
 
-The same toolkit pushes this to its logical endpoint with a **context engine**: seven YAML blueprints encoding everything an agent needs — UX patterns, UI tokens, content voice, accessibility contracts, ethical guardrails like dark-pattern prohibitions, technical prop contracts, and business intelligence (what's safe to A/B test, and what never is). The key idea: not every task needs every blueprint. An agent generating a component loads technical, UI, and accessibility. One writing copy loads content and ethical. A full design review loads all seven. — design-system-ops, knowledge-notes/context-engine-blueprints.md
-
-#### 3. Tokens as an API
-
-Two other practitioners arrive at related — but distinct — points independently. Romina Kavcic makes the case for **tokens as an API**: most tokens are structured for humans, so when an AI reads them via MCP (Model Context Protocol, a standard that lets AI tools connect to external data like a Figma file), it sees "a wall of nested objects with no context about why these values exist or when to use them." Tokens are the API contract between design and code. And just as you can't restructure a component library overnight, "you can add descriptions to your top 20 tokens in an hour" — that hour propagates upward through everything built on them. It's the semantic-naming idea from page 02 — name intent, not appearance — seen through an AI's eyes. — [Romina Kavcic, "Design tokens that AI can actually read"](https://learn.thedesignsystem.guide/p/design-tokens-that-ai-can-actually)
-
-#### 4. Components as an API
-
-Murphy Trueman makes the parallel argument for **components as an API**: "Your design system is already an API; the question is whether it's a good one." He argues for purpose-driven classification over appearance-based naming — a component called `FeatureHighlight` or `OnboardingStep` tells a machine its functional role; `BlueCard` or `CardBase` tells it nothing. — [Murphy Trueman, "Your next design system user is an agent"](https://blog.murphytrueman.com/your-next-design-system-user/)
-
-#### 5. Production systems exposed via MCP
+#### 2. Production systems exposed via MCP
 
 This isn't only a forward-looking argument — a handful of named systems already expose themselves this way in production:
 
@@ -43,6 +33,8 @@ This isn't only a forward-looking argument — a handful of named systems alread
 - **Mitsubishi Electric's** Serendie design system publishes an MCP endpoint and documents combining it with Figma's own MCP server, so an agent can read a design and implement it using the system's real components rather than inventing lookalikes.
 
 These are early, but they're concrete evidence that "machine-readable manifest" isn't a hypothetical — it's a shape multiple production systems have already converged on independently.
+
+---
 
 ## Common mistakes
 

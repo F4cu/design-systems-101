@@ -54,6 +54,8 @@ Grixti's version of the same point names the mechanism, not just the absence: if
 
 It's tempting to pitch contribution as a way to grow the system faster — more hands, more components shipped. Hupe is blunt that this usually isn't true: reviewing and integrating someone else's work is often slower than the core team just building it themselves. The real payoff is that a contributor brings context the core team doesn't have, so the result actually works for teams and users the core team never sees day to day. That's also the point [Contribution models](contribution-models.md) makes about throughput: don't sell contribution to leadership as a capacity play, because the data doesn't back it up, and the pitch collapses the first time someone checks the numbers. — [Amy Hupe, "5 Lessons on Enabling Design System Contribution"](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)
 
+---
+
 ## Common mistakes
 
 Treating "we accept external contributions" as a policy statement instead of an ongoing practice. A CONTRIBUTING.md file and an open GitHub repo satisfy the letter of an open contribution model without doing any of the work this page describes:

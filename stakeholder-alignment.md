@@ -69,6 +69,8 @@ The diagnostic value isn't the org chart, it's the question it forces: a system 
 
 Awareness & perception — how the organization *feels* about the system — is qualitative and moves slowly enough to check every 6–9 months. Usability & discoverability is both quantitative and qualitative and moves fast enough to check quarterly. Adoption & contribution is quantitative and moves fast enough to check monthly. See [Adoption measurement](adoption-measurement.md) for the metrics themselves; the addition here is cadence — checking perception monthly produces noise, and checking adoption only twice a year is too slow to catch drift before it compounds. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
 
+---
+
 ## Common mistakes
 
 - **Building the stakeholder quadrant, the horizon plan, or the LeanDS canvas once, at launch, and treating it as settled.** [Business alignment](business-alignment.md) makes the same point about the roadmap itself: a case that was true at launch goes stale exactly as fast as the organization changes around it. The zeroheight *Design Systems Report 2026* found staffing (56%) and stakeholder buy-in (31%) still ranked among the top blockers reported by 147 practitioners — the same categories these tools exist to manage — which suggests most teams aren't revisiting the mapping often enough to keep pace with the organisation.

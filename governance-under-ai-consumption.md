@@ -58,6 +58,8 @@ graph TD
 
 </div>
 
+---
+
 ## Common mistakes
 
 - **Treating this as an AI-specific problem with an AI-specific fix** — better prompts, a bigger context window, a smarter agent. "Legibility has become a design constraint, not just a documentation problem. The systems that will hold up are the ones built to be understood without a human in the loop." The gap an agent exposes was already a gap for a new hire, a contractor, or a contributor from another team — the agent just removes the last few people willing to quietly fill it in from memory.

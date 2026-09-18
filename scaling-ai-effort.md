@@ -40,6 +40,8 @@ The same notes apply calibrated scoping to agent access through **MCP** (Model C
 Cross-layer questions like "what code component should I use for this Figma frame?" resolve layer by layer; no single server becomes a bottleneck.
 — design-system-ops, knowledge-notes/mcp-setup-guide.md
 
+The same calibration shows up at the product-UI layer, not just the infrastructure layer. AWS Cloudscape's **user-authorized actions** pattern scopes an agent's permission to act on a per-decision basis — "Allow this time," "Allow for this chat," or "Always allow" — rather than one blanket grant. It's the same principle as layered MCP access, applied to what a user grants an agent inside a product rather than what a design system grants an agent reading it. See [Designing agentic UI patterns](agentic-ui-patterns.md). — [AWS Cloudscape, "User-authorized actions"](https://cloudscape.design/gen-ai/patterns/user-authorized-actions/)
+
 #### 3. Scoped, incremental MCP rollout
 
 Romina Kavcic, writing independently, makes the adoption-side argument: "With MCP, you control exactly what data and tools AI can access. It's not about giving AI free rein, but about creating specific, controlled bridges." Her advice: "Start small: Pick one tool, set up MCP, and automate one repetitive task. Once you see the value, expand from there" — one connection first (she suggests Figma), not everything at once. Each bridge she names is scoped to a single job, not general-purpose access:
@@ -52,6 +54,8 @@ Romina Kavcic, writing independently, makes the adoption-side argument: "With MC
 - **Slack** — makes chat history searchable for decision tracking and adoption signals
 
 — Romina Kavcic, ["5 MCP Connections Every Design System Team Needs Right Now"](https://learn.thedesignsystem.guide/p/5-mcp-connections-every-design-system)
+
+---
 
 ## Common mistakes
 
