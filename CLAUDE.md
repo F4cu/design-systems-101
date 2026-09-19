@@ -29,7 +29,7 @@ No install, build, lint, or test step exists — this is markdown + a static `in
   plugin — that plugin targets Mermaid's pre-v10 global API and silently no-ops under
   Mermaid 10 (which is ESM-first). Don't reintroduce `docsify-mermaid`.
 - **`_sidebar.md`** — the only page ordering/navigation source; add new pages here or they
-  won't appear in the nav. Organized into five parts: Foundations, Governance, Adoption,
+  won't appear in the nav. Organized into five parts: Foundations, Governance, Metrics,
   Business alignment, Agentic AI, followed by Glossary and References.
 - **Content pages** (`*.md` at root) — each is a standalone topic page. `start-here.md` is
   the Docsify homepage (`window.$docsify.homepage`).

@@ -4,7 +4,7 @@
 
 ## Adoption counts tell you who consumes; observability tells you how
 
-[Adoption measurement](adoption-measurement.md) answers whether teams use the system at all, and at what stage — aware, installed, consuming, contributing, advocating. Dependency observability sits one layer beneath that question: for the teams that *are* consuming, which version are they on, which props do they reach for, which tokens do they quietly bypass in favor of raw values, and which have built a parallel solution because the system's component didn't fit. A system can have excellent adoption numbers and still be operating close to blind on all four of those questions.
+[Measuring adoption](adoption-measurement.md) answers whether teams use the system at all, and at what stage — aware, installed, consuming, contributing, advocating. Dependency observability sits one layer beneath that question: for the teams that *are* consuming, which version are they on, which props do they reach for, which tokens do they quietly bypass in favor of raw values, and which have built a parallel solution because the system's component didn't fit. A system can have excellent adoption numbers and still be operating close to blind on all four of those questions.
 
 <p class="eyebrow">Why It Exists</p>
 
@@ -26,7 +26,7 @@ Before a design system can reason about how many consumers a release will break,
 
 #### 3. Token bypass detection
 
-[Adoption measurement](adoption-measurement.md) already names token compliance as "the adoption signal that most directly correlates with system value" — a team can use every system component correctly and still hardcode raw colors and spacing around them, quietly undermining the theming and consistency the tokens exist to guarantee. Dependency observability is what makes that bypass visible at all: without scanning for raw values living alongside token references, a system has no way to distinguish full token compliance from a codebase that looks compliant at the component layer and isn't underneath it.
+[Measuring adoption](adoption-measurement.md) already names token compliance as "the adoption signal that most directly correlates with system value" — a team can use every system component correctly and still hardcode raw colors and spacing around them, quietly undermining the theming and consistency the tokens exist to guarantee. Dependency observability is what makes that bypass visible at all: without scanning for raw values living alongside token references, a system has no way to distinguish full token compliance from a codebase that looks compliant at the component layer and isn't underneath it.
 
 #### 4. Watching for parallel, unofficial implementations
 

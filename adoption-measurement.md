@@ -1,4 +1,4 @@
-# Adoption Measurement
+# Measuring Adoption
 
 <p class="eyebrow">The Principle</p>
 

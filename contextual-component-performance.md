@@ -4,7 +4,7 @@
 
 ## A component's quality is contextual, not intrinsic
 
-A component that passes isolated testing — accessibility checks, visual QA, token compliance — can still fail where it actually lives. The same dropdown, table, or modal behaves differently depending on what it's embedded in: a filter dropdown on a dashboard tolerates a moment of confusion; the same dropdown inside a checkout step doesn't, because the cost of hesitation there is a lost conversion, not a re-click. [Adoption measurement](adoption-measurement.md) already separates "does the system provide this" from "do teams use it" — this page adds a third question neither one answers: *does it perform, specifically, in the context it's placed in, and within the journey that context is part of.* A component can be imported everywhere, pass every isolated check, and still be quietly working against the one flow where it matters most.
+A component that passes isolated testing — accessibility checks, visual QA, token compliance — can still fail where it actually lives. The same dropdown, table, or modal behaves differently depending on what it's embedded in: a filter dropdown on a dashboard tolerates a moment of confusion; the same dropdown inside a checkout step doesn't, because the cost of hesitation there is a lost conversion, not a re-click. [Measuring adoption](adoption-measurement.md) already separates "does the system provide this" from "do teams use it" — this page adds a third question neither one answers: *does it perform, specifically, in the context it's placed in, and within the journey that context is part of.* A component can be imported everywhere, pass every isolated check, and still be quietly working against the one flow where it matters most.
 
 <p class="eyebrow">Why It Exists</p>
 
@@ -22,7 +22,7 @@ Without measuring in situ (in its actual place of use, not in isolation), a team
 
 Product analytics tools built for measuring friction — funnel drop-off (where users abandon a multi-step flow), rage clicks (repeated fast clicks on something that isn't responding), dead clicks (a click that triggers no visible response), session replay (a recorded playback of a real user's screen) — are page- and flow-aware by design. But they have no native concept of "design system component."
 
-Component usage tooling is the mirror image. Import scanners like **Pinterest's** FigStats or **Atlassian's** custom scanner (see [Adoption measurement](adoption-measurement.md)) are component-aware but context-blind: an import count doesn't know or care whether that instance sits in a checkout step or a settings panel. Closing the gap means deliberately tagging analytics events with both the component identity *and* its journey context — a practice that has to be built in-house, because no tool ships this connection out of the box.
+Component usage tooling is the mirror image. Import scanners like **Pinterest's** FigStats or **Atlassian's** custom scanner (see [Measuring adoption](adoption-measurement.md)) are component-aware but context-blind: an import count doesn't know or care whether that instance sits in a checkout step or a settings panel. Closing the gap means deliberately tagging analytics events with both the component identity *and* its journey context — a practice that has to be built in-house, because no tool ships this connection out of the box.
 
 #### 2. Risk as component × context
 
@@ -38,7 +38,7 @@ A component can be adopted, accessible, and on-brand, and still be the specific 
 
 #### 5. Measurement failure modes worsen with context
 
-**Mews's** account of building adoption metrics from production data found that import-based counts are unreliable once components get extended and re-exported, that large container components distort visual measurement, and that complexity goes unweighted in naive metrics (cited in [Adoption measurement](adoption-measurement.md)). Slicing any of those measurements down to a single journey or page type shrinks the sample further and amplifies the same noise — a context-level finding needs more evidence, not less, before it's trusted.
+**Mews's** account of building adoption metrics from production data found that import-based counts are unreliable once components get extended and re-exported, that large container components distort visual measurement, and that complexity goes unweighted in naive metrics (cited in [Measuring adoption](adoption-measurement.md)). Slicing any of those measurements down to a single journey or page type shrinks the sample further and amplifies the same noise — a context-level finding needs more evidence, not less, before it's trusted.
 
 ## Diagram
 
@@ -67,7 +67,7 @@ The instrumentation gap described above — product analytics is context-aware b
 
 Platforms like [PostHog](https://posthog.com/docs/llm-analytics) have recently started closing that gap natively. They unify product analytics — funnels, session replay, feature flags (toggles that turn a feature on for some users without a new deploy) — with LLM/agent observability: traces (a step-by-step record of what an AI agent did), evaluations, and cost and latency per model call. In that combined system, "every trace has a person behind it" — an LLM call and the human session around it already share a single record linking everything tied to that person, natively. That's a materially different starting point than wiring two disconnected tools together, and it opens up a few concrete possibilities worth naming even though nobody has written them up as a pattern yet:
 
-**Tag component instances the same way you'd tag an LLM trace.** If a design system's runtime components already emit an analytics event on mount or interaction (many do, for adoption tracking — see [Adoption measurement](adoption-measurement.md)), extending that event with a `journey_stage` or `page_type` property costs almost nothing and immediately makes the existing funnel and session-replay tooling component-aware, without needing a separate contextual-analytics product.
+**Tag component instances the same way you'd tag an LLM trace.** If a design system's runtime components already emit an analytics event on mount or interaction (many do, for adoption tracking — see [Measuring adoption](adoption-measurement.md)), extending that event with a `journey_stage` or `page_type` property costs almost nothing and immediately makes the existing funnel and session-replay tooling component-aware, without needing a separate contextual-analytics product.
 
 **Let an agentic authoring or migration workflow's LLM trace and the component's runtime outcome share one record.** [Agentic workflow design](agentic-workflow-design.md) already argues that agent actions need scoped, auditable output. If the same platform captures both "an agent generated or migrated this component" (an LLM trace) and "this component then underperformed in the checkout journey" (a product-analytics signal), the two facts can be joined automatically instead of requiring a human to notice the correlation later — turning a one-off finding into a standing feedback signal an agentic design-system workflow could act on.
 

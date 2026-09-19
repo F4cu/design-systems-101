@@ -165,11 +165,11 @@ identically. See [Component API design](component-api-design.md).
 **Coverage vs. usage vs. adoption** — three distinct measurements often conflated into
 one: coverage is what proportion of a product is built from the system; usage is how
 often specific components are reached for; adoption is whether a team is meaningfully
-on the system at all. See [Adoption measurement](adoption-measurement.md).
+on the system at all. See [Measuring adoption](adoption-measurement.md).
 
 **Adoption stage** — where a team sits on a five-stage path (aware, installed, consuming,
 contributing, advocating) in how deeply it has taken up the system. See
-[Adoption measurement](adoption-measurement.md).
+[Measuring adoption](adoption-measurement.md).
 
 **Three rungs of "documented"** — a component can exist (has a story), be described (has
 a props reference), or be guided (has usage guidance) — three different bars, often

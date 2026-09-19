@@ -25,7 +25,7 @@ NN/g's dimensions aren't a new topic so much as a naming scheme for territory th
 - **Infrastructure robustness** — tokens, components, tooling, and the design-to-code contract underneath them. See [Token architecture](token-architecture.md) and [The design-to-code contract](design-to-code-contract.md).
 - **Governance** — how decisions get made, recorded, and revisited. See [Component governance](component-governance.md).
 - **Support** — documentation, onboarding, and how much a team actively equips people to use the system. See [Documentation coverage](documentation-coverage.md) and [Operating cadence](operating-cadence.md).
-- **Adoption** — whether teams actually use, trust, and rely on the system, measured rather than assumed. See [Measurement](adoption-measurement.md) and [Dependency observability](dependency-observability.md).
+- **Adoption** — whether teams actually use, trust, and rely on the system, measured rather than assumed. See [Measuring adoption](adoption-measurement.md) and [Dependency observability](dependency-observability.md).
 
 Each of those pages goes deeper on its dimension than a maturity framework can afford to; the framework's value is naming all six side by side so none of them gets forgotten. — [Wang, "Design-System Maturity: A 6-Dimension Framework"](https://www.nngroup.com/articles/design-system-maturity/)
 

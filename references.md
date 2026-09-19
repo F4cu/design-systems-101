@@ -130,7 +130,7 @@ prose.
 - [Omlet, "Scaling adoption and advocacy for an enterprise-wide design system with Guy Segal"](https://omlet.dev/blog/scaling-design-system-adoption-and-advocacy-with-guy-segal/) — Thomson Reuters ambassador pods
 - zeroheight, *Design Systems Report 2026* — staffing data
 
-## Adoption measurement
+## Measuring adoption
 
 - [Murphy Trueman, "The component adoption gap: understanding the psychology behind design system success"](https://murphytrueman.substack.com/p/the-component-adoption-gap-understanding)
 - zeroheight, *Design Systems Report 2026*

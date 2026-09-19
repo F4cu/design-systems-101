@@ -67,7 +67,7 @@ The diagnostic value isn't the org chart, it's the question it forces: a system 
 
 #### 6. Three-clock measurement
 
-Awareness & perception — how the organization *feels* about the system — is qualitative and moves slowly enough to check every 6–9 months. Usability & discoverability is both quantitative and qualitative and moves fast enough to check quarterly. Adoption & contribution is quantitative and moves fast enough to check monthly. See [Adoption measurement](adoption-measurement.md) for the metrics themselves; the addition here is cadence — checking perception monthly produces noise, and checking adoption only twice a year is too slow to catch drift before it compounds. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
+Awareness & perception — how the organization *feels* about the system — is qualitative and moves slowly enough to check every 6–9 months. Usability & discoverability is both quantitative and qualitative and moves fast enough to check quarterly. Adoption & contribution is quantitative and moves fast enough to check monthly. See [Measuring adoption](adoption-measurement.md) for the metrics themselves; the addition here is cadence — checking perception monthly produces noise, and checking adoption only twice a year is too slow to catch drift before it compounds. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
 
 ---
 
