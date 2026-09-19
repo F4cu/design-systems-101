@@ -162,6 +162,12 @@ intent across platforms while letting the implementation diverge to match each
 platform's conventions, rather than forcing one implementation to run everywhere
 identically. See [Component API design](component-api-design.md).
 
+**Components as data** — authoring a component's anatomy, props, styles, and variants
+directly as structured data (YAML/JSON) rather than a Figma file, so Figma and
+generated code for each platform become outputs of that data instead of the source
+it's reverse-engineered from. See
+[Multi-platform component specs](multi-platform-component-specs.md).
+
 **Coverage vs. usage vs. adoption** — three distinct measurements often conflated into
 one: coverage is what proportion of a product is built from the system; usage is how
 often specific components are reached for; adoption is whether a team is meaningfully

@@ -6,6 +6,7 @@
   - [Layered component architecture](component-building.md)
   - [The design-to-code contract](design-to-code-contract.md)
   - [Component API design](component-api-design.md)
+  - [Multi-platform component specs](multi-platform-component-specs.md)
   - [UI audit](ui-audit.md)
   - [Pilot strategy](pilot-strategy.md)
 - **Governance**

@@ -24,7 +24,7 @@ There's now a shared standard: the Design Tokens Community Group format. Its fir
 
 #### 2. Platform-agnostic naming, tooling handles translation
 
-The same notes cover cross-platform naming: platform differences (web pixels vs. iOS points, different typefaces) are handled by transformation tooling — software like Style Dictionary that converts one token file into each platform's native format — never encoded into the name itself. It's `spacing.4`, not `spacing.web.4`.
+The same notes cover cross-platform naming: platform differences (web pixels vs. iOS points, different typefaces) are handled by transformation tooling — software like Style Dictionary that converts one token file into each platform's native format — never encoded into the name itself. It's `spacing.4`, not `spacing.web.4`. This is one piece of a broader pattern covered in [Multi-platform component specs](multi-platform-component-specs.md): keeping the source of truth platform-neutral, not just the tokens inside it.
 
 #### 3. Token names as contracts
 
