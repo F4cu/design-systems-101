@@ -36,7 +36,7 @@ For the human side, the same practitioner's oversight framework starts from "Age
 
 #### 3. Scoped output claims
 
-One discipline applies to anything an agent publishes on its own: scope claims to what was actually inspected — "no X was found in the files scanned," never "the system has no X" (— design-system-ops, knowledge-notes/output-discipline.md).
+One discipline applies to anything an agent publishes on its own: scope claims to what was actually inspected — "no X was found in the files scanned," never "the system has no X." See [AI output discipline](ai-output-discipline.md) for the fuller rule, including why invented scores and hedging spirals cause the same kind of damage (— design-system-ops, knowledge-notes/output-discipline.md).
 
 ## Diagram
 

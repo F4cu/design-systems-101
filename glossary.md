@@ -214,6 +214,15 @@ feedback loop). See [Agentic workflow design](agentic-workflow-design.md).
 effect, ranging from fully autonomous to human-only. See
 [Agentic workflow design](agentic-workflow-design.md).
 
+**Scope note** — a brief statement of what an AI audit inspected, what it didn't, and what
+it assumed, attached to the output so its claims can't be mistaken for broader knowledge
+of the system than the tool actually has. See [AI output discipline](ai-output-discipline.md).
+
+**Status label** — a qualitative marker (🟢 Strong, 🔴 Critical, ✅ PASS) used in place of
+a numeric score or grade to report an AI audit's findings, forcing the judgment behind it
+to be defended with evidence instead of hidden behind a number. See
+[AI output discipline](ai-output-discipline.md).
+
 **Safe outputs** — a CI pattern where an agent runs with no write permissions and can only
 emit a structured request (open an issue, propose a PR); a separate, permission-controlled
 job decides whether to act on it. See [CI for agentic workflows](ci-for-agentic-workflows.md).

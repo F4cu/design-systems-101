@@ -165,7 +165,7 @@ prose.
 - Simon Sinek's Golden Circle (Why/How/What), applied to stakeholder levels by Ashton-Booth
 - zeroheight, *Design Systems Report 2026*
 
-## AI context & readiness, governance under AI consumption, agentic workflow design, scaling AI effort
+## AI context & readiness, governance under AI consumption, agentic workflow design, AI output discipline, scaling AI effort
 
 - [Romina Kavcic, "Design tokens that AI can actually read"](https://learn.thedesignsystem.guide/p/design-tokens-that-ai-can-actually)
 - [Romina Kavcic, "Should you build an agent for your design system"](https://learn.thedesignsystem.guide/p/should-you-build-an-agent-for-your)
