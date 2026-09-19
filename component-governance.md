@@ -92,6 +92,11 @@ graph TD
 
 — design-system-ops, knowledge-notes/component-governance.md
 
+This ladder describes how governance *practices* accumulate within one team over time —
+it's a single linear track. [Design system maturity](design-system-maturity.md) covers a
+newer framework that treats governance as just one of six independent dimensions a
+system can score on, rather than collapsing everything into one stage.
+
 ---
 
 ## Common mistakes

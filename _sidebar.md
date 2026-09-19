@@ -9,6 +9,7 @@
   - [Pilot strategy](pilot-strategy.md)
 - **Governance**
   - [Component governance](component-governance.md)
+  - [Design system maturity](design-system-maturity.md)
   - [Contribution models](contribution-models.md)
   - [Fostering contribution](fostering-contribution.md)
   - [Component API design](component-api-design.md)

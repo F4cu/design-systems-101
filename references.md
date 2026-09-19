@@ -63,6 +63,10 @@ prose.
 - [Design System Tactics, "RACI"](https://www.designsystemtactics.com/tactics/raci)
 - [DesignX, "Design System Governance: An Enterprise Guide"](https://designx.co/design-system-governance-enterprise/)
 
+## Design system maturity
+
+- [Huei-Hsin Wang, "Design-System Maturity: A 6-Dimension Framework,"](https://www.nngroup.com/articles/design-system-maturity/) Nielsen Norman Group, 2026
+
 ## Fostering contribution
 
 - [Amy Hupe, "5 Lessons on Enabling Design System Contribution"](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)

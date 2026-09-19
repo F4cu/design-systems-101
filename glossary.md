@@ -89,6 +89,11 @@ was made, so it doesn't get silently re-litigated later. See
 optimised, describing the sophistication of its practices, not just its current health.
 See [Component governance](component-governance.md).
 
+**Maturity dimension** — one of six independent axes (organizational alignment, team
+effectiveness, infrastructure robustness, governance, support, adoption) a design system
+can be scored on separately, rather than collapsed into one overall stage. See
+[Design system maturity](design-system-maturity.md).
+
 **RACI matrix** — a table assigning each governance decision one Responsible, one
 Accountable, and any number of Consulted or Informed parties, so it's clear who decides
 versus who's just weighing in. See [Component governance](component-governance.md).
