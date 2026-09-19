@@ -1,10 +1,10 @@
 # Contribution Models
 
-<p class="eyebrow">The Principle</p>
+<p class="eyebrow">The Idea</p>
 
-## A contribution model decides who gets to make the call, not how it's recorded
+## No single contribution model fits every org — the right shape depends on size and structure, and it comes with its own bar for what counts as a contribution worth accepting
 
-A contribution model answers a different question than [component governance](component-governance.md) does. Governance is about how a decision gets recorded once someone's made it. A contribution model is about who structurally gets to *make* it — one central team, a federation of product teams, or something in between — and what counts as a contribution worth accepting in the first place.
+A contribution model answers a different question than [component governance](component-governance.md) does. Governance is about how a decision gets recorded once someone's made it. A contribution model is about who structurally gets to *make* it — one central team, a federation of product teams, or something in between — and what counts as a contribution worth accepting in the first place. Which shape fits, and where the bar for in and out sits, changes with the org's size and maturity, not a fixed template.
 
 <p class="eyebrow">Why It Exists</p>
 

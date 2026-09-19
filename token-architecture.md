@@ -1,4 +1,4 @@
-# Token Architecture: The Three-Tier Model
+# Token Architecture
 
 <p class="eyebrow">The Principle</p>
 

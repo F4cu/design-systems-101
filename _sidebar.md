@@ -3,7 +3,7 @@
   - [What a design system is](foundations.md)
   - [Token architecture](token-architecture.md)
   - [Component taxonomy](component-taxonomy.md)
-  - [Component building](component-building.md)
+  - [Layered component architecture](component-building.md)
   - [The design-to-code contract](design-to-code-contract.md)
   - [UI audit](ui-audit.md)
   - [Pilot strategy](pilot-strategy.md)
@@ -17,7 +17,7 @@
   - [Scaling across decades](scaling-across-decades.md)
   - [Inheriting a legacy system](inheriting-a-legacy-system.md)
 - **Adoption**
-  - [Communication](operating-cadence.md)
+  - [Operating cadence](operating-cadence.md)
   - [Measurement](adoption-measurement.md)
   - [Performance in context](contextual-component-performance.md)
   - [Dependency observability](dependency-observability.md)

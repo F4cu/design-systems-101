@@ -1,8 +1,8 @@
 # Fostering Contribution
 
-<p class="eyebrow">The Principle</p>
+<p class="eyebrow">The Idea</p>
 
-## An open contribution door doesn't produce contributors — a built culture does
+## An open contribution door doesn't produce contributors — building that culture takes several deliberate practices, from how you recruit to how you frame the payoff
 
 [Contribution models](contribution-models.md) answer a structural question: who gets to decide what enters the system. This page answers a different one — once the model exists, what makes people actually show up and use it. Publishing a "how to contribute" doc and leaving the door open produces almost nothing on its own. Amy Hupe's five lessons on enabling contribution, and Inayaili de León's talk on fostering participation, both start from the same observation: contribution is a behavior you cultivate deliberately, not a feature you ship once.
 
@@ -65,4 +65,4 @@ Treating "we accept external contributions" as a policy statement instead of an 
 - **Nothing in progress gets shared until it's finished.** Work stays invisible until it ships, so other teams only discover overlap or conflicting assumptions once it's too late to cheaply fix.
 - **The door being technically open isn't the same as someone believing it's worth walking through.** A repo that accepts PRs in principle but never triages them teaches people not to bother next time.
 
-See [Communication](operating-cadence.md) for the channels and stewardship structure that carry this culture day to day once it exists.
+See [Operating cadence](operating-cadence.md) for the channels and stewardship structure that carry this culture day to day once it exists.

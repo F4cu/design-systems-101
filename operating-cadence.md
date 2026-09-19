@@ -1,8 +1,8 @@
-# Communication
+# Operating Cadence
 
-<p class="eyebrow">The Principle</p>
+<p class="eyebrow">The Idea</p>
 
-## Governance decides what's true; cadence makes sure people know it
+## Keeping a governed system legible to everyone outside the core team takes several deliberate channels working together, not one announcement
 
 [Governance](component-governance.md) decides what's in the system and why. Operating cadence is the separate, ongoing practice of making sure people actually *know* that — through channels, a release rhythm, a standing door to ask questions, a named person to guide bigger work, a program to build advocates, and a route for feedback to get back in. A system can be perfectly governed and still fail in practice if nobody outside the core team ever hears about a change, knows who to ask, or has anywhere to send a complaint.
 

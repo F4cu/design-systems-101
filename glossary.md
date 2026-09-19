@@ -55,11 +55,11 @@ points. See [Component taxonomy](component-taxonomy.md).
 
 **Component property** (Figma) — a variant, boolean, text, or instance-swap property
 attached directly to a Figma component; the design-tool equivalent of a prop in code. See
-[Component building](component-building.md).
+[Layered component architecture](component-building.md).
 
 **Nested instance** — a subcomponent instance placed inside a parent component in Figma,
 with its own properties optionally exposed up through the parent's properties panel. See
-[Component building](component-building.md).
+[Layered component architecture](component-building.md).
 
 **Design-to-code contract** — an explicit agreement about what "done" means at each
 stage (design, build, documentation, release) of building a component. See
@@ -71,11 +71,11 @@ stage (design, build, documentation, release) of building a component. See
 
 **Pilot** (design system) — a real, already-planned product project used to build and
 test a design system's first components against actual work, before they're locked in
-as v1. See [Pilot strategy & launch prioritization](pilot-strategy.md).
+as v1. See [Pilot strategy](pilot-strategy.md).
 
 **Scorecard** (pilot scorecard) — a shared, numerically scored set of criteria used to
 choose which candidate project to pilot a design system on, so the choice isn't made by
-gut feel or seniority. See [Pilot strategy & launch prioritization](pilot-strategy.md).
+gut feel or seniority. See [Pilot strategy](pilot-strategy.md).
 
 **Governance** (component governance) — the decisions and processes that determine what
 belongs in a design system, how it gets added, how it changes, and how it's removed. See

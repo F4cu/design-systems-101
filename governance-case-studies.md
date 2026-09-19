@@ -1,6 +1,6 @@
 # Governance Case Studies
 
-<p class="eyebrow">The Principle</p>
+<p class="eyebrow">Case Studies</p>
 
 ## Governance failures and successes only make sense in context
 

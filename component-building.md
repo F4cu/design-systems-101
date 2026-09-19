@@ -1,8 +1,8 @@
-# Component Building: Structuring Components in Figma
+# Layered Component Architecture
 
 <p class="eyebrow">The Principle</p>
 
-## Flexibility is a structural decision, made before the first variant is drawn
+## A component's flexibility comes from nesting smaller components inside it, not from adding more variants and booleans to one flat layer
 
 Once a team has the vocabulary from [Component taxonomy](component-taxonomy.md) — primitive, subcomponent, slot — the next question is mechanical: how do you actually build that structure in Figma? Nathan Curtis's answer is to stop treating every new need as a new variant or a new boolean toggle, and instead build components as **nested instances**: smaller subcomponents placed inside a parent, with their properties exposed up through the parent's properties panel. The alternative — one flat component with a growing pile of variant switches and boolean layers — is the same "configuration collapse" failure mode from [Component API design](component-api-design.md), just showing up in the Figma file instead of the code. — [Nathan Curtis, "Architecting Subcomponents"](https://www.youtube.com/watch?v=NiDoqI_ZhvY), Schema by Figma, 2022
 

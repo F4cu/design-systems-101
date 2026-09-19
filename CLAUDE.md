@@ -46,18 +46,44 @@ No install, build, lint, or test step exists — this is markdown + a static `in
 Every content page from Part 1 onward follows the same shape (see `token-architecture.md`
 as a reference example):
 
-1. `<p class="eyebrow">The Principle</p>` + an `##` heading — the concept in plain
-   language, no jargon yet.
-2. `<p class="eyebrow">Why It Exists</p>` + an `##` heading — the concrete failure mode
-   that happens without it.
-3. `## In Practice` — numbered `####` sub-sections with real examples, each ending in a
+1. **Title (H1)**: name the principle or topic in 2–5 words. Never restate the page's own
+   subject descriptively (bad: `Component Building: Structuring Components in Figma`,
+   should be `Layered Component Architecture`) and never stack a colon- or `&`-joined
+   subtitle listing the page's own sub-topics (bad: `Release Management: Versioning,
+   Changelogs & Migration Guides` — if the sub-topics need naming, that's what the opening
+   `##` heading is for). The H1 must match the link text used for this page everywhere
+   else in the wiki (`_sidebar.md`, `glossary.md`, other pages' cross-links) — update all
+   of them together if the title changes.
+2. Opening eyebrow + `##` heading — pick one of three types based on how the page's
+   `In Practice` sub-sections relate to each other:
+   - **`<p class="eyebrow">The Principle</p>`** (the default) — use when the sub-sections
+     are all facets of one claim. The `##` heading must be a self-contained, one-sentence
+     *definition* of what the principle means and why it matters — never a claim copied or
+     paraphrased from the body paragraph below it that only makes sense once you've read
+     that paragraph. Reference examples: `token-architecture.md`, `component-api-design.md`.
+   - **`<p class="eyebrow">The Idea</p>`** — use when the sub-sections are genuinely
+     independent practices, tools, or named frameworks gathered under a shared theme
+     rather than facets of a single claim (test: could a sub-section stand alone as its
+     own page-worthy principle? If several could, it's this type). The `##` heading names
+     the *shared thread* connecting the sub-sections instead of asserting one universal
+     claim. Reference examples: `operating-cadence.md`, `contribution-models.md`,
+     `stakeholder-alignment.md`.
+   - **`<p class="eyebrow">Case Studies</p>`** — use when the page is built from worked,
+     concrete examples rather than a claim to defend. The `##` heading frames why the
+     cases are worth reading together, and should not force a single universal principle
+     out of them. Reference example: `governance-case-studies.md`.
+3. `<p class="eyebrow">Why It Exists</p>` + an `##` heading — the concrete failure mode
+   that happens without it. This section's job doesn't change across the three types above
+   (it justifies the topic/practice area, not one specific claim), so it stays the same
+   regardless of which eyebrow type item 2 uses.
+4. `## In Practice` — numbered `####` sub-sections with real examples, each ending in a
    footnote-style source citation (`— author/source, path or post title`).
-4. `## Diagram` (optional, only when a relationship is genuinely spatial/sequential —
+5. `## Diagram` (optional, only when a relationship is genuinely spatial/sequential —
    don't diagram things that are just lists) — a Mermaid block wrapped in
    `<div class="mermaid-wrap">...</div>` so it scrolls in its own box on narrow viewports
    instead of forcing page-wide horizontal scroll. Keep diagrams few-node and legible at
    ~800px max width.
-5. `## Common mistakes` — a bulleted list, each bullet a beginner-likely error grounded in
+6. `## Common mistakes` — a bulleted list, each bullet a beginner-likely error grounded in
    a cited source where possible.
 
 Other conventions:

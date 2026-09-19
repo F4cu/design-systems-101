@@ -1,4 +1,4 @@
-# Component Taxonomy: Naming the Parts
+# Component Taxonomy
 
 <p class="eyebrow">The Principle</p>
 

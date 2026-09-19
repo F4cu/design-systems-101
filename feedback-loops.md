@@ -1,4 +1,4 @@
-# Generative Loops: Loops That Include Review Need a Stopping Rule
+# Generative Loops
 
 <p class="eyebrow">The Principle</p>
 

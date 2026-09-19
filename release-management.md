@@ -1,4 +1,4 @@
-# Release Management: Versioning, Changelogs & Migration Guides
+# Release Management
 
 <p class="eyebrow">The Principle</p>
 

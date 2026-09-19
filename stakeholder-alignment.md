@@ -1,8 +1,8 @@
-# Stakeholder Alignment & Planning Horizons
+# Stakeholder Alignment
 
-<p class="eyebrow">The Principle</p>
+<p class="eyebrow">The Idea</p>
 
-## Design systems fail from lost organizational alignment, not broken components
+## Staying aligned with stakeholders at scale takes a toolkit, not one framework — a way to map who they are, and others to match altitude, timing, and pitch to each group
 
 "Design systems don't fail because of components. They fail because they lose alignment with the organisation." At scale, a design system isn't a component library with a governance process attached to it — it's a small organization living inside a bigger one, and it has to justify its own existence the same way any viable organization does: by staying legible to, and connected with, everything around it. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
 

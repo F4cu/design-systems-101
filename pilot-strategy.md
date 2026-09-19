@@ -1,8 +1,8 @@
-# Pilot Strategy & Launch Prioritization
+# Pilot Strategy
 
-<p class="eyebrow">The Principle</p>
+<p class="eyebrow">The Idea</p>
 
-## The first components should come from real work already in flight, not a wishlist drawn up in a room
+## Piloting a design system's first components is a deliberate sequence — timing the launch window, scoring real candidates, sourcing from what's already shipping, and proving value before scaling — not a single launch decision
 
 "I haven't done a design system where we didn't pilot it first." Dan Mall treats a design system's early components the way a TV network treats a pilot episode: a real, small production run through before anyone commits to a full season. The pilot is what tells you whether a component actually survives contact with a real product, before it gets locked in as v1. — [Dan Mall, via UXPin, "On Design Systems: Dan Mall of Superfriendly"](https://www.uxpin.com/studio/blog/design-systems-dan-mall-superfriendly/); [Big Medium, "Design Systems: Pilots & Scorecards"](https://bigmedium.com/ideas/links/design-systems-pilots-scorecards.html)
 
@@ -61,8 +61,8 @@ Mall's framing for what a healthy system looks like once it's past its first pil
 
 ## Common mistakes
 
-- **Treating the pilot and launch as a project with an end date, then moving on.** Mall's own metaphor for what a design system actually requires afterward is gardening, not construction: "that's what it takes to have something grow." That means recurring weekly rituals (he cites a team that dedicates every Friday to the system), repeated communication, and continued tending — until, in his words, "at some point it flips to it's actually harder to stop doing this thing than it is to continue doing it." A pilot that scores well and ships is still only the tactical, "Now" horizon of the work described in [Stakeholder alignment & planning horizons](stakeholder-alignment.md); if nothing carries it into the "Next" and "Future" horizons, it stalls exactly the way an unpiloted launch does, just a few months later.
+- **Treating the pilot and launch as a project with an end date, then moving on.** Mall's own metaphor for what a design system actually requires afterward is gardening, not construction: "that's what it takes to have something grow." That means recurring weekly rituals (he cites a team that dedicates every Friday to the system), repeated communication, and continued tending — until, in his words, "at some point it flips to it's actually harder to stop doing this thing than it is to continue doing it." A pilot that scores well and ships is still only the tactical, "Now" horizon of the work described in [Stakeholder alignment](stakeholder-alignment.md); if nothing carries it into the "Next" and "Future" horizons, it stalls exactly the way an unpiloted launch does, just a few months later.
 - **Picking whichever project happens to be available instead of timing the pilot window deliberately.** Too early and the team doesn't know enough yet for the pilot to surface real components; too late and folding in design-system components means an expensive refactor no team will volunteer for twice.
 - **Expecting 100% compliance beyond the pilot.** A system that expects every bit of product work to use standardized components is optimizing against the legitimate custom cases it was never designed to cover — teams will defect from it rather than fight it.
 
-[Communication](operating-cadence.md) covers the rituals that keep the system from stalling. — [Dan Mall, "Dan Mall: creating a sustainable design system practice,"](https://ellessmedia.com/csi/dan-mall/) Content Strategy Interviews
+[Operating cadence](operating-cadence.md) covers the rituals that keep the system from stalling. — [Dan Mall, "Dan Mall: creating a sustainable design system practice,"](https://ellessmedia.com/csi/dan-mall/) Content Strategy Interviews
