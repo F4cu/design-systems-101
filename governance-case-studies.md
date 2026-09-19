@@ -14,7 +14,7 @@ Without concrete cases, governance principles stay abstract enough to agree with
 
 ---
 
-## In Practice
+## The Cases
 
 #### 1. Forking instead of extending, at Wise
 

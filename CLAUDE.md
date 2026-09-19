@@ -71,13 +71,17 @@ as a reference example):
    - **`<p class="eyebrow">Case Studies</p>`** — use when the page is built from worked,
      concrete examples rather than a claim to defend. The `##` heading frames why the
      cases are worth reading together, and should not force a single universal principle
-     out of them. Reference example: `governance-case-studies.md`.
+     out of them. Reference example: `governance-case-studies.md`. On this type only,
+     also rename the section from item 4 below to `## The Cases` — "In Practice" implies
+     an abstract claim being made concrete, which isn't what's happening on a page that's
+     already nothing but concrete cases.
 3. `<p class="eyebrow">Why It Exists</p>` + an `##` heading — the concrete failure mode
    that happens without it. This section's job doesn't change across the three types above
    (it justifies the topic/practice area, not one specific claim), so it stays the same
    regardless of which eyebrow type item 2 uses.
-4. `## In Practice` — numbered `####` sub-sections with real examples, each ending in a
-   footnote-style source citation (`— author/source, path or post title`).
+4. `## In Practice` (`## The Cases` on a `Case Studies`-type page — see item 2) — numbered
+   `####` sub-sections with real examples, each ending in a footnote-style source
+   citation (`— author/source, path or post title`).
 5. `## Diagram` (optional, only when a relationship is genuinely spatial/sequential —
    don't diagram things that are just lists) — a Mermaid block wrapped in
    `<div class="mermaid-wrap">...</div>` so it scrolls in its own box on narrow viewports
