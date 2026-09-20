@@ -55,11 +55,11 @@ points. See [Component taxonomy](component-taxonomy.md).
 
 **Component property** (Figma) — a variant, boolean, text, or instance-swap property
 attached directly to a Figma component; the design-tool equivalent of a prop in code. See
-[Layered component architecture](component-building.md).
+[Component architecture](component-building.md).
 
 **Nested instance** — a subcomponent instance placed inside a parent component in Figma,
 with its own properties optionally exposed up through the parent's properties panel. See
-[Layered component architecture](component-building.md).
+[Component architecture](component-building.md).
 
 **Design-to-code contract** — an explicit agreement about what "done" means at each
 stage (design, build, documentation, release) of building a component. See

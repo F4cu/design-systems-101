@@ -1,4 +1,4 @@
-# Layered Component Architecture
+# Component Architecture
 
 <p class="eyebrow">The Principle</p>
 

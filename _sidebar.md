@@ -3,7 +3,7 @@
   - [What a design system is](foundations.md)
   - [Token architecture](token-architecture.md)
   - [Component taxonomy](component-taxonomy.md)
-  - [Layered component architecture](component-building.md)
+  - [Component architecture](component-building.md)
   - [The design-to-code contract](design-to-code-contract.md)
   - [Component API design](component-api-design.md)
   - [Multi-platform component specs](multi-platform-component-specs.md)

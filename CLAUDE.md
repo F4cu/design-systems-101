@@ -48,7 +48,7 @@ as a reference example):
 
 1. **Title (H1)**: name the principle or topic in 2–5 words. Never restate the page's own
    subject descriptively (bad: `Component Building: Structuring Components in Figma`,
-   should be `Layered Component Architecture`) and never stack a colon- or `&`-joined
+   should be `Component Architecture`) and never stack a colon- or `&`-joined
    subtitle listing the page's own sub-topics (bad: `Release Management: Versioning,
    Changelogs & Migration Guides` — if the sub-topics need naming, that's what the opening
    `##` heading is for). The H1 must match the link text used for this page everywhere
