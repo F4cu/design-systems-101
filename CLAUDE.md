@@ -7,32 +7,38 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 A personal field guide (not a commercial product) to the operational and architectural
 side of running a design system — token architecture, governance, adoption,
 documentation, business alignment, and a dedicated section on AI-readiness and agentic
-workflows. It's a static [Docsify](https://docsify.js.org) site: plain markdown pages,
-no build step, no bundler, no component code and no real token values anywhere (sources
-are cited for the ideas behind them, not replicated as config to copy).
+workflows. It's an [Astro Starlight](https://starlight.astro.build/) site: markdown
+content pages, Starlight's default theme, no component code and no real token values
+anywhere (sources are cited for the ideas behind them, not replicated as config to copy).
 
-Published at https://f4cu.github.io/design-systems-101/ via GitHub Pages off `main`.
+Published at https://f4cu.github.io/design-systems-101/ via GitHub Pages, built and
+deployed by `.github/workflows/deploy.yml` on push to `main`.
 
 ## Commands
 
 ```bash
-npx docsify-cli serve .   # serve locally to preview changes
+npm install
+npm run dev     # serve locally to preview changes
+npm run build   # production build to dist/
 ```
-
-No install, build, lint, or test step exists — this is markdown + a static `index.html`/`_sidebar.md` shell only.
 
 ## Architecture
 
-- **`index.html`** — the Docsify shell: CDN-loaded Docsify 4, custom CSS (WCAG line-length
-  caps, sidebar sizing, mobile viewport fixes), and a hand-rolled Mermaid v10 render hook.
-  Mermaid is wired manually via a `doneEach` lifecycle hook, not the `docsify-mermaid`
-  plugin — that plugin targets Mermaid's pre-v10 global API and silently no-ops under
-  Mermaid 10 (which is ESM-first). Don't reintroduce `docsify-mermaid`.
-- **`_sidebar.md`** — the only page ordering/navigation source; add new pages here or they
-  won't appear in the nav. Organized into five parts: Foundations, Governance, Metrics,
-  Business alignment, Agentic AI, followed by Glossary and References.
-- **Content pages** (`*.md` at root) — each is a standalone topic page. `start-here.md` is
-  the Docsify homepage (`window.$docsify.homepage`).
+- **`astro.config.mjs`** — Starlight config: site metadata, the `sidebar` array (the only
+  page ordering/navigation source — add new pages here or they won't appear in the nav),
+  and the `astro-mermaid` integration for rendering Mermaid diagrams client-side
+  (including re-rendering on Starlight's view-transition page swaps). Organized into five
+  sidebar groups: Foundations, Governance, Metrics, Business alignment, Agentic AI,
+  followed by Glossary and References. A sidebar item is a bare filename slug
+  (`'token-architecture'`) unless its nav label needs to differ from the page's `title`
+  frontmatter, in which case use `{ slug: '...', label: '...' }`.
+- **`src/styles/custom.css`** — the only custom CSS on top of Starlight's stock theme:
+  WCAG line-length caps, the `.eyebrow` label style, and the `.mermaid-wrap` scroll-box
+  style. Deliberately does not reskin Starlight's default colors/fonts/sidebar chrome.
+- **Content pages** (`src/content/docs/*.md`) — each is a standalone topic page. The
+  `title` frontmatter field is what Starlight renders as the page's H1 and browser-tab
+  title — don't also put a `# Title` line in the body, Starlight adds it automatically.
+  `index.md` (originally `start-here.md`) is the homepage, served at `/`.
 - **`glossary.md`** — one line per term introduced anywhere in the wiki, links back to the
   page that explains it in context. Update when a page introduces new terminology.
 - **`references.md`** — every citation across the wiki, grouped by page/topic, mirroring
@@ -46,14 +52,16 @@ No install, build, lint, or test step exists — this is markdown + a static `in
 Every content page from Part 1 onward follows the same shape (see `token-architecture.md`
 as a reference example):
 
-1. **Title (H1)**: name the principle or topic in 2–5 words. Never restate the page's own
-   subject descriptively (bad: `Component Building: Structuring Components in Figma`,
-   should be `Component Architecture`) and never stack a colon- or `&`-joined
-   subtitle listing the page's own sub-topics (bad: `Release Management: Versioning,
-   Changelogs & Migration Guides` — if the sub-topics need naming, that's what the opening
-   `##` heading is for). The H1 must match the link text used for this page everywhere
-   else in the wiki (`_sidebar.md`, `glossary.md`, other pages' cross-links) — update all
-   of them together if the title changes.
+1. **Title (`title` frontmatter, rendered as the H1)**: name the principle or topic in
+   2–5 words. Never restate the page's own subject descriptively (bad: `Component
+   Building: Structuring Components in Figma`, should be `Component Architecture`) and
+   never stack a colon- or `&`-joined subtitle listing the page's own sub-topics (bad:
+   `Release Management: Versioning, Changelogs & Migration Guides` — if the sub-topics
+   need naming, that's what the opening `##` heading is for). The title must match the
+   link text used for this page everywhere else in the wiki (`astro.config.mjs`'s
+   sidebar, `glossary.md`, other pages' cross-links) — update all of them together if the
+   title changes. Do not add a `# Title` line in the page body — Starlight renders the
+   frontmatter `title` as the H1 automatically.
 2. Opening eyebrow + `##` heading — pick one of three types based on how the page's
    `In Practice` sub-sections relate to each other:
    - **`<p class="eyebrow">The Principle</p>`** (the default) — use when the sub-sections
@@ -117,6 +125,7 @@ Other conventions:
 - **Mobile-first**: the primary read surface is a phone (iOS Safari). Don't add wide
   tables or unwrapped long inline code/URLs — they force horizontal scroll on a
   375–430px viewport. Any new diagram must go inside `.mermaid-wrap`.
-- **Cross-linking**: link to other pages in-line with relative markdown links
-  (`[Token architecture](token-architecture.md)`) rather than duplicating an explanation
-  that another page already owns.
+- **Cross-linking**: link to other pages in-line with absolute, extension-less site paths
+  (`[Token architecture](/token-architecture/)`) rather than duplicating an explanation
+  that another page already owns. Astro does not resolve `.md`-suffixed relative links
+  the way Docsify did — a link written as `(token-architecture.md)` 404s at build time.

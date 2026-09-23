@@ -1,0 +1,41 @@
+/* WCAG 1.4.8: cap line length at ~75 characters so running text stays readable —
+   measure applies only to prose, not tables or code, which need the full width. */
+:root {
+	--measure: 600px;
+}
+.sl-markdown-content p,
+.sl-markdown-content li,
+.sl-markdown-content blockquote,
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4 {
+	max-width: var(--measure);
+}
+
+.eyebrow {
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--sl-color-gray-3);
+	margin: 2em 0 0.25em !important;
+}
+.eyebrow + h2 {
+	margin-top: 0.2em;
+}
+
+/* Mermaid diagrams don't reflow — scroll them within their own box instead of the page */
+.mermaid-wrap {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	margin: 1em 0;
+}
+.mermaid-wrap .mermaid {
+	display: block;
+}
+.mermaid-wrap svg {
+	max-width: 800px;
+	height: auto;
+	display: block;
+}

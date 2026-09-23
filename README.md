@@ -30,8 +30,8 @@ System Model to design systems; and, for the AI section,
 [Murphy Trueman](https://blog.murphytrueman.com/), and
 [Shane P Williams](https://designsystemscollective.substack.com/), three people writing
 independently about AI and design systems today. Every claim is
-attributed to the specific source it came from — see the [references page](references.md)
-for the full list, or [start here](start-here.md) for the sourcing philosophy in more
+attributed to the specific source it came from — see the [references page](https://f4cu.github.io/design-systems-101/references/)
+for the full list, or [start here](https://f4cu.github.io/design-systems-101/) for the sourcing philosophy in more
 detail.
 
 No component code, no real token values, and no API keys or repo-specific config are
@@ -40,13 +40,14 @@ replicated as configuration to copy.
 
 ## How it's built
 
-Plain markdown pages served with [Docsify](https://docsify.js.org) — no build step,
-no bundler. Diagrams are [Mermaid](https://mermaid.js.org) blocks rendered client-side.
-See `_sidebar.md` for the page order and `.claude/handoff/` for the notes on how this
-was researched and put together.
+Plain markdown pages built with [Astro Starlight](https://starlight.astro.build/).
+Diagrams are [Mermaid](https://mermaid.js.org) blocks rendered client-side via
+`astro-mermaid`. See `astro.config.mjs` for the page order and `.claude/handoff/` for
+the notes on how this was researched and put together.
 
 To read it locally:
 
 ```bash
-npx docsify-cli serve .
+npm install
+npm run dev
 ```
