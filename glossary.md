@@ -168,6 +168,12 @@ generated code for each platform become outputs of that data instead of the sour
 it's reverse-engineered from. See
 [Multi-platform component specs](multi-platform-component-specs.md).
 
+**Component contract** — a precise, verifiable declaration of what a component must do
+(its intent), as opposed to a description a platform team can interpret loosely; the
+mechanism for handling structural or behavioral differences between platforms, as
+opposed to token layering for value differences. See
+[Platform divergence](platform-divergence.md).
+
 **Coverage vs. usage vs. adoption** — three distinct measurements often conflated into
 one: coverage is what proportion of a product is built from the system; usage is how
 often specific components are reached for; adoption is whether a team is meaningfully
