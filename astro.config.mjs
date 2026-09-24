@@ -29,6 +29,8 @@ export default defineConfig({
 				'A field guide to running design systems — token architecture, governance, adoption, and AI-readiness.',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/F4cu/ds101' }],
 			customCss: ['./src/styles/custom.css'],
+			// Wrap long code lines instead of scrolling sideways on phones
+			expressiveCode: { defaultProps: { wrap: true } },
 			sidebar: [
 				{ label: 'Start here', link: '/' },
 				{

@@ -25,11 +25,54 @@ Because the cascade compounds, the cheapest place to fix context is where it sta
 
 The design-system-ops notes describe a **machine-readable component manifest**: a structured JSON index of every component, with its name, category, description, props, variants, composition relationships, token bindings, accessibility role, and status. An agent querying it can turn "I need a component for user input with validation" into a specific component, variant, and configuration, without reading documentation pages. That's the difference between a system that works with AI and one that's *legible* to it.
 
+The notes specify the minimum fields for each component, and the key names below are theirs. The TextField values are illustrative, and each list is trimmed to one item:
+
+```json title="manifest.json (one entry)"
+{
+  "name": "TextField",
+  "category": "input",
+  "description": "Single-line text input with a label and inline validation message.",
+  "props": [
+    {
+      "name": "error",
+      "type": "string",
+      "required": false,
+      "description": "Validation message shown below the field"
+    }
+  ],
+  "variants": [
+    { "name": "compact", "description": "Dense forms and filter bars" }
+  ],
+  "composedOf": ["Label", "HelperText"],
+  "composedIn": ["Form", "FilterBar"],
+  "tokens": ["input.border.default"],
+  "a11y": { "role": "textbox" },
+  "status": "stable",
+  "version": "2.1.0"
+}
+```
+
+Asked for "user input with validation," an agent can match the `input` category, the description, and the `error` prop. `composedOf` and `composedIn` tell it what the field is built from and where it belongs. `status` tells it the component is safe to use. It gets all of this without opening a docs page.
+
 [Context engineering](/context-engineering/) covers task-specific versions of this manifest: Murphy Trueman's seven-blueprint **context engine**, and a second one built independently by Diana Wolosin.
 
 ### Describe tokens and components by purpose
 
-When an agent reads an undocumented token set, it sees "a wall of nested objects with no context about why these values exist or when to use them," the same ambiguity a new team member hits, with no one to ask. The same goes for component names: `BlueCard` or `CardBase` tells a machine nothing about its role, while `FeatureHighlight` or `OnboardingStep` does. [Documentation for agents](/documentation-for-agents/) covers treating tokens and components as an API, from Romina Kavcic and Murphy Trueman.
+When an agent reads an undocumented token set, it sees "a wall of nested objects with no context about why these values exist or when to use them," the same ambiguity a new team member hits, with no one to ask. The same goes for component names: `BlueCard` or `CardBase` tells a machine nothing about its role, while `FeatureHighlight` or `OnboardingStep` does.
+
+For tokens, the [DTCG format](/token-architecture/#store-tokens-in-the-shared-dtcg-format) has a place for purpose built in: an optional `$description` next to the value.
+
+```json title="tokens/semantic.json"
+"color.feedback.error": {
+  "$type": "color",
+  "$value": "{color.red.600}",
+  "$description": "Error text and borders on invalid form fields. Not for warnings."
+}
+```
+
+The name says what the token is. The description says when to use it and when not to. That's the context a wall of nested objects leaves out.
+
+[Documentation for agents](/documentation-for-agents/) covers treating tokens and components as an API, from Romina Kavcic and Murphy Trueman.
 
 ### Document anti-patterns and edge cases
 

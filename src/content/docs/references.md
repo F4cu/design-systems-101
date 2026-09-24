@@ -20,7 +20,9 @@ prose.
 - [Nathan Curtis, "Configuration Collapse"](https://nathanacurtis.substack.com/p/configuration-collapse)
 - Brad Frost, *Atomic Design*, [Chapter 2](https://atomicdesign.bradfrost.com/chapter-2/) — atoms, molecules, organisms
 - [Radix Primitives, "Composition"](https://www.radix-ui.com/primitives/docs/guides/composition) — parts and the `asChild` pattern
-- [Workday Canvas Design System, "Compound Components"](https://github.com/Workday/canvas-kit/blob/master/modules/docs/mdx/COMPOUND_COMPONENTS.mdx)
+- [Radix Primitives, "Dialog"](https://www.radix-ui.com/primitives/docs/components/dialog): the Dialog anatomy example
+- [Workday Canvas Design System, "Compound Components"](https://github.com/Workday/canvas-kit/blob/master/modules/docs/mdx/COMPOUND_COMPONENTS.mdx): includes the configuration-vs-compound Tabs example
+- [MUI, "Button API"](https://mui.com/material-ui/api/button/): the `startIcon` slot prop
 - [story.to.design, "Subcomponents: How to make your design system more flexible"](https://story.to.design/blog/subcomponents-more-flexible-design-systems)
 
 ## Component building
@@ -28,12 +30,14 @@ prose.
 - [Nathan Curtis, "Architecting Subcomponents"](https://www.youtube.com/watch?v=NiDoqI_ZhvY), Schema by Figma, 2022
 - [Figma, "Taking cues from code"](https://www.figma.com/blog/taking-cues-from-code/)
 - [fourzerothree.in, "Crafting Components with Subcomponents and Nested Instances"](https://www.fourzerothree.in/p/crafting-components-with-subcomponents)
+- [Nathan Curtis, "Component Contracts and Schemas"](https://nathanacurtis.substack.com/p/component-contracts-and-schemas): the 96-variant disabled example
 
 ## Multi-platform component specs
 
 - [Nathan Curtis, "Component Specifications"](https://medium.com/eightshapes-llc/component-specifications-1492ca4c94c)
 - [Nathan Curtis, "Components as Data"](https://medium.com/@nathanacurtis/components-as-data-2be178777f21)
 - [Nathan Curtis, "The EightShapes Specs Figma Plugin"](https://nathanacurtis.substack.com/p/the-eightshapes-specs-figma-plugin-2892f21adc96)
+- [Nathan Curtis, "Component Contracts and Schemas"](https://nathanacurtis.substack.com/p/component-contracts-and-schemas): the `size` enum example
 - [Design Tokens Community Group, "Design Tokens Specification Reaches First Stable Version"](https://www.w3.org/community/design-tokens/2025/10/28/design-tokens-specification-reaches-first-stable-version/), W3C, October 2025
 
 ## Platform divergence
@@ -95,6 +99,7 @@ prose.
 - [Supernova, "Building Durable Component APIs for Design Systems"](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems)
 - [MUI, "API design approach"](https://mui.com/material-ui/guides/api/)
 - [Wealthfront Engineering, "Building Wealthfront's multi-platform design system"](https://eng.wealthfront.com/2022/05/10/building-wealthfronts-multi-platform-design-system/)
+- Murphy Trueman, `design-system-ops`, [`skills/metadata-schema-generator/SKILL.md`](https://github.com/murphytrueman/design-system-ops/blob/main/skills/metadata-schema-generator/SKILL.md): prohibited prop combinations
 
 ## Release management: versioning, changelogs & migration guides
 
@@ -206,6 +211,8 @@ prose.
 ## Context engineering, documentation for agents, agentic UI patterns, generative loops
 
 - [Diana Wolosin, "Design Systems for AI: Introducing the Context Engine"](https://www.designsystemscollective.com/design-systems-for-ai-introducing-the-context-engine-777726da6a01)
+- Murphy Trueman, `design-system-ops`, [`skills/metadata-schema-generator/SKILL.md`](https://github.com/murphytrueman/design-system-ops/blob/main/skills/metadata-schema-generator/SKILL.md): per-value `semantic` guidance in component metadata
+- [Romina Kavcic, "Design tokens that AI can actually read"](https://learn.thedesignsystem.guide/p/design-tokens-that-ai-can-actually): the token `meta` example
 - Diana Wolosin — benchmark of 8 MCP configurations against 1,056 prompts at Indeed, referenced via [Into Design Systems conference](https://www.intodesignsystems.com/)
 - [Jan Six, Into Design Systems conference, "Build design systems with agents"](https://www.intodesignsystems.com/agenda/build-design-systems-with-agents)
 - [Carbon Design System, "Carbon for AI"](https://carbondesignsystem.com/guidelines/carbon-for-ai/)

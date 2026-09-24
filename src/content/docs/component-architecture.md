@@ -56,9 +56,24 @@ fourzerothree.in warns that nesting for flexibility nobody needs yet makes a com
 ## Choosing variants or nesting
 
 Nested instances don't replace variants. They solve different problems, and reaching for a variant when the real need is a swappable piece is how a variant set grows past the point anyone can read it at a glance.
+
 ### Variants
 
 Use them for a closed set of mutually exclusive states on one component, like a button's default, hover, active, and disabled.
+
+Know what they cost as the set grows: each new state multiplies every existing combination. [Nathan Curtis](https://nathanacurtis.substack.com/p/component-contracts-and-schemas) counts it for a disabled state. A Figma button with 96 variants "requires 96 more variants, each carrying the varied `opacity` property," which he calls "massive redundancy – maybe 500ish layers – for one simple intent." A contract written as data states the same decision once:
+
+```yaml title="Contract excerpt"
+button:
+  variants:
+    - configurations:
+        disabled: true
+      elements:
+        root:
+          opacity: 0.36
+```
+
+Read it as: whenever `disabled` is true, the button's root element gets 0.36 opacity, whatever the other props are. Figma can't express a rule like that, so the file repeats it 96 times. [Multi-platform component specs](/multi-platform-component-specs/#define-components-as-data-and-generate-figma-from-it) covers moving a component's definition into data.
 
 ### Nested instances
 

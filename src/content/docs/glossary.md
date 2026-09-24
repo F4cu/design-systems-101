@@ -163,6 +163,11 @@ to use than the problem it was meant to solve. See
 that each seem reasonable individually but together make a component fragile and hard
 to maintain. See [Component API design](/component-api-design/).
 
+**Prohibited combination** — a pair of prop values that the code accepts but the system
+doesn't support (like a ghost button at large size), recorded in the component's
+metadata with a reason and a severity so tools can refuse or flag it. See
+[Component API design](/component-api-design/).
+
 **Multi-platform (vs. cross-platform)** — sharing one set of design decisions and
 intent across platforms while letting the implementation diverge to match each
 platform's conventions, rather than forcing one implementation to run everywhere

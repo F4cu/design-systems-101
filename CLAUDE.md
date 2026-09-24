@@ -8,8 +8,10 @@ A personal field guide (not a commercial product) to the operational and archite
 side of running a design system — token architecture, governance, adoption,
 documentation, business alignment, and a dedicated section on AI-readiness and agentic
 workflows. It's an [Astro Starlight](https://starlight.astro.build/) site: markdown
-content pages, Starlight's default theme, no component code and no real token values
-anywhere (sources are cited for the ideas behind them, not replicated as config to copy).
+content pages, Starlight's default theme, no real component library and no real token
+values anywhere (sources are cited for the ideas behind them, not replicated as config to
+copy). Short illustrative code snippets are fine; see "Code snippets" under Page
+conventions.
 
 Published at https://f4cu.github.io/ds101/ via GitHub Pages, built and
 deployed by `.github/workflows/deploy.yml` on push to `main`.
@@ -111,6 +113,13 @@ table of contents lists every practice as a short label. See `release-management
      standalone `## Diagram` section. Only when a relationship is genuinely spatial or
      sequential. Wrap each Mermaid block in `<div class="mermaid-wrap">...</div>`, and keep
      it few-node and legible at ~800px max width.
+   - **Code snippets inline**, like diagrams: directly under the model or practice they
+     illustrate, only when the structure is clearer as code than as prose. Keep each under
+     ~12 lines and ~40 characters wide (lines wrap on phones, but wrapped code reads
+     badly). Tag the language (`tsx`, `json`). Mirror the shape of an example from a
+     source the page already cites rather than inventing an API, and say so in the
+     sentence. For before/after pairs, use two blocks with `title="..."` labels, and
+     follow each snippet with a sentence on what to notice. See `component-taxonomy.md`.
 6. **`## Common mistakes`**: a bulleted list, each bullet a beginner-likely error grounded in
    a cited source where possible. A mistake that just reverses a practice heading is a
    duplicate. Delete it.

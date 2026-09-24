@@ -43,19 +43,69 @@ Intent: what a value is *for*, like `color.action.primary` or `color.feedback.er
 
 An optional third tier that scopes semantic intent to one component, like `button.background.default`. It points at a semantic token, never at a primitive.
 
+Here's the same chain as token definitions, simplified to one line per token:
+
+```json title="Simplified: one line per token"
+"color.blue.500": "#2563EB"
+"color.action.primary":
+  "{color.blue.500}"
+"button.background.default":
+  "{color.action.primary}"
+```
+
+The curly braces mark an **alias**: a value that points at another token by name instead of holding a value of its own. Only the primitive holds a real value. Every other tier is a chain of aliases, and that chain is what the practices below protect. The real file format nests these names differently. See [Store tokens in the shared DTCG format](#store-tokens-in-the-shared-dtcg-format).
+
 ## Practices
 
 ### Reference strictly downward
 
 References flow component → semantic → primitive, never sideways and never skipping a tier. The design-system-ops notes call a skipped tier "the most architecturally damaging token violation." `button.background.default: {color.blue.500}` *appears* to work, because the right colour shows up. But "a rebrand or theme change that correctly updates the semantic tier will not reach this component." It breaks silently, and you only find out mid-rebrand.
 
+```json title="Skips a tier"
+"button.background.default":
+  "{color.blue.500}"
+```
+
+```json title="Steps down one tier"
+"button.background.default":
+  "{color.action.primary}"
+```
+
+Say the rebrand repoints `color.action.primary` to `{color.purple.500}`. The second button turns purple with the rest of the product. The first stays blue, because it never pointed at `color.action.primary` in the first place.
+
 ### Name semantic tokens for intent, never appearance
 
-The same notes: "A semantic token that describes visual appearance has failed its purpose. `color.semantic.blue` is a primitive with extra steps." The moment the brand shifts to purple, `color.semantic.blue` is either a lie or a mass rename. Name semantic tokens by role and intent (`category.role.variant.state`), never by colour names, vague size terms, or generic qualifiers.
+The same notes: "A semantic token that describes visual appearance has failed its purpose. `color.semantic.blue` is a primitive with extra steps." The moment the brand shifts to purple, `color.semantic.blue` is either a lie or a mass rename:
+
+```json title="After a purple rebrand"
+"color.semantic.blue":
+  "{color.purple.500}"
+"color.action.primary":
+  "{color.purple.500}"
+```
+
+Both tokens now hold the same purple. Only one name still tells the truth. Name semantic tokens by role and intent (`category.role.variant.state`), never by colour names, vague size terms, or generic qualifiers.
 
 ### Store tokens in the shared DTCG format
 
 The Design Tokens Community Group (DTCG) format is now a shared standard. Its first stable spec, DTCG 2025.10 (October 2025), defines 13 token types (color, dimension, fontFamily, and so on) and composite tokens like typography and shadow. In a composite token, each sub-value must itself reference tokens correctly, not just the top-level value. The spec also defines resolver files, which combine token sets into modes like light/dark or brand variants.
+
+In a DTCG file, the dotted name becomes nested groups, and each token is an object with its value in `$value` and its type in `$type`:
+
+```json title="tokens/semantic.json"
+{
+  "color": {
+    "action": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.blue.500}"
+      }
+    }
+  }
+}
+```
+
+The path through the groups (`color` → `action` → `primary`) is the token's name, and the alias syntax is the same as in the simplified version above. [Platform divergence](/platform-divergence/#value-differences-resolved-in-tokens) shows a composite typography token whose sub-values are all aliases.
 
 ### Keep platforms out of token names
 

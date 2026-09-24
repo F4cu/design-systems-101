@@ -22,6 +22,28 @@ Curtis's rule of thumb, from ["Configuration Collapse"](https://nathanacurtis.su
 
 Two signals that something belongs in composition: it's used in only one context, or it needs several props that only matter in combination. A footer that needs `footer`, `footerClassName`, `showFooter`, and `footerAlignment` is four props for one feature. A single composed `Dialog.Footer` child replaces all four.
 
+```tsx title="Configuration"
+<Dialog
+  footer={<Button>Save</Button>}
+  footerClassName="sticky"
+  footerAlignment="end"
+  showFooter
+>
+  …
+</Dialog>
+```
+
+```tsx title="Composition"
+<Dialog>
+  …
+  <Dialog.Footer>
+    <Button>Save</Button>
+  </Dialog.Footer>
+</Dialog>
+```
+
+`showFooter` disappears, because leaving the footer out just means not writing it. Alignment and styling, if still needed, move onto `Dialog.Footer`, the one part they affect, instead of growing Dialog's top-level API. [Component taxonomy](/component-taxonomy/#compound-components) shows how parts like `Dialog.Footer` are built.
+
 ### Configure with props
 
 For behavior and foundational state, like `state`, `appearance`, and `size`. These stay on the top-level API. The cost: every prop is permanent surface area that someone maintains and every consumer learns.
@@ -46,9 +68,42 @@ A new visual expression of something that already exists, like a new button colo
 
 Don't mix `type`, `mode`, `variant`, and `style` for the same underlying concept across components. When the names vary, the whole API gets harder to predict. Source: [Supernova](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems).
 
+```tsx title="Mixed names"
+<Button variant="outline" />
+<Tag type="outline" />
+<Card mode="outlined" />
+```
+
+```tsx title="One name"
+<Button variant="outline" />
+<Tag variant="outline" />
+<Card variant="outline" />
+```
+
+In the first version, someone who knows Button still has to look up Tag and Card. Values drift the same way, so `outlined` shows up next to `outline`. In the second version, knowing one component means you can guess the others.
+
 ### Support only the prop combinations you document
 
 Supernova's warning: "if your system permits a certain usage, it will likely be used that way somewhere in the product." Undocumented combinations don't stay theoretical for long, so decide which ones you support and block the rest.
+
+[Murphy Trueman's design-system-ops toolkit](https://github.com/murphytrueman/design-system-ops/blob/main/skills/metadata-schema-generator/SKILL.md) writes the blocked ones down in each component's metadata file as **prohibited combinations**: prop pairs that are "technically valid but semantically wrong." From his illustrative Button:
+
+```json title="Button.metadata.json (excerpt)"
+"prohibited_combinations": [
+  {
+    "combination": { "variant": "ghost", "size": "lg" },
+    "reason": "Ghost buttons at large size create false visual hierarchy — they appear as primary actions despite being tertiary",
+    "severity": "warning"
+  },
+  {
+    "combination": { "disabled": true, "loading": true },
+    "reason": "Redundant states — loading already prevents interaction. Use loading alone.",
+    "severity": "error"
+  }
+]
+```
+
+The severity tells tools what to do. With `error`, they should refuse to generate the combination. With `warning`, they flag it for review. Each rule also carries its reason, so a reviewer or an agent that hits it knows why, not just that it's blocked.
 
 ### Respect platform-native names
 
@@ -57,6 +112,21 @@ Don't force artificial uniformity across tools. It's `src` on the web and `image
 ### Prefer composition over style overrides
 
 An override is a hidden dependency that can break silently on the next release. Composition stays part of the documented, versioned API. [Supernova](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems) makes this case, and [MUI's API design guide](https://mui.com/material-ui/guides/api/) reaches the same split on its own from a component-engineering angle: props for styling, composition for structure.
+
+```css title="Override: promo.css"
+/* Reaches into Card's internals */
+.promo .card__title {
+  font-size: 2rem;
+}
+```
+
+```tsx title="Composition"
+<Card>
+  <PromoHeading>…</PromoHeading>
+</Card>
+```
+
+`.card__title` is an internal class name, not part of Card's API. If the system team renames it in a refactor, the promo loses its styling, and nothing in the release notes warned anyone, because no prop changed. The composed version puts the product team's own heading inside Card. The only thing it depends on is that Card accepts children, which is documented and versioned.
 
 ### Share decisions across platforms, not implementations
 

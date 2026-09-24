@@ -22,6 +22,24 @@ The two audiences need different formats, not different amounts of effort. One d
 
 Diana Wolosin's split: component APIs, the things that must be exact like a prop's type or a variant's valid values, belong in JSON, because "it has explicit keys, explicit values, explicit boundaries, and there is no ambiguity." Guidance that needs judgment, like when to use a variant or what an anti-pattern looks like, stays in natural language. Forcing it into a rigid schema would strip the nuance that makes it useful.
 
+The split doesn't have to mean two separate files. In [Murphy Trueman's component metadata](https://github.com/murphytrueman/design-system-ops/blob/main/skills/metadata-schema-generator/SKILL.md), a single prop carries both:
+
+```json title="Button.metadata.json (excerpt)"
+{
+  "name": "variant",
+  "type": "enum",
+  "values": ["primary", "secondary", "ghost"],
+  "default": "primary",
+  "semantic": {
+    "primary": "Use for the single most important action on the page or in a section",
+    "secondary": "Use for supporting actions alongside a primary action",
+    "ghost": "Use for tertiary actions or actions within dense UI"
+  }
+}
+```
+
+`values` and `default` are the exact contract. `semantic` holds one sentence of judgment per value, in plain language. Trueman's rule for filling it in: take the guidance from code comments or the team's docs. If neither has it, leave `semantic` out and flag the prop "rather than writing plausible guidance." Longer guidance, like anti-patterns with examples, still belongs in prose.
+
 ### Expect the structuring to help humans too
 
 [Atlassian's](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era) sharpest line on why this isn't AI-only busywork: "To identify the rules that help LLMs, you also uncover the rules that help explain these concepts to humans — and that's a good thing." [Governance for AI](/governance-for-ai/) makes the same claim from Shane P Williams's side: work that makes the system legible to agents is quality work for everyone.
@@ -29,6 +47,25 @@ Diana Wolosin's split: component APIs, the things that must be exact like a prop
 ### Treat tokens as an API
 
 [Romina Kavcic](https://learn.thedesignsystem.guide/p/design-tokens-that-ai-can-actually) makes the case for **tokens as an API**. Most tokens are structured for humans, so when an AI reads them via MCP, it sees "a wall of nested objects with no context about why these values exist or when to use them." Tokens are the contract between design and code. You can't restructure a component library overnight, but "you can add descriptions to your top 20 tokens in an hour," and that hour pays off in everything built on them. It's the semantic-naming idea from [Token architecture](/token-architecture/), seen through an AI's eyes.
+
+Kavcic's fullest example shows what a described token can carry (trimmed here):
+
+```json title="tokens.json (excerpt)"
+"color-feedback-errorDefault": {
+  "value": "#DE3E25",
+  "type": "color",
+  "meta": {
+    "description": "Primary error state color",
+    "usage": ["destructive button backgrounds", "error alert borders"],
+    "doNot": ["use for warnings"],
+    "pairedTokens": ["color-text-error"],
+    "a11y": { "contrastOnWhite": "4.52:1", "wcagLevel": "AA" },
+    "components": ["Button", "Alert", "Input", "Toast"]
+  }
+}
+```
+
+Each field answers a question an agent would otherwise guess at: where the token goes (`usage`), where it doesn't (`doNot`), what it's used with (`pairedTokens`), and whether it's safe to use on white. Her example uses the older `value` and `type` keys. In the [DTCG format](/token-architecture/#store-tokens-in-the-shared-dtcg-format), those are `$value` and `$type`, the description goes in `$description`, and extra fields like these go under `$extensions`, the spec's place for tool-specific data.
 
 ### Name components by their role
 

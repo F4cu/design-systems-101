@@ -41,6 +41,21 @@ flowchart LR
 
 Because the definition is structured rather than a picture, it can also be checked automatically. Curtis's example: a raw color value in a variant where a token reference was required. That error is invisible in a rendered mockup and obvious in the data. It's the same shift [Component API design](/component-api-design/) describes for props, applied one layer earlier: to how the component is defined in the first place.
 
+In ["Component Contracts and Schemas,"](https://nathanacurtis.substack.com/p/component-contracts-and-schemas) Curtis shows the smallest version of that check, a single prop:
+
+```yaml title="Contract excerpt"
+props:
+  size:
+    type: string
+    enum:
+      - small
+      - medium
+      - large
+    default: medium
+```
+
+An `enum` (a fixed list of allowed values) "reduces any possible size to three legal choices." In a loose document, he notes, "every value is just text, and text accepts anything," so `size: med` or `size: kind of large` slip through. In the contract, they fail the check.
+
 ### Use the shared DTCG format as the token floor
 
 Tokens are the part most systems get to first. As of October 2025, there's a shared, tool-independent format to build on. The [Design Tokens Community Group's specification](https://www.w3.org/community/design-tokens/2025/10/28/design-tokens-specification-reaches-first-stable-version/) reached its first stable release, with editors from Figma, Adobe, Google, Microsoft, Meta, and others agreeing on one file format. Style Dictionary, Tokens Studio, Terrazzo, and Figma can all read it. Co-chair Kaelig Deloumeau-Prigent: "design systems teams can now maintain one source of truth that works everywhere — from design to production code across iOS, Android, and web." [Token architecture](/token-architecture/) covers the tiers this format organizes.
