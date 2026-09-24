@@ -2,38 +2,40 @@
 title: Business Alignment
 ---
 
-<p class="eyebrow">The Principle</p>
+A design system's roadmap should stay legible against what the company cares about *right now*, not run as a self-contained backlog the rest of the org has to take on faith. [Communicating value](/communicating-value/) is about making the case. Business alignment is about keeping that case true as company priorities shift. [Brand alignment](/brand-alignment/) covers a related axis: staying in sync with brand and marketing.
 
-## A roadmap should stay legible against what the business cares about now
+:::tip[Key takeaways]
+- Map the roadmap to the company's current top-line goals every planning cycle
+- Flag what's mission-critical to the budget holders, not to the system team
+- Match the formality of your alignment to your org's scale
+:::
 
-A design system's roadmap should be legible against what the company actually cares about *right now* — not run as a self-contained backlog the rest of the org has to take on faith. [Communicating value](/communicating-value/) is about making the case; business alignment is about keeping that case true over time, as company priorities shift underneath it. [Brand alignment](/brand-alignment/) covers a related but distinct axis: staying in sync with the brand and marketing teams, not just the business priorities.
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+A system pitched once at launch and never re-justified drifts out of sync with what the business is optimizing for. A cost-cutting year and a growth year call for different emphasis in the same roadmap. The work might not change much, but which parts of it you talk about should.
 
-## A case made once at launch drifts out of sync with shifting priorities
+## Choosing how formal to be
 
-A system pitched once at launch and never re-justified drifts out of sync with what the business is actually optimizing for. A cost-cutting year and a growth year call for a different emphasis in the same roadmap — the work might not change much, but which parts of it get talked about should. Supernova's guidance on getting buy-in puts this plainly: map your roadmap to company-level priorities, and flag the parts of your budget request that are mission-critical in the eyes of the people who currently hold the purse strings — not the parts that are mission-critical to the system team internally. — [Supernova, "How to Build a Business Case for Your Design System"](https://www.supernova.io/blog/how-to-build-a-business-case-for-your-design-system)
+Both examples below come from [Figma's Design Executive Council research](https://www.figma.com/blog/the-new-business-case-for-design-systems/). They sit at opposite ends of formality, and both work for their scale. The shared discipline is keeping the system's story tied to what the organization is paying attention to. Pick the end that matches how your company already tracks priorities.
 
----
+### Heavyweight: SAP
 
-## In Practice
+**SAP** put the design system on the board's agenda. Its Chief Design Officer made it a KPI tracked through OKRs, with over a million user data points feeding back into the system and about ten hours a week of the CDO's own time spent on design reviews. It fits an org that runs on formal goals and has an executive sponsor willing to spend real time. The cost is that level of executive attention.
 
-Two real examples sit at opposite ends of formality, and both work for the scale they're operating at.
+### Lightweight: Notion
 
-#### 1. SAP: heavyweight and deliberate
+**Notion** tracks "sentiment signals" in ordinary workflows instead of formal review cycles. A quick emoji or note of appreciation in a shared channel is treated as a real signal of whether a change landed well. It fits a smaller or less formal org. The cost: signals are softer and harder to put in front of a budget holder.
 
-**SAP's** version surfaced the design system at board level: its Chief Design Officer made it a KPI tracked through OKRs, with over a million user data points feeding back into the system and roughly ten hours a week of the CDO's own time spent on design reviews.
+## Practices
 
-#### 2. Notion: lightweight and continuous
+### Map the roadmap to current company goals
 
-**Notion's** version tracks "sentiment signals" anchored in ordinary workflows rather than formal review cycles. A quick emoji or note of appreciation moving through a shared channel is treated as a real signal of whether a change landed well, not just a nice gesture.
+Before each planning cycle, ask what the company's top-line goals actually are right now. Check whether the system's roadmap visibly serves at least one of them, in words a non-design stakeholder would recognize. If it can't be connected to any current priority, notice that before a budget conversation forces the question.
 
-Same underlying discipline — keep the system's story tied to what the organization is actually paying attention to — expressed at two very different scales. — [Figma / Design Executive Council, "The new business case for design systems"](https://www.figma.com/blog/the-new-business-case-for-design-systems/)
+### Flag what's critical to the budget holders
 
-The practical version of "mapping to company priorities": before a planning cycle, ask what the company's current top-line goals actually are, and check whether the system's proposed roadmap visibly serves at least one of them in language a non-design stakeholder would recognize. If a system's roadmap can't be connected to any current company priority, that's worth noticing before a budget conversation forces the question.
-
----
+[Supernova's guidance on getting buy-in](https://www.supernova.io/blog/how-to-build-a-business-case-for-your-design-system) puts it plainly: map your roadmap to company-level priorities, and flag the parts of your budget request that are mission-critical to the people who currently hold the budget, not the parts that are mission-critical to the system team.
 
 ## Common mistakes
 
-Treating the business case as something you make once at launch and never revisit. A pitch that was compelling two years ago, in a different business climate, doesn't automatically stay compelling — the value story goes stale exactly as fast as the company's priorities change, and a system that keeps repeating its original pitch starts to sound out of touch with what the org currently cares about, even if the underlying work is still excellent. Revisit the mapping every planning cycle, not just when funding is at risk.
+- **Making the business case once at launch and never revisiting it.** A pitch that was compelling two years ago, in a different business climate, doesn't stay compelling. A system that keeps repeating its original pitch starts to sound out of touch, even when the work is excellent. Revisit the mapping every planning cycle, not just when funding is at risk.

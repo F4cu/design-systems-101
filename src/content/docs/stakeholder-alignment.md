@@ -2,81 +2,94 @@
 title: Stakeholder Alignment
 ---
 
-<p class="eyebrow">The Idea</p>
+"Design systems don't fail because of components. They fail because they lose alignment with the organisation." At scale, a design system is a small organization inside a bigger one, and it has to stay legible to, and connected with, everything around it. Staying aligned takes a toolkit, not one framework: a way to map who your stakeholders are, and others to match altitude, timing, and pitch to each group. Source: [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026, which this whole page draws on.
 
-## Staying aligned with stakeholders at scale takes a toolkit, not one framework — a way to map who they are, and others to match altitude, timing, and pitch to each group
+:::tip[Key takeaways]
+- Map stakeholders by how often they use the system and how much they influence it
+- Answer each group's question at the altitude they ask it from
+- Plan on three horizons at once: now, next, and future
+- Measure perception, usability, and adoption on different clocks
+- Revisit the mapping every planning cycle, not just at launch
+:::
 
-"Design systems don't fail because of components. They fail because they lose alignment with the organisation." At scale, a design system isn't a component library with a governance process attached to it — it's a small organization living inside a bigger one, and it has to justify its own existence the same way any viable organization does: by staying legible to, and connected with, everything around it. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+ITVX's Mosaic design system shows the scale problem. What started in 2015 as ITV Hub grew into ITVX by 2022, and the design system's operating model grew with it. A central core of 3 people (1 head of design systems and 2 designers) now works with 14 cross-functional partners (2 tech managers, 7 engineers, 7 designers). Together they feed 13 product workstreams across 2 product pillars, supporting 6 platforms and about 15,000 devices (browser, CTV, tvOS, iOS, Android, Roku). At that scale, no core team can personally track what every stakeholder needs. The tools below make that tracking explicit instead of leaving it to whoever is in the room.
 
-## A system's reach outgrows a single team's ability to represent everyone in it
+## Choosing a framework
 
-ITVX's Mosaic design system illustrates the scale problem concretely. What started in 2015 as ITV Hub grew into ITVX by 2022, and the design system's operating model grew with it. A centralized core of 3 people (1 head of design systems + 2 designers) now sits alongside a distributed layer of 14 cross-functional partners (2 tech managers, 7 engineers, 7 designers). Together they feed 13 product workstreams across 2 product pillars, which in turn support 6 platforms and roughly 15,000 devices (browser, CTV, tvOS, iOS, Android, Roku). At that scale, no core team — however good — can personally track what every stakeholder needs. The tools that follow are ways of making that tracking explicit instead of leaving it to whoever happens to be in the room. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
+Each tool answers a different question. Pick by the job in front of you:
 
----
+- **Who are my stakeholders, and what does each group want?** Stakeholder map.
+- **Why isn't my update landing with an executive?** Golden Circle.
+- **Is our planning too short-term, or too abstract?** Three horizons.
+- **How do I pitch the system, or a big change to it?** LeanDS.
+- **Is the system missing a whole organizational function?** Viable System Model.
+- **How often should we measure what?** Three clocks.
 
-## In Practice
+### Stakeholder map
 
-#### 1. Stakeholder mapping by influence and frequency
+Use it to tailor any pitch, update, or doc to its audience. The quadrant crosses how often someone uses the system with how much influence they have over its direction:
 
-Ashton-Booth's quadrant crosses how often someone uses the system against how much influence they hold over its direction:
+- **Primary users** (high frequency, high influence) are "required": the system has to work for them. Their question: "how can I create the most value in my role and contribute back?"
+- **Secondary users** (high frequency, low influence) are "consulted": they feel every rough edge but don't set direction. Their question: "how does the design system support our product strategy, and which metrics show its impact?"
+- **Product stakeholders** (low frequency, high influence) are "accountable": they own outcomes but rarely touch the system. Their question: "how do we ensure the system meets our standards, and how do we integrate it better?"
+- **Business stakeholders** (low frequency, low influence) are "informed": they need to know it exists and what it does for the business. Their questions center on creative strategy, technical advantage, and business goals.
 
-- High frequency + high influence is a **primary user** ("required" — the system has to work for them, full stop). Their default question: "how can I create the most value in my role and contribute back?"
-- High frequency + low influence is a **secondary user** ("consulted" — they feel every rough edge but don't set direction). Their default question: "how does the design system support our product strategy, and which metrics show its impact?"
-- Low frequency + high influence is a **product stakeholder** ("accountable" — they own outcomes but rarely touch the system day to day). Their default question: "how do we ensure the system meets our standards, and how do we integrate it better?"
-- Low frequency + low influence is a **business stakeholder** ("informed" — they need to know it exists and what it's doing for the business, not how it works). Their default questions center on creative strategy, technical advantage, and contribution to business goals.
+A message aimed at the wrong group's question lands as noise, even when the information is correct.
 
-A pitch, an update, or a piece of documentation aimed at the wrong quadrant's question lands as noise even when the underlying information is correct. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
+### Golden Circle
 
-#### 2. Golden Circle for stakeholder altitude
+Use it when you're answering at the wrong altitude. Borrowing Simon Sinek's Golden Circle, Ashton-Booth places primary users at **What** (results and outcomes), product stakeholders at **How** (process and actions), secondary users at **Why** (purpose and motivation), and business stakeholders at **Impact**, the combined result of all three. When a business stakeholder asks "why," a list of shipped components doesn't land, because they're asking from the Impact layer looking down.
 
-Layered onto the same four groups: primary users sit at the **What** layer (results, output, outcomes); product stakeholders sit at **How** (process and actions); secondary users sit at **Why** (purpose and motivation); business stakeholders sit at **Impact**, the combined output of all three layers together. The practical use: when a business stakeholder asks a "why" question, answering with a "what" — a list of shipped components — doesn't land, because they're asking from the Impact layer looking down, not the What layer looking up. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026, citing Simon Sinek's Golden Circle
+### Three horizons
 
-#### 3. Three-horizon planning
+Use it to balance firefighting against long-term trust:
 
-- *Tactical* planning ("Now") moves quickly and removes friction: clear short-term priorities, daily support, fast blocker resolution. It answers "how do we support teams and keep delivery moving?"
-- *Strategic* planning ("Next") creates direction and alignment: clear priorities, cross-team alignment, longer-term thinking. It answers "how do we scale in the right direction?"
-- *Normative* planning ("Future") builds belief and shared purpose: shared principles, real relationships, continuous alignment over time. It answers "how do we create trust and long-term adoption?"
+- **Tactical ("Now")** moves fast and removes friction: short-term priorities, daily support, quick unblocking. It answers "how do we support teams and keep delivery moving?"
+- **Strategic ("Next")** sets direction: clear priorities, cross-team alignment, longer-term thinking. It answers "how do we scale in the right direction?"
+- **Normative ("Future")** builds belief and shared purpose: shared principles, real relationships, and continuous alignment. It answers "how do we create trust and long-term adoption?"
 
-Running only the tactical horizon is what produces a system that's always fighting fires. Running only the normative horizon is what produces a system with a beautiful mission statement and no delivery. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
+### LeanDS
 
-#### 4. LeanDS framework for system pitches
+Use it to build a pitch for the system or a major change. The [LeanDS framework](https://marianneab.substack.com) organizes 11 questions into three sections:
 
-The framework organizes 11 questions into three sections mirroring Why / What / How:
+- **Why** (purpose): the wider organisation (size, single- or multi-brand, who the system serves), current business goals, and the system problem (what's working and what isn't).
+- **What** (drivers, aligned with the Lean UX canvas): system users, user benefits, metrics, solutions, and a hypothesis tying them together.
+- **How** (feasibility): the team model (centralized, distributed, or hybrid), scope and risks, and the plan.
 
-- *Why* (purpose): the wider organisation (how big, single- or multi-brand, who the system serves), business goals & objectives (what the business is focused on right now), and the system problem (what's working, what isn't).
-- *What* (drivers & motives, deliberately aligned with the Lean UX canvas): system users, user benefits & outcomes, metrics & measurements, solutions, and a hypothesis that stitches the rest together.
-- *How* (feasibility): the design system's team model (centralized, distributed, or hybrid), scope & risks, and the plan itself.
-
-The hypothesis box is the framework's spine — it forces every other box into one sentence:
+The hypothesis is the framework's backbone. It forces every other box into one sentence:
 
 > *"We believe that tackling [the system problem], in line with [the wider organisation] and [business goals], we will help [system users] to [user benefits], success will be shown by [metrics], we plan to achieve this through [solutions], this approach will be supported by our [team model], whilst considering [scope & risks], and is part of [the plan]."*
 
-A pitch that can't complete that sentence usually has a gap in one of the 11 boxes, not just a communication problem. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026 / [`marianneab.substack.com`](https://marianneab.substack.com), "LeanDS Framework"
+A pitch that can't complete that sentence usually has a gap in one of the 11 boxes, not just a communication problem.
 
-#### 5. Viable System Model diagnostic
+### Viable System Model
 
-Beer's own framing of why any organization needs this: "An organisation is viable if it can survive in a particular sort of environment. For although its existence is separate, so that it enjoys some kind of autonomy, it cannot survive in a vacuum." Ashton-Booth maps a design system onto Beer's five subsystems:
+Use it to find a missing function. Stafford Beer's framing (*Diagnosing the System for Organisations*, 1985): "An organisation is viable if it can survive in a particular sort of environment. For although its existence is separate, so that it enjoys some kind of autonomy, it cannot survive in a vacuum." Ashton-Booth maps a design system onto Beer's five subsystems:
 
-- **System 1** is core operations — the actual tokens, components & patterns, and guidelines being produced.
-- **System 2** is the communication channels that coordinate System 1 so its parts don't work at cross-purposes.
-- **System 3** is governance & regulation, keeping System 1 inside agreed bounds.
-- **System 4** is strategic future thinking — scanning outside and ahead of the system's current state, the part that notices a new platform or a shifting org chart before it becomes an emergency.
-- **System 5** is business & stakeholder influence — identity, norms, and the atmosphere the whole system operates inside, set from outside System 1–4 entirely.
+- **System 1**: core operations, meaning the tokens, components, patterns, and guidelines being produced.
+- **System 2**: the communication channels that keep System 1's parts from working at cross-purposes.
+- **System 3**: governance, keeping System 1 inside agreed bounds.
+- **System 4**: strategic thinking, scanning ahead for a new platform or a shifting org chart before it becomes an emergency.
+- **System 5**: business and stakeholder influence, the identity and norms the whole system operates in.
 
-The diagnostic value isn't the org chart, it's the question it forces: a system that's all System 1 (shipping components) with no System 4 (nobody watching what's coming) or System 5 (no stakeholder influence feeding back in) is optimizing the wrong thing at exactly the moment it most needs to adapt. — Stafford Beer, *Diagnosing the System for Organisations*, 1985; [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
+The value is the question it forces. A system that's all System 1 (shipping components), with no System 4 (nobody watching what's coming) or System 5 (no stakeholder influence), is optimizing the wrong thing just when it most needs to adapt.
 
-#### 6. Three-clock measurement
+### Three clocks
 
-Awareness & perception — how the organization *feels* about the system — is qualitative and moves slowly enough to check every 6–9 months. Usability & discoverability is both quantitative and qualitative and moves fast enough to check quarterly. Adoption & contribution is quantitative and moves fast enough to check monthly. See [Measuring adoption](/adoption-measurement/) for the metrics themselves; the addition here is cadence — checking perception monthly produces noise, and checking adoption only twice a year is too slow to catch drift before it compounds. — [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
+Use it to set measurement cadence. Awareness and perception (how the org *feels* about the system) is qualitative and slow, so check it every 6–9 months. Usability and discoverability moves faster, so check it quarterly. Adoption and contribution moves fastest, so check it monthly. [Measuring adoption](/adoption-measurement/) covers the metrics themselves. Checking perception monthly produces noise, and checking adoption twice a year is too slow to catch drift.
 
----
+## Practices
+
+### Run all three horizons at once
+
+Running only the tactical horizon produces a system that's always fighting fires. Running only the normative one produces a beautiful mission statement with no delivery behind it. [Pilot strategy](/pilot-strategy/) shows the same risk from the other side: a pilot that ships is only "Now."
+
+### Revisit the mapping every planning cycle
+
+Don't build the quadrant, the horizon plan, or the LeanDS canvas once at launch and treat it as settled. [Business alignment](/business-alignment/) makes the same point about the roadmap: a case that was true at launch goes stale as fast as the organization changes. zeroheight's *Design Systems Report 2026* found staffing (56%) and stakeholder buy-in (31%) still among the top blockers for 147 practitioners, the same areas these tools exist to manage. That suggests most teams aren't revisiting often enough.
 
 ## Common mistakes
 
-- **Building the stakeholder quadrant, the horizon plan, or the LeanDS canvas once, at launch, and treating it as settled.** [Business alignment](/business-alignment/) makes the same point about the roadmap itself: a case that was true at launch goes stale exactly as fast as the organization changes around it. The zeroheight *Design Systems Report 2026* found staffing (56%) and stakeholder buy-in (31%) still ranked among the top blockers reported by 147 practitioners — the same categories these tools exist to manage — which suggests most teams aren't revisiting the mapping often enough to keep pace with the organisation.
-- **Answering a stakeholder's "why" question with a "what" answer.** A list of shipped components doesn't land with someone asking from the Impact layer looking down, not the What layer looking up.
-- **Running only the tactical horizon, or only the normative one, instead of both.** Tactical-only planning produces a system that's always fighting fires; normative-only planning produces a beautiful mission statement with no delivery behind it.
-
-— zeroheight, *Design Systems Report 2026*; [Marianne Ashton-Booth, "From Silos to Systems,"](https://marianneashtonbooth.com) UXDX Berlin 2026
+- **Answering a stakeholder's "why" question with a "what" answer.** A list of shipped components doesn't land with someone asking about impact. Check which group they're in before you choose what to show.

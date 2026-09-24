@@ -2,54 +2,45 @@
 title: Communicating Value
 ---
 
-<p class="eyebrow">The Principle</p>
+A design system has to justify itself in the funder's terms. "It's more consistent" and "it's more efficient" are true, but they read as nice-to-haves to anyone who doesn't use the system day to day. The bar is low industry-wide: zeroheight's *Design Systems Report 2026* (147 practitioners) found only **5%** of teams measure ROI at all. A team with any credible value story is already ahead of most of the field.
 
-## A design system has to justify itself in the funder's terms
+:::tip[Key takeaways]
+- Translate value into what each funder cares about: cost, velocity, or speed to market
+- Argue beyond productivity: retention, new markets, and craft
+- Put a dollar figure on it, even a rough one
+- Keep internal health metrics as supporting detail, not the headline
+:::
+
+## The problem
 
 > "A style guide is an artifact of design process. A design system is a living, funded product with a roadmap & backlog, serving an ecosystem."
 > — Nathan Curtis, EightShapes, quoted in Brad Frost, *Atomic Design*, Chapter 5
 
-Curtis's distinction is the reason this page exists: a style guide can just sit there and still be useful. A design system can't — it has to keep earning its funding, which means someone has to make the case for it in language a funder recognizes. A design system is funded the same way any other internal investment is: it has to justify itself in terms the funder cares about. "It's more consistent" and "it's more efficient" are true, but they read as nice-to-haves to a stakeholder who doesn't operate the system day to day.
+A style guide can just sit there and still be useful. A design system can't: it has to keep earning its funding. Systems that can't explain their value beyond "it's tidier" are the first thing cut in a budget squeeze, because nobody outside the team can see what's at stake in losing them.
 
-The bar here is currently low industry-wide — zeroheight's 2026 survey of 147 practitioners found only **5%** of teams measure ROI at all. That means a team that can tell a credible value story is already ahead of most of the field. — zeroheight, *Design Systems Report 2026*
+## Practices
 
-<p class="eyebrow">Why It Exists</p>
+### Translate value into each funder's terms
 
-## Systems that can't show value are the first cut in a budget squeeze
+A CFO cares about cost and time saved, in real numbers. A CTO cares about velocity and a lower long-term maintenance burden. A CEO or product leader cares about speed to market and whether the product feels coherent at scale. The system's internal metrics, like component count or token compliance, mean nothing to any of them. The translation has to happen before the pitch. Sources: [Supernova, "Getting Executive Buy-In and Proving ROI of Design Systems"](https://www.supernova.io/blog/getting-executive-buy-in-proving-roi-design-systems) and [Adobe XD, "20 levers for communicating the value/ROI of design"](https://xd.adobe.com/ideas/perspectives/leadership-insights/20-levers-communicating-value-roi-design).
 
-Systems that can't articulate value beyond "it's tidier" are the first thing cut in a budget squeeze, because nobody outside the system team can see what's actually at stake in losing it. Figma's Design Executive Council research frames the historical version of this conversation as centered almost entirely on productivity — less rework, faster handoffs. It argues that's only part of the picture: organizations increasingly invest in design systems to scale product offerings, improve retention, expand into new markets, and raise the craft bar, not just to move faster internally. — [Figma / Design Executive Council, "The new business case for design systems"](https://www.figma.com/blog/the-new-business-case-for-design-systems/)
+### Argue beyond productivity
 
----
+[Figma's Design Executive Council research](https://www.figma.com/blog/the-new-business-case-for-design-systems/) notes that the value conversation used to be almost entirely about productivity: less rework, faster handoffs. That's only part of it. Organizations increasingly invest in design systems to scale product offerings, improve retention, expand into new markets, and raise the craft bar. The same research has named examples, which persuade better than abstract advice because the numbers come attached to a real outcome:
 
-## In Practice
+- **Freshworks** credited its design system with a 28% cut in customer service costs and faster support-ticket resolution, an outcome the whole org cares about.
+- **SAP** feeds over a million user data points from in-app surveys into the system. Its Chief Design Officer put the design system on the board's agenda as a KPI tracked through OKRs.
+- **Hyundai Motor Group** uses its system to unify 30+ vehicle models across three brands (Hyundai, Kia, Genesis). Every interface feels native to its market while keeping a distinct brand identity, an argument no productivity metric captures.
+- **Grammarly** made localization a strategic input from the start, with in-house linguists and right-to-left readability treated as core requirements.
+- **Linear** frames its system's value less as rigid rules and more as enabling the craft and quality that drive loyalty and retention.
+- **Notion** tracks lightweight "sentiment signals," feedback moving naturally through team channels, as an ongoing value indicator alongside formal reviews.
 
-#### 1. Stakeholder-specific translations
+### Put a dollar figure on it
 
-A CFO cares about cost and time saved, made concrete in real numbers. A CTO cares about velocity and reduced long-term maintenance burden. A CEO or product leader cares about speed to market and whether the product feels coherent at scale. Leading with the system's internal metrics — component count, token compliance — means nothing to any of them; the translation has to happen before the pitch does. — [Supernova, "Getting Executive Buy-In and Proving ROI of Design Systems"](https://www.supernova.io/blog/getting-executive-buy-in-proving-roi-design-systems); [Adobe XD, "20 levers for communicating the value/ROI of design"](https://xd.adobe.com/ideas/perspectives/leadership-insights/20-levers-communicating-value-roi-design)
+"It saves us time" is easy to dismiss. A dollar figure, even a crude one, is something a finance stakeholder can evaluate and repeat to someone else. [Mike Fortuna's account](https://medium.com/@m4tuna/how-i-calculated-the-business-case-for-a-design-system-549def283eb5) walks through turning design-system time savings into an actual dollar figure.
 
-#### 2. Public examples of both cases
-
-This is more persuasive than abstract advice because the numbers are attached to a real outcome:
-
-- **Freshworks** credited its design system with a 28% reduction in customer service costs and improved time-to-resolution on support tickets — an outcome most of the org cares about, not just design.
-- **SAP** collects over a million data points from users via in-app surveys and feeds them into the system; its Chief Design Officer put the design system on the board's agenda as a KPI tracked through OKRs.
-- **Hyundai Motor Group** uses its system to unify 30+ vehicle models across three brands (Hyundai, Kia, Genesis) — every interface feels native to its market while keeping distinct brand identity, a business-scale argument no productivity metric captures.
-- **Grammarly** made localization a strategic design-system input from the start, with in-house linguists and right-to-left readability treated as a core requirement, not an afterthought.
-- **Linear** frames its system's value less as rigid rules and more as enabling the craft and quality that drives loyalty and retention.
-- **Notion** tracks lightweight "sentiment signals" — feedback moving naturally through team channels — as an ongoing value indicator, rather than only relying on formal reviews.
-
-— [Figma / Design Executive Council, "The new business case for design systems"](https://www.figma.com/blog/the-new-business-case-for-design-systems/)
-
-#### 3. Worked ROI example
-
-For teams that want the arithmetic rather than the anecdote: Mike Fortuna's account of calculating a business case walks through how to turn design-system time savings into an actual dollar figure a finance stakeholder can evaluate, rather than a directional claim. — [Mike Fortuna, "How I Calculated the Business Case for a Design System"](https://medium.com/@m4tuna/how-i-calculated-the-business-case-for-a-design-system-549def283eb5)
-
-One more illustration, used explicitly to persuade rather than measure: if a moderately complex component takes three days to design, build, and test, and fifty product teams each build their own version independently, that's 150 days of duplicated work for something that costs a fraction of that built once and shared. The arithmetic is crude and directional, but executives find it persuasive precisely because it's easy to hold in your head.
-
----
+A simpler illustration, meant to persuade rather than measure: if a moderately complex component takes three days to design, build, and test, and fifty product teams each build their own, that's 150 days of duplicated work for something built once and shared. The arithmetic is rough, but executives find it persuasive because it's easy to hold in your head.
 
 ## Common mistakes
 
-- **Leading with the system's internal health metrics when pitching outward.** Component count, token compliance, and adoption percentage are the right numbers to track and improve — but they're meaningless to someone who's never opened the system's docs. Translate to the business metric the specific stakeholder cares about first, and keep the operational number as supporting detail, not the headline.
-- **Stating a general claim without showing specific numbers.** "It saves us time" is easy to dismiss; walking through an actual dollar figure — even a crude one, like fifty teams each spending three days rebuilding the same component — is what a finance stakeholder can actually evaluate and repeat to someone else.
-- **Not measuring at all, and treating that as normal.** Only 5% of teams measure ROI in the first place — so the biggest gap most systems have isn't a weak pitch, it's no pitch. Having any credible value story, even an imperfect one, already puts a team ahead of most of the field.
+- **Leading with internal health metrics when pitching outward.** Component count, token compliance, and adoption percentage are the right numbers to track and improve. But they mean nothing to someone who has never opened the docs. Lead with the business metric the stakeholder cares about, and keep the operational numbers as supporting detail.
