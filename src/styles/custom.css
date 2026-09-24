@@ -18,6 +18,12 @@
 .sl-markdown-content blockquote {
 	border-inline-start-color: var(--sl-color-accent);
 }
+/* The attribution is the quote's last paragraph ("> — Author" after a blank ">" line) */
+.sl-markdown-content blockquote > p:last-child:not(:first-child) {
+	margin-top: 0.5rem;
+	color: var(--sl-color-gray-3);
+	font-size: var(--sl-text-sm);
+}
 
 /* Mermaid diagrams don't reflow — scroll them within their own box instead of the page */
 .mermaid-wrap {
