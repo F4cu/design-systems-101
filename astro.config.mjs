@@ -6,28 +6,28 @@ import mermaid from 'astro-mermaid';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://f4cu.github.io',
-	base: '/design-systems-101',
+	base: '/ds101',
 	// Old page URLs from before file names were unified with page titles
 	redirects: {
-		'/adoption-measurement/': '/design-systems-101/measuring-adoption/',
-		'/ai-context-and-readiness/': '/design-systems-101/ai-readiness/',
-		'/component-building/': '/design-systems-101/component-architecture/',
-		'/contextual-component-performance/': '/design-systems-101/performance-in-context/',
-		'/feedback-loops/': '/design-systems-101/generative-loops/',
-		'/foundations/': '/design-systems-101/what-a-design-system-is/',
-		'/governance-under-ai-consumption/': '/design-systems-101/governance-for-ai/',
-		'/scaling-ai-effort/': '/design-systems-101/scaling-ai-effort-to-risk/',
-		'/component-governance/': '/design-systems-101/decision-governance/',
+		'/adoption-measurement/': '/ds101/measuring-adoption/',
+		'/ai-context-and-readiness/': '/ds101/ai-readiness/',
+		'/component-building/': '/ds101/component-architecture/',
+		'/contextual-component-performance/': '/ds101/performance-in-context/',
+		'/feedback-loops/': '/ds101/generative-loops/',
+		'/foundations/': '/ds101/what-a-design-system-is/',
+		'/governance-under-ai-consumption/': '/ds101/governance-for-ai/',
+		'/scaling-ai-effort/': '/ds101/scaling-ai-effort-to-risk/',
+		'/component-governance/': '/ds101/decision-governance/',
 	},
 	integrations: [
 		mermaid({
 			theme: 'neutral',
 		}),
 		starlight({
-			title: 'Design Systems 101',
+			title: 'DS101',
 			description:
 				'A field guide to running design systems — token architecture, governance, adoption, and AI-readiness.',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/F4cu/design-systems-101' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/F4cu/ds101' }],
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{ label: 'Start here', link: '/' },

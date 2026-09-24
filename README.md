@@ -1,4 +1,4 @@
-# design-systems-101
+# DS101
 
 A personal field guide to the operational and architectural side of running a design
 system — token architecture, governance, adoption, documentation coverage, and a
@@ -8,7 +8,7 @@ This is a personal learning project, built for my own reading and reference — 
 commercial product, and not an official or endorsed resource from any of the people or
 projects it cites.
 
-**Read it here:** https://f4cu.github.io/design-systems-101/
+**Read it here:** https://f4cu.github.io/ds101/
 
 ## What this is
 
@@ -30,8 +30,8 @@ System Model to design systems; and, for the AI section,
 [Murphy Trueman](https://blog.murphytrueman.com/), and
 [Shane P Williams](https://designsystemscollective.substack.com/), three people writing
 independently about AI and design systems today. Every claim is
-attributed to the specific source it came from — see the [references page](https://f4cu.github.io/design-systems-101/references/)
-for the full list, or [start here](https://f4cu.github.io/design-systems-101/) for the sourcing philosophy in more
+attributed to the specific source it came from — see the [references page](https://f4cu.github.io/ds101/references/)
+for the full list, or [start here](https://f4cu.github.io/ds101/) for the sourcing philosophy in more
 detail.
 
 No component code, no real token values, and no API keys or repo-specific config are

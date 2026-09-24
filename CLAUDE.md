@@ -11,7 +11,7 @@ workflows. It's an [Astro Starlight](https://starlight.astro.build/) site: markd
 content pages, Starlight's default theme, no component code and no real token values
 anywhere (sources are cited for the ideas behind them, not replicated as config to copy).
 
-Published at https://f4cu.github.io/design-systems-101/ via GitHub Pages, built and
+Published at https://f4cu.github.io/ds101/ via GitHub Pages, built and
 deployed by `.github/workflows/deploy.yml` on push to `main`.
 
 ## Commands

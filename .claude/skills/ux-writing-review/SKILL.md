@@ -5,7 +5,7 @@ description: Review or draft wiki pages (*.md) in this repo against UX writing b
 
 # UX writing review
 
-Review design-systems-101 content pages against UX writing best practices, with a
+Review DS101 content pages against UX writing best practices, with a
 specific focus on catching unnecessary abstraction and jargon. Apply this before
 finishing any page you write or edit, or when the user asks for a writing/content pass.
 
