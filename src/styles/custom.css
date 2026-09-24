@@ -13,6 +13,11 @@
 	max-width: var(--measure);
 }
 
+/* Tint the block quote rule with the theme accent so quotes read as highlighted.
+   Starlight has no border-specific accent token; --sl-color-accent is its base accent. */
+.sl-markdown-content blockquote {
+	border-inline-start-color: var(--sl-color-accent);
+}
 
 /* Mermaid diagrams don't reflow — scroll them within their own box instead of the page */
 .mermaid-wrap {
