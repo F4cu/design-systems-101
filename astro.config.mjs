@@ -64,7 +64,7 @@ export default defineConfig({
 				{
 					label: 'Agentic AI',
 					items: [
-						{ slug: 'ai-context-and-readiness', label: 'AI readiness' },
+						'ai-context-and-readiness',
 						'context-engineering',
 						'documentation-for-agents',
 						'agentic-ui-patterns',

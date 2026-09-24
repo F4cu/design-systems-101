@@ -212,17 +212,17 @@ track priorities a design system's roadmap can be mapped against. See
 but the facts describing it (its name, its props, its variants, its accessibility role)
 that let a person or an AI agent understand and use it correctly without having to
 inspect the real thing directly. A book's title and author on the spine is metadata; the
-book's contents aren't. See [AI context & readiness](/ai-context-and-readiness/).
+book's contents aren't. See [AI readiness](/ai-context-and-readiness/).
 
 **Context cascade** — the way context quality compounds through every handoff in a
 system; strong metadata at the source produces reliable AI output downstream, weak
 metadata produces hallucinated or broken output. See
-[AI context & readiness](/ai-context-and-readiness/).
+[AI readiness](/ai-context-and-readiness/).
 
 **Component manifest** — a structured, machine-readable index of every component in a
 system (names, props, relationships, status) that AI agents and tooling can query
 directly instead of parsing documentation pages. See
-[AI context & readiness](/ai-context-and-readiness/).
+[AI readiness](/ai-context-and-readiness/).
 
 **Agentic workflow pattern** — one of several ways multiple AI agents coordinate on a
 task: sequential chain, parallel agents (what design-system-ops calls a parallel

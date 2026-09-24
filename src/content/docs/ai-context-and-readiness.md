@@ -1,39 +1,40 @@
 ---
-title: AI Context & Readiness
+title: AI Readiness
 ---
 
-<p class="eyebrow">The Principle</p>
+An AI-ready design system is one AI agents and tools can use, reason about, and generate from without needing knowledge nobody wrote down. Most systems assume a human who can infer intent from visual context or ask a colleague. An agent can't infer or ask. It only works with what's explicit. But the gap isn't new: the same unwritten knowledge has always confused new team members and outside contributors. The design-system-ops notes (`knowledge-notes/ai-readiness.md`) sum it up: AI readiness is design-system quality, applied with more precision.
 
-## AI readiness means nothing is left implicit
+:::tip[Key takeaways]
+- Invest in context quality at the source, because errors compound downstream
+- Publish a machine-readable index of every component
+- Describe tokens and components by purpose, not appearance
+- Document anti-patterns and edge cases, not just the happy path
+:::
 
-An AI-ready design system is one that can be consumed, reasoned about, and generated from by AI agents and tooling without requiring implicit knowledge that was never written down. Most systems weren't built for this — they assume a human who can infer intent from visual context or ask a colleague. An AI agent can't infer or ask; it works only with what's explicit. But the gap AI exposes isn't new: the same implicit knowledge that confuses an agent has always confused new team members and external contributors. AI readiness is design-system quality, applied with more precision. — design-system-ops, knowledge-notes/ai-readiness.md
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+Without explicit context, errors compound. The same notes call this the **context cascade**: context quality at the source carries through every downstream consumer. Strong metadata in a Figma component leads to accurate AI-generated code, correct implementation, and reliable tests. Weak metadata leads to hallucinated props (properties the AI invents because the real ones weren't documented), broken implementation, and failed tests. Every layer either inherits good context or amplifies bad context. There's no neutral handoff.
 
-## Bad context compounds through every downstream consumer
+## Practices
 
-Without explicit context, errors compound. One team's knowledge notes call this the **context cascade**: context quality at the source compounds through every downstream consumer. Strong metadata in a Figma component leads to accurate AI-generated code, correct implementation, and reliable testing. Weak metadata leads to hallucinated props (properties the AI invents because the real ones weren't documented), broken implementation, and failed tests.
+### Invest in context at the source
 
-Every layer either inherits good context or amplifies bad context — there is no neutral handoff. The practical implication is simple: invest in context quality at the source, because that investment compounds downstream. — design-system-ops, knowledge-notes/ai-readiness.md
+Because the cascade compounds, the cheapest place to fix context is where it starts: the component's metadata in Figma and code. An hour spent there pays off in every layer built on top of it.
 
----
+### Publish a machine-readable component manifest
 
-## In Practice
+The design-system-ops notes describe a **machine-readable component manifest**: a structured JSON index of every component, with its name, category, description, props, variants, composition relationships, token bindings, accessibility role, and status. An agent querying it can turn "I need a component for user input with validation" into a specific component, variant, and configuration, without reading documentation pages. That's the difference between a system that works with AI and one that's *legible* to it.
 
-#### 1. A machine-readable component manifest
+[Context engineering](/context-engineering/) covers task-specific versions of this manifest: Murphy Trueman's seven-blueprint **context engine**, and a second one built independently by Diana Wolosin.
 
-The same team's notes describe a **machine-readable component manifest**: a structured JSON index of every component — name, category, description, props, variants, composition relationships, token bindings, accessibility role, status. An AI agent querying it can resolve "I need a component for user input with validation" to a specific component, variant, and configuration without reading documentation pages. That's the difference between a design system that works with AI and one that is *legible* to AI. — design-system-ops, knowledge-notes/ai-readiness.md
+### Describe tokens and components by purpose
 
-A task-specific version of this same manifest — Murphy Trueman's seven-blueprint **context engine**, and a second, independently built one from Diana Wolosin — gets its own room in [Context engineering](/context-engineering/). Structuring tokens and components themselves as an API (Romina Kavcic, Murphy Trueman) is covered in [Documentation for agents](/documentation-for-agents/).
+When an agent reads an undocumented token set, it sees "a wall of nested objects with no context about why these values exist or when to use them," the same ambiguity a new team member hits, with no one to ask. The same goes for component names: `BlueCard` or `CardBase` tells a machine nothing about its role, while `FeatureHighlight` or `OnboardingStep` does. [Documentation for agents](/documentation-for-agents/) covers treating tokens and components as an API, from Romina Kavcic and Murphy Trueman.
 
----
+### Document anti-patterns and edge cases
+
+Per the design-system-ops notes, components with ambiguous names, undocumented anti-patterns, and vague purpose descriptions fail AI consumers first, and human consumers next.
 
 ## Common mistakes
 
-Assuming "AI readiness" means bolting a separate AI layer onto your system. It doesn't — the work is quality work, done with more precision, that helps every consumer, including the humans:
-
-- **Structuring tokens for humans only.** When an AI reads an undocumented token set, it sees "a wall of nested objects with no context about why these values exist or when to use them" — the same ambiguity a new team member would hit, just with no one to ask.
-- **Naming components by appearance instead of function.** `BlueCard` or `CardBase` tells a machine nothing about its role; `FeatureHighlight` or `OnboardingStep` does.
-- **Leaving anti-patterns and edge cases undocumented.** Components with ambiguous names, undocumented anti-patterns, and vague purpose descriptions fail AI consumers first and human consumers next.
-
-— design-system-ops, knowledge-notes/ai-readiness.md
+- **Treating AI readiness as a separate AI layer bolted onto the system.** It isn't. The work is quality work, done with more precision, and it helps every consumer, including the humans.
