@@ -58,9 +58,9 @@ finishing any page you write or edit, or when the user asks for a writing/conten
 
 3. **Concrete over abstract, always.** Prefer a specific example, name, or number over a
    general claim. "Teams re-litigate decisions" is weaker than "teams without decision
-   records re-litigate the same call every 18 months." This matches the existing page
-   template's "In Practice" sections — don't let a principle section drift into
-   abstraction that the practice section then has to redeem.
+   records re-litigate the same call every 18 months." This matches the page
+   template's Practices sections — don't let the lead drift into abstraction that the
+   practices then have to redeem.
 
 4. **Sentence-level UX writing checks:**
    - Active voice, present tense, second person where natural ("you," not "the user" —

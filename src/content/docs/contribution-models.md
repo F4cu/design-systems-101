@@ -2,104 +2,90 @@
 title: Contribution Models
 ---
 
-<p class="eyebrow">The Idea</p>
+A contribution model decides who gets to *make* decisions about what enters the system, and what a contribution has to clear to get in. It might be one central team, a federation of product teams, or something in between. [Component governance](/component-governance/) is the other half: how a decision gets recorded once someone has made it. No single model fits every org. The right one changes with size and maturity.
 
-## No single contribution model fits every org — the right shape depends on size and structure, and it comes with its own bar for what counts as a contribution worth accepting
+:::tip[Key takeaways]
+- Start centralized on the core, and add federation on top on purpose
+- Fit the process to your org's real problem: visibility at scale, skills when small
+- Add a component only when 3+ teams need it now, for the same user goal
+- Set clear criteria for what leaves the system, too
+- Expect a small group of contributors, however open the door is
+:::
 
-A contribution model answers a different question than [component governance](/component-governance/) does. Governance is about how a decision gets recorded once someone's made it. A contribution model is about who structurally gets to *make* it — one central team, a federation of product teams, or something in between — and what counts as a contribution worth accepting in the first place. Which shape fits, and where the bar for in and out sits, changes with the org's size and maturity, not a fixed template.
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+Pick the wrong model for your org's size and maturity, and you get one of two failures. Either a central team becomes a bottleneck everyone routes around, or an open free-for-all produces components nobody maintains.
 
-## The wrong model produces a bottleneck or an unmaintained free-for-all
+## Choosing a model
 
-Pick the wrong model for your org's size and maturity and you get one of two failures: a centralized team that becomes a bottleneck everyone routes around, or an open, federated free-for-all that produces components nobody maintains.
+Start centralized, then add federation on purpose. [Nathan Curtis](https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542) has revised his own framing: treating centralized and federated as alternatives was a mistake. Federation is never pursued first, and it never succeeds without a funded centre underneath. Keep the core centralized (tokens, foundations, accessibility, component contracts), and layer federation on top deliberately.
 
-Nathan Curtis's 2015 taxonomy is still the reference point:
+Then fit the process to the problem your org actually has. [Ness Grixti](https://nessgrixti.com/articles/rethinking-contribution-lessons-from-the-messy-middle-of-design-systems/): "you can't define contribution until you truly understand what problem it's solving in your organisation." At 80+ teams, the problem is visibility: the system team can't see what every team needs. A lightweight feature-request process fits better than a pipeline for finished work. At small scale, the better move is to teach product designers and engineers systems thinking, so they can extend the system themselves.
 
-- **Solitary** — one team builds mostly for itself and makes the result available. Bootstrap, from an outside designer's perspective, works this way.
-- **Centralized** — a dedicated team produces and supports the system for others.
-- **Federated** — designers from multiple product teams decide on it together.
+The first three models below come from [Curtis's 2015 taxonomy](https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0). Share figures come from zeroheight's *Design Systems Report 2026* (147 practitioners).
 
-— [Nathan Curtis, "Team Models for Scaling a Design System"](https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0)
+### Solitary
 
-Jina Anne's extension, drawn from her time at Salesforce, adds a fourth: **cyclical**, where a centralized core team and a federated contributor group continuously inform each other rather than one replacing the other. — [Jina Anne, "The Salesforce Team Model for Scaling a Design System"](https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b)
+One team builds mostly for itself and makes the result available to others. Bootstrap, seen from an outside designer's perspective, works this way.
 
-Her other writing adds a complementary point about who fills these teams, not just how authority is structured between them: design-systems work is often the natural home for "hybrid" practitioners — designer-coders who straddle disciplines and don't fit neatly into a pure design team or a pure engineering one. Structuring the model around explicitly cross-functional roles (design, code, content, accessibility, product) gives those hybrids a place to stand, instead of leaving them organizationally homeless between two teams that each consider them slightly not their own. — [Jina Anne, "Design Systems and Hybrids"](https://24ways.org/2017/design-systems-and-hybrids/), 24ways
+### Centralized
 
----
+A dedicated team produces and supports the system for everyone else. It's the most common model: 51% of teams run it, and 31% run a hybrid. It still strains: 53% of centralized teams say they don't have enough people.
 
-## In Practice
+### Federated
 
-#### 1. Contribution scope scaled by org size
+Designers from several product teams decide on the system together. Only 13% of teams run it purely federated, and staffing complaints go up as teams federate: 68% of hybrid and 74% of federated teams say they're understaffed. Federation doesn't solve the resourcing problem. It spreads it out and makes it harder to see.
 
-Ness Grixti's practical rule: "you can't define contribution until you truly understand what problem it's solving in your organisation." At large scale (80+ teams), the systems team's real problem is visibility — it can't see what every team needs — so the fix is a lightweight feature-request process that surfaces demand, not a formal pipeline expecting outside teams to ship finished work. At small scale, the more effective move is different entirely: upskill the org's own product designers and engineers in systems thinking so they can extend the system competently themselves, rather than building a contribution process for a volume of contributors that doesn't exist yet. — [Ness Grixti, "Rethinking Contribution: Lessons from the Messy Middle of Design Systems"](https://nessgrixti.com/articles/rethinking-contribution-lessons-from-the-messy-middle-of-design-systems/)
+### Cyclical
 
-#### 2. A fifth model: the community backlog
+[Jina Anne](https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b), drawing on her time at Salesforce, adds a fourth model. A central core team and a federated contributor group keep informing each other, rather than one replacing the other.
 
-Because it's public, documented, and run at a different scale than most private-company examples: the **GOV.UK** Design System runs on a **community backlog**. It's a public GitHub repo where anyone across UK government can propose a component or pattern, which a working group reviews for whether it's useful and not a duplicate before it's marked to-do and paired with a contributor. It's contribution-led — most major additions come from outside the core team — but not a free-for-all: a named community designer runs weekly catch-ups with whoever's building the thing, the GOV.UK equivalent of Curtis's steward role. The team's own account of iterating the model is candid about what they got wrong the first time:
+### Community backlog
 
-> "In the past, we often waited for teams to approach us for proposals for patterns and components, which did not always match with the community's needs."
-> — Chris Ballantine-Thomas, GOV.UK Design System, ["Iterating the GOV.UK Design System contribution model"](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/)
+The **GOV.UK** Design System runs a public backlog on GitHub. Anyone in UK government can propose a component. A working group checks that it's useful and not a duplicate, and a named community designer runs weekly catch-ups with the contributor. [Chris Ballantine-Thomas](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/) describes their key fix: publish what the team wants built *before* anyone proposes it, instead of waiting for proposals that didn't match what the community needed. The full story is in [Governance case studies](/governance-case-studies/).
 
-Their fix was to flip from reactive to proactive: publish what the team currently wants built *before* waiting for someone to propose it, so contributor effort lands on something the system actually needs rather than being reviewed and declined after the fact. It's the same lesson as Curtis's federation-is-a-facet point below, arrived at independently by a public-sector team working in the open.
+## Practices
 
-#### 3. Federation as a facet, not a starting point
+### Staff the core team across disciplines
 
-Curtis has since revised his own framing: presenting centralized and federated as a choice between alternatives was a mistake. In practice, federation is never pursued first and never succeeds without a funded centre underneath it — the move is to start centralized on the core (tokens, foundations, accessibility, component contracts) and layer federation on top deliberately, not to pick one model and commit to it forever. — [Nathan Curtis, "The Fallacy of Federated Design Systems"](https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542)
+[Jina Anne](https://24ways.org/2017/design-systems-and-hybrids/) points out that design-systems work is often the natural home for hybrid practitioners, such as designer-coders who don't fit a pure design or pure engineering team. Build the model around cross-functional roles (design, code, content, accessibility, product). That gives hybrids a home instead of leaving them caught between two teams.
 
-Survey data backs this up with numbers rather than opinion. zeroheight's 2026 Design Systems Report, surveying 147 practitioners, found 51% run a centralized model, 31% hybrid, and only 13% pure federated. Dissatisfaction with staffing *climbs* the more federated a team goes: 53% of centralized teams say they don't have enough people, rising to 68% of hybrid teams and 74% of federated teams. Federation doesn't solve the resourcing problem; it spreads it out and makes it harder to see. — zeroheight, *Design Systems Report 2026*
+### Count contributions, not participation
 
-#### 4. Contribution is not participation
+[Curtis](https://medium.com/eightshapes-llc/defining-design-system-contributions-eb48e00e8898) defines a contribution as a proposal, design, code, doc, or asset, made by someone outside the core team and released through the system for others to reuse. Attending office hours or filing a bug is participation. That's valuable, but it isn't a contribution. Blur the two, and the process has to cover an endless surface and never ships.
 
-Curtis draws a line worth keeping: a contribution is a proposal, design, code, doc, or asset — completed by someone outside the core team and released through the system for others to reuse. Attending office hours or filing a bug is participation, which is valuable, but it isn't a contribution. Blur the two and your contribution process has to cover an infinite surface and never ships. — [Nathan Curtis, "Defining Design System Contributions"](https://medium.com/eightshapes-llc/defining-design-system-contributions-eb48e00e8898)
+### Match the workflow to the contribution's size
 
-#### 5. Contribution workflow based on size
+An icon, a missing variant, or a token fix should be close to self-serve: a clear template, fast review, and shipping in a normal release. A new component or a data-heavy pattern needs a steward, a defined scope, and the expectation that the contributor won't finish it alone. [Curtis](https://medium.com/eightshapes-llc/defining-design-system-contributions-eb48e00e8898) describes the steward's job: guide the contributor through the steps and pick up the rest if they stall.
 
-An icon, a missing variant, or a token fix should be near-autonomous: a clear template, fast review, shipped inside a normal release. A new component or a data-heavy pattern is a different animal entirely — it needs a steward, a defined scope, and a realistic expectation that the contributor won't finish it alone. Most prospective contributors don't know, or want to know, every step involved in shipping something large; the steward's job is to guide them through it and pick up the remainder if they stall. — [Nathan Curtis, "Defining Design System Contributions"](https://medium.com/eightshapes-llc/defining-design-system-contributions-eb48e00e8898)
+### Criteria for adding a component
 
-#### 6. The bar for what gets in
+Ask these in order. A proposal that fails an early question doesn't need a debate about the later ones.
 
-Borrowed from the same practitioner literature:
-
-- **Reusability** — needed by two or three teams, not one.
-- **Genericity** — solves the shared problem, not the specific case that prompted it.
-- **Accessibility** — meets the standard before shipping, not after.
-- **Completeness** — states, responsive behavior, content guidance, docs, not just the happy path.
-- **Maintenance cost** — the core team carries this forever; is it worth carrying.
-
-#### 7. The reusability/genericity trap
-
-Cathy Dutton's critique of pattern libraries argues that reusability is measured from the organization's side far more often than the user's — a "user registration" pattern describes what the business needs to collect, not what the user is trying to accomplish, and turning it into a shared component can quietly cement that framing into every team that reuses it. Her sharpest example: a date picker generalized well enough to serve both leisure travel booking and urgent medical-appointment scheduling is not actually the same problem twice, even though the UI looks identical — one user is comparing options, the other needs the first available slot. A component can pass every item on the bar above and still be solving the org's convenience instead of the user's actual goal. — [Cathy Dutton, "The Problem with Patterns,"](https://alistapart.com/article/problem-with-patterns/) A List Apart
-
-The practical addition to "when to add a new component": before promoting a recurring UI shape into a shared pattern, ask what problem it's actually solving and for whom, not just how many teams are asking for it. A pattern proposal that can't state the user's goal in terms other than the interface it produces — "we need this because three teams want a date picker" rather than "three teams need to help someone book the earliest available slot" — is a candidate for the trap Dutton describes, regardless of how many teams are behind it.
-
-The "needed by two or three teams" bar has a name outside design systems, too — software engineering's **rule of three**, popularized by Martin Fowler's *Refactoring* (1999) and credited there to Don Roberts. Duplicated code or a duplicated pattern doesn't earn a shared abstraction the first time it appears, or even the second. It earns one the third time, once there's enough real evidence of the shape it needs to take. Applied to contribution: a one-off component built for a single team's edge case isn't a design-system candidate yet, no matter how well built it is. It becomes one once a third team independently needed the same thing.
+1. **Is it actually new?** First, sort the request into a lane: modification, addition, or removal. Inayaili de León Persson's Vanilla Framework does this before any debate, so an addition isn't reviewed like a bug fix ([Component governance](/component-governance/)). A new visual expression of something that exists, like a new button color, is usually a variant of the existing component, not a new one ([Component API design](/component-api-design/)).
+2. **Do three or more teams need it now?** Dan Mall's threshold from [Pilot strategy](/pilot-strategy/): if three or more teams need it *right now*, it goes in. If only one team does, that team solves it on its own for now. This matches software's **rule of three**, from Martin Fowler's *Refactoring* (1999), credited there to Don Roberts. A pattern earns a shared abstraction the third time it shows up, once there's real evidence of the shape it needs.
+3. **Is it the same user problem each time?** [Cathy Dutton](https://alistapart.com/article/problem-with-patterns/) warns that reuse is usually measured from the organization's side, not the user's. A date picker shared by leisure travel booking and urgent medical scheduling looks identical, but one user is comparing options and the other needs the first available slot. State the user's goal without describing the interface. "Three teams want a date picker" fails. "Three teams need to help someone book the earliest slot" passes.
+4. **Does it clear the quality bar?** It meets accessibility standards before shipping, not after. It's complete: states, responsive behavior, content guidance, and docs, not just the happy path. And it's worth the maintenance cost, since the core team carries it forever.
 
 > "Three strikes and you refactor."
-> — attributed to Don Roberts, in Martin Fowler, *Refactoring: Improving the Design of Existing Code* (1999)
+> — attributed to Don Roberts, in Martin Fowler, *Refactoring* (1999)
 
-#### 8. The bar for what gets out
+### Criteria for removing a component
 
-It's just as much a part of the model as the bar for what gets in — a system with no deprecation path only grows and eventually collapses under its own weight. Deprecation is triggered by any of:
+A system with no way to remove things only grows, until it collapses under its own weight. Deprecate a component when any of these is true:
 
 - a better alternative exists with a clear migration path
 - usage is at or near zero
-- accessibility debt can't be resolved
-- maintenance cost is disproportionate to value
-- the component no longer fits the system's direction
+- accessibility debt can't be fixed
+- maintenance cost outweighs its value
+- it no longer fits the system's direction
 
-It always ships with a timeline and a migration path, not just a warning — **IBM's** Carbon is the standard reference for bundling deprecations with detailed migration guides rather than announcing removal and leaving teams to figure out the rest.
+Every deprecation needs a timeline and a migration path, not just a warning. **IBM's** Carbon is the standard reference for bundling deprecations with detailed migration guides. See [Release management](/release-management/).
 
-#### 9. The honest scale of contribution
+### Expect a small group of contributors
 
-Again from zeroheight's 2026 data, 69% of teams say anyone on the product team can contribute, but 82% of teams actually receive contributions from ten or fewer designers. This doesn't improve with company size — even at 5,000+ employee companies, only 37% have more than ten contributing designers. Contribution stays small regardless of how open the door is.
-
----
+In zeroheight's 2026 data, 69% of teams say anyone on the product team can contribute. But 82% actually get contributions from ten or fewer designers. Company size doesn't change this: even at companies with 5,000+ employees, only 37% have more than ten contributing designers. Plan for a small, well-supported champions network, not an open door with a README. [Fostering contribution](/fostering-contribution/) covers how to build one.
 
 ## Common mistakes
 
-- **Pitching open contribution to leadership as a way to scale capacity.** It isn't one — the data above shows contribution volume staying flat and small no matter how large the org gets, and reviewing a contribution is usually *more* expensive for the core team than building it yourself in the short term. The reason to run a contribution model isn't throughput; it's legitimacy, distributed knowledge, and surfacing real requirements the core team would otherwise never see. Treat it as a small, well-supported champions network rather than an open door with a README, and the model choice becomes a lot less fraught — it can flex with the org instead of being a one-time decision the whole system depends on.
-- **Treating participation — office hours, bug reports — as the same thing as a contribution.** Attending office hours or filing a bug is valuable, but it isn't a contribution; blurring the two makes the process responsible for an infinite surface that never ships.
-- **Promoting a pattern into a shared component because enough teams are asking, not because it solves the same user problem.** A date picker generalized to serve both leisure travel and urgent medical scheduling looks like the same component but isn't — one user is comparing options, the other needs the first available slot. Team count is a proxy; the user's actual goal is the real bar.
-
-See [Governance case studies](/governance-case-studies/) for what this looks like when it works and when it doesn't, and [Fostering contribution](/fostering-contribution/) for how a team builds that champions network deliberately rather than waiting for it to volunteer itself.
+- **Pitching open contribution to leadership as extra capacity.** Contribution volume stays small whatever the org's size. In the short term, reviewing a contribution usually costs the core team more than building the thing itself. The real reasons to run a contribution model are legitimacy, spreading knowledge, and surfacing requirements the core team would never see.

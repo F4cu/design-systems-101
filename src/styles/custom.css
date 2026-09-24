@@ -13,17 +13,6 @@
 	max-width: var(--measure);
 }
 
-.eyebrow {
-	font-size: 12px;
-	font-weight: 600;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	color: var(--sl-color-gray-3);
-	margin: 2em 0 0.25em !important;
-}
-.eyebrow + h2 {
-	margin-top: 0.2em;
-}
 
 /* Mermaid diagrams don't reflow — scroll them within their own box instead of the page */
 .mermaid-wrap {

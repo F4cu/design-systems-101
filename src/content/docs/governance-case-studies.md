@@ -2,52 +2,65 @@
 title: Governance Case Studies
 ---
 
-<p class="eyebrow">Case Studies</p>
+Almost every real governance failure, and every real success, only makes sense in context: what worked for one team's size, stage, and structure would have failed for another. These four cases are worked examples, not templates. Each ends with what made the outcome depend on its context.
 
-## Governance failures and successes only make sense in context
+:::tip[Key takeaways]
+- Register a change centrally even when it looks local (Wise)
+- Don't build governance a system hasn't earned yet (zeroheight data)
+- A small, named group of champions beats an open door (Grammarly)
+- Publish what you want built before waiting for proposals (GOV.UK)
+:::
 
-Governance advice tends to arrive as universal rules, but almost every real governance failure — and every real success — is legible only in context: what worked for one team's size, stage, and structure would have failed for another's. These three scenarios are worked examples, not templates, and each ends with what made the outcome context-dependent rather than universal.
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+Without concrete cases, governance principles are easy to agree with and hard to apply. Teams reach for the nearest generic best-practice list instead of reasoning about their own situation. A worked example, including the ones that went wrong, gives you something to reason *from*.
 
-## Abstract principles alone can't tell you what to do in your situation
+## The cases
 
-Without concrete cases, governance principles stay abstract enough to agree with and hard enough to apply that teams reach for the nearest generic best-practice list instead of reasoning about their own situation. A worked example — including the ones that went wrong — gives you something to reason *from*.
+### Wise: forking instead of extending
 
----
+**Wise's** product systems team was asked to add a new color theme for a second platform brand, and pushed back. The change seemed to affect only one surface (Editorial), and updating the shared color library for a second brand didn't seem justified for that scope. So the Editorial team duplicated the color library and extended it themselves, locally.
 
-## The Cases
+What got missed: core product components, like buttons, inputs, and the rest of the shared library, were already being used *inside* Editorial. Those nested instances were still bound to the original single-brand tokens. When the new theme was applied, the surrounding Editorial patterns updated correctly, but the nested product components kept their default colors. The inconsistency only showed up after the fork was live.
 
-#### 1. Forking instead of extending, at Wise
+The lesson: nested components inherit their token bindings, not their surrounding context. A component deep in a composition that references an unthemed token looks fine right up until someone applies a theme around it. What would have worked: registering the request centrally even though it looked single-surface, so the system team could see the nesting risk before the fork. This was one piece of a larger brand refresh. [Brand alignment](/brand-alignment/) covers how Wise's 2023 rebrand reshaped its token infrastructure. Source: [Ness Grixti's Wise case study](https://nessgrixti.com/portfolio/wise-multi-brand/).
 
-**Wise's** product systems team was asked to add a new color theme for a second platform brand, and pushed back. The change seemed to affect only one surface (Editorial), and updating the shared color library for a second brand didn't feel justified for that scope. So the Editorial team duplicated the color library and extended it themselves, locally.
+### zeroheight: the adoption paradox
 
-What got missed: core product components — buttons, inputs, the shared library — were already being used *inside* Editorial contexts, and those nested instances were still bound to the original single-brand tokens. When the new theme was applied, the surrounding Editorial patterns updated correctly, but the nested product components kept their default colors, breaking visual consistency in a way that only showed up after the fork was already live.
+zeroheight's *Design Systems Report 2026* (147 practitioners) surfaces a paradox. Ask teams with *poor* adoption why, and 55% blame weak governance, second only to lack of a company mandate (73%). Ask teams with *good* adoption what drove it, and only 24% mention governance. They credit component completeness (79%) and communication or community (59%).
 
-The lesson: nested components inherit their token bindings, not their surrounding context. A component deep in a composition that references an unthemed token will look fine right up until someone applies a theme around it. What would have made this work: registering the request centrally even though it looked single-surface, so the system team could see the nesting risk before the fork happened, rather than after. This was one piece of a larger brand refresh — see [Brand alignment](/brand-alignment/) for how Wise's 2023 rebrand reshaped its token infrastructure more broadly. — [Ness Grixti, "Wise Multi-Brand Design System — Case Study"](https://nessgrixti.com/portfolio/wise-multi-brand/)
+Picture two teams side by side. One has an elaborate review board, multi-stage approval, and a strict contribution template, and still struggles, because half its library is missing what teams actually need. The other has light governance, a small decision log, and no review committee, but ships a complete, well-communicated core, and adoption follows.
 
-#### 2. Misdiagnosed governance failures
+The reading: weak governance is the explanation people reach for when a system is already failing for other reasons. Strong governance isn't what causes success. It's what stops a *successful* system from decaying once it has adoption. Building elaborate governance before a system has earned adoption solves a problem the team doesn't have yet.
 
-zeroheight's 2026 survey of 147 practitioners surfaces a genuine paradox. Ask teams with *poor* adoption why, and 55% blame weak governance — second only to lack of a company mandate at 73%. Ask teams with *good* adoption what actually drove it, and governance barely registers: only 24% mention it. What they credit instead is component completeness (79%) and communication or community (59%).
+### Grammarly: a small champions network
 
-Picture two teams side by side. One has an elaborate review board, multi-stage approval, and a strict contribution template — and still struggles, because half its component library is missing the things teams actually need. The other has light governance, a small decision log, and no formal review committee — but ships a complete, well-communicated core, and adoption follows.
+**Grammarly** built a network of ten advocates across design and engineering to help enable the rest of the organization and drive adoption. It wasn't an open contribution door. It was a specific, named group of people with real standing. It worked well enough that engineering offered to trade headcount for further design-system investment, which is about as concrete a signal of trust as a contribution model can produce.
 
-The reading: weak governance is the explanation people reach for when a system is already failing for other reasons, but strong governance isn't what causes success in the first place. It's what stops a *successful* system from decaying once it has adoption. Building an elaborate governance apparatus before a system has earned adoption solves a problem the team doesn't have yet. — zeroheight, *Design Systems Report 2026*
+The context that made it work: ten people is a small, sustainable number, consistent with the finding in [Contribution models](/contribution-models/) that real contribution stays small regardless of company size. The network also spanned design and engineering, so it had standing on both sides of the handoff. Source: [Figma / Design Executive Council, "The new business case for design systems"](https://www.figma.com/blog/the-new-business-case-for-design-systems/).
 
-#### 3. A small champions network, at Grammarly
+### GOV.UK: a public community backlog
 
-**Grammarly** built a network of ten advocates spanning design and engineering to help enable the rest of the organization and drive adoption — not an open contribution door, a specific, named group of people with real standing. It worked well enough that engineering offered to trade headcount for further design-system investment, which is about as concrete a signal of trust as a contribution model can produce.
+The **GOV.UK** Design System runs on a public community backlog, documented in the open and at a different scale than most private-company examples. It's a public GitHub repo where anyone across UK government can propose a component or pattern. A working group reviews each proposal for whether it's useful and not a duplicate, then marks it to-do and pairs it with a contributor. Most major additions come from outside the core team, but it isn't a free-for-all. A named community designer runs weekly catch-ups with whoever is building the thing, the GOV.UK equivalent of Curtis's steward role.
 
-The context that made this work: ten people is a small, sustainable number, consistent with the finding in [Contribution models](/contribution-models/) that real contribution stays small regardless of company size. The network also spanned both design and engineering, so it had standing on both sides of the handoff, not just one. — cited via Figma / Design Executive Council research on design-system business value
+The team's own account of iterating the model is candid about what they got wrong the first time:
 
----
+> "In the past, we often waited for teams to approach us for proposals for patterns and components, which did not always match with the community's needs."
+> — Chris Ballantine-Thomas, GOV.UK Design System, ["Iterating the GOV.UK Design System contribution model"](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/)
+
+Their fix was to flip from reactive to proactive: publish what the team currently wants built *before* anyone proposes it. That way contributor effort lands on something the system needs, rather than being reviewed and declined after the fact. The context that made it work: a public-sector team working in the open, across many departments, with a funded core team to run the backlog.
+
+## Patterns across cases
+
+Each case argues for something different:
+
+- **Wise** argues for registering changes centrally even when they look local.
+- **The adoption paradox** argues against building governance a system hasn't earned yet.
+- **Grammarly** argues for a small, named group over either a wide-open door or a purely centralized team.
+- **GOV.UK** argues for steering contribution toward known needs instead of waiting for it to arrive.
+
+All four are true at once, for different reasons, at different points in a system's life. That's the point of reading governance as contextual rather than as a checklist.
 
 ## Common mistakes
 
-Reading any one of these as "the" answer and copying its structure:
-
-- **The Wise story** argues for registering changes centrally even when they look local.
-- **The adoption-paradox story** argues against building governance apparatus a system hasn't earned yet.
-- **The Grammarly story** argues for a small, named group over either a wide-open door or a purely centralized team.
-
-All three are true simultaneously, for different reasons, at different points in a system's life — which is the entire point of reading governance as contextual rather than as a checklist.
+- **Copying one case's structure as "the" answer.** Each outcome depended on the team's size, stage, and structure. Take the reasoning, not the org chart.

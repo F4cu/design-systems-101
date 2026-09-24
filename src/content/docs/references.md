@@ -42,7 +42,7 @@ prose.
 - [Nathan Curtis, "Component Contracts and Schemas"](https://nathanacurtis.substack.com/p/component-contracts-and-schemas)
 - [Nathan Curtis, "Reimagining a Token Taxonomy"](https://medium.com/eightshapes-llc/reimagining-a-token-taxonomy-462d35b2b033)
 
-## UI audit & heuristic evaluation
+## UI audit
 
 - [Brad Frost, "Conducting an Interface Inventory"](https://bradfrost.com/blog/post/conducting-an-interface-inventory/)
 - [18F Methods, "Interface audit"](https://methods.18f.gov/decide/interface-audit/)
@@ -118,6 +118,7 @@ prose.
 - [Ness Grixti, "Wise Multi-Brand Design System — Case Study"](https://nessgrixti.com/portfolio/wise-multi-brand/)
 - zeroheight, *Design Systems Report 2026*
 - Figma / Design Executive Council — Grammarly champions-network anecdote, via "The new business case for design systems"
+- [Chris Ballantine-Thomas, "Iterating the GOV.UK Design System contribution model"](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/)
 
 ## Scaling across decades
 

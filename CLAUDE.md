@@ -33,7 +33,7 @@ npm run build   # production build to dist/
   (`'token-architecture'`) unless its nav label needs to differ from the page's `title`
   frontmatter, in which case use `{ slug: '...', label: '...' }`.
 - **`src/styles/custom.css`** — the only custom CSS on top of Starlight's stock theme:
-  WCAG line-length caps, the `.eyebrow` label style, and the `.mermaid-wrap` scroll-box
+  WCAG line-length caps and the `.mermaid-wrap` scroll-box
   style. Deliberately does not reskin Starlight's default colors/fonts/sidebar chrome.
 - **Content pages** (`src/content/docs/*.md`) — each is a standalone topic page. The
   `title` frontmatter field is what Starlight renders as the page's H1 and browser-tab
@@ -49,54 +49,60 @@ npm run build   # production build to dist/
 
 ## Page conventions
 
-Every content page from Part 1 onward follows the same shape (see `token-architecture.md`
-as a reference example):
+Every content page from Part 1 onward uses one template. It's built so the "On this page"
+table of contents lists every practice as a short label. See `release-management.md` and
+`contribution-models.md` as reference examples.
 
 1. **Title (`title` frontmatter, rendered as the H1)**: name the principle or topic in
    2–5 words. Never restate the page's own subject descriptively (bad: `Component
    Building: Structuring Components in Figma`, should be `Component Architecture`) and
    never stack a colon- or `&`-joined subtitle listing the page's own sub-topics (bad:
-   `Release Management: Versioning, Changelogs & Migration Guides` — if the sub-topics
-   need naming, that's what the opening `##` heading is for). The title must match the
-   link text used for this page everywhere else in the wiki (`astro.config.mjs`'s
+   `Release Management: Versioning, Changelogs & Migration Guides`). The title must match
+   the link text used for this page everywhere else in the wiki (`astro.config.mjs`'s
    sidebar, `glossary.md`, other pages' cross-links) — update all of them together if the
    title changes. Do not add a `# Title` line in the page body — Starlight renders the
    frontmatter `title` as the H1 automatically.
-2. Opening eyebrow + `##` heading — pick one of three types based on how the page's
-   `In Practice` sub-sections relate to each other:
-   - **`<p class="eyebrow">The Principle</p>`** (the default) — use when the sub-sections
-     are all facets of one claim. The `##` heading must be a self-contained, one-sentence
-     *definition* of what the principle means and why it matters — never a claim copied or
-     paraphrased from the body paragraph below it that only makes sense once you've read
-     that paragraph. Reference examples: `token-architecture.md`, `component-api-design.md`.
-   - **`<p class="eyebrow">The Idea</p>`** — use when the sub-sections are genuinely
-     independent practices, tools, or named frameworks gathered under a shared theme
-     rather than facets of a single claim (test: could a sub-section stand alone as its
-     own page-worthy principle? If several could, it's this type). The `##` heading names
-     the *shared thread* connecting the sub-sections instead of asserting one universal
-     claim. Reference examples: `operating-cadence.md`, `contribution-models.md`,
-     `stakeholder-alignment.md`.
-   - **`<p class="eyebrow">Case Studies</p>`** — use when the page is built from worked,
-     concrete examples rather than a claim to defend. The `##` heading frames why the
-     cases are worth reading together, and should not force a single universal principle
-     out of them. Reference example: `governance-case-studies.md`. On this type only,
-     also rename the section from item 4 below to `## The Cases` — "In Practice" implies
-     an abstract claim being made concrete, which isn't what's happening on a page that's
-     already nothing but concrete cases.
-3. `<p class="eyebrow">Why It Exists</p>` + an `##` heading — the concrete failure mode
-   that happens without it. This section's job doesn't change across the three types above
-   (it justifies the topic/practice area, not one specific claim), so it stays the same
-   regardless of which eyebrow type item 2 uses.
-4. `## In Practice` (`## The Cases` on a `Case Studies`-type page — see item 2) — numbered
-   `####` sub-sections with real examples, each ending in a footnote-style source
-   citation (`— author/source, path or post title`).
-5. `## Diagram` (optional, only when a relationship is genuinely spatial/sequential —
-   don't diagram things that are just lists) — a Mermaid block wrapped in
-   `<div class="mermaid-wrap">...</div>` so it scrolls in its own box on narrow viewports
-   instead of forcing page-wide horizontal scroll. Keep diagrams few-node and legible at
-   ~800px max width.
-6. `## Common mistakes` — a bulleted list, each bullet a beginner-likely error grounded in
-   a cited source where possible.
+2. **Lead** (no heading): 1–3 plain sentences stating the page's main takeaway. Starting
+   with the takeaway always makes sense. Putting it in a heading doesn't, because long
+   sentence headings clutter the TOC. No eyebrow labels anywhere.
+3. **`:::tip[Key takeaways]`** aside: 3–5 bullets (never more), one per key practice, each
+   written as advice. On pages with more practices, pick the ones a reader most needs.
+4. **`## The problem`**: the concrete failure mode that happens without this practice area.
+5. **The core section(s)**, chosen by page type:
+   - **Practice** (default, the page is a set of things to do): `## Practices`.
+   - **Decision** (the page's value is picking between alternatives): `## Choosing <the
+     decision>` (e.g. `## Choosing a model`), then `## Practices`.
+   - **Model** (the page explains a structure, like token layers): `## The model`, with one
+     `###` per layer or dimension, then `## Practices`. A Model page must still end in
+     practices. It never just lists the parts of a design system.
+   - **Case studies**: `## The cases` (`### Org: what they did`), then
+     `## Patterns across cases`. Multi-paragraph named-org narratives live only here. Topic
+     pages keep short (2–4 sentence) org examples inline and link here for the full story.
+
+   Rules for the core sections:
+   - **Only `##` and `###` headings.** Starlight's TOC shows levels 2–3 only, so a `####`
+     practice is invisible when scanning. No numbers in headings, except on sequence pages
+     where order matters (`### 1. Inventory the interface first`).
+   - **Practice headings are advice**, imperative and ≤ ~8 words ("Deprecate before you
+     remove"). Not a topic ("Deprecation lifecycle"), and not an "X, not Y" slogan.
+     Aim for ≤ ~7 practices. Group larger sets under 2–3 `###` clusters.
+   - **The and/or test.** If the reader should do all of the items, they're Practices. If the
+     reader should pick one, they go under `## Choosing …`. Guidance on how to choose opens
+     that section, before the options. It's never a separate `###`. Each option says, in
+     prose, who does it, when it fits, and what it costs.
+   - **Criteria.** When a page owns a decision rule (e.g. when to add a component), it gets a
+     `### Criteria for …` heading with a numbered list of questions in the order a reviewer
+     asks them. Each decision rule has one owning page. Other pages link to it.
+   - **Citations inline.** Name the practitioner in the sentence and put the link on the
+     name ("[Curtis](…) defines…"). No trailing "— author, title" lines. Block quotes keep
+     their attribution line.
+   - **Diagrams inline**, directly under the practice or model they illustrate, never as a
+     standalone `## Diagram` section. Only when a relationship is genuinely spatial or
+     sequential. Wrap each Mermaid block in `<div class="mermaid-wrap">...</div>`, and keep
+     it few-node and legible at ~800px max width.
+6. **`## Common mistakes`**: a bulleted list, each bullet a beginner-likely error grounded in
+   a cited source where possible. A mistake that just reverses a practice heading is a
+   duplicate. Delete it.
 
 Other conventions:
 

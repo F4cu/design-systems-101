@@ -2,33 +2,33 @@
 title: Release Management
 ---
 
-<p class="eyebrow">The Principle</p>
+A version number, a changelog entry, and a migration guide are three views of the same event: they tell consuming teams what upgrading will cost them. When all three tell the truth, teams keep upgrading. When they don't, teams stop.
 
-## A version number is a promise about impact, not a build artifact
+:::tip[Key takeaways]
+- Use SemVer so impact is readable before anyone opens the diff
+- Version token changes as their own releases
+- Deprecate, then migrate, then remove, never remove by surprise
+- Put every breaking change for a release on one migration page
+- Keep the changelog public, and push each release to the teams it affects
+:::
 
-Semantic Versioning (SemVer) gives a design system a shared vocabulary for the *impact* of a change before anyone reads the diff: major means something will break, minor means something new is safe to ignore, patch means nothing about your code needs to change. [Nathan Curtis](https://medium.com/eightshapes-llc/versioning-design-systems-48cceb5ace4d) notes that essentially every design system he's worked with uses SemVer for exactly this reason — it's cheap to adopt and it's the one signal a consuming team can act on without reading release notes first. The version number, the changelog entry, and the migration guide are three views of the same underlying event; this page treats them as one practice, not three separate chores.
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+Without a reliable signal for impact, teams do one of two things. They upgrade blindly and get broken by changes they had no warning about. Or they stop upgrading, because every past upgrade cost them unplanned work. Both have the same cause: the version number, changelog, and migration path didn't tell the truth about what the change would cost.
 
-## Undermarked change either gets ignored or gets feared
+## Practices
 
-Without a reliable signal for impact, teams do one of two unproductive things: they upgrade blindly and get broken by changes they had no warning about, or they stop upgrading altogether because every past upgrade cost them unplanned work. Both failure modes have the same root cause — the version number, changelog, and migration path didn't tell the truth about what changing would cost. [zeroheight](https://zeroheight.com/blog/handling-breaking-changes-in-a-design-system-without-causing-chaos/) frames breaking changes as a lifecycle with three phases — **deprecation, migration, removal** — precisely because skipping straight to removal is what turns an upgrade into an incident.
+### Use SemVer as the impact signal
 
----
+Semantic Versioning (SemVer) tells a consuming team the *impact* of a change before anyone reads the diff. Major means something will break. Minor means something new is safe to ignore. Patch means nothing about your code needs to change. [Nathan Curtis](https://medium.com/eightshapes-llc/versioning-design-systems-48cceb5ace4d) notes that nearly every design system he's worked with uses SemVer for this reason: it's cheap to adopt, and it's the one signal a team can act on without reading release notes first.
 
-## In Practice
+### Version token changes on their own
 
-#### 1. System-wide versioning vs. component-level versioning
+Tokens sit underneath every component, so a token change reaches more components than any other kind of change. A renamed or re-scoped color token can quietly break dozens of components that never touched their own code. The [Design Tokens Substack](https://designtokens.substack.com/p/how-to-manage-breaking-changes-in) recommends treating token changes as release events in their own right, with their own major/minor/patch reasoning, instead of folding them into a component release where the impact is easy to miss.
 
-These are a real tradeoff, not a right-and-wrong choice. System-wide versioning gives every consumer one number to track ("we're on 4.2") and forces synchronized releases, which suits a centralized team shipping tokens, components, and guidelines together. Component-level versioning lets one component ship a fix without forcing every other component's consumers into an unrelated upgrade, at the cost of consumers now tracking many numbers instead of one. [Supernova's survey of real systems](https://www.supernova.io/blog/8-examples-of-versioning-in-leading-design-systems) shows both strategies in active production use — the right choice tracks how centralized the team and the consuming teams already are, not which approach is more "correct."
+### Deprecate before you remove
 
-#### 2. Design tokens need their own version discipline
-
-Tokens sit underneath every component, so a token change affects the largest number of components of any change type in the system — a renamed or re-scoped color token can silently break dozens of components downstream that never touched the components' own code. Treat token changes as release events in their own right, with their own major/minor/patch reasoning, rather than folding them quietly into a component release where their impact is easy to miss. ([Design Tokens Substack, "How to Manage Breaking Changes in Design Tokens"](https://designtokens.substack.com/p/how-to-manage-breaking-changes-in))
-
-#### 3. Deprecation-to-removal lifecycle
-
-A breaking change that lands as a surprise removal is a design failure, not just a communication failure. The three-phase shape:
+[zeroheight](https://zeroheight.com/blog/handling-breaking-changes-in-a-design-system-without-causing-chaos/) frames a breaking change as a lifecycle with three phases. Skipping straight to removal is what turns an upgrade into an incident.
 
 <div class="mermaid-wrap">
 
@@ -40,31 +40,38 @@ graph LR
 
 </div>
 
-zeroheight's concrete deprecation mechanics: mark the deprecated item in its own description field with a visible marker like `[DEPRECATED]`, and where possible wire build tooling to detect continued usage and warn — or, for a system with enough maturity, fail the build. The point isn't the specific marker; it's that deprecation has to be *discoverable at the point of use*, not just announced once in a changelog nobody was reading that week. — [zeroheight, "Deprecating in design systems: When it's time to say goodbye"](https://help.zeroheight.com/hc/en-us/articles/36474257606555-Deprecating-in-design-systems-When-it-s-time-to-say-goodbye)
+The mechanics in [zeroheight's deprecation guide](https://help.zeroheight.com/hc/en-us/articles/36474257606555-Deprecating-in-design-systems-When-it-s-time-to-say-goodbye): put a visible marker like `[DEPRECATED]` in the item's description field. Where possible, have build tooling detect continued usage and warn, or in a mature system, fail the build. The specific marker doesn't matter. What matters is that the deprecation is visible *where the item is used*, not just announced once in a changelog.
 
-This maps directly onto the modification/addition/removal decision tree already covered in [Component governance](/component-governance/) — Inayaili de León Persson's removal lane ("deprecation shipped with advance notice, not a surprise") is the governance-side version of the same lifecycle described here from the release-mechanics side.
+This is the release-side view of the removal lane in [Component governance](/component-governance/), where Inayaili de León Persson asks for "deprecation shipped with advance notice, not a surprise."
 
-#### 4. Aggregated migration guides
+### Put breaking changes on one migration page
 
-**Carbon Design System's** public [migration guide](https://v10.carbondesignsystem.com/help/migration-guide/design/) is cited repeatedly as the reference example: rather than scattering breaking changes across scrollback in a changelog, every breaking change for a release is pulled into one page, paired directly with what to do instead. A migration guide that only says what changed, without saying what a consumer should now do, has done half the job.
+**Carbon Design System's** [migration guide](https://v10.carbondesignsystem.com/help/migration-guide/design/) is the reference example. Instead of scattering breaking changes across changelog entries, every breaking change in a release goes on one page, next to what to do instead. A guide that says what changed, but not what a team should now do, has done half the job.
 
-#### 5. Changelog structure
+### Sort the changelog into standard categories
 
-The [Keep a Changelog](https://keepachangelog.com) categories — Added, Changed, Deprecated, Removed, Fixed, Security — give every entry a home and make a release scannable in seconds: a consumer checking "does this affect me" should be able to answer it from category headers alone, before reading a single line of prose. Pair every entry with the version number and date. ([UXPin, "How to Create a Design System Changelog"](https://www.uxpin.com/studio/blog/how-to-create-a-design-system-changelog/))
+The [Keep a Changelog](https://keepachangelog.com) categories are Added, Changed, Deprecated, Removed, Fixed, and Security. They give every entry a home. A team checking "does this affect me?" should be able to answer from the category headers alone. [UXPin's changelog guide](https://www.uxpin.com/studio/blog/how-to-create-a-design-system-changelog/) adds: put the version number and date on every entry.
 
-#### 6. Changelog as a trust mechanism
+### Keep the changelog public and current
 
-A visible, public changelog — even something as lightweight as a shared Notion page — builds trust with consuming teams: "when people can see what changed and why, they're more likely to update their implementations and less likely to fork the system out of frustration." ([UXPin, "How to Create a Design System Changelog"](https://www.uxpin.com/studio/blog/how-to-create-a-design-system-changelog/)) This is the same neglect-is-the-real-threat dynamic named on the [Component governance](/component-governance/) page — a changelog that goes stale reads to consumers exactly like an unmaintained system, whether or not the system itself is actually healthy.
+A visible changelog, even a shared Notion page, builds trust. [UXPin](https://www.uxpin.com/studio/blog/how-to-create-a-design-system-changelog/) puts it this way: "when people can see what changed and why, they're more likely to update their implementations and less likely to fork the system out of frustration." A stale changelog reads to consumers like an unmaintained system, whether or not the system is healthy. [Component governance](/component-governance/) names the same risk.
 
-#### 7. Push-based notifications
+### Push every release to consuming teams
 
-A changelog that requires a consumer to remember to go check it will get missed by exactly the teams who most need the warning. Automated notification — a Slack post, a release email — on every release, not just major ones, is what converts a written record into something teams actually act on before they're broken by it.
+A changelog that teams have to remember to check gets missed by the teams who most need the warning. Post every release automatically, not just major ones, to Slack or email. That's what turns a written record into something teams act on before it breaks them.
 
----
+## Choosing a versioning strategy
+
+[Supernova's survey of real systems](https://www.supernova.io/blog/8-examples-of-versioning-in-leading-design-systems) finds both strategies below in production. Neither is more correct. The right one depends on how centralized the system team and its consumers already are.
+
+### System-wide versioning
+
+Everything ships under one number ("we're on 4.2"), and releases are synchronized. This fits a centralized team shipping tokens, components, and guidelines together. The cost: a fix to one component forces every consumer into an upgrade.
+
+### Component-level versioning
+
+Each component ships its own fixes on its own schedule, so an unrelated fix doesn't force anyone to upgrade. The cost: consumers track many numbers instead of one.
 
 ## Common mistakes
 
-- **Treating the version bump as the deliverable and the migration guide as optional polish.** A major version with no migration guide forces every consuming team to independently reverse-engineer the same diff — the cost of writing the guide once is far lower than the aggregate cost of dozens of teams doing that discovery work in parallel. If a release is significant enough to warrant a major version, it's significant enough to warrant the guide that makes that version usable.
-- **Skipping straight to removal instead of deprecating first.** A breaking change that lands as a surprise removal is a design failure, not just a communication one — deprecation has to be discoverable at the point of use, with advance notice, before it disappears.
-- **Folding a token change quietly into a component release.** Tokens affect the largest number of components of any change type; bundling them in without their own versioning makes their impact easy to miss until it breaks something downstream.
-- **Letting the changelog go stale.** A changelog that isn't kept current reads to consuming teams exactly like an unmaintained system, whether or not the system itself is actually healthy.
+- **Treating the migration guide as optional polish.** A major version with no guide makes every consuming team reverse-engineer the same diff on its own. Writing the guide once costs far less than dozens of teams doing that work in parallel. If a release is big enough for a major version, it's big enough for the guide.

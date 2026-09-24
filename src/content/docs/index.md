@@ -21,7 +21,7 @@ The foundations section is grounded in one real toolkit: **Design System Ops**, 
 pack for AI coding assistants written by Murphy Trueman from 14 years of production
 design-systems work. It isn't used here as a template to copy — its knowledge notes are
 evidence for the *principles* behind running a system, not a set of settings to adopt
-wholesale. Every claim traced to it carries a citation at the end of the example so you
+wholesale. Every claim traced to it names and links the source in the sentence, so you
 can go read the original.
 
 The rest of the wiki widens the source pool deliberately. A single toolkit can't cover
@@ -56,20 +56,43 @@ list without the surrounding prose.
 
 ## How to read a page
 
-Every page from Part 1 onward follows the same shape: the principle in plain language,
-why it exists (what actually breaks without it), an example or two from the sources
-above, sometimes a diagram, and one common mistake a beginner is likely to make. If
-something needs a claim the sources don't support, the page says so as an open question
-rather than inventing an answer.
+Every topic page has the same shape, so you can scan any of them the same way:
+
+- **A one- or two-sentence lead** with the page's main takeaway, and a **Key takeaways** box
+  with up to five of its most important practices.
+- **The problem**: what actually breaks without this practice area.
+- **Practices**: things to do, each heading written as the advice itself. The "On this
+  page" menu lists them, so the menu alone works as a checklist.
+- **Choosing …** (on some pages): alternatives where orgs and practitioners take
+  different routes, such as team models or versioning strategies. Each option says when
+  it fits and what it costs.
+- **The model** (on some pages): a structure you need to understand first, like token
+  layers, before the practices that build on it.
+- **Common mistakes**: the errors a beginner is most likely to make.
+
+Every claim names the person or report it came from. If something needs a claim the
+sources don't support, the page says so as an open question rather than inventing an
+answer.
 
 The wiki is organized into five Parts, roughly in reading order:
 
-1. **Foundations** — what a design system actually is: tokens, the design-to-code handoff.
-2. **Governance** — how decisions get made and recorded, which contribution model fits which context, how to actually build a culture that contributes to it, and the practical component-API judgment calls: when to add a variant vs. reach for composition, how to avoid prop bloat.
-3. **Adoption** — the operating rhythm that keeps a system visible (cadence, office hours, stewardship, advocacy, feedback loops), whether it's actually being used, and how documentation either supports or undermines that.
-4. **Business alignment** — the org-facing skill of building a business case, staying in sync with brand and marketing, and keeping the system funded, distinct from running it well.
-5. **Agentic AI** — two directions at once: making the system legible to AI as a consumer (context engineering, documentation built for agents, governance under AI consumption), and designing AI as a product surface the system has to support (agentic UI patterns, generative loops, workflow orchestration, scaling access to risk).
+1. **Foundations**: what a design system actually is, and how its building blocks are
+   designed: token architecture, component taxonomy and APIs, the design-to-code
+   handoff, working across platforms, and how to audit and pilot a first system.
+2. **Governance**: how decisions get made and recorded, which contribution model fits
+   which context, how to build a culture that contributes, the operating rhythm and
+   release practice that keep a system visible, and what changes at decades-long scale
+   or when you inherit someone else's system.
+3. **Metrics**: whether the system is actually used, how components perform in real
+   contexts, what consumers depend on, and whether the docs keep up.
+4. **Business alignment**: building a business case, staying in sync with brand and
+   company priorities, and keeping stakeholders aligned, separate from running the
+   system well.
+5. **Agentic AI**: two directions at once. Making the system legible to AI as a
+   consumer (context engineering, documentation built for agents, governance under AI
+   consumption), and designing AI as a product surface the system has to support
+   (agentic UI patterns, generative loops, workflow orchestration, scaling access to risk).
 
-Start with [Foundations](/foundations/), or jump straight to whatever section you need
+Start with [What a design system is](/foundations/), or jump straight to whatever section you need
 using the sidebar. A [glossary](/glossary/) at the end collects every term introduced
 along the way.
