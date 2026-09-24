@@ -44,11 +44,15 @@ The guide stresses that RACI should follow the team model you've already chosen 
 
 [DesignX's enterprise governance guide](https://designx.co/design-system-governance-enterprise/) names the failure it prevents: "everyone gives feedback, but no one decides." A proposal collects opinions from everyone with a stake but never reaches one owner who can close it. Its worked example for a new component proposal, extended here to the other activities Design System Tactics names:
 
-- **New component proposal**: Responsible is the designer and engineer preparing it. Accountable is the design system owner. Consulted are the product champion, accessibility reviewer, and engineering lead. Informed are the affected product teams.
-- **Token update**: Responsible is a system designer. Accountable is the system owner. Consulted are the engineering lead and affected teams. Informed are all product teams.
-- **Component review**: Responsible is a system engineer. Accountable is the system owner. Consulted are the accessibility reviewer and product champion. Informed is the contributor.
-- **Release or deprecation**: Responsible is the system team. Accountable is the system owner. Consulted are product and engineering leads. Informed are adopting teams.
-- **Documentation update**: Responsible are the contributor and system team. Accountable is the system owner. Consulted are a content specialist and accessibility reviewer. Informed are system users.
+| Activity | Contributor | System team | Owner | Specialists | Product teams |
+|---|:-:|:-:|:-:|:-:|:-:|
+| New component | R | – | A | C | I |
+| Token update | – | R | A | C | C |
+| Component review | I | R | A | C | – |
+| Release or deprecation | – | R | A | C | I |
+| Docs update | R | R | A | C | I |
+
+The contributor is the designer and engineer preparing the work. The system team is whichever system designer or engineer picks it up. Specialists are the accessibility reviewer, product champion, engineering lead, and content specialist, whichever the activity needs. For a token update, the affected teams are consulted and all other teams are informed. Look at the Owner column: every row has exactly one A, and that one person is what keeps feedback from piling up with no decision.
 
 Only the first and fourth rows restate the sourced examples directly. The rest apply the same pattern to make a finished matrix concrete.
 
