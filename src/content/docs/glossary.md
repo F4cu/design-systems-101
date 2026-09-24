@@ -67,9 +67,9 @@ with its own properties optionally exposed up through the parent's properties pa
 stage (design, build, documentation, release) of building a component. See
 [The design-to-code contract](/design-to-code-contract/).
 
-**Interface inventory** — a screenshot-and-catalog pass over every distinct treatment of every UI element already shipping, done before designing new tokens or components. See [UI audit & heuristic evaluation](/ui-audit/).
+**Interface inventory** — a screenshot-and-catalog pass over every distinct treatment of every UI element already shipping, done before designing new tokens or components. See [UI audit](/ui-audit/).
 
-**Heuristic evaluation** — an expert usability review of an interface against a fixed set of principles (Nielsen's 10 heuristics), run by a small panel independently before findings are consolidated; not a substitute for user research. See [UI audit & heuristic evaluation](/ui-audit/).
+**Heuristic evaluation** — an expert usability review of an interface against a fixed set of principles (Nielsen's 10 heuristics), run by a small panel independently before findings are consolidated; not a substitute for user research. See [UI audit](/ui-audit/).
 
 **Pilot** (design system) — a real, already-planned product project used to build and
 test a design system's first components against actual work, before they're locked in

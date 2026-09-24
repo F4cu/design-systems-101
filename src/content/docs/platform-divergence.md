@@ -2,29 +2,44 @@
 title: Platform Divergence
 ---
 
-<p class="eyebrow">The Idea</p>
+Some differences between iOS, Android, and web are legitimate, not drift. Every such difference is either a **value** (a different typeface for the same role) or a **structure** (a different control for the same intent), and each is fixed at a different layer. Value differences are resolved in tokens, and structural ones in component contracts.
 
-## Every platform difference is either a value or a structure, and each is fixed at a different layer of the system
+:::tip[Key takeaways]
+- Push value differences down into tokens, structural ones up into contracts
+- Let platform live in the build pipeline, not in token names
+- Make contracts checkable, not just descriptive
+- Respect a platform's own conventions on purpose, not by accident
+- Record every divergence decision where it's made
+:::
 
-A multi-platform design system doesn't stay identical across iOS, Android, and web forever — some divergence is legitimate, not drift. Nathan Curtis frames the moment this becomes explicit as a shift in the conversation itself: early on, teams talk about "how design is the same" across platforms; once the fundamentals are shared, the conversation moves to "how design is different and how teams draw boundaries around such exceptions." — [Nathan Curtis, "Finding Platform Balance in a Design System"](https://medium.com/eightshapes-llc/finding-platform-balance-in-a-design-system-47eaae48de98)
+## The problem
 
-That boundary-drawing splits into two unrelated problems that get conflated constantly. A **value** difference — San Francisco on iOS, Roboto on Android, the same type role on both — is resolved by [token layering](/token-architecture/): the semantic token stays one thing, and platform becomes a dimension the build pipeline exports against. A **structural** difference — a confirmation pattern that's a centered Dialog on iOS but a bottom-anchored sheet on Android for heavier content — can't be resolved by a token at all, because there's no shared value to alias; it's resolved by a **component contract**, which declares the *intent* once and lets each platform implement it natively. Confusing the two produces exactly the failure modes below: teams either try to force one Dialog implementation everywhere platforms have real conventions, or fork a token per platform for something that was never a value problem to begin with.
+Nothing in a component's file distinguishes "this platform is different on purpose" from "nobody reconciled this yet." [Nathan Curtis](https://medium.com/eightshapes-llc/finding-platform-balance-in-a-design-system-47eaae48de98) describes the moment this becomes explicit. Early on, teams talk about "how design is the same" across platforms. Once the fundamentals are shared, the conversation moves to "how design is different and how teams draw boundaries around such exceptions."
 
-<p class="eyebrow">Why It Exists</p>
+A divergence made silently, with one team quietly building it differently, looks exactly like a bug until a user switches devices and notices the "same" feature behaving two ways. The two kinds of difference also get mixed up constantly. Teams either force one Dialog implementation onto platforms with real conventions, or fork a token per platform for something that was never a value problem.
 
-## Undocumented divergence looks identical to unintentional drift
+## The model
 
-Nothing in a component's file distinguishes "this platform is different on purpose" from "nobody reconciled this yet." Curtis's own example is a system that adopted the Streamline icon set everywhere, until Android designers pointed out that "the design system shouldn't project a Streamline-based icon set unaltered onto that platform" — the platform already had its own iconography conventions, and forcing Streamline onto it would have fought the OS rather than fit it. — [Nathan Curtis, "Finding Platform Balance in a Design System"](https://medium.com/eightshapes-llc/finding-platform-balance-in-a-design-system-47eaae48de98)
+<div class="mermaid-wrap">
 
-That call was legitimate precisely because it was made explicitly and recorded somewhere. The same divergence made silently — one platform team just quietly builds it differently because nobody wrote down that it should match — is indistinguishable from a bug until a user switches devices and notices the "same" feature behaving two different ways. The fix isn't preventing divergence; it's forcing every case through one of the two mechanisms below, so a difference is either a token resolving per platform or a contract explicitly naming what's allowed to vary — never an unrecorded judgment call by whichever team touched it last.
+```mermaid
+flowchart TD
+  Diff["Platform difference"] --> Q{Value or structure?}
+  Q -->|Value| T["Semantic token<br/>font.body"]
+  T --> iOS1["iOS build:<br/>SF Pro"]
+  T --> And1["Android build:<br/>Roboto"]
+  Q -->|Structure| C["Component contract<br/>confirmation intent"]
+  C --> iOS2["iOS:<br/>Dialog"]
+  C --> And2["Android:<br/>BottomSheet"]
+```
 
----
+</div>
 
-## In Practice
+### Value differences: resolved in tokens
 
-#### 1. Token layering: platform as a build dimension, not a maintained set
+San Francisco on iOS and Roboto on Android fill the same type role. That's a value difference, and [token layering](/token-architecture/) resolves it. The semantic token stays one thing, and platform becomes a dimension the build pipeline exports against.
 
-[Token architecture](/token-architecture/) already covers the primitive → semantic → component tiers and the rule that platform differences get handled by transformation tooling rather than baked into a token's name. This is what that looks like end to end. Curtis traces a token's actual path through a production pipeline: a value defined once in Style Dictionary doesn't reach a component directly — it flows through a build step into platform-specific output files, and design teams are often unaware this intermediate layer even exists. A `font.body` semantic token resolves to a different platform file, not a different token:
+[Curtis traces a token's path](https://medium.com/eightshapes-llc/reimagining-a-token-taxonomy-462d35b2b033) through a production pipeline. A value defined once in Style Dictionary doesn't reach a component directly. It flows through a build step into platform-specific output files, and design teams often don't know this middle layer exists. A `font.body` semantic token resolves to a different platform file, not a different token:
 
 ```
 tokens/semantic.json
@@ -42,7 +57,7 @@ tokens/semantic.json
 }
 ```
 
-`{font.family.platformDefault}` is itself a primitive alias, not a hardcoded name — and it's the one primitive Style Dictionary resolves differently per build target:
+`{font.family.platformDefault}` is a primitive alias, not a hardcoded name. It's the one primitive Style Dictionary resolves differently per build target:
 
 ```
 // iOS build target
@@ -52,43 +67,36 @@ tokens/semantic.json
 "font.family.platformDefault": "Roboto"
 
 // Web build target
-"font.family.platformDefault": "-apple-system, Roboto, sans-serif"
+"font.family.platformDefault":
+  "-apple-system, Roboto, sans-serif"
 ```
 
-`font.body` never forks. One semantic token, three build targets, three output files (Swift, XML, SCSS) — the platform lives in the pipeline's transform config, not in a second copy of the token. — [Nathan Curtis, "Reimagining a Token Taxonomy"](https://medium.com/eightshapes-llc/reimagining-a-token-taxonomy-462d35b2b033)
+`font.body` never forks. It's one semantic token with three build targets and three output files (Swift, XML, SCSS).
 
-#### 2. Component contracts: intent declared once, implementation native per platform
+### Structural differences: resolved in component contracts
 
-A structural difference has no value to alias, so it's handled a level up, at the component's definition rather than its tokens. Curtis's distinction: "a description informs. A contract arbitrates." A description is documentation a team can read and interpret loosely; a contract is what a component *must* do, precise enough that React, iOS, Android, Web Components, and Figma can each build against it independently and still converge on the same behavior. The contract specifies the *what* — for a confirmation pattern, that might be "block interaction until the user acknowledges or dismisses, present the heaviest content without truncation" — and leaves the *how* to each platform: centered Dialog on iOS, a bottom-anchored sheet on Android when the content is heavy enough to want more vertical room, in line with the same design-once-per-platform reasoning behind [Component API design](/component-api-design/)'s Dialog/BottomSheet example. — [Nathan Curtis, "Component Contracts and Schemas"](https://nathanacurtis.substack.com/p/component-contracts-and-schemas)
+A confirmation pattern might be a centered Dialog on iOS but a bottom-anchored sheet on Android for heavier content. There's no shared value to alias, so a token can't resolve it. It's handled one level up, in the component's definition.
 
-A contract only holds if it's checkable, not just written down. Curtis lists what makes one durable: well-typed rather than loose prose, platform-neutral (not secretly biased toward whichever tool authored it first), and verifiable — a machine, not just a reviewer, can confirm an implementation still satisfies it after either side changes.
+[Curtis's distinction](https://nathanacurtis.substack.com/p/component-contracts-and-schemas): "a description informs. A contract arbitrates." A description is documentation a team can interpret loosely. A contract states what a component *must* do, precisely enough that React, iOS, Android, Web Components, and Figma can each build against it on their own and still behave the same. For a confirmation pattern, the contract might say "block interaction until the user acknowledges or dismisses, present the heaviest content without truncation." Each platform decides *how*. It's the same reasoning behind the Dialog/BottomSheet example in [Component API design](/component-api-design/).
 
-#### 3. The rule of thumb: push values down, push structure up, decide explicitly
+## Practices
 
-Put together, the two mechanisms give a working default: when a difference is a *value* — a size, a color, a type role — resolve it at the semantic token layer, so one alias serves every platform. When a difference is *structural or behavioral* — which control appears, how it's triggered, what happens on dismiss — push it up to the component contract, where each platform is free to implement natively. Neither mechanism decides the interesting case for you: whether a given difference should end up unified or platform-idiomatic is a judgment call, the same one Curtis's Android icon team made explicitly rather than by default. The discipline isn't picking one answer for every case — it's writing the decision down wherever it's made, in the token file or the contract, so the next platform team inherits a decision instead of reverse-engineering one.
+### Push values down, structure up
 
-## Diagram
+When a difference is a *value* (a size, a color, a type role), resolve it at the semantic token layer, so one alias serves every platform. When it's *structural or behavioral* (which control appears, how it's triggered, what happens on dismiss), push it up to the component contract, where each platform can implement it natively.
 
-<div class="mermaid-wrap">
+### Make contracts checkable, not just descriptive
 
-```mermaid
-flowchart TD
-  Diff["Platform difference"] --> Q{Value or structure?}
-  Q -->|Value| T["Semantic token<br/>font.body"]
-  T --> iOS1["iOS build:<br/>SF Pro"]
-  T --> And1["Android build:<br/>Roboto"]
-  Q -->|Structure| C["Component contract<br/>confirmation intent"]
-  C --> iOS2["iOS:<br/>Dialog"]
-  C --> And2["Android:<br/>BottomSheet"]
-```
+Curtis lists what makes a contract hold up. It's well-typed rather than loose prose. It's platform-neutral, not secretly biased toward whichever tool wrote it first. And it's verifiable: a machine, not just a reviewer, can confirm an implementation still satisfies it after either side changes. Loose prose isn't arbitrating anything. Two platforms will read the same paragraph and build two different things.
 
-</div>
+### Respect platform conventions on purpose
 
----
+Curtis's example: a system adopted the Streamline icon set everywhere, until Android designers pointed out that "the design system shouldn't project a Streamline-based icon set unaltered onto that platform." Android already had its own icon conventions, and forcing Streamline onto it would have fought the OS instead of fitting it. That exception was legitimate because it was made explicitly.
+
+### Record every divergence decision
+
+Neither mechanism decides the interesting cases for you. Whether a difference should be unified or platform-native is a judgment call. What matters is writing the decision down wherever it's made, in the token file or the contract. Then the next platform team inherits a decision instead of reverse-engineering one.
 
 ## Common mistakes
 
-- **Forking a token per platform for something that was never a value problem.** If two platforms need different components, not different values, adding `spacing.4.ios` and `spacing.4.android` doesn't fix the mismatch — it just hides a contract problem inside the token layer, where the next person to touch it won't think to look. — [Nathan Curtis, "Reimagining a Token Taxonomy"](https://medium.com/eightshapes-llc/reimagining-a-token-taxonomy-462d35b2b033)
-- **Forcing one structural implementation everywhere platforms have real conventions.** Projecting a single component (or a single icon set) unaltered onto a platform that has its own established patterns fights the OS instead of fitting it — Curtis's Android icon example is the corrective, not the norm to avoid. — [Nathan Curtis, "Finding Platform Balance in a Design System"](https://medium.com/eightshapes-llc/finding-platform-balance-in-a-design-system-47eaae48de98)
-- **Writing a contract as a description instead of a contract.** Loose prose a platform team can interpret differently isn't arbitrating anything; if it isn't well-typed and machine-verifiable, two platforms will read the same paragraph and build two different things. — [Nathan Curtis, "Component Contracts and Schemas"](https://nathanacurtis.substack.com/p/component-contracts-and-schemas)
-- **Letting a platform diverge without recording why.** An undocumented exception is indistinguishable from an unnoticed bug — the fix isn't avoiding divergence, it's never letting one happen without a decision attached to it.
+- **Forking a token per platform for something that was never a value problem.** If two platforms need different components, not different values, adding `spacing.4.ios` and `spacing.4.android` doesn't fix the mismatch. It hides a contract problem inside the token layer, where the next person won't think to look. Source: [Curtis, "Reimagining a Token Taxonomy"](https://medium.com/eightshapes-llc/reimagining-a-token-taxonomy-462d35b2b033).

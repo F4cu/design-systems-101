@@ -2,45 +2,35 @@
 title: Component Architecture
 ---
 
-<p class="eyebrow">The Principle</p>
+A component gets its flexibility from smaller components nested inside it, not from piling more variants and booleans onto one flat layer. Once you have the vocabulary from [Component taxonomy](/component-taxonomy/), this page covers the mechanics: how to build that structure in Figma.
 
-## A component's flexibility comes from nesting smaller components inside it, not from adding more variants and booleans to one flat layer
+:::tip[Key takeaways]
+- Build flexibility with nested instances, not more variants
+- Treat every Figma component property like a code prop
+- Nest in layers, base components first
+- Expose only the properties each level needs
+- Use variants for closed sets of states, nesting for reusable pieces
+:::
 
-Once a team has the vocabulary from [Component taxonomy](/component-taxonomy/) — primitive, subcomponent, slot — the next question is mechanical: how do you actually build that structure in Figma? Nathan Curtis's answer is to stop treating every new need as a new variant or a new boolean toggle, and instead build components as **nested instances**: smaller subcomponents placed inside a parent, with their properties exposed up through the parent's properties panel. The alternative — one flat component with a growing pile of variant switches and boolean layers — is the same "configuration collapse" failure mode from [Component API design](/component-api-design/), just showing up in the Figma file instead of the code. — [Nathan Curtis, "Architecting Subcomponents"](https://www.youtube.com/watch?v=NiDoqI_ZhvY), Schema by Figma, 2022
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+A component built as one flat layer tree, with a variant for every case, eventually hits a wall. A real product request doesn't match any existing variant, and two variants built as mutually exclusive options can't be combined. The designer's only way forward is to detach the instance and hand-edit it. That quietly removes the instance from the system: it stops getting updates, stops showing up in coverage metrics, and nobody notices until an audit finds it.
 
-## Flat components run out of room, and designers detach to compensate
+[Nathan Curtis's talk "Architecting Subcomponents"](https://www.youtube.com/watch?v=NiDoqI_ZhvY) (Schema by Figma, 2022) frames the subcomponent approach as the answer. Instead of the system team "playing constant catch-up, adding prop after prop," the system offers composable parts and lets the requester assemble their own answer. The flat alternative is the same "configuration collapse" failure from [Component API design](/component-api-design/), showing up in the Figma file instead of the code.
 
-A component built as one flat layer tree with variants for every case eventually hits a wall: a real product request doesn't match any existing variant, and there's no way to combine two variants that were built as mutually exclusive options. The designer's only way forward is to detach the instance and hand-edit it — which quietly removes that instance from the system. It stops getting updates, stops showing up in coverage metrics, and nobody notices until an audit finds it. Curtis's talk frames the whole subcomponent approach as a response to exactly this: rather than the design system team "playing constant catch-up, adding prop after prop" to keep pace with requests, the system offers composable parts and lets the requester assemble their own answer. — [Nathan Curtis, "Architecting Subcomponents"](https://www.youtube.com/watch?v=NiDoqI_ZhvY), Schema by Figma, 2022
+## Practices
 
----
+### Build flexibility with nested instances
 
-## In Practice
+A subcomponent placed inside a parent, like an icon inside a Button or a `CardMedia` inside a Card, is a nested instance. Figma lets the parent expose the nested instance's own properties (its instance swap, its visibility boolean, its text) in the parent's properties panel. A designer working on the Button never has to drill into the icon's layer to change it. [fourzerothree.in](https://www.fourzerothree.in/p/crafting-components-with-subcomponents) describes this as the mechanical form of a slot: the nested instance is the subcomponent, and the exposed property makes it swappable from the parent.
 
-#### 1. Component properties: Figma's equivalent of props
+### Treat every component property like a code prop
 
-Figma's component properties feature — variant, boolean, text, and instance-swap properties attached directly to a component — is, as Figma's own team has put it, "essentially React properties for Figma components." Every property added here is the design-tool equivalent of a prop in code: it should earn a permanent place the same way a code prop does, not get added reflexively because one request needs it. The same discipline from [Component API design](/component-api-design/) — configurable for the common case, composable for the uncommon one — applies here before a single property gets added. — [Figma, "Taking cues from code"](https://www.figma.com/blog/taking-cues-from-code/)
+Figma's component properties (variant, boolean, text, and instance swap) are, as [Figma's own team](https://www.figma.com/blog/taking-cues-from-code/) puts it, "essentially React properties for Figma components." Each one should earn a permanent place the way a code prop does, not get added because one request needs it. Every property is a surface someone has to maintain and every consumer has to learn. The rule from [Component API design](/component-api-design/) applies before a single property gets added: configurable for the common case, composable for the uncommon one.
 
-#### 2. Nested instances with exposed properties
+### Nest in layers, base components first
 
-A subcomponent placed inside a parent — an icon inside a Button, a `CardMedia` inside a Card — is a nested instance. Figma lets a parent component expose a nested instance's own properties (its instance-swap slot, its boolean visibility, its text content) up into the parent's properties panel, so a designer working on the Button never has to drill into the icon's layer to change it. This is the mechanical form of a slot: the nested instance is the subcomponent, the exposed property is what makes it swappable from the parent's surface. — [fourzerothree.in, "Crafting Components with Subcomponents and Nested Instances"](https://www.fourzerothree.in/p/crafting-components-with-subcomponents)
-
-#### 3. Layered nesting, base components first
-
-fourzerothree.in's worked example builds bottom-up: a base component set (a nav item with default/hover/selected states) becomes the foundation nested inside a larger Nav Menu Item, which is itself nested inside a Side Navigation component — each level exposing only the properties relevant at that level, rather than every property from every layer bubbling all the way to the top. Icon components follow the same pattern one level down: a master icon component with size and icon-swap properties exposed, reused as a nested instance inside buttons, inputs, and nav items alike, instead of a separate icon baked into each. — [fourzerothree.in, "Crafting Components with Subcomponents and Nested Instances"](https://www.fourzerothree.in/p/crafting-components-with-subcomponents)
-
-#### 4. Variants still have a place
-
-Nested instances aren't a replacement for variants — they solve different problems. A variant set is right for a closed set of mutually exclusive states on one component (a button's default/hover/active/disabled). Nesting is right when a piece needs its own independent property surface, or gets reused inside more than one parent. Reaching for a new variant when the actual need is a swappable nested piece is how a variant set quietly grows past the point anyone can read it at a glance.
-
-#### 5. The same warning as code: don't over-architect
-
-fourzerothree.in's own caution applies here directly: over-nesting for flexibility that isn't needed yet creates a component so deep that other designers can't find the layer they're supposed to edit, and simple, predictable naming stops being simple. The bar for splitting a piece into its own nested instance is the same [rule of three](/contribution-models/) that governs splitting out a new component at all — wait for a second real reuse, don't pre-build for a hypothetical one. — [fourzerothree.in, "Crafting Components with Subcomponents and Nested Instances"](https://www.fourzerothree.in/p/crafting-components-with-subcomponents)
-
-## Diagram
-
-How a Side Navigation component nests down to its base states:
+[fourzerothree.in's worked example](https://www.fourzerothree.in/p/crafting-components-with-subcomponents) builds bottom-up. A base nav item with default, hover, and selected states is nested inside a larger Nav Menu Item, which is nested inside a Side Navigation component.
 
 <div class="mermaid-wrap">
 
@@ -53,11 +43,27 @@ graph TD
 
 </div>
 
----
+Icons follow the same pattern one level down. One master icon component, with size and icon-swap properties exposed, is reused as a nested instance inside buttons, inputs, and nav items, instead of a separate icon baked into each.
+
+### Expose only the properties each level needs
+
+In the same example, each level exposes only the properties that matter at that level. Letting every nested property bubble all the way to the top-level component defeats the point of layered nesting. A designer should see what's relevant to the level they're editing, and nothing else.
+
+### Nest only after a second real reuse
+
+fourzerothree.in warns that nesting for flexibility nobody needs yet makes a component so deep that other designers can't find the layer they're supposed to edit. Wait for a second real reuse before splitting a piece into its own nested instance. It's the same discipline as the [criteria for adding a component](/contribution-models/#criteria-for-adding-a-component).
+
+## Choosing variants or nesting
+
+Nested instances don't replace variants. They solve different problems, and reaching for a variant when the real need is a swappable piece is how a variant set grows past the point anyone can read it at a glance.
+### Variants
+
+Use them for a closed set of mutually exclusive states on one component, like a button's default, hover, active, and disabled.
+
+### Nested instances
+
+Use them when a piece needs its own independent properties, or gets reused inside more than one parent.
 
 ## Common mistakes
 
-- **Adding a component property reflexively instead of treating it like a code prop.** Every variant, boolean, or instance-swap property is a permanent surface someone has to maintain and every consumer has to learn — the same "earn its place" discipline from [Component API design](/component-api-design/) applies inside Figma, not just in code.
-- **Detaching instead of nesting.** If the system doesn't yet expose the flexibility a designer needs, the fix is to add a well-scoped nested instance or property to the source component, not to detach and hand-edit a copy that silently drops out of the system.
-- **Over-nesting for hypothetical flexibility.** Splitting off a nested instance before a second real use case exists produces a component tree too deep for other designers to navigate confidently — the same rule of three that governs new components applies to new nested pieces.
-- **Letting every nested property bubble all the way to the top-level component.** Exposing everything at every level defeats the point of layered nesting; expose only what's relevant to the level that's actually being edited.
+- **Detaching instead of nesting.** If the system doesn't yet offer the flexibility a designer needs, the fix is to add a well-scoped nested instance or property to the source component. A detached, hand-edited copy silently drops out of the system.

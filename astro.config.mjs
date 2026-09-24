@@ -22,7 +22,7 @@ export default defineConfig({
 				{
 					label: 'Foundations',
 					items: [
-						{ slug: 'foundations', label: 'What a design system is' },
+						'foundations',
 						'token-architecture',
 						'component-taxonomy',
 						'component-building',
@@ -30,7 +30,7 @@ export default defineConfig({
 						'component-api-design',
 						'multi-platform-component-specs',
 						'platform-divergence',
-						{ slug: 'ui-audit', label: 'UI audit' },
+						'ui-audit',
 						'pilot-strategy',
 					],
 				},
