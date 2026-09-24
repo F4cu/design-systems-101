@@ -36,8 +36,7 @@ Ask these in order. A proposal that fails an early question doesn't need a debat
 3. **Is it the same user problem each time?** [Cathy Dutton](https://alistapart.com/article/problem-with-patterns/) warns that reuse is usually measured from the organization's side, not the user's. A date picker shared by leisure travel booking and urgent medical scheduling looks identical, but one user is comparing options and the other needs the first available slot. State the user's goal without describing the interface. "Three teams want a date picker" fails. "Three teams need to help someone book the earliest slot" passes.
 4. **Does it clear the quality bar?** It meets accessibility standards before shipping, not after. It's complete: states, responsive behavior, content guidance, and docs, not just the happy path. And it's worth the maintenance cost, since the core team carries it forever. The [design-to-code contract](/design-to-code-contract/) spells out what "complete" means at each stage.
 
-> "Three strikes and you refactor."
-> — attributed to Don Roberts, in Martin Fowler, *Refactoring* (1999)
+The old refactoring rule applies here too: "Three strikes and you refactor," attributed to Don Roberts in Martin Fowler's *Refactoring* (1999).
 
 ### Criteria for removing a component
 

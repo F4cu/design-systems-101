@@ -2,7 +2,10 @@
 title: Pilot Strategy
 ---
 
-"I haven't done a design system where we didn't pilot it first." Dan Mall treats a design system's first components the way a TV network treats a pilot episode: a small, real production run before anyone commits to a full season. The pilot tells you whether a component survives contact with a real product before it gets locked in as v1. Sources: [Dan Mall via UXPin](https://www.uxpin.com/studio/blog/design-systems-dan-mall-superfriendly/) and [Big Medium, "Design Systems: Pilots & Scorecards"](https://bigmedium.com/ideas/links/design-systems-pilots-scorecards.html).
+> "I haven't done a design system where we didn't pilot it first."
+> — [Dan Mall, via UXPin](https://www.uxpin.com/studio/blog/design-systems-dan-mall-superfriendly/)
+
+Mall treats a design system's first components the way a TV network treats a pilot episode: a small, real production run before anyone commits to a full season. The pilot tells you whether a component survives contact with a real product before it gets locked in as v1. Source: [Big Medium, "Design Systems: Pilots & Scorecards"](https://bigmedium.com/ideas/links/design-systems-pilots-scorecards.html).
 
 :::tip[Key takeaways]
 - Pick the pilot project with a shared scorecard, at the right moment

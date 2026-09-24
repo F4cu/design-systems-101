@@ -57,10 +57,7 @@ A common mistake at enterprise scale is routing every accessibility question to 
 
 ### Let knowledge flow upstream too
 
-Governance also matures in *direction*. [Murphy Trueman](https://blog.murphytrueman.com/the-bidirectional-design-system/) describes a bidirectional system: "when a developer implements better error handling, that pattern informs the design system." Jina Bolton, from her time at Salesforce, describes the same loop:
-
-> "The Design System informs our Product Design. Our Product Design informs the Design System."
-> — Jina Bolton, Salesforce, quoted in Brad Frost, *Atomic Design*, Chapter 5
+Governance also matures in *direction*. [Murphy Trueman](https://blog.murphytrueman.com/the-bidirectional-design-system/) describes a bidirectional system: "when a developer implements better error handling, that pattern informs the design system." Jina Bolton, from her time at Salesforce, describes the same loop (quoted in Brad Frost's *Atomic Design*, Chapter 5): "The Design System informs our Product Design. Our Product Design informs the Design System."
 
 Two practitioners at different companies landing on the same shape suggests it isn't a house style. It's what governance looks like when it works in both directions.
 

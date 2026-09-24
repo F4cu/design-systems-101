@@ -18,9 +18,7 @@ Left unchecked, components pile up props one product request at a time, and each
 
 ## Choosing configuration or composition
 
-Curtis's rule of thumb, from ["Configuration Collapse"](https://nathanacurtis.substack.com/p/configuration-collapse):
-
-> "Make the common configurable. Make the uncommon composable."
+Curtis's rule of thumb, from ["Configuration Collapse"](https://nathanacurtis.substack.com/p/configuration-collapse): "Make the common configurable. Make the uncommon composable."
 
 Two signals that something belongs in composition: it's used in only one context, or it needs several props that only matter in combination. A footer that needs `footer`, `footerClassName`, `showFooter`, and `footerAlignment` is four props for one feature. A single composed `Dialog.Footer` child replaces all four.
 

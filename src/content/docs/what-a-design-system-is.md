@@ -35,10 +35,7 @@ The decisions about what belongs, how it changes, and how it leaves. [Decision g
 
 ### Look after all three layers
 
-Alla Kholmatova's book names the payoff of getting all three right, not just the middle one:
-
-> "Without a shared design language and practices, collaboration is difficult."
-> — Alla Kholmatova, *Design Systems: A Practical Guide to Creating Design Languages for Digital Products* (O'Reilly, 2017)
+Alla Kholmatova's book *Design Systems* (O'Reilly, 2017) names the payoff of getting all three right, not just the middle one: "Without a shared design language and practices, collaboration is difficult."
 
 Tokens and governance are what make that shared language last. Without them, "the library" is just a folder of components that look similar today and will quietly stop matching as soon as nobody's watching.
 
