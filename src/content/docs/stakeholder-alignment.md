@@ -90,6 +90,17 @@ Use it to set measurement cadence. Awareness and perception (how the org *feels*
 
 Running only the tactical horizon produces a system that's always fighting fires. Running only the normative one produces a beautiful mission statement with no delivery behind it. [Pilot strategy](/pilot-strategy/) shows the same risk from the other side: a pilot that ships is only "Now."
 
+<div class="mermaid-wrap">
+
+```mermaid
+flowchart TD
+  Team["Design system team"] --> Now["Now: tactical<br/>unblock teams"]
+  Team --> Next["Next: strategic<br/>set direction"]
+  Team --> Future["Future: normative<br/>build trust"]
+```
+
+</div>
+
 ### Revisit the mapping every planning cycle
 
 Don't build the quadrant, the horizon plan, or the LeanDS canvas once at launch and treat it as settled. [Business alignment](/business-alignment/) makes the same point about the roadmap: a case that was true at launch goes stale as fast as the organization changes. zeroheight's *Design Systems Report 2026* found staffing (56%) and stakeholder buy-in (31%) still among the top blockers for 147 practitioners, the same areas these tools exist to manage. That suggests most teams aren't revisiting often enough.
