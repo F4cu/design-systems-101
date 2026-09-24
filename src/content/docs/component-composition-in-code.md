@@ -1,22 +1,21 @@
 ---
-title: Component Taxonomy
+title: Component Composition in Code
 ---
 
-A component is rarely one indivisible thing. It's built from smaller pieces, and it may itself be a piece inside something bigger. Practitioners name these layers differently (primitive, atom, subcomponent, part, compound component, slot), and the words aren't synonyms for "small component." Each answers a different question: how generic is this piece, and where is it allowed to be used?
+A component is rarely one indivisible thing. It's built from smaller pieces, and it may itself be a piece inside something bigger. Practitioners name these layers differently (primitive, atom, subcomponent, part, compound component, slot), and the words aren't synonyms for "small component." Each answers a different question: how generic is this piece, and where is it allowed to be used? This page covers how those layers are built in code. [Component composition in Figma](/component-composition-in-figma/) covers the same structure in the design file.
 
 :::tip[Key takeaways]
 - Tell primitives (reusable anywhere) apart from subcomponents (scoped to one parent)
-- Keep behavior in props, and move structure into subcomponents and slots
 - Keep subcomponents scoped to their parent in code
 - Split out a subcomponent only when a second real use shows up
-- Use the same names in Figma and in code
+- Match part names across Figma and code
 :::
 
 ## The problem
 
 When "component" is the only word anyone has, every conversation about structure collapses into it. A designer calls the icon inside a button "part of the button." An engineer calls it a separate component because it's a separate file. Neither is wrong, but they're answering different questions.
 
-[Nathan Curtis](https://nathanacurtis.substack.com/p/configuration-collapse) calls the result "configuration collapse." Components pile up layout props, visibility toggles, and ad hoc nested structure, because nobody had a name for "a composable piece scoped to this one parent," so it got jammed into the parent's prop list. The same gap shows up in code. A team either exposes too little (one giant component with dozens of props) or too much (every internal piece exported, with no signal about which pieces go together). See [Component API design](/component-api-design/).
+The question underneath is whether a piece is safe to use on its own. Without separate words for a generic building block and a piece that only works inside one parent, the codebase can't signal the difference either. Every internal piece gets exported, with no hint of which ones go together, and consumers assemble combinations nobody designed or tested. Whether a piece should be a prop or a part in the first place is a separate decision, owned by [Component API design](/component-api-design/#choosing-configuration-or-composition).
 
 ## The model
 
@@ -76,22 +75,9 @@ The nesting carries meaning. `Dialog.Portal` renders its contents outside the pa
 
 ### Compound components
 
-**Compound component** is the engineers' term for how subcomponents are built in code: "a pattern where higher level components are composed using smaller components, and you retain access to all the semantic elements of the higher level component." [Workday's Canvas Design System](https://github.com/Workday/canvas-kit/blob/master/modules/docs/mdx/COMPOUND_COMPONENTS.mdx) shows it with `Tabs`: `Tabs` is the container, and `Tabs.List`, `Tabs.Item`, and `Tabs.Panel` are its subcomponents, accessed as properties of the parent rather than imported on their own.
+**Compound component** is the engineers' term for how subcomponents are built in code: "a pattern where higher level components are composed using smaller components, and you retain access to all the semantic elements of the higher level component." [Workday's Canvas Design System](https://github.com/Workday/canvas-kit/blob/master/modules/docs/mdx/COMPOUND_COMPONENTS.mdx) shows it with `Tabs` (shortened here):
 
-Canvas's docs contrast the two ways of building the same Tabs (shortened here). The configuration version takes everything as data through one prop:
-
-```tsx title="Configuration"
-<Tabs
-  items={[
-    { title: 'First', content: '…' },
-    { title: 'Second', content: '…' },
-  ]}
-/>
-```
-
-The compound version exposes each piece as markup:
-
-```tsx title="Compound"
+```tsx
 <Tabs>
   <Tabs.List>
     <Tabs.Item>First</Tabs.Item>
@@ -102,25 +88,13 @@ The compound version exposes each piece as markup:
 </Tabs>
 ```
 
-Both render the same tabs. The difference shows up when a team needs something the `items` array didn't plan for, like a badge on one tab. In the compound version, they put it inside that `Tabs.Item`. In the configuration version, someone has to add a new field to the data shape.
+`Tabs` is the container, and `Tabs.List`, `Tabs.Item`, and `Tabs.Panel` are its subcomponents. Each is reached as a property of the parent (`Tabs.Item`) rather than imported on its own, so the code itself says which pieces belong together. Because every piece is markup, a team that needs something extra, like a badge on one tab, puts it inside that `Tabs.Item` instead of asking for a new prop.
 
 ### Slots
 
-A **slot** is the placeholder a parent exposes so a subcomponent, or any content, can be placed into it. [Curtis](https://nathanacurtis.substack.com/p/slots-in-design-systems) notes that "an increase in component slots and custom compositions within them" reduces how many configuration props a component needs. You trade prop count for a few well-defined insertion points. [story.to.design](https://story.to.design/blog/subcomponents-more-flexible-design-systems) describes the payoff in design tools: instead of detaching a component because the variant they need doesn't exist, a designer composes existing subcomponents into a slot. Their example is an icon nested inside a button.
+A **slot** is the placeholder a parent exposes so a subcomponent, or any content, can be placed into it. [Curtis](https://nathanacurtis.substack.com/p/slots-in-design-systems) notes that "an increase in component slots and custom compositions within them" reduces how many configuration props a component needs. You trade prop count for a few well-defined insertion points.
 
-In React, a slot is either `children` or a prop that accepts an element. [MUI's Button](https://mui.com/material-ui/api/button/) takes the second route with `startIcon`. Compare the same button built with configuration props:
-
-```tsx title="Configuration props"
-<Button
-  icon="download"
-  iconPosition="start"
-  showIcon
->
-  Download
-</Button>
-```
-
-And with a slot:
+In React, a slot is either `children` or a prop that accepts an element. [MUI's Button](https://mui.com/material-ui/api/button/) takes the second route with `startIcon`:
 
 ```tsx title="Slot"
 <Button startIcon={<DownloadIcon />}>
@@ -128,13 +102,9 @@ And with a slot:
 </Button>
 ```
 
-Three props collapse into one insertion point. The Button no longer needs to know which icons exist, whether one is shown, or how to name them.
+The Button renders whatever element it receives in that position. It doesn't need to know which icons exist, whether one is shown, or what they're called.
 
 ## Practices
-
-### Keep behavior in props, structure in slots
-
-None of this replaces props. It narrows what belongs in them. Behavior and foundational state (`disabled`, `size`, `appearance`) stay as top-level props on the parent. Structural and content variation moves into subcomponents and slots. [Component API design](/component-api-design/) has the fuller rule of thumb.
 
 ### Keep subcomponents scoped to their parent
 
@@ -161,9 +131,11 @@ export const Card = Object.assign(
 
 The discipline that governs new components applies to subcomponents too: don't split one out until a real second use case shows up. See the [criteria for adding a component](/component-lifecycle/#criteria-for-adding-a-component).
 
-### Use the same names in Figma and in code
+### Match part names across Figma and code
 
-What Curtis calls a subcomponent at the design and API level is what a frontend team builds as a compound component. Naming both sides the same way keeps a design file's parts and a codebase's subcomponents mapped one-to-one. If Figma calls something a "part" and the code exports it as an unrelated component with a different name, the mapping breaks. That's the failure the [design-to-code contract](/design-to-code-contract/) exists to prevent.
+What Curtis calls a subcomponent at the design and API level is what a frontend team builds as a compound component. Naming both sides the same way keeps a design file's nested components and a codebase's subcomponents mapped one-to-one. If Figma calls something a "part" and the code exports it as an unrelated component with a different name, the mapping breaks. That's the failure the [design-to-code contract](/design-to-code-contract/) exists to prevent.
+
+This applies to the parts, not to every prop. A prop can still follow each tool's own conventions, as [Component API design](/component-api-design/#respect-platform-native-names) explains.
 
 ## Common mistakes
 

@@ -34,34 +34,34 @@ or brand variants, for theming. See [Token architecture](/token-architecture/).
 literally named `Box` or `Stack`) with direct access to design tokens but no domain
 meaning of its own; the same idea Brad Frost calls an atom. Not to be confused with a
 primitive token (above), the raw-value tier of a token system. See
-[Component taxonomy](/component-taxonomy/).
+[Component composition in code](/component-composition-in-code/).
 
 **Subcomponent** — an independently composable component with its own API, intended for
 use only within one specific parent component, such as `CardMedia` inside `Card`. Distinct
 from a primitive by scope, not size: a primitive is reusable anywhere, a subcomponent is
-tied to its parent. See [Component taxonomy](/component-taxonomy/).
+tied to its parent. See [Component composition in code](/component-composition-in-code/).
 
 **Part** — Radix Primitives' term for the same concept as a subcomponent: one piece of a
 component exposed separately so consumers compose it rather than configure it through
-props, e.g. `Dialog.Trigger`, `Dialog.Content`. See [Component taxonomy](/component-taxonomy/).
+props, e.g. `Dialog.Trigger`, `Dialog.Content`. See [Component composition in code](/component-composition-in-code/).
 
 **Compound component** — the code-level pattern that implements subcomponents/parts: a
 parent component composed from smaller components while retaining access to all of the
 parent's semantic elements, e.g. `Tabs.List`, `Tabs.Item`, `Tabs.Panel`. See
-[Component taxonomy](/component-taxonomy/).
+[Component composition in code](/component-composition-in-code/).
 
 **Slot** — the insertion point a parent component exposes so a subcomponent or other
 content can be placed into it, rather than the piece placed there. Leaning on slots
 trades a large configuration-prop surface for a small number of well-defined insertion
-points. See [Component taxonomy](/component-taxonomy/).
+points. See [Component composition in code](/component-composition-in-code/).
 
 **Component property** (Figma) — a variant, boolean, text, or instance-swap property
 attached directly to a Figma component; the design-tool equivalent of a prop in code. See
-[Component architecture](/component-architecture/).
+[Component composition in Figma](/component-composition-in-figma/).
 
 **Nested instance** — a subcomponent instance placed inside a parent component in Figma,
 with its own properties optionally exposed up through the parent's properties panel. See
-[Component architecture](/component-architecture/).
+[Component composition in Figma](/component-composition-in-figma/).
 
 **Design-to-code contract** — an explicit agreement about what "done" means at each
 stage (design, build, documentation, release) of building a component. See

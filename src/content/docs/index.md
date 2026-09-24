@@ -77,7 +77,7 @@ answer.
 The wiki is organized into five Parts, roughly in reading order:
 
 1. **Foundations**: what a design system actually is, and how its building blocks are
-   designed: token architecture, component taxonomy and APIs, the design-to-code
+   designed: token architecture, component composition and APIs, the design-to-code
    handoff, working across platforms, and how to audit and pilot a first system.
 2. **Governance**: who owns the system, how decisions get made and recorded, what
    earns a place in the system and what leaves it, how other teams contribute and how

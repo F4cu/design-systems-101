@@ -59,7 +59,7 @@ table of contents lists every practice as a short label. See `release-management
 
 1. **Title (`title` frontmatter, rendered as the H1)**: name the principle or topic in
    2–5 words. Never restate the page's own subject descriptively (bad: `Component
-   Building: Structuring Components in Figma`, should be `Component Architecture`) and
+   Building: Structuring Components in Figma`, should be `Component Composition in Figma`) and
    never stack a colon- or `&`-joined subtitle listing the page's own sub-topics (bad:
    `Release Management: Versioning, Changelogs & Migration Guides`). The title must match
    the link text used for this page everywhere else in the wiki (`astro.config.mjs`'s
@@ -121,7 +121,7 @@ table of contents lists every practice as a short label. See `release-management
      badly). Tag the language (`tsx`, `json`). Mirror the shape of an example from a
      source the page already cites rather than inventing an API, and say so in the
      sentence. For before/after pairs, use two blocks with `title="..."` labels, and
-     follow each snippet with a sentence on what to notice. See `component-taxonomy.md`.
+     follow each snippet with a sentence on what to notice. See `component-composition-in-code.md`.
 6. **`## Common mistakes`**: a bulleted list, each bullet a beginner-likely error grounded in
    a cited source where possible. A mistake that just reverses a practice heading is a
    duplicate. Delete it.

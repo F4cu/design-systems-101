@@ -42,7 +42,7 @@ Two signals that something belongs in composition: it's used in only one context
 </Dialog>
 ```
 
-`showFooter` disappears, because leaving the footer out just means not writing it. Alignment and styling, if still needed, move onto `Dialog.Footer`, the one part they affect, instead of growing Dialog's top-level API. [Component taxonomy](/component-taxonomy/#compound-components) shows how parts like `Dialog.Footer` are built.
+`showFooter` disappears, because leaving the footer out just means not writing it. Alignment and styling, if still needed, move onto `Dialog.Footer`, the one part they affect, instead of growing Dialog's top-level API. [Component composition in code](/component-composition-in-code/#compound-components) shows how parts like `Dialog.Footer` are built.
 
 ### Configure with props
 
@@ -56,7 +56,7 @@ For structural and content variation. Curtis documents real before-and-after cas
 - An Alert's three-level subcomponent hierarchy for title, description, and actions became one slotted body with ready-made layout examples.
 - A Card was hollowed out into a plain container, so specialized teams build purpose-driven extensions instead of the core system adding more configuration.
 
-The cost: consumers assemble more themselves, so they need good examples. [Component taxonomy](/component-taxonomy/) names the pieces involved.
+The cost: consumers assemble more themselves, so they need good examples. [Component composition in code](/component-composition-in-code/) names the pieces involved.
 
 ## Practices
 
@@ -107,7 +107,7 @@ The severity tells tools what to do. With `error`, they should refuse to generat
 
 ### Respect platform-native names
 
-Don't force artificial uniformity across tools. It's `src` on the web and `image` in Figma, per the same Supernova guide.
+Don't force artificial uniformity across tools. It's `src` on the web and `image` in Figma, per the same Supernova guide. This applies to props, not to the parts themselves: a subcomponent should keep one name in both tools, as [Component composition in code](/component-composition-in-code/#match-part-names-across-figma-and-code) explains.
 
 ### Prefer composition over style overrides
 

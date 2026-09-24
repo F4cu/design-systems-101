@@ -11,7 +11,9 @@ export default defineConfig({
 	redirects: {
 		'/adoption-measurement/': '/ds101/measuring-adoption/',
 		'/ai-context-and-readiness/': '/ds101/ai-readiness/',
-		'/component-building/': '/ds101/component-architecture/',
+		'/component-building/': '/ds101/component-composition-in-figma/',
+		'/component-architecture/': '/ds101/component-composition-in-figma/',
+		'/component-taxonomy/': '/ds101/component-composition-in-code/',
 		'/contextual-component-performance/': '/ds101/performance-in-context/',
 		'/feedback-loops/': '/ds101/generative-loops/',
 		'/foundations/': '/ds101/what-a-design-system-is/',
@@ -38,8 +40,8 @@ export default defineConfig({
 					items: [
 						'what-a-design-system-is',
 						'token-architecture',
-						'component-taxonomy',
-						'component-architecture',
+						'component-composition-in-code',
+						'component-composition-in-figma',
 						'design-to-code-contract',
 						'component-api-design',
 						'multi-platform-component-specs',

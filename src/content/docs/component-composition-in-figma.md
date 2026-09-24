@@ -1,8 +1,8 @@
 ---
-title: Component Architecture
+title: Component Composition in Figma
 ---
 
-A component gets its flexibility from smaller components nested inside it, not from piling more variants and booleans onto one flat layer. Once you have the vocabulary from [Component taxonomy](/component-taxonomy/), this page covers the mechanics: how to build that structure in Figma.
+A component gets its flexibility from smaller components nested inside it, not from piling more variants and booleans onto one flat layer. This page covers how to build that structure in Figma. [Component composition in code](/component-composition-in-code/) defines the layers (primitives, subcomponents, slots) and how the same structure is built in code.
 
 :::tip[Key takeaways]
 - Build flexibility with nested instances, not more variants
@@ -22,7 +22,7 @@ A component built as one flat layer tree, with a variant for every case, eventua
 
 ### Build flexibility with nested instances
 
-A subcomponent placed inside a parent, like an icon inside a Button or a `CardMedia` inside a Card, is a nested instance. Figma lets the parent expose the nested instance's own properties (its instance swap, its visibility boolean, its text) in the parent's properties panel. A designer working on the Button never has to drill into the icon's layer to change it. [fourzerothree.in](https://www.fourzerothree.in/p/crafting-components-with-subcomponents) describes this as the mechanical form of a slot: the nested instance is the subcomponent, and the exposed property makes it swappable from the parent.
+A subcomponent placed inside a parent, like an icon inside a Button or a `CardMedia` inside a Card, is a nested instance. Figma lets the parent expose the nested instance's own properties (its instance swap, its visibility boolean, its text) in the parent's properties panel. A designer working on the Button never has to drill into the icon's layer to change it. [fourzerothree.in](https://www.fourzerothree.in/p/crafting-components-with-subcomponents) describes this as the mechanical form of a slot: the nested instance is the subcomponent, and the exposed property makes it swappable from the parent. [story.to.design](https://story.to.design/blog/subcomponents-more-flexible-design-systems) describes the payoff: instead of detaching a component because the variant they need doesn't exist, a designer composes existing subcomponents into a slot. Their example is an icon nested inside a button.
 
 ### Treat every component property like a code prop
 
