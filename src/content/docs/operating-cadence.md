@@ -16,7 +16,7 @@ title: Operating Cadence
 
 [Nathan Curtis](https://medium.com/eightshapes-llc/design-system-communications-ca679ffc36d3) observes that "not every system team runs a predictable cadence... but every system has some kind of cadence to plan, work, critique, demo, and release things." The question isn't whether a rhythm exists. It's whether it's designed or accidental.
 
-Left undesigned, communication defaults to whoever happens to be in the room. That's why [adoption measurement](/adoption-measurement/) keeps surfacing "weak communication" as a top blocker, even for systems people already trust. Trusting a system isn't the same as knowing what changed, who to ask, or where to send feedback.
+Left undesigned, communication defaults to whoever happens to be in the room. That's why [adoption measurement](/measuring-adoption/) keeps surfacing "weak communication" as a top blocker, even for systems people already trust. Trusting a system isn't the same as knowing what changed, who to ask, or where to send feedback.
 
 ## Practices
 

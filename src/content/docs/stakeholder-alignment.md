@@ -78,7 +78,7 @@ The value is the question it forces. A system that's all System 1 (shipping comp
 
 ### Three clocks
 
-Use it to set measurement cadence. Awareness and perception (how the org *feels* about the system) is qualitative and slow, so check it every 6–9 months. Usability and discoverability moves faster, so check it quarterly. Adoption and contribution moves fastest, so check it monthly. [Measuring adoption](/adoption-measurement/) covers the metrics themselves. Checking perception monthly produces noise, and checking adoption twice a year is too slow to catch drift.
+Use it to set measurement cadence. Awareness and perception (how the org *feels* about the system) is qualitative and slow, so check it every 6–9 months. Usability and discoverability moves faster, so check it quarterly. Adoption and contribution moves fastest, so check it monthly. [Measuring adoption](/measuring-adoption/) covers the metrics themselves. Checking perception monthly produces noise, and checking adoption twice a year is too slow to catch drift.
 
 ## Practices
 

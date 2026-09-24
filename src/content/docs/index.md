@@ -93,6 +93,6 @@ The wiki is organized into five Parts, roughly in reading order:
    consumption), and designing AI as a product surface the system has to support
    (agentic UI patterns, generative loops, workflow orchestration, scaling access to risk).
 
-Start with [What a design system is](/foundations/), or jump straight to whatever section you need
+Start with [What a design system is](/what-a-design-system-is/), or jump straight to whatever section you need
 using the sidebar. A [glossary](/glossary/) at the end collects every term introduced
 along the way.

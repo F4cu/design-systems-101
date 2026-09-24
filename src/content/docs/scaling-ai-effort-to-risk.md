@@ -30,7 +30,7 @@ The design-system-ops notes (`knowledge-notes/component-bestiary-reference.md`) 
 
 ### Spend depth where the rating is highest
 
-The rating calibrates everything downstream: documentation depth ("the cost of an AI tool getting a modal wrong is higher than the cost of it getting a badge wrong"), audit order, and contribution standards. A high-CR component contributed without enough expertise "is worse than no component, because it provides false confidence while introducing real risk." The rating isn't fixed per component, either. The same component's effective CR shifts with where it's placed. See [Performance in context](/contextual-component-performance/).
+The rating calibrates everything downstream: documentation depth ("the cost of an AI tool getting a modal wrong is higher than the cost of it getting a badge wrong"), audit order, and contribution standards. A high-CR component contributed without enough expertise "is worse than no component, because it provides false confidence while introducing real risk." The rating isn't fixed per component, either. The same component's effective CR shifts with where it's placed. See [Performance in context](/performance-in-context/).
 
 ### Split agent access into layers
 
@@ -42,7 +42,7 @@ The same notes (`knowledge-notes/mcp-setup-guide.md`) apply the same scoping to 
 
 Cross-layer questions like "what code component should I use for this Figma frame?" resolve one layer at a time, and no single layer becomes a bottleneck.
 
-The same scoping shows up in product UI. AWS Cloudscape's [user-authorized actions](https://cloudscape.design/gen-ai/patterns/user-authorized-actions/) pattern scopes an agent's permission per decision ("Allow this time," "Allow for this chat," or "Always allow") instead of one blanket grant. See [Designing agentic UI patterns](/agentic-ui-patterns/).
+The same scoping shows up in product UI. AWS Cloudscape's [user-authorized actions](https://cloudscape.design/gen-ai/patterns/user-authorized-actions/) pattern scopes an agent's permission per decision ("Allow this time," "Allow for this chat," or "Always allow") instead of one blanket grant. See [Agentic UI patterns](/agentic-ui-patterns/).
 
 ### Add one connection at a time
 
@@ -52,7 +52,7 @@ The same scoping shows up in product UI. AWS Cloudscape's [user-authorized actio
 - **Mintlify**: turns published docs into a searchable knowledge base without leaving the editor.
 - **GitHub**: reviews PRs and diffs token definitions to catch design-code drift (see [Dependency observability](/dependency-observability/)).
 - **GitLab**: manages issues, merge requests, and CI pipelines through AI workflows.
-- **PostHog**: checks design decisions against real adoption and conversion data (see [Measuring adoption](/adoption-measurement/)).
+- **PostHog**: checks design decisions against real adoption and conversion data (see [Measuring adoption](/measuring-adoption/)).
 - **Slack**: makes chat history searchable for decision tracking and adoption signals.
 
 ### Fail honestly when a connection breaks

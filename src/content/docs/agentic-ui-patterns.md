@@ -1,5 +1,5 @@
 ---
-title: Designing Agentic UI Patterns
+title: Agentic UI Patterns
 ---
 
 The rest of this section treats AI as a consumer of the design system: an agent reading tokens, components, and docs. This page covers the other direction. Your product now ships chat interfaces, generated content, and agents that act on a user's behalf, and the design system needs real patterns for that surface: components, not just guidelines. A handful of mature systems have already published theirs.
@@ -39,7 +39,7 @@ IBM Carbon's [**Carbon for AI**](https://carbondesignsystem.com/guidelines/carbo
 
 AWS Cloudscape's [**user-authorized actions**](https://cloudscape.design/gen-ai/patterns/user-authorized-actions/) pattern is the most concrete authorization model any of these systems publish. Instead of one yes/no prompt, it offers a scope selector: "Allow this time," "Allow for this chat," or "Always allow," so trust is granted at the level the user intends. Two rules sharpen it. "Don't show the authorization dialog for a tool that is already trusted for the session." And for actions that can't be undone, the user has to type a confirmation before the Allow button enables.
 
-It's the UI version of the problem [Scaling AI effort to risk](/scaling-ai-effort/) and [Agentic workflow design](/agentic-workflow-design/) solve for agent access: scale trust to risk and reversibility, not convenience.
+It's the UI version of the problem [Scaling AI effort to risk](/scaling-ai-effort-to-risk/) and [Agentic workflow design](/agentic-workflow-design/) solve for agent access: scale trust to risk and reversibility, not convenience.
 
 ### Separate conversations from automations
 

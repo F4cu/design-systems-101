@@ -25,7 +25,7 @@ The raw vocabulary: colors, spacing, type sizes. [Token architecture](/token-arc
 
 ### Components
 
-The assembled units built from that vocabulary. [Component taxonomy](/component-taxonomy/) names their layers, and [Component architecture](/component-building/) covers how to build them.
+The assembled units built from that vocabulary. [Component taxonomy](/component-taxonomy/) names their layers, and [Component architecture](/component-architecture/) covers how to build them.
 
 ### Governance
 

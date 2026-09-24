@@ -2,7 +2,7 @@
 title: Dependency Observability
 ---
 
-[Measuring adoption](/adoption-measurement/) tells you whether teams use the system at all. Dependency observability looks one layer down, at the teams that *are* using it. Which version are they on? Which props do they reach for? Which tokens do they quietly skip in favor of raw values? And who built their own version because the system's didn't fit? A system can have excellent adoption numbers and still be nearly blind on all four.
+[Measuring adoption](/measuring-adoption/) tells you whether teams use the system at all. Dependency observability looks one layer down, at the teams that *are* using it. Which version are they on? Which props do they reach for? Which tokens do they quietly skip in favor of raw values? And who built their own version because the system's didn't fit? A system can have excellent adoption numbers and still be nearly blind on all four.
 
 :::tip[Key takeaways]
 - Know which team is on which version before shipping a breaking change
@@ -43,7 +43,7 @@ Version tracking is a dashboard query. Parallel implementations require delibera
 
 ### Scan for token bypass
 
-[Measuring adoption](/adoption-measurement/) calls token compliance "the adoption signal that most directly correlates with system value." A team can use every component correctly and still hardcode raw colors and spacing around them, undermining the theming and consistency tokens exist for. Hardcoded values don't show up in an import-count dashboard. Only scanning for raw values next to token references reveals a codebase that looks compliant at the component layer but isn't underneath.
+[Measuring adoption](/measuring-adoption/) calls token compliance "the adoption signal that most directly correlates with system value." A team can use every component correctly and still hardcode raw colors and spacing around them, undermining the theming and consistency tokens exist for. Hardcoded values don't show up in an import-count dashboard. Only scanning for raw values next to token references reveals a codebase that looks compliant at the component layer but isn't underneath.
 
 ### Look for parallel implementations
 

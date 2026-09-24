@@ -57,11 +57,11 @@ points. See [Component taxonomy](/component-taxonomy/).
 
 **Component property** (Figma) — a variant, boolean, text, or instance-swap property
 attached directly to a Figma component; the design-tool equivalent of a prop in code. See
-[Component architecture](/component-building/).
+[Component architecture](/component-architecture/).
 
 **Nested instance** — a subcomponent instance placed inside a parent component in Figma,
 with its own properties optionally exposed up through the parent's properties panel. See
-[Component architecture](/component-building/).
+[Component architecture](/component-architecture/).
 
 **Design-to-code contract** — an explicit agreement about what "done" means at each
 stage (design, build, documentation, release) of building a component. See
@@ -179,11 +179,11 @@ opposed to token layering for value differences. See
 **Coverage vs. usage vs. adoption** — three distinct measurements often conflated into
 one: coverage is what proportion of a product is built from the system; usage is how
 often specific components are reached for; adoption is whether a team is meaningfully
-on the system at all. See [Measuring adoption](/adoption-measurement/).
+on the system at all. See [Measuring adoption](/measuring-adoption/).
 
 **Adoption stage** — where a team sits on a five-stage path (aware, installed, consuming,
 contributing, advocating) in how deeply it has taken up the system. See
-[Measuring adoption](/adoption-measurement/).
+[Measuring adoption](/measuring-adoption/).
 
 **Three rungs of "documented"** — a component can exist (has a story), be described (has
 a props reference), or be guided (has usage guidance) — three different bars, often
@@ -212,17 +212,17 @@ track priorities a design system's roadmap can be mapped against. See
 but the facts describing it (its name, its props, its variants, its accessibility role)
 that let a person or an AI agent understand and use it correctly without having to
 inspect the real thing directly. A book's title and author on the spine is metadata; the
-book's contents aren't. See [AI readiness](/ai-context-and-readiness/).
+book's contents aren't. See [AI readiness](/ai-readiness/).
 
 **Context cascade** — the way context quality compounds through every handoff in a
 system; strong metadata at the source produces reliable AI output downstream, weak
 metadata produces hallucinated or broken output. See
-[AI readiness](/ai-context-and-readiness/).
+[AI readiness](/ai-readiness/).
 
 **Component manifest** — a structured, machine-readable index of every component in a
 system (names, props, relationships, status) that AI agents and tooling can query
 directly instead of parsing documentation pages. See
-[AI readiness](/ai-context-and-readiness/).
+[AI readiness](/ai-readiness/).
 
 **Agentic workflow pattern** — one of several ways multiple AI agents coordinate on a
 task: sequential chain, parallel agents (what design-system-ops calls a parallel
@@ -252,16 +252,16 @@ agent. See [CI for agentic workflows](/ci-for-agentic-workflows/).
 
 **Challenge Rating (CR)** — a difficulty rating for a UI component based on how dangerous
 it is to implement incorrectly, used to calibrate how much documentation and audit rigor
-it deserves. See [Scaling AI effort](/scaling-ai-effort/).
+it deserves. See [Scaling AI effort](/scaling-ai-effort-to-risk/).
 
 **MCP (Model Context Protocol)** — the interface that lets AI agents read data (design
 files, component metadata, code) directly from its source instead of a stale copy.
-See [Scaling AI effort](/scaling-ai-effort/).
+See [Scaling AI effort](/scaling-ai-effort-to-risk/).
 
 **MCP layer** — one of three separated tiers of MCP access in a design system (the
 design tool, the system's own metadata, the code-mapping bridge), kept apart so no
 single connection becomes a bottleneck or a single point of failure. See
-[Scaling AI effort](/scaling-ai-effort/).
+[Scaling AI effort](/scaling-ai-effort-to-risk/).
 
 **Context engineering** — building a structured, machine-readable layer of scoped
 blueprints or metadata that gives an AI agent what prose documentation alone can't,
@@ -276,39 +276,39 @@ everything at once. See [Context engineering](/context-engineering/).
 
 **Generative loop** — any orchestration shape where an agent's output feeds back into
 another round of generation; not every generative loop includes a review step. See
-[Generative loops](/feedback-loops/).
+[Generative loops](/generative-loops/).
 
 **Generator/reviewer loop** — the type of generative loop that includes review: a generator
 agent produces work, a reviewer agent reviews it and sends it back for revision, capped at a
 defined number of iterations so it can't run indefinitely. This is what design-system-ops
 calls the feedback-loop orchestration pattern. See
-[Generative loops](/feedback-loops/).
+[Generative loops](/generative-loops/).
 
 **Format-evaluation loop** — a generative loop applied to infrastructure rather than a
 single piece of output: propose a context format or metadata schema, measure how
 agents actually perform against it, revise. Diana Wolosin's benchmark of eight MCP
 configurations against 1,056 prompts is the concrete example. See
-[Generative loops](/feedback-loops/).
+[Generative loops](/generative-loops/).
 
 **Response regeneration** — AWS Cloudscape's shippable UI pattern for generative loops:
 thumbs-up/thumbs-down controls plus a dedicated regenerate action, putting the same
 discipline in front of the user instead of keeping it as an internal step between two
-agents. See [Generative loops](/feedback-loops/).
+agents. See [Generative loops](/generative-loops/).
 
 **AI label / explainability popover** — Carbon for AI's required, component-level
 disclosure that marks content as AI-generated and explains it, so the transparency
 requirement ships with the component instead of living in a guidelines page a team can
-skip. See [Designing agentic UI patterns](/agentic-ui-patterns/).
+skip. See [Agentic UI patterns](/agentic-ui-patterns/).
 
 **User-authorized actions** — AWS Cloudscape's scoped permission model ("Allow this
 time," "Allow for this chat," "Always allow") for granting an agent authority to act,
 matched to the risk and reversibility of the action instead of one blanket prompt. See
-[Designing agentic UI patterns](/agentic-ui-patterns/).
+[Agentic UI patterns](/agentic-ui-patterns/).
 
 **Agents vs. Flows** — GitLab Pajamas' distinction between conversational, iterative AI
 interaction (Agents) and automated, repeatable AI interaction (Flows), each carrying
 different risk tiers and opt-in requirements. See
-[Designing agentic UI patterns](/agentic-ui-patterns/).
+[Agentic UI patterns](/agentic-ui-patterns/).
 
 **Schema** — a fixed template that says what fields a piece of metadata must have and
 what counts as a valid value in each one (a prop's type, a variant's allowed values),

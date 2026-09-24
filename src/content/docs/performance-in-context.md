@@ -2,7 +2,7 @@
 title: Performance in Context
 ---
 
-A component's quality depends on where it's used. A component that passes isolated testing (accessibility checks, visual QA, token compliance) can still fail where it actually lives. [Measuring adoption](/adoption-measurement/) asks "does the system provide this?" and "do teams use it?" This page adds a third question: *does it perform in the specific context and journey it's placed in?*
+A component's quality depends on where it's used. A component that passes isolated testing (accessibility checks, visual QA, token compliance) can still fail where it actually lives. [Measuring adoption](/measuring-adoption/) asks "does the system provide this?" and "do teams use it?" This page adds a third question: *does it perform in the specific context and journey it's placed in?*
 
 :::tip[Key takeaways]
 - Tag analytics events with both the component and its journey context
@@ -39,11 +39,11 @@ Two common measurement habits share this blind spot. Isolated QA asks "does this
 
 Product analytics tools built to measure friction are page- and flow-aware by design. Think funnel drop-off (where users abandon a multi-step flow), rage clicks (repeated fast clicks on something unresponsive), dead clicks (clicks with no visible response), and session replay (a recorded playback of a real user's screen). But they have no concept of "design system component."
 
-Component usage tools are the mirror image. Import scanners like **Pinterest's** FigStats or **Atlassian's** custom scanner (see [Measuring adoption](/adoption-measurement/)) know the component but not the context. An import count doesn't know whether that instance sits in checkout or settings. Closing the gap means tagging analytics events with both the component and its journey context. That has to be built in-house, because no tool connects the two out of the box.
+Component usage tools are the mirror image. Import scanners like **Pinterest's** FigStats or **Atlassian's** custom scanner (see [Measuring adoption](/measuring-adoption/)) know the component but not the context. An import count doesn't know whether that instance sits in checkout or settings. Closing the gap means tagging analytics events with both the component and its journey context. That has to be built in-house, because no tool connects the two out of the box.
 
 ### Rate risk per placement
 
-[Scaling AI effort](/scaling-ai-effort/) borrows a Challenge Rating (CR) that ranks how dangerous a component is to implement incorrectly: badges low, date pickers and data tables high. It's usually treated as fixed. It isn't. The same dropdown can be CR 1 in a dashboard filter and effectively CR 6 in a payment step, because the cost of the same mistake scales with what the journey is trying to do. Ask the CR question per placement.
+[Scaling AI effort](/scaling-ai-effort-to-risk/) borrows a Challenge Rating (CR) that ranks how dangerous a component is to implement incorrectly: badges low, date pickers and data tables high. It's usually treated as fixed. It isn't. The same dropdown can be CR 1 in a dashboard filter and effectively CR 6 in a payment step, because the cost of the same mistake scales with what the journey is trying to do. Ask the CR question per placement.
 
 ### Slice detachment spikes by page
 
@@ -55,7 +55,7 @@ A component can be adopted, accessible, and on-brand, and still be the exact ste
 
 ### Demand more evidence for context-level findings
 
-**Mews** found that import counts are unreliable once components are extended and re-exported, large containers distort visual measurement, and naive metrics ignore complexity (see [Measuring adoption](/adoption-measurement/)). Slicing any of these down to one journey shrinks the sample and amplifies the same noise. A context-level finding needs more evidence before you trust it.
+**Mews** found that import counts are unreliable once components are extended and re-exported, large containers distort visual measurement, and naive metrics ignore complexity (see [Measuring adoption](/measuring-adoption/)). Slicing any of these down to one journey shrinks the sample and amplifies the same noise. A context-level finding needs more evidence before you trust it.
 
 ## Open question: unified analytics platforms
 
@@ -68,7 +68,7 @@ Platforms like [PostHog](https://posthog.com/docs/llm-analytics) now combine pro
 - **Test context-specific variants behind flags.** Ship a checkout-specific variant behind a feature flag and read the conversion change from the same platform that holds the baseline.
 - **Let a scheduled job flag regressions.** Some platforms already run scheduled checks that report when a slice of LLM cost, latency, or error rate regresses. Pointing that at "this component's completion rate dropped in this journey stage" is a natural extension, though not documented.
 
-All of this is custom instrumentation a team would have to build on purpose. No vendor ships it for design systems today. It's the same discipline [AI readiness](/ai-context-and-readiness/) argues for in component metadata, applied to analytics events.
+All of this is custom instrumentation a team would have to build on purpose. No vendor ships it for design systems today. It's the same discipline [AI readiness](/ai-readiness/) argues for in component metadata, applied to analytics events.
 
 ## Common mistakes
 

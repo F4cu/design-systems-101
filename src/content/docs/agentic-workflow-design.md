@@ -51,7 +51,7 @@ One agent delegates subtasks to others and decides when enough has been delegate
 
 ### Generator/reviewer loop
 
-A generator paired with a reviewer that sends work back. The guide calls it the **feedback loop**. It's the only pattern of the four with no built-in stopping point, which is why it gets its own page: [Generative loops](/feedback-loops/).
+A generator paired with a reviewer that sends work back. The guide calls it the **feedback loop**. It's the only pattern of the four with no built-in stopping point, which is why it gets its own page: [Generative loops](/generative-loops/).
 
 ## Practices
 

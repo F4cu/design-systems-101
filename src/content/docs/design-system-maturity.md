@@ -41,7 +41,7 @@ Documentation, onboarding, and how actively the team equips people to use the sy
 
 ### Adoption
 
-Whether teams actually use, trust, and rely on the system, measured rather than assumed. See [Measuring adoption](/adoption-measurement/) and [Dependency observability](/dependency-observability/).
+Whether teams actually use, trust, and rely on the system, measured rather than assumed. See [Measuring adoption](/measuring-adoption/) and [Dependency observability](/dependency-observability/).
 
 ## Practices
 

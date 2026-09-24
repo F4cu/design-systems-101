@@ -7,6 +7,17 @@ import mermaid from 'astro-mermaid';
 export default defineConfig({
 	site: 'https://f4cu.github.io',
 	base: '/design-systems-101',
+	// Old page URLs from before file names were unified with page titles
+	redirects: {
+		'/adoption-measurement/': '/design-systems-101/measuring-adoption/',
+		'/ai-context-and-readiness/': '/design-systems-101/ai-readiness/',
+		'/component-building/': '/design-systems-101/component-architecture/',
+		'/contextual-component-performance/': '/design-systems-101/performance-in-context/',
+		'/feedback-loops/': '/design-systems-101/generative-loops/',
+		'/foundations/': '/design-systems-101/what-a-design-system-is/',
+		'/governance-under-ai-consumption/': '/design-systems-101/governance-for-ai/',
+		'/scaling-ai-effort/': '/design-systems-101/scaling-ai-effort-to-risk/',
+	},
 	integrations: [
 		mermaid({
 			theme: 'neutral',
@@ -22,10 +33,10 @@ export default defineConfig({
 				{
 					label: 'Foundations',
 					items: [
-						'foundations',
+						'what-a-design-system-is',
 						'token-architecture',
 						'component-taxonomy',
-						'component-building',
+						'component-architecture',
 						'design-to-code-contract',
 						'component-api-design',
 						'multi-platform-component-specs',
@@ -51,8 +62,8 @@ export default defineConfig({
 				{
 					label: 'Metrics',
 					items: [
-						'adoption-measurement',
-						'contextual-component-performance',
+						'measuring-adoption',
+						'performance-in-context',
 						'dependency-observability',
 						'documentation-coverage',
 					],
@@ -64,16 +75,16 @@ export default defineConfig({
 				{
 					label: 'Agentic AI',
 					items: [
-						'ai-context-and-readiness',
+						'ai-readiness',
 						'context-engineering',
 						'documentation-for-agents',
 						'agentic-ui-patterns',
-						'feedback-loops',
-						'governance-under-ai-consumption',
+						'generative-loops',
+						'governance-for-ai',
 						'agentic-workflow-design',
 						'ai-output-discipline',
 						'ci-for-agentic-workflows',
-						{ slug: 'scaling-ai-effort', label: 'Scaling AI effort' },
+						'scaling-ai-effort-to-risk',
 					],
 				},
 				{ label: 'Glossary', link: '/glossary/' },

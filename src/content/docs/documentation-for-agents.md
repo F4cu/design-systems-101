@@ -24,7 +24,7 @@ Diana Wolosin's split: component APIs, the things that must be exact like a prop
 
 ### Expect the structuring to help humans too
 
-[Atlassian's](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era) sharpest line on why this isn't AI-only busywork: "To identify the rules that help LLMs, you also uncover the rules that help explain these concepts to humans — and that's a good thing." [Governance for AI](/governance-under-ai-consumption/) makes the same claim from Shane P Williams's side: work that makes the system legible to agents is quality work for everyone.
+[Atlassian's](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era) sharpest line on why this isn't AI-only busywork: "To identify the rules that help LLMs, you also uncover the rules that help explain these concepts to humans — and that's a good thing." [Governance for AI](/governance-for-ai/) makes the same claim from Shane P Williams's side: work that makes the system legible to agents is quality work for everyone.
 
 ### Treat tokens as an API
 
@@ -36,7 +36,7 @@ Diana Wolosin's split: component APIs, the things that must be exact like a prop
 
 ### Build the rule into the component
 
-IBM Carbon ships its AI-transparency requirement as a component, not a policy page: "Each AI component is required to have an embedded AI label and explainability popover that alerts users to AI-generated content" ([Carbon for AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)). The documentation isn't a separate artifact describing the requirement. The requirement lives in the component, so it can't drift from what ships. [Designing agentic UI patterns](/agentic-ui-patterns/) has more on this approach.
+IBM Carbon ships its AI-transparency requirement as a component, not a policy page: "Each AI component is required to have an embedded AI label and explainability popover that alerts users to AI-generated content" ([Carbon for AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)). The documentation isn't a separate artifact describing the requirement. The requirement lives in the component, so it can't drift from what ships. [Agentic UI patterns](/agentic-ui-patterns/) has more on this approach.
 
 ## Common mistakes
 

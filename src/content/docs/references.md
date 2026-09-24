@@ -203,7 +203,7 @@ prose.
 - [Sil Bormüller, "Your Design System Is Not Ready for AI Agents"](https://www.intodesignsystems.com/blog/design-system-not-ready-for-ai-agents) — conference write-up carrying Romina Kavcic's CI trust-tier framework, Jan Six's GitHub Primer safe-outputs example, and Diana Wolosin's Indeed pipeline figures, from the AI Design Systems Conference 2026
 - Murphy Trueman, `design-system-ops` — `knowledge-notes/ai-readiness.md`
 
-## Context engineering, documentation for agents, designing agentic UI patterns, generative loops
+## Context engineering, documentation for agents, agentic UI patterns, generative loops
 
 - [Diana Wolosin, "Design Systems for AI: Introducing the Context Engine"](https://www.designsystemscollective.com/design-systems-for-ai-introducing-the-context-engine-777726da6a01)
 - Diana Wolosin — benchmark of 8 MCP configurations against 1,056 prompts at Indeed, referenced via [Into Design Systems conference](https://www.intodesignsystems.com/)

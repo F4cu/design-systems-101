@@ -62,6 +62,13 @@ table of contents lists every practice as a short label. See `release-management
    sidebar, `glossary.md`, other pages' cross-links) — update all of them together if the
    title changes. Do not add a `# Title` line in the page body — Starlight renders the
    frontmatter `title` as the H1 automatically.
+
+   **File name = title in kebab-case**: lowercase, spaces to hyphens, punctuation dropped,
+   `&` becomes `and`, and a leading "The" dropped (`The Design-to-Code Contract` →
+   `design-to-code-contract.md`). The title is the source of truth. If it changes, rename
+   the file too, and add the old URL to the `redirects` map in `astro.config.mjs` so
+   published links keep working. Sidebar entries are then bare slugs, with no `label`
+   override. `index.md` (the homepage) is the only exception.
 2. **Lead** (no heading): 1–3 plain sentences stating the page's main takeaway. Starting
    with the takeaway always makes sense. Putting it in a heading doesn't, because long
    sentence headings clutter the TOC. No eyebrow labels anywhere.
