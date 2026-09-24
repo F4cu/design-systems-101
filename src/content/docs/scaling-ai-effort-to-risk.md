@@ -42,6 +42,17 @@ The same notes (`knowledge-notes/mcp-setup-guide.md`) apply the same scoping to 
 
 Cross-layer questions like "what code component should I use for this Figma frame?" resolve one layer at a time, and no single layer becomes a bottleneck.
 
+<div class="mermaid-wrap">
+
+```mermaid
+flowchart TD
+  Agent["AI agent"] --> Design["Design MCP<br/>names, variants,<br/>token values"]
+  Agent --> System["System MCP server<br/>inventory, rules,<br/>decision trees"]
+  Agent --> CC["Code Connect<br/>design-to-import<br/>mapping"]
+```
+
+</div>
+
 The same scoping shows up in product UI. AWS Cloudscape's [user-authorized actions](https://cloudscape.design/gen-ai/patterns/user-authorized-actions/) pattern scopes an agent's permission per decision ("Allow this time," "Allow for this chat," or "Always allow") instead of one blanket grant. See [Agentic UI patterns](/agentic-ui-patterns/).
 
 ### Add one connection at a time

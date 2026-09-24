@@ -27,6 +27,18 @@ Inayaili de León Persson's **Canonical** Vanilla Framework sorts every incoming
 
 Sorting first keeps a "should we add a new component" conversation from being argued like a five-minute bug-fix review, or the reverse. Additions and removals then go through the criteria below.
 
+<div class="mermaid-wrap">
+
+```mermaid
+flowchart TD
+  Req["Incoming request"] --> Q{Which lane?}
+  Q -->|Modification| M["Quick review"]
+  Q -->|Addition| A["Criteria for adding"]
+  Q -->|Removal| R["Criteria for removing"]
+```
+
+</div>
+
 ### Criteria for adding a component
 
 Ask these in order. A proposal that fails an early question doesn't need a debate about the later ones.

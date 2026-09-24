@@ -37,6 +37,20 @@ Print, packaging, signage, campaign pages, and usually the marketing or brochure
 
 [Token architecture](/token-architecture/)'s three tiers (primitive → semantic → component) are where brand and product actually meet in code. A rebrand should mean updating the primitive-tier values that encode the brand's colors, type, and spacing in one place, with the semantic and component tiers picking up the change automatically. If brand values get hardcoded further down the stack, the next rebrand means hunting down every reference instead of changing one layer.
 
+<div class="mermaid-wrap">
+
+```mermaid
+flowchart TD
+  Brand["Brand refresh"] --> P["Primitive tokens"]
+  P --> S["Semantic tokens"]
+  S --> C["Component tokens"]
+  C --> UI["Product UI"]
+  Brand --> G["Brand guidelines"]
+  G --> M["Marketing and<br/>physical surfaces"]
+```
+
+</div>
+
 ### Align brand and product on a recurring cadence
 
 The fix isn't picking one team to own both. It's cross-functional alignment on a regular schedule, so brand identity and product implementation stay two things aimed at the same target, instead of one team's tool quietly standing in for the other's.
