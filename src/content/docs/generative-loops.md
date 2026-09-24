@@ -13,7 +13,7 @@ A **generative loop** is any orchestration shape where an agent's output feeds b
 
 ## The problem
 
-[Agentic workflow design](/agentic-workflow-design/) names four orchestration patterns from the design-system-ops orchestration guide (`knowledge-notes/agent-orchestration-guide.md`): sequential chain, parallel agents, supervisor, and what the guide calls the **feedback loop**. This wiki uses the more specific name, generator/reviewer loop.
+[Agentic workflow design](/ds101/agentic-workflow-design/) names four orchestration patterns from the design-system-ops orchestration guide (`knowledge-notes/agent-orchestration-guide.md`): sequential chain, parallel agents, supervisor, and what the guide calls the **feedback loop**. This wiki uses the more specific name, generator/reviewer loop.
 
 The first three each have a built-in end. A sequential chain finishes when its last agent runs. Parallel agents finish when every branch reports back. A supervisor finishes when it stops delegating. None needs a stopping rule, because stopping is just finishing. A generator/reviewer loop is the one pattern that routes work back to *itself*, and nothing about that shape says when to quit. Per the same guide, it "can loop indefinitely if convergence criteria are not defined."
 
@@ -29,7 +29,7 @@ A generator/reviewer loop needs an explicit stopping condition before it runs, n
 
 ### Measure whether a format works
 
-Diana Wolosin's benchmark of eight MCP configurations against 1,056 prompts (propose a format, measure how agents resolve it, revise) is a generative loop applied to infrastructure: a **format-evaluation loop**, where the candidate is a context format, not a piece of content. It isn't one of the four orchestration patterns. It's evidence that the same discipline (define "correct," then measure against it) recurs outside workflow design. A format that looks reasonable isn't necessarily the one that performs best. [Context engineering](/context-engineering/) has the full account.
+Diana Wolosin's benchmark of eight MCP configurations against 1,056 prompts (propose a format, measure how agents resolve it, revise) is a generative loop applied to infrastructure: a **format-evaluation loop**, where the candidate is a context format, not a piece of content. It isn't one of the four orchestration patterns. It's evidence that the same discipline (define "correct," then measure against it) recurs outside workflow design. A format that looks reasonable isn't necessarily the one that performs best. [Context engineering](/ds101/context-engineering/) has the full account.
 
 ### Ship the loop as a UI pattern
 

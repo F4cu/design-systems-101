@@ -2,7 +2,7 @@
 title: Business Alignment
 ---
 
-A design system's roadmap should stay legible against what the company cares about *right now*, not run as a self-contained backlog the rest of the org has to take on faith. [Communicating value](/communicating-value/) is about making the case. Business alignment is about keeping that case true as company priorities shift. [Brand alignment](/brand-alignment/) covers a related axis: staying in sync with brand and marketing.
+A design system's roadmap should stay legible against what the company cares about *right now*, not run as a self-contained backlog the rest of the org has to take on faith. [Communicating value](/ds101/communicating-value/) is about making the case. Business alignment is about keeping that case true as company priorities shift. [Brand alignment](/ds101/brand-alignment/) covers a related axis: staying in sync with brand and marketing.
 
 :::tip[Key takeaways]
 - Map the roadmap to the company's current top-line goals every planning cycle

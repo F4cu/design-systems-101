@@ -2,7 +2,7 @@
 title: Component Composition in Figma
 ---
 
-A component gets its flexibility from smaller components nested inside it, not from piling more variants and booleans onto one flat layer. This page covers how to build that structure in Figma. [Component composition in code](/component-composition-in-code/) defines the layers (primitives, subcomponents, slots) and how the same structure is built in code.
+A component gets its flexibility from smaller components nested inside it, not from piling more variants and booleans onto one flat layer. This page covers how to build that structure in Figma. [Component composition in code](/ds101/component-composition-in-code/) defines the layers (primitives, subcomponents, slots) and how the same structure is built in code.
 
 :::tip[Key takeaways]
 - Build flexibility with nested instances, not more variants
@@ -16,7 +16,7 @@ A component gets its flexibility from smaller components nested inside it, not f
 
 A component built as one flat layer tree, with a variant for every case, eventually hits a wall. A real product request doesn't match any existing variant, and two variants built as mutually exclusive options can't be combined. The designer's only way forward is to detach the instance and hand-edit it. That quietly removes the instance from the system: it stops getting updates, stops showing up in coverage metrics, and nobody notices until an audit finds it.
 
-[Nathan Curtis's talk "Architecting Subcomponents"](https://www.youtube.com/watch?v=NiDoqI_ZhvY) (Schema by Figma, 2022) frames the subcomponent approach as the answer. Instead of the system team "playing constant catch-up, adding prop after prop," the system offers composable parts and lets the requester assemble their own answer. The flat alternative is the same "configuration collapse" failure from [Component API design](/component-api-design/), showing up in the Figma file instead of the code.
+[Nathan Curtis's talk "Architecting Subcomponents"](https://www.youtube.com/watch?v=NiDoqI_ZhvY) (Schema by Figma, 2022) frames the subcomponent approach as the answer. Instead of the system team "playing constant catch-up, adding prop after prop," the system offers composable parts and lets the requester assemble their own answer. The flat alternative is the same "configuration collapse" failure from [Component API design](/ds101/component-api-design/), showing up in the Figma file instead of the code.
 
 ## Practices
 
@@ -26,7 +26,7 @@ A subcomponent placed inside a parent, like an icon inside a Button or a `CardMe
 
 ### Treat every component property like a code prop
 
-Figma's component properties (variant, boolean, text, and instance swap) are, as [Figma's own team](https://www.figma.com/blog/taking-cues-from-code/) puts it, "essentially React properties for Figma components." Each one should earn a permanent place the way a code prop does, not get added because one request needs it. Every property is a surface someone has to maintain and every consumer has to learn. The rule from [Component API design](/component-api-design/) applies before a single property gets added: configurable for the common case, composable for the uncommon one.
+Figma's component properties (variant, boolean, text, and instance swap) are, as [Figma's own team](https://www.figma.com/blog/taking-cues-from-code/) puts it, "essentially React properties for Figma components." Each one should earn a permanent place the way a code prop does, not get added because one request needs it. Every property is a surface someone has to maintain and every consumer has to learn. The rule from [Component API design](/ds101/component-api-design/) applies before a single property gets added: configurable for the common case, composable for the uncommon one.
 
 ### Nest in layers, base components first
 
@@ -51,7 +51,7 @@ In the same example, each level exposes only the properties that matter at that 
 
 ### Nest only after a second real reuse
 
-fourzerothree.in warns that nesting for flexibility nobody needs yet makes a component so deep that other designers can't find the layer they're supposed to edit. Wait for a second real reuse before splitting a piece into its own nested instance. It's the same discipline as the [criteria for adding a component](/component-lifecycle/#criteria-for-adding-a-component).
+fourzerothree.in warns that nesting for flexibility nobody needs yet makes a component so deep that other designers can't find the layer they're supposed to edit. Wait for a second real reuse before splitting a piece into its own nested instance. It's the same discipline as the [criteria for adding a component](/ds101/component-lifecycle/#criteria-for-adding-a-component).
 
 ## Choosing variants or nesting
 
@@ -73,7 +73,7 @@ button:
           opacity: 0.36
 ```
 
-Read it as: whenever `disabled` is true, the button's root element gets 0.36 opacity, whatever the other props are. Figma can't express a rule like that, so the file repeats it 96 times. [Multi-platform component specs](/multi-platform-component-specs/#define-components-as-data-and-generate-figma-from-it) covers moving a component's definition into data.
+Read it as: whenever `disabled` is true, the button's root element gets 0.36 opacity, whatever the other props are. Figma can't express a rule like that, so the file repeats it 96 times. [Multi-platform component specs](/ds101/multi-platform-component-specs/#define-components-as-data-and-generate-figma-from-it) covers moving a component's definition into data.
 
 ### Nested instances
 

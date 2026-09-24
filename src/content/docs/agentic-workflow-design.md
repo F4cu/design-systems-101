@@ -35,7 +35,7 @@ graph LR
 
 </div>
 
-The left branch is Kavcic's workflow-vs-agent test. The autonomy levels on the right come from the design-system-ops oversight framework (see the practices below). Then pick among the four patterns in the orchestration guide, which the [glossary](/glossary/) calls agentic workflow patterns:
+The left branch is Kavcic's workflow-vs-agent test. The autonomy levels on the right come from the design-system-ops oversight framework (see the practices below). Then pick among the four patterns in the orchestration guide, which the [glossary](/ds101/glossary/) calls agentic workflow patterns:
 
 ### Sequential chain
 
@@ -51,7 +51,7 @@ One agent delegates subtasks to others and decides when enough has been delegate
 
 ### Generator/reviewer loop
 
-A generator paired with a reviewer that sends work back. The guide calls it the **feedback loop**. It's the only pattern of the four with no built-in stopping point, which is why it gets its own page: [Generative loops](/generative-loops/).
+A generator paired with a reviewer that sends work back. The guide calls it the **feedback loop**. It's the only pattern of the four with no built-in stopping point, which is why it gets its own page: [Generative loops](/ds101/generative-loops/).
 
 ## Practices
 
@@ -65,7 +65,7 @@ From the orchestration guide: a skipped audit is worse than a failed one, "becau
 
 ### Scope claims to what was inspected
 
-Anything an agent publishes on its own should scope its claims to what it actually checked: "no X was found in the files scanned," never "the system has no X" (`knowledge-notes/output-discipline.md`). [AI output discipline](/ai-output-discipline/) has the fuller rule.
+Anything an agent publishes on its own should scope its claims to what it actually checked: "no X was found in the files scanned," never "the system has no X" (`knowledge-notes/output-discipline.md`). [AI output discipline](/ds101/ai-output-discipline/) has the fuller rule.
 
 ## Common mistakes
 

@@ -51,7 +51,7 @@ No source is blended into a single "what the industry thinks" voice — each cla
 attributed to whoever made it, by name, with a link. Where sources agree, that's noted
 as two people independently landing on the same conclusion; where they diverge, both
 views are left standing rather than resolved for you. Every page's citations are also
-collected in one place in the [references](/references/) page, if you want the reading
+collected in one place in the [references](/ds101/references/) page, if you want the reading
 list without the surrounding prose.
 
 ## How to read a page
@@ -94,6 +94,6 @@ The wiki is organized into five Parts, roughly in reading order:
    consumption), and designing AI as a product surface the system has to support
    (agentic UI patterns, generative loops, workflow orchestration, scaling access to risk).
 
-Start with [What a design system is](/what-a-design-system-is/), or jump straight to whatever section you need
-using the sidebar. A [glossary](/glossary/) at the end collects every term introduced
+Start with [What a design system is](/ds101/what-a-design-system-is/), or jump straight to whatever section you need
+using the sidebar. A [glossary](/ds101/glossary/) at the end collects every term introduced
 along the way.

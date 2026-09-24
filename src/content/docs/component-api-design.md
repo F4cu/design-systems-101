@@ -42,7 +42,7 @@ Two signals that something belongs in composition: it's used in only one context
 </Dialog>
 ```
 
-`showFooter` disappears, because leaving the footer out just means not writing it. Alignment and styling, if still needed, move onto `Dialog.Footer`, the one part they affect, instead of growing Dialog's top-level API. [Component composition in code](/component-composition-in-code/#compound-components) shows how parts like `Dialog.Footer` are built.
+`showFooter` disappears, because leaving the footer out just means not writing it. Alignment and styling, if still needed, move onto `Dialog.Footer`, the one part they affect, instead of growing Dialog's top-level API. [Component composition in code](/ds101/component-composition-in-code/#compound-components) shows how parts like `Dialog.Footer` are built.
 
 ### Configure with props
 
@@ -56,13 +56,13 @@ For structural and content variation. Curtis documents real before-and-after cas
 - An Alert's three-level subcomponent hierarchy for title, description, and actions became one slotted body with ready-made layout examples.
 - A Card was hollowed out into a plain container, so specialized teams build purpose-driven extensions instead of the core system adding more configuration.
 
-The cost: consumers assemble more themselves, so they need good examples. [Component composition in code](/component-composition-in-code/) names the pieces involved.
+The cost: consumers assemble more themselves, so they need good examples. [Component composition in code](/ds101/component-composition-in-code/) names the pieces involved.
 
 ## Practices
 
 ### Extend before adding a lookalike
 
-A new visual expression of something that already exists, like a new button color next to solid and outline, is usually a new variant value or a new property, not a new component. [Supernova](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems) puts it this way: if the need is general and reusable, it belongs inside the existing component's contract, not in a lookalike next to it. The full [criteria for adding a component](/component-lifecycle/#criteria-for-adding-a-component) live on Component lifecycle.
+A new visual expression of something that already exists, like a new button color next to solid and outline, is usually a new variant value or a new property, not a new component. [Supernova](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems) puts it this way: if the need is general and reusable, it belongs inside the existing component's contract, not in a lookalike next to it. The full [criteria for adding a component](/ds101/component-lifecycle/#criteria-for-adding-a-component) live on Component lifecycle.
 
 ### Name the same concept the same way everywhere
 
@@ -107,7 +107,7 @@ The severity tells tools what to do. With `error`, they should refuse to generat
 
 ### Respect platform-native names
 
-Don't force artificial uniformity across tools. It's `src` on the web and `image` in Figma, per the same Supernova guide. This applies to props, not to the parts themselves: a subcomponent should keep one name in both tools, as [Component composition in code](/component-composition-in-code/#match-part-names-across-figma-and-code) explains.
+Don't force artificial uniformity across tools. It's `src` on the web and `image` in Figma, per the same Supernova guide. This applies to props, not to the parts themselves: a subcomponent should keep one name in both tools, as [Component composition in code](/ds101/component-composition-in-code/#match-part-names-across-figma-and-code) explains.
 
 ### Prefer composition over style overrides
 
@@ -132,7 +132,7 @@ An override is a hidden dependency that can break silently on the next release. 
 
 The same component often needs to work on web, iOS, and Android without looking identical on all three. [Wealthfront's engineering team](https://eng.wealthfront.com/2022/05/10/building-wealthfronts-multi-platform-design-system/) calls this "design once, build anywhere": share tokens (padding, radius, color, typography) and intent, and let the implementation follow each platform's conventions. Their example: a Dialog floats centered on desktop web, while its mobile counterpart is a BottomSheet attached to the bottom edge. It's a different component and interaction model, built on the same decisions.
 
-That only works if the intent is recorded somewhere neutral. [Multi-platform component specs](/multi-platform-component-specs/) covers how. [Platform divergence](/platform-divergence/) explains why a structural split like Dialog vs. BottomSheet needs a component contract rather than a token.
+That only works if the intent is recorded somewhere neutral. [Multi-platform component specs](/ds101/multi-platform-component-specs/) covers how. [Platform divergence](/ds101/platform-divergence/) explains why a structural split like Dialog vs. BottomSheet needs a component contract rather than a token.
 
 ### Separate what a component guarantees from what it guides
 

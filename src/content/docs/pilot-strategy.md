@@ -45,7 +45,7 @@ Scoring it together, with product, engineering, and design in the room, keeps th
 
 ### 3. Mine the component list from real screens
 
-Mall collects screenshots and walkthroughs across the organization's existing apps, anywhere from 20 to 100 products, and looks for what recurs. "All of them have some sort of left-side navigation. That's a component that maybe we should start with." His threshold, three or more teams needing it *right now*, is now part of the wiki's [criteria for adding a component](/component-lifecycle/#criteria-for-adding-a-component). Run the [UI audit](/ui-audit/) first to get the inventory this step works from.
+Mall collects screenshots and walkthroughs across the organization's existing apps, anywhere from 20 to 100 products, and looks for what recurs. "All of them have some sort of left-side navigation. That's a component that maybe we should start with." His threshold, three or more teams needing it *right now*, is now part of the wiki's [criteria for adding a component](/ds101/component-lifecycle/#criteria-for-adding-a-component). Run the [UI audit](/ds101/ui-audit/) first to get the inventory this step works from.
 
 ### 4. Borrow before you build
 
@@ -59,7 +59,7 @@ Mall's projects typically run four to nine pilots. Build a small library of ten 
 
 ### 6. Fund the next phase with proof
 
-Instead of pitching the system as an idea and asking for budget up front, [Mall](https://launch.nttdata.com/insights/design-that-scales-unlocking-design-system-success-with-dan-mall) runs the pilot quietly and measures what it saved a real team. His example: an app that used to take six months and about $375K was built in three months for about $175K. He brings that number, not a deck of principles, to whoever controls the next round of funding. [Communicating value](/communicating-value/) and [Business alignment](/business-alignment/) cover how to build the case from it.
+Instead of pitching the system as an idea and asking for budget up front, [Mall](https://launch.nttdata.com/insights/design-that-scales-unlocking-design-system-success-with-dan-mall) runs the pilot quietly and measures what it saved a real team. His example: an app that used to take six months and about $375K was built in three months for about $175K. He brings that number, not a deck of principles, to whoever controls the next round of funding. [Communicating value](/ds101/communicating-value/) and [Business alignment](/ds101/business-alignment/) cover how to build the case from it.
 
 ### 7. Aim for 80% standard, not 100%
 
@@ -67,4 +67,4 @@ Mall's picture of a healthy system past its first pilots: about 80% of product w
 
 ## Common mistakes
 
-- **Treating the pilot and launch as a project with an end date.** Mall's metaphor for what a system needs afterward is gardening, not construction: "that's what it takes to have something grow." That means weekly rituals (he cites a team that gives every Friday to the system), repeated communication, and continued care, until "at some point it flips to it's actually harder to stop doing this thing than it is to continue doing it" ([Content Strategy Interviews](https://ellessmedia.com/csi/dan-mall/)). A pilot that ships is only the "Now" horizon from [Stakeholder alignment](/stakeholder-alignment/). If nothing carries it into "Next" and "Future," it stalls just like an unpiloted launch, a few months later. [Operating cadence](/operating-cadence/) covers the rituals that prevent this.
+- **Treating the pilot and launch as a project with an end date.** Mall's metaphor for what a system needs afterward is gardening, not construction: "that's what it takes to have something grow." That means weekly rituals (he cites a team that gives every Friday to the system), repeated communication, and continued care, until "at some point it flips to it's actually harder to stop doing this thing than it is to continue doing it" ([Content Strategy Interviews](https://ellessmedia.com/csi/dan-mall/)). A pilot that ships is only the "Now" horizon from [Stakeholder alignment](/ds101/stakeholder-alignment/). If nothing carries it into "Next" and "Future," it stalls just like an unpiloted launch, a few months later. [Operating cadence](/ds101/operating-cadence/) covers the rituals that prevent this.

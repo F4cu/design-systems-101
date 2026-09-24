@@ -21,15 +21,15 @@ Each of those is a different failure at a different layer. Stale tokens mean the
 
 ### Tokens
 
-The raw vocabulary: colors, spacing, type sizes. [Token architecture](/token-architecture/) covers how to structure them.
+The raw vocabulary: colors, spacing, type sizes. [Token architecture](/ds101/token-architecture/) covers how to structure them.
 
 ### Components
 
-The assembled units built from that vocabulary. [Component composition in code](/component-composition-in-code/) names their layers and how they're built in code, and [Component composition in Figma](/component-composition-in-figma/) covers the same structure in the design file.
+The assembled units built from that vocabulary. [Component composition in code](/ds101/component-composition-in-code/) names their layers and how they're built in code, and [Component composition in Figma](/ds101/component-composition-in-figma/) covers the same structure in the design file.
 
 ### Governance
 
-The decisions about what belongs, how it changes, and how it leaves. [Decision governance](/decision-governance/) and [Component lifecycle](/component-lifecycle/) cover how to run it.
+The decisions about what belongs, how it changes, and how it leaves. [Decision governance](/ds101/decision-governance/) and [Component lifecycle](/ds101/component-lifecycle/) cover how to run it.
 
 ## Practices
 
@@ -63,4 +63,4 @@ The design-system-ops governance notes define it as "the set of decisions and pr
 
 - **Equating "the design system" with "the Figma library."** With a component-shaped mental model, you invest everything in the middle layer while the vocabulary underneath rots and the decision-making around it never gets defined. When something goes wrong, like a rebrand that touches five hundred files or a library full of near-duplicate buttons nobody trusts, it looks like a component problem. But it started one layer up or one layer down.
 
-Next: [Token architecture](/token-architecture/).
+Next: [Token architecture](/ds101/token-architecture/).

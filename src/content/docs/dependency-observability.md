@@ -2,7 +2,7 @@
 title: Dependency Observability
 ---
 
-[Measuring adoption](/measuring-adoption/) tells you whether teams use the system at all. Dependency observability looks one layer down, at the teams that *are* using it. Which version are they on? Which props do they reach for? Which tokens do they quietly skip in favor of raw values? And who built their own version because the system's didn't fit? A system can have excellent adoption numbers and still be nearly blind on all four.
+[Measuring adoption](/ds101/measuring-adoption/) tells you whether teams use the system at all. Dependency observability looks one layer down, at the teams that *are* using it. Which version are they on? Which props do they reach for? Which tokens do they quietly skip in favor of raw values? And who built their own version because the system's didn't fit? A system can have excellent adoption numbers and still be nearly blind on all four.
 
 :::tip[Key takeaways]
 - Know which team is on which version before shipping a breaking change
@@ -39,15 +39,15 @@ Version tracking is a dashboard query. Parallel implementations require delibera
 
 ### Watch which props get overridden
 
-**Spotify** also tracks slot patterns and prop overrides: which props get overridden most, and which configurations teams actually settle on. A prop nobody uses is a deprecation candidate. A prop that's overridden constantly means the default is wrong, not that consumers are misusing the API. This is the after-the-fact half of [Component API design](/component-api-design/): that page covers designing props well up front, and this data shows whether the design held up.
+**Spotify** also tracks slot patterns and prop overrides: which props get overridden most, and which configurations teams actually settle on. A prop nobody uses is a deprecation candidate. A prop that's overridden constantly means the default is wrong, not that consumers are misusing the API. This is the after-the-fact half of [Component API design](/ds101/component-api-design/): that page covers designing props well up front, and this data shows whether the design held up.
 
 ### Scan for token bypass
 
-[Measuring adoption](/measuring-adoption/) calls token compliance "the adoption signal that most directly correlates with system value." A team can use every component correctly and still hardcode raw colors and spacing around them, undermining the theming and consistency tokens exist for. Hardcoded values don't show up in an import-count dashboard. Only scanning for raw values next to token references reveals a codebase that looks compliant at the component layer but isn't underneath.
+[Measuring adoption](/ds101/measuring-adoption/) calls token compliance "the adoption signal that most directly correlates with system value." A team can use every component correctly and still hardcode raw colors and spacing around them, undermining the theming and consistency tokens exist for. Hardcoded values don't show up in an import-count dashboard. Only scanning for raw values next to token references reveals a codebase that looks compliant at the component layer but isn't underneath.
 
 ### Look for parallel implementations
 
-A team that built its own version of a component isn't visible in any import count, because it isn't importing the system's version at all. It's the sharpest form of the neglect named in [Decision governance](/decision-governance/): a team doesn't fork loudly, it just quietly stops asking. The only way to catch it is to look on purpose, for lookalike patterns in product codebases outside the system's own repositories.
+A team that built its own version of a component isn't visible in any import count, because it isn't importing the system's version at all. It's the sharpest form of the neglect named in [Decision governance](/ds101/decision-governance/): a team doesn't fork loudly, it just quietly stops asking. The only way to catch it is to look on purpose, for lookalike patterns in product codebases outside the system's own repositories.
 
 ### Borrow supply-chain inventory tools
 

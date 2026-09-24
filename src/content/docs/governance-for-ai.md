@@ -2,7 +2,7 @@
 title: Governance for AI
 ---
 
-An agent treats every documentation gap as a rule to follow literally. [AI readiness](/ai-readiness/) asks whether a system's metadata is explicit enough for an agent to use. This page goes further: an agent treats every gap, stale doc, and "everyone just knows" convention as literal, because it has no instinct to fall back on when the written rule and the real one disagree. A human contributor papers over that gap without noticing. An agent executes exactly what's written, or exactly what it can infer from the code.
+An agent treats every documentation gap as a rule to follow literally. [AI readiness](/ds101/ai-readiness/) asks whether a system's metadata is explicit enough for an agent to use. This page goes further: an agent treats every gap, stale doc, and "everyone just knows" convention as literal, because it has no instinct to fall back on when the written rule and the real one disagree. A human contributor papers over that gap without noticing. An agent executes exactly what's written, or exactly what it can infer from the code.
 
 :::tip[Key takeaways]
 - Write down the rules everyone "just knows" before an agent tests them
@@ -43,11 +43,11 @@ graph TD
 
 ### Fix deferred gaps before an agent finds them
 
-Gaps a team has lived with for years, like an under-documented edge case or a component with two conflicting "correct" usages, don't cause new damage the day an agent shows up. They were always a cost. Williams: "the work that teams quietly deferred has not gone away. It has simply become more visible, and considerably more expensive." In [Documentation coverage](/documentation-coverage/) terms, a component stuck at "exists" instead of "guided" was already a risk for new people. An agent just removes the grace period.
+Gaps a team has lived with for years, like an under-documented edge case or a component with two conflicting "correct" usages, don't cause new damage the day an agent shows up. They were always a cost. Williams: "the work that teams quietly deferred has not gone away. It has simply become more visible, and considerably more expensive." In [Documentation coverage](/ds101/documentation-coverage/) terms, a component stuck at "exists" instead of "guided" was already a risk for new people. An agent just removes the grace period.
 
 ### Give every decision record an owner
 
-[Decision governance](/decision-governance/) argues for decision records, so a system doesn't argue the same question every 18 months. [Williams pushes further](https://designsystemscollective.substack.com/p/drift-doesnt-announce-itself): writing a record solves the *memory* problem, not the *staleness* problem. "Every design system claims a source of truth. Fewer are honest about how long ago anyone last checked it." And: "writing something down is not the same as keeping it true."
+[Decision governance](/ds101/decision-governance/) argues for decision records, so a system doesn't argue the same question every 18 months. [Williams pushes further](https://designsystemscollective.substack.com/p/drift-doesnt-announce-itself): writing a record solves the *memory* problem, not the *staleness* problem. "Every design system claims a source of truth. Fewer are honest about how long ago anyone last checked it." And: "writing something down is not the same as keeping it true."
 
 What prevented drift in practice wasn't better tooling. It was a habit: "one origin for a fact, checked against reality instead of copied from memory." A rule survives because "someone rewrote it, in the open, reasoning intact," when reality proved the old version wrong. So a decision record needs an owner who re-checks it against the real system, not just an author who filed it once.
 

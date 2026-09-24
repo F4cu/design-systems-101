@@ -2,7 +2,7 @@
 title: Component Composition in Code
 ---
 
-A component is rarely one indivisible thing. It's built from smaller pieces, and it may itself be a piece inside something bigger. Practitioners name these layers differently (primitive, atom, subcomponent, part, compound component, slot), and the words aren't synonyms for "small component." Each answers a different question: how generic is this piece, and where is it allowed to be used? This page covers how those layers are built in code. [Component composition in Figma](/component-composition-in-figma/) covers the same structure in the design file.
+A component is rarely one indivisible thing. It's built from smaller pieces, and it may itself be a piece inside something bigger. Practitioners name these layers differently (primitive, atom, subcomponent, part, compound component, slot), and the words aren't synonyms for "small component." Each answers a different question: how generic is this piece, and where is it allowed to be used? This page covers how those layers are built in code. [Component composition in Figma](/ds101/component-composition-in-figma/) covers the same structure in the design file.
 
 :::tip[Key takeaways]
 - Tell primitives (reusable anywhere) apart from subcomponents (scoped to one parent)
@@ -15,7 +15,7 @@ A component is rarely one indivisible thing. It's built from smaller pieces, and
 
 When "component" is the only word anyone has, every conversation about structure collapses into it. A designer calls the icon inside a button "part of the button." An engineer calls it a separate component because it's a separate file. Neither is wrong, but they're answering different questions.
 
-The question underneath is whether a piece is safe to use on its own. Without separate words for a generic building block and a piece that only works inside one parent, the codebase can't signal the difference either. Every internal piece gets exported, with no hint of which ones go together, and consumers assemble combinations nobody designed or tested. Whether a piece should be a prop or a part in the first place is a separate decision, owned by [Component API design](/component-api-design/#choosing-configuration-or-composition).
+The question underneath is whether a piece is safe to use on its own. Without separate words for a generic building block and a piece that only works inside one parent, the codebase can't signal the difference either. Every internal piece gets exported, with no hint of which ones go together, and consumers assemble combinations nobody designed or tested. Whether a piece should be a prop or a part in the first place is a separate decision, owned by [Component API design](/ds101/component-api-design/#choosing-configuration-or-composition).
 
 ## The model
 
@@ -129,13 +129,13 @@ export const Card = Object.assign(
 
 ### Split out a subcomponent only on a second real use
 
-The discipline that governs new components applies to subcomponents too: don't split one out until a real second use case shows up. See the [criteria for adding a component](/component-lifecycle/#criteria-for-adding-a-component).
+The discipline that governs new components applies to subcomponents too: don't split one out until a real second use case shows up. See the [criteria for adding a component](/ds101/component-lifecycle/#criteria-for-adding-a-component).
 
 ### Match part names across Figma and code
 
-What Curtis calls a subcomponent at the design and API level is what a frontend team builds as a compound component. Naming both sides the same way keeps a design file's nested components and a codebase's subcomponents mapped one-to-one. If Figma calls something a "part" and the code exports it as an unrelated component with a different name, the mapping breaks. That's the failure the [design-to-code contract](/design-to-code-contract/) exists to prevent.
+What Curtis calls a subcomponent at the design and API level is what a frontend team builds as a compound component. Naming both sides the same way keeps a design file's nested components and a codebase's subcomponents mapped one-to-one. If Figma calls something a "part" and the code exports it as an unrelated component with a different name, the mapping breaks. That's the failure the [design-to-code contract](/ds101/design-to-code-contract/) exists to prevent.
 
-This applies to the parts, not to every prop. A prop can still follow each tool's own conventions, as [Component API design](/component-api-design/#respect-platform-native-names) explains.
+This applies to the parts, not to every prop. A prop can still follow each tool's own conventions, as [Component API design](/ds101/component-api-design/#respect-platform-native-names) explains.
 
 ## Common mistakes
 

@@ -50,7 +50,7 @@ Trust usually isn't the bottleneck people assume. zeroheight's *Design Systems R
 
 ### Earn adoption, and watch for silence
 
-[Ness Grixti](https://nessgrixti.com/articles/the-hidden-work-behind-design-system-adoption/) says adoption is "earned. Slowly, through trust, relevance and usefulness," not through a launch event or a mandate. Trust builds through consistency: responding to feedback, delivering promised updates, pairing with teams on problems, and being open about changes. Her clearest evidence is **Wise's** rebuild (the token restructure covered in [Brand alignment](/brand-alignment/)). It was built on deep audits and open conversations with the teams who'd use it, and won Best Adoption at the 2023 zeroheight Design System Awards. The system that wins on adoption isn't necessarily the most polished. It's the one people helped build.
+[Ness Grixti](https://nessgrixti.com/articles/the-hidden-work-behind-design-system-adoption/) says adoption is "earned. Slowly, through trust, relevance and usefulness," not through a launch event or a mandate. Trust builds through consistency: responding to feedback, delivering promised updates, pairing with teams on problems, and being open about changes. Her clearest evidence is **Wise's** rebuild (the token restructure covered in [Brand alignment](/ds101/brand-alignment/)). It was built on deep audits and open conversations with the teams who'd use it, and won Best Adoption at the 2023 zeroheight Design System Awards. The system that wins on adoption isn't necessarily the most polished. It's the one people helped build.
 
 Her sharpest warning sign: fading adoption shows up as quiet disengagement, like teams that stop asking questions or stop showing up, more than as complaints. A team still complaining still wants the system to work. A team gone silent may have already built around it.
 
@@ -74,4 +74,4 @@ No method is solved. Each org below found a real limit, and knowing where each o
 
 - **Turning team breakdowns into a public league table.** Ranking "best" and "worst" adopters makes people defensive instead of honest about their numbers. It flattens context: a team building a custom data-visualization library isn't failing to adopt, the system may just not cover their domain. And it blurs two findings a good report keeps apart, "chose not to use" and "needed something the system doesn't provide." Only the first is an adoption problem (design-system-ops adoption notes).
 
-These numbers stop at "is it used." They don't say whether an adopted component is helping or hurting in a specific flow. [Performance in context](/performance-in-context/) covers that next layer.
+These numbers stop at "is it used." They don't say whether an adopted component is helping or hurting in a specific flow. [Performance in context](/ds101/performance-in-context/) covers that next layer.

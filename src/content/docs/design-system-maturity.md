@@ -21,27 +21,27 @@ NN/g's six dimensions aren't a new topic so much as names for territory this wik
 
 ### Organizational alignment
 
-Funding, sponsorship, and whether the roadmap stays legible to the business. See [Business alignment](/business-alignment/) and [Stakeholder alignment](/stakeholder-alignment/).
+Funding, sponsorship, and whether the roadmap stays legible to the business. See [Business alignment](/ds101/business-alignment/) and [Stakeholder alignment](/ds101/stakeholder-alignment/).
 
 ### Team effectiveness
 
-Capacity, makeup, and whether the team model fits the org's size. See [Team models](/team-models/), [Contribution models](/contribution-models/), and [Fostering contribution](/fostering-contribution/).
+Capacity, makeup, and whether the team model fits the org's size. See [Team models](/ds101/team-models/), [Contribution models](/ds101/contribution-models/), and [Fostering contribution](/ds101/fostering-contribution/).
 
 ### Infrastructure robustness
 
-Tokens, components, tooling, and the handoff underneath them. See [Token architecture](/token-architecture/) and [The design-to-code contract](/design-to-code-contract/).
+Tokens, components, tooling, and the handoff underneath them. See [Token architecture](/ds101/token-architecture/) and [The design-to-code contract](/ds101/design-to-code-contract/).
 
 ### Governance
 
-How decisions get made, recorded, and revisited. See [Decision governance](/decision-governance/). Its five-stage ladder (ad hoc → managed → systematic → measured → optimised) tracks how governance practices build up within one team. It's one linear track, not six independent ones. A system can be advanced on that ladder and still score low on alignment or adoption here, because those depend on things governance alone doesn't control, like executive sponsorship and other teams' behavior.
+How decisions get made, recorded, and revisited. See [Decision governance](/ds101/decision-governance/). Its five-stage ladder (ad hoc → managed → systematic → measured → optimised) tracks how governance practices build up within one team. It's one linear track, not six independent ones. A system can be advanced on that ladder and still score low on alignment or adoption here, because those depend on things governance alone doesn't control, like executive sponsorship and other teams' behavior.
 
 ### Support
 
-Documentation, onboarding, and how actively the team equips people to use the system. See [Documentation coverage](/documentation-coverage/) and [Operating cadence](/operating-cadence/).
+Documentation, onboarding, and how actively the team equips people to use the system. See [Documentation coverage](/ds101/documentation-coverage/) and [Operating cadence](/ds101/operating-cadence/).
 
 ### Adoption
 
-Whether teams actually use, trust, and rely on the system, measured rather than assumed. See [Measuring adoption](/measuring-adoption/) and [Dependency observability](/dependency-observability/).
+Whether teams actually use, trust, and rely on the system, measured rather than assumed. See [Measuring adoption](/ds101/measuring-adoption/) and [Dependency observability](/ds101/dependency-observability/).
 
 ## Practices
 
@@ -55,7 +55,7 @@ Wang's process: 4–8 evaluators score all six dimensions independently on a 1�
 
 ### Judge team effectiveness by fit to org size
 
-This wiki's deepest take on team effectiveness is Nathan Curtis's team-model taxonomy. A small org that over-invests in federated governance pays for coordination it doesn't need. An enterprise still running on one maintainer is understaffed for its scale. Curtis's revised view is sharper: federation is never a starting model. It's layered onto a funded central core once the org needs it. Read a team-effectiveness score against that fit, not a universal ideal. [Team models](/team-models/) has the full argument and survey data.
+This wiki's deepest take on team effectiveness is Nathan Curtis's team-model taxonomy. A small org that over-invests in federated governance pays for coordination it doesn't need. An enterprise still running on one maintainer is understaffed for its scale. Curtis's revised view is sharper: federation is never a starting model. It's layered onto a funded central core once the org needs it. Read a team-effectiveness score against that fit, not a universal ideal. [Team models](/ds101/team-models/) has the full argument and survey data.
 
 ## Common mistakes
 

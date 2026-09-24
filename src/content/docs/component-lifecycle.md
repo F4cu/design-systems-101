@@ -2,7 +2,7 @@
 title: Component Lifecycle
 ---
 
-Every component enters the system through a decision and should leave through one too. This page owns those decisions: how to sort a request, what a new component has to clear to get in, and when an existing one should go. [Release management](/release-management/) covers the mechanics of shipping and retiring it. [Decision governance](/decision-governance/) covers how the decision gets owned and recorded.
+Every component enters the system through a decision and should leave through one too. This page owns those decisions: how to sort a request, what a new component has to clear to get in, and when an existing one should go. [Release management](/ds101/release-management/) covers the mechanics of shipping and retiring it. [Decision governance](/ds101/decision-governance/) covers how the decision gets owned and recorded.
 
 :::tip[Key takeaways]
 - Sort each request into a lane before debating it
@@ -43,10 +43,10 @@ flowchart TD
 
 Ask these in order. A proposal that fails an early question doesn't need a debate about the later ones.
 
-1. **Is it actually new?** A new visual expression of something that exists, like a new button color, is usually a variant of the existing component, not a new one ([Component API design](/component-api-design/)).
-2. **Do three or more teams need it now?** Dan Mall's threshold from [Pilot strategy](/pilot-strategy/): if three or more teams need it *right now*, it goes in. If only one team does, that team solves it on its own for now. This matches software's **rule of three**, from Martin Fowler's *Refactoring* (1999), credited there to Don Roberts. A pattern earns a shared abstraction the third time it shows up, once there's real evidence of the shape it needs.
+1. **Is it actually new?** A new visual expression of something that exists, like a new button color, is usually a variant of the existing component, not a new one ([Component API design](/ds101/component-api-design/)).
+2. **Do three or more teams need it now?** Dan Mall's threshold from [Pilot strategy](/ds101/pilot-strategy/): if three or more teams need it *right now*, it goes in. If only one team does, that team solves it on its own for now. This matches software's **rule of three**, from Martin Fowler's *Refactoring* (1999), credited there to Don Roberts. A pattern earns a shared abstraction the third time it shows up, once there's real evidence of the shape it needs.
 3. **Is it the same user problem each time?** [Cathy Dutton](https://alistapart.com/article/problem-with-patterns/) warns that reuse is usually measured from the organization's side, not the user's. A date picker shared by leisure travel booking and urgent medical scheduling looks identical, but one user is comparing options and the other needs the first available slot. State the user's goal without describing the interface. "Three teams want a date picker" fails. "Three teams need to help someone book the earliest slot" passes.
-4. **Does it clear the quality bar?** It meets accessibility standards before shipping, not after. It's complete: states, responsive behavior, content guidance, and docs, not just the happy path. And it's worth the maintenance cost, since the core team carries it forever. The [design-to-code contract](/design-to-code-contract/) spells out what "complete" means at each stage.
+4. **Does it clear the quality bar?** It meets accessibility standards before shipping, not after. It's complete: states, responsive behavior, content guidance, and docs, not just the happy path. And it's worth the maintenance cost, since the core team carries it forever. The [design-to-code contract](/ds101/design-to-code-contract/) spells out what "complete" means at each stage.
 
 The old refactoring rule applies here too: "Three strikes and you refactor," attributed to Don Roberts in Martin Fowler's *Refactoring* (1999).
 
@@ -60,8 +60,8 @@ Deprecate a component when any of these is true:
 - maintenance cost outweighs its value
 - it no longer fits the system's direction
 
-Every deprecation needs a timeline and a migration path, not just a warning. **IBM's** Carbon is the standard reference for bundling deprecations with detailed migration guides. [Release management](/release-management/) covers the deprecate → migrate → remove sequence.
+Every deprecation needs a timeline and a migration path, not just a warning. **IBM's** Carbon is the standard reference for bundling deprecations with detailed migration guides. [Release management](/ds101/release-management/) covers the deprecate → migrate → remove sequence.
 
 ## Common mistakes
 
-- **Deprecating a component without tracing its usage first.** Murphy Trueman warns that a component's riskiest users are often the invisible ones: low-priority internal tools nobody thinks to check. See [Inheriting a legacy system](/inheriting-a-legacy-system/) and [Dependency observability](/dependency-observability/) for how to find them.
+- **Deprecating a component without tracing its usage first.** Murphy Trueman warns that a component's riskiest users are often the invisible ones: low-priority internal tools nobody thinks to check. See [Inheriting a legacy system](/ds101/inheriting-a-legacy-system/) and [Dependency observability](/ds101/dependency-observability/) for how to find them.

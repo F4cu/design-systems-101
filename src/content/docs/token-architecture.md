@@ -14,7 +14,7 @@ Tokens work in three layers: raw values, the intent those values serve, and opti
 
 ## The problem
 
-If a button's background is hardcoded, or points straight at `color.blue.500`, then a rebrand or a dark theme means hunting down every place that value was used. If it points at `color.action.primary` instead, you change one semantic mapping and everything downstream follows. [Brand alignment](/brand-alignment/) shows how this structure is where a real brand refresh meets the product system.
+If a button's background is hardcoded, or points straight at `color.blue.500`, then a rebrand or a dark theme means hunting down every place that value was used. If it points at `color.action.primary` instead, you change one semantic mapping and everything downstream follows. [Brand alignment](/ds101/brand-alignment/) shows how this structure is where a real brand refresh meets the product system.
 
 ## The model
 
@@ -105,15 +105,15 @@ In a DTCG file, the dotted name becomes nested groups, and each token is an obje
 }
 ```
 
-The path through the groups (`color` → `action` → `primary`) is the token's name, and the alias syntax is the same as in the simplified version above. [Platform divergence](/platform-divergence/#value-differences-resolved-in-tokens) shows a composite typography token whose sub-values are all aliases.
+The path through the groups (`color` → `action` → `primary`) is the token's name, and the alias syntax is the same as in the simplified version above. [Platform divergence](/ds101/platform-divergence/#value-differences-resolved-in-tokens) shows a composite typography token whose sub-values are all aliases.
 
 ### Keep platforms out of token names
 
-Per the design-system-ops notes, platform differences (web pixels vs. iOS points, different typefaces) are handled by transformation tooling, never encoded in the name. Transformation tooling is software like Style Dictionary that converts one token file into each platform's native format. So it's `spacing.4`, not `spacing.web.4`. [Platform divergence](/platform-divergence/) walks through that transformation step end to end. [Multi-platform component specs](/multi-platform-component-specs/) applies the same platform-neutral idea to whole components.
+Per the design-system-ops notes, platform differences (web pixels vs. iOS points, different typefaces) are handled by transformation tooling, never encoded in the name. Transformation tooling is software like Style Dictionary that converts one token file into each platform's native format. So it's `spacing.4`, not `spacing.web.4`. [Platform divergence](/ds101/platform-divergence/) walks through that transformation step end to end. [Multi-platform component specs](/ds101/multi-platform-component-specs/) applies the same platform-neutral idea to whole components.
 
 ### Treat token names as contracts
 
-[Murphy Trueman](https://blog.murphytrueman.com/your-next-design-system-user/) argues that "your design system is already an API; the question is whether it's a good one." A token name isn't a label. It's a contract with every consumer, human or machine. Renaming one is a breaking change ([Release management](/release-management/)). [Documentation for agents](/documentation-for-agents/) covers the machine consumers.
+[Murphy Trueman](https://blog.murphytrueman.com/your-next-design-system-user/) argues that "your design system is already an API; the question is whether it's a good one." A token name isn't a label. It's a contract with every consumer, human or machine. Renaming one is a breaking change ([Release management](/ds101/release-management/)). [Documentation for agents](/ds101/documentation-for-agents/) covers the machine consumers.
 
 ## Common mistakes
 

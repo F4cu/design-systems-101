@@ -23,7 +23,7 @@ Without concrete cases, governance principles are easy to agree with and hard to
 
 What got missed: core product components, like buttons, inputs, and the rest of the shared library, were already being used *inside* Editorial. Those nested instances were still bound to the original single-brand tokens. When the new theme was applied, the surrounding Editorial patterns updated correctly, but the nested product components kept their default colors. The inconsistency only showed up after the fork was live.
 
-The lesson: nested components inherit their token bindings, not their surrounding context. A component deep in a composition that references an unthemed token looks fine right up until someone applies a theme around it. What would have worked: registering the request centrally even though it looked single-surface, so the system team could see the nesting risk before the fork. This was one piece of a larger brand refresh. [Brand alignment](/brand-alignment/) covers how Wise's 2023 rebrand reshaped its token infrastructure. Source: [Ness Grixti's Wise case study](https://nessgrixti.com/portfolio/wise-multi-brand/).
+The lesson: nested components inherit their token bindings, not their surrounding context. A component deep in a composition that references an unthemed token looks fine right up until someone applies a theme around it. What would have worked: registering the request centrally even though it looked single-surface, so the system team could see the nesting risk before the fork. This was one piece of a larger brand refresh. [Brand alignment](/ds101/brand-alignment/) covers how Wise's 2023 rebrand reshaped its token infrastructure. Source: [Ness Grixti's Wise case study](https://nessgrixti.com/portfolio/wise-multi-brand/).
 
 ### zeroheight: the adoption paradox
 
@@ -37,7 +37,7 @@ The reading: weak governance is the explanation people reach for when a system i
 
 **Grammarly** built a network of ten advocates across design and engineering to help enable the rest of the organization and drive adoption. It wasn't an open contribution door. It was a specific, named group of people with real standing. It worked well enough that engineering offered to trade headcount for further design-system investment, which is about as concrete a signal of trust as a contribution model can produce.
 
-The context that made it work: ten people is a small, sustainable number, consistent with the finding in [Contribution models](/contribution-models/) that real contribution stays small regardless of company size. The network also spanned design and engineering, so it had standing on both sides of the handoff. Source: [Figma / Design Executive Council, "The new business case for design systems"](https://www.figma.com/blog/the-new-business-case-for-design-systems/).
+The context that made it work: ten people is a small, sustainable number, consistent with the finding in [Contribution models](/ds101/contribution-models/) that real contribution stays small regardless of company size. The network also spanned design and engineering, so it had standing on both sides of the handoff. Source: [Figma / Design Executive Council, "The new business case for design systems"](https://www.figma.com/blog/the-new-business-case-for-design-systems/).
 
 ### GOV.UK: a public community backlog
 

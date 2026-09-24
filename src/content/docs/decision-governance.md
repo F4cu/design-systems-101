@@ -2,7 +2,7 @@
 title: Decision Governance
 ---
 
-Governance is how a design system decides things on purpose, and how it remembers what it decided. A governed system can tell you *why* it looks the way it does. An ungoverned one just accumulates. This page covers who decides and how decisions get recorded. [Component lifecycle](/component-lifecycle/) covers the criteria for what enters and leaves the system. Governance matures in stages, and most teams aren't at the end state. That's fine, as long as they know which stage they're at.
+Governance is how a design system decides things on purpose, and how it remembers what it decided. A governed system can tell you *why* it looks the way it does. An ungoverned one just accumulates. This page covers who decides and how decisions get recorded. [Component lifecycle](/ds101/component-lifecycle/) covers the criteria for what enters and leaves the system. Governance matures in stages, and most teams aren't at the end state. That's fine, as long as they know which stage they're at.
 
 :::tip[Key takeaways]
 - Record every decision, including the proposals you declined
@@ -26,7 +26,7 @@ Governance doesn't die from a bad decision. It dies from decisions nobody bother
 
 ### Record decisions, including declined ones
 
-The same notes keep the fix lightweight. A decision record needs only the context, the options considered, the decision, and its consequences. But it has to cover the decisions a new team member would need to understand, including *declined* proposals, so a future team doesn't reverse something without knowing it was already considered. [Governance for AI](/governance-for-ai/) adds that each record also needs an owner who re-checks it against reality.
+The same notes keep the fix lightweight. A decision record needs only the context, the options considered, the decision, and its consequences. But it has to cover the decisions a new team member would need to understand, including *declined* proposals, so a future team doesn't reverse something without knowing it was already considered. [Governance for AI](/ds101/governance-for-ai/) adds that each record also needs an owner who re-checks it against reality.
 
 ### Write down who owns each decision
 
@@ -40,7 +40,7 @@ A RACI matrix fixes this. It lists who is Responsible, Accountable, Consulted, a
 4. Review the draft with the people it names.
 5. Publish it, and revisit it as the org grows.
 
-The guide stresses that RACI should follow the team model you've already chosen (centralized, federated, or cyclical, see [Team models](/team-models/)), not replace that decision.
+The guide stresses that RACI should follow the team model you've already chosen (centralized, federated, or cyclical, see [Team models](/ds101/team-models/)), not replace that decision.
 
 [DesignX's enterprise governance guide](https://designx.co/design-system-governance-enterprise/) names the failure it prevents: "everyone gives feedback, but no one decides." A proposal collects opinions from everyone with a stake but never reaches one owner who can close it. Its worked example for a new component proposal, extended here to the other activities Design System Tactics names:
 
@@ -54,7 +54,7 @@ Only the first and fourth rows restate the sourced examples directly. The rest a
 
 ### Make accessibility everyone's standard
 
-A common mistake at enterprise scale is routing every accessibility question to one specialist or a small team, on the theory that centralizing expertise centralizes quality. It does the opposite. Everyone else stops treating accessibility as their job, the specialist becomes a bottleneck on every release, and issues that should have been caught earlier surface at a late review nobody can act on cheaply. The [design-to-code contract](/design-to-code-contract/) puts accessibility in both the design and build contracts for this reason. Keep a specialist as the escalation path, not the only checkpoint.
+A common mistake at enterprise scale is routing every accessibility question to one specialist or a small team, on the theory that centralizing expertise centralizes quality. It does the opposite. Everyone else stops treating accessibility as their job, the specialist becomes a bottleneck on every release, and issues that should have been caught earlier surface at a late review nobody can act on cheaply. The [design-to-code contract](/ds101/design-to-code-contract/) puts accessibility in both the design and build contracts for this reason. Keep a specialist as the escalation path, not the only checkpoint.
 
 ### Let knowledge flow upstream too
 
@@ -82,8 +82,8 @@ graph TD
 
 </div>
 
-This ladder tracks how governance practices build up within one team over time. [Design system maturity](/design-system-maturity/) covers a newer framework that treats governance as one of six independent dimensions, instead of one linear track.
+This ladder tracks how governance practices build up within one team over time. [Design system maturity](/ds101/design-system-maturity/) covers a newer framework that treats governance as one of six independent dimensions, instead of one linear track.
 
 ## Common mistakes
 
-- **Treating governance as gatekeeping.** A contribution process that protects the system *from* contributors, instead of helping them build it well, feels rigorous. But contribution rates drop, and teams quietly build locally instead. The system stays "pure" and becomes irrelevant. If nobody is contributing, the process isn't working. It's being avoided. See [Contribution models](/contribution-models/).
+- **Treating governance as gatekeeping.** A contribution process that protects the system *from* contributors, instead of helping them build it well, feels rigorous. But contribution rates drop, and teams quietly build locally instead. The system stays "pure" and becomes irrelevant. If nobody is contributing, the process isn't working. It's being avoided. See [Contribution models](/ds101/contribution-models/).

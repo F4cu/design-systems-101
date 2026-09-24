@@ -57,7 +57,7 @@ Designers from several product teams decide on the system together. Only 13% of 
 
 ### Revisit the model as the org grows
 
-A small org that over-invests in federation pays for coordination it doesn't need. An enterprise still run by one maintainer is understaffed for its scale. Treat the model as something that grows with the org, not a one-time decision. [Design system maturity](/design-system-maturity/) scores this as "team effectiveness," read against the org's size.
+A small org that over-invests in federation pays for coordination it doesn't need. An enterprise still run by one maintainer is understaffed for its scale. Treat the model as something that grows with the org, not a one-time decision. [Design system maturity](/ds101/design-system-maturity/) scores this as "team effectiveness," read against the org's size.
 
 ## Common mistakes
 

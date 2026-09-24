@@ -16,7 +16,7 @@ Most design-system advice assumes a normal software lifecycle: a few years, one 
 
 Left alone, a large industrial company collects one specialized design system per product line. Each is reasonable on its own, and each solves the same problems slightly differently. Nobody chose that. It's what happens when long-lived products get built years apart, sometimes by teams that arrive through an acquisition with their own tooling. The result is duplicated component work, a UX that feels inconsistent across one company's portfolio, and legacy products stranded outside whatever comes next.
 
-This page covers the organizational version of the problem: why the fragmentation happens. For what to do when you're the one who inherits such a system, see [Inheriting a legacy system](/inheriting-a-legacy-system/).
+This page covers the organizational version of the problem: why the fragmentation happens. For what to do when you're the one who inherits such a system, see [Inheriting a legacy system](/ds101/inheriting-a-legacy-system/).
 
 ## Practices
 
@@ -32,7 +32,7 @@ That's a concrete, dated example of a pattern **David Sward**, Siemens' Chief De
 
 ### Plan legacy support from the start
 
-Industrial and medical hardware can stay on the market, and in support, for decades, far longer than the team that designed its interface stays together. Sward's talk description frames this as a central constraint. A system built for a two-year product cycle doesn't hold up when the product is still shipping fifteen years later, maintained by people who never met the original designers. So legacy support has to be planned from the start, the same way a component's deprecation path is planned at release, not invented at retirement (see [Release management](/release-management/)). By the time a decades-old product needs it, the team that could have planned for it is usually gone.
+Industrial and medical hardware can stay on the market, and in support, for decades, far longer than the team that designed its interface stays together. Sward's talk description frames this as a central constraint. A system built for a two-year product cycle doesn't hold up when the product is still shipping fifteen years later, maintained by people who never met the original designers. So legacy support has to be planned from the start, the same way a component's deprecation path is planned at release, not invented at retirement (see [Release management](/ds101/release-management/)). By the time a decades-old product needs it, the team that could have planned for it is usually gone.
 
 ### Open-source the design assets
 

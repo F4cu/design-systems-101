@@ -56,7 +56,7 @@ Met when:
 - The three contracts above are met.
 - Affected teams get visibility before shipping.
 - Release notes are written in plain terms.
-- Breaking changes come with a documented migration path. See [Release management](/release-management/).
+- Breaking changes come with a documented migration path. See [Release management](/ds101/release-management/).
 
 ## Practices
 

@@ -181,6 +181,7 @@ Other conventions:
   tables or unwrapped long inline code/URLs — they force horizontal scroll on a
   375–430px viewport. Any new diagram must go inside `.mermaid-wrap`.
 - **Cross-linking**: link to other pages in-line with absolute, extension-less site paths
-  (`[Token architecture](/token-architecture/)`) rather than duplicating an explanation
-  that another page already owns. Astro does not resolve `.md`-suffixed relative links
+  that include the `/ds101` base (`[Token architecture](/ds101/token-architecture/)`)
+  rather than duplicating an explanation that another page already owns. Astro doesn't
+  add `base` to markdown links, so a bare `(/token-architecture/)` 404s on GitHub Pages. Astro does not resolve `.md`-suffixed relative links
   the way Docsify did — a link written as `(token-architecture.md)` 404s at build time.

@@ -2,7 +2,7 @@
 title: Fostering Contribution
 ---
 
-An open contribution door doesn't produce contributors on its own. [Contribution models](/contribution-models/) answer how outside teams propose and ship changes. This page answers what makes people actually show up. Amy Hupe's five lessons on enabling contribution and Inayaili de León's talk on fostering participation start from the same observation: contribution is a behavior you build on purpose, not a feature you ship once.
+An open contribution door doesn't produce contributors on its own. [Contribution models](/ds101/contribution-models/) answer how outside teams propose and ship changes. This page answers what makes people actually show up. Amy Hupe's five lessons on enabling contribution and Inayaili de León's talk on fostering participation start from the same observation: contribution is a behavior you build on purpose, not a feature you ship once.
 
 :::tip[Key takeaways]
 - Actively recruit the quiet ones instead of waiting for volunteers
@@ -14,7 +14,7 @@ An open contribution door doesn't produce contributors on its own. [Contribution
 
 ## The problem
 
-An open process that waits for pull requests selects for people who already have the confidence, spare time, and standing to show up unprompted. That's a narrow slice of the people who use the system every day. [Contribution models](/contribution-models/) shows how narrow: zeroheight's 2026 data found 82% of teams get contributions from ten or fewer designers, whatever the company's size. Leaving the door open isn't neutral. As [Amy Hupe](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/) argues, it quietly filters out exactly the people whose context the system most needs.
+An open process that waits for pull requests selects for people who already have the confidence, spare time, and standing to show up unprompted. That's a narrow slice of the people who use the system every day. [Contribution models](/ds101/contribution-models/) shows how narrow: zeroheight's 2026 data found 82% of teams get contributions from ten or fewer designers, whatever the company's size. Leaving the door open isn't neutral. As [Amy Hupe](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/) argues, it quietly filters out exactly the people whose context the system most needs.
 
 ## Practices
 
@@ -50,8 +50,8 @@ Nobody gets a bonus for filing a design-system PR, and it isn't in most contribu
 
 ### Pitch contribution as context, not speed
 
-It's tempting to pitch contribution as a way to grow the system faster. [Hupe](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/) is blunt that this usually isn't true: reviewing and integrating someone else's work is often slower than the core team building it. The real payoff is that a contributor brings context the core team doesn't have, so the result works for teams and users the core team never sees. [Contribution models](/contribution-models/) makes the same point with data. Don't sell contribution to leadership as extra capacity, because the pitch collapses the first time someone checks the numbers.
+It's tempting to pitch contribution as a way to grow the system faster. [Hupe](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/) is blunt that this usually isn't true: reviewing and integrating someone else's work is often slower than the core team building it. The real payoff is that a contributor brings context the core team doesn't have, so the result works for teams and users the core team never sees. [Contribution models](/ds101/contribution-models/) makes the same point with data. Don't sell contribution to leadership as extra capacity, because the pitch collapses the first time someone checks the numbers.
 
 ## Common mistakes
 
-- **Treating "we accept contributions" as a policy instead of a practice.** A CONTRIBUTING.md file and an open GitHub repo meet the letter of an open model without doing any of the work on this page. A repo that accepts PRs in principle but never triages them teaches people not to bother next time. [Operating cadence](/operating-cadence/) covers the channels and stewardship that carry this culture day to day.
+- **Treating "we accept contributions" as a policy instead of a practice.** A CONTRIBUTING.md file and an open GitHub repo meet the letter of an open model without doing any of the work on this page. A repo that accepts PRs in principle but never triages them teaches people not to bother next time. [Operating cadence](/ds101/operating-cadence/) covers the channels and stewardship that carry this culture day to day.

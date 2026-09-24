@@ -2,7 +2,7 @@
 title: Contribution Models
 ---
 
-A contribution model decides how people outside the core team propose, build, and ship changes to the system. It sits between two neighbors. [Team models](/team-models/) decide who owns the system. [Component lifecycle](/component-lifecycle/) decides what a contribution has to clear to get in. [Fostering contribution](/fostering-contribution/) covers the culture that makes people show up at all.
+A contribution model decides how people outside the core team propose, build, and ship changes to the system. It sits between two neighbors. [Team models](/ds101/team-models/) decide who owns the system. [Component lifecycle](/ds101/component-lifecycle/) decides what a contribution has to clear to get in. [Fostering contribution](/ds101/fostering-contribution/) covers the culture that makes people show up at all.
 
 :::tip[Key takeaways]
 - Fit the process to your org's real problem: visibility at scale, skills when small
@@ -32,7 +32,7 @@ At 80+ teams, Grixti says the problem is visibility: the system team can't see w
 
 ### Match the workflow to the contribution's size
 
-An icon, a missing variant, or a token fix should be close to self-serve: a clear template, fast review, and shipping in a normal release. A new component or a data-heavy pattern needs a steward, a defined scope, and the expectation that the contributor won't finish it alone. [Curtis](https://medium.com/eightshapes-llc/defining-design-system-contributions-eb48e00e8898) describes the steward's job: guide the contributor through the steps and pick up the rest if they stall. [Operating cadence](/operating-cadence/) covers the steward role in more depth.
+An icon, a missing variant, or a token fix should be close to self-serve: a clear template, fast review, and shipping in a normal release. A new component or a data-heavy pattern needs a steward, a defined scope, and the expectation that the contributor won't finish it alone. [Curtis](https://medium.com/eightshapes-llc/defining-design-system-contributions-eb48e00e8898) describes the steward's job: guide the contributor through the steps and pick up the rest if they stall. [Operating cadence](/ds101/operating-cadence/) covers the steward role in more depth.
 
 <div class="mermaid-wrap">
 
@@ -51,11 +51,11 @@ flowchart TD
 
 ### Publish what you want built
 
-The **GOV.UK** Design System runs a public community backlog on GitHub. Anyone in UK government can propose a component. A working group checks that it's useful and not a duplicate, and a named community designer runs weekly catch-ups with the contributor. [Chris Ballantine-Thomas](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/) describes their key fix: publish what the team wants built *before* anyone proposes it, instead of waiting for proposals that didn't match what the community needed. Contributor effort then lands on something the system needs. The full story is in [Governance case studies](/governance-case-studies/).
+The **GOV.UK** Design System runs a public community backlog on GitHub. Anyone in UK government can propose a component. A working group checks that it's useful and not a duplicate, and a named community designer runs weekly catch-ups with the contributor. [Chris Ballantine-Thomas](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/) describes their key fix: publish what the team wants built *before* anyone proposes it, instead of waiting for proposals that didn't match what the community needed. Contributor effort then lands on something the system needs. The full story is in [Governance case studies](/ds101/governance-case-studies/).
 
 ### Expect a small group of contributors
 
-In zeroheight's *Design Systems Report 2026*, 69% of teams say anyone on the product team can contribute. But 82% actually get contributions from ten or fewer designers. Company size doesn't change this: even at companies with 5,000+ employees, only 37% have more than ten contributing designers. Plan for a small, well-supported champions network, not an open door with a README. [Fostering contribution](/fostering-contribution/) covers how to build one.
+In zeroheight's *Design Systems Report 2026*, 69% of teams say anyone on the product team can contribute. But 82% actually get contributions from ten or fewer designers. Company size doesn't change this: even at companies with 5,000+ employees, only 37% have more than ten contributing designers. Plan for a small, well-supported champions network, not an open door with a README. [Fostering contribution](/ds101/fostering-contribution/) covers how to build one.
 
 ## Common mistakes
 

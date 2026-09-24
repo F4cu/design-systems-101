@@ -2,7 +2,7 @@
 title: CI for Agentic Workflows
 ---
 
-[Agentic workflow design](/agentic-workflow-design/) sets an autonomy level per action: how much review it needs before it takes effect. CI (continuous integration, the automated pipeline that tests and ships code changes) is where most of those levels actually get enforced for anything touching code, tokens, or docs. An agent that can write files but can't merge them is only really constrained if something sits between "the agent produced this" and "this is live." That something is almost always a CI job.
+[Agentic workflow design](/ds101/agentic-workflow-design/) sets an autonomy level per action: how much review it needs before it takes effect. CI (continuous integration, the automated pipeline that tests and ships code changes) is where most of those levels actually get enforced for anything touching code, tokens, or docs. An agent that can write files but can't merge them is only really constrained if something sits between "the agent produced this" and "this is live." That something is almost always a CI job.
 
 :::tip[Key takeaways]
 - Keep the agent read-only, and let a separate job do the writing
@@ -52,7 +52,7 @@ Kavcic widens the inputs: a drift-scoring engine fed by "Figma API, CI hooks, an
 
 ### Feed the pipeline structured metadata
 
-A CI job that re-reads a component's full prose docs on every run pays a real, recurring cost. Diana Wolosin's team at Indeed changed their pipeline to trigger on MDX updates and convert the changed content to JSON metadata before an agent sees it. The JSON path used 80% fewer tokens than the prose version and cut annual cost from about $1,500 to $300 across a 77-component system ([via Sil Bormüller](https://www.intodesignsystems.com/blog/design-system-not-ready-for-ai-agents)). An unoptimized trigger makes checks expensive enough that teams quietly run them less often. [Context engineering](/context-engineering/) makes the same case for structure over prose.
+A CI job that re-reads a component's full prose docs on every run pays a real, recurring cost. Diana Wolosin's team at Indeed changed their pipeline to trigger on MDX updates and convert the changed content to JSON metadata before an agent sees it. The JSON path used 80% fewer tokens than the prose version and cut annual cost from about $1,500 to $300 across a 77-component system ([via Sil Bormüller](https://www.intodesignsystems.com/blog/design-system-not-ready-for-ai-agents)). An unoptimized trigger makes checks expensive enough that teams quietly run them less often. [Context engineering](/ds101/context-engineering/) makes the same case for structure over prose.
 
 ### Make metadata completeness a merge gate
 

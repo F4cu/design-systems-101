@@ -42,11 +42,11 @@ The split doesn't have to mean two separate files. In [Murphy Trueman's componen
 
 ### Expect the structuring to help humans too
 
-[Atlassian's](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era) sharpest line on why this isn't AI-only busywork: "To identify the rules that help LLMs, you also uncover the rules that help explain these concepts to humans — and that's a good thing." [Governance for AI](/governance-for-ai/) makes the same claim from Shane P Williams's side: work that makes the system legible to agents is quality work for everyone.
+[Atlassian's](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era) sharpest line on why this isn't AI-only busywork: "To identify the rules that help LLMs, you also uncover the rules that help explain these concepts to humans — and that's a good thing." [Governance for AI](/ds101/governance-for-ai/) makes the same claim from Shane P Williams's side: work that makes the system legible to agents is quality work for everyone.
 
 ### Treat tokens as an API
 
-[Romina Kavcic](https://learn.thedesignsystem.guide/p/design-tokens-that-ai-can-actually) makes the case for **tokens as an API**. Most tokens are structured for humans, so when an AI reads them via MCP, it sees "a wall of nested objects with no context about why these values exist or when to use them." Tokens are the contract between design and code. You can't restructure a component library overnight, but "you can add descriptions to your top 20 tokens in an hour," and that hour pays off in everything built on them. It's the semantic-naming idea from [Token architecture](/token-architecture/), seen through an AI's eyes.
+[Romina Kavcic](https://learn.thedesignsystem.guide/p/design-tokens-that-ai-can-actually) makes the case for **tokens as an API**. Most tokens are structured for humans, so when an AI reads them via MCP, it sees "a wall of nested objects with no context about why these values exist or when to use them." Tokens are the contract between design and code. You can't restructure a component library overnight, but "you can add descriptions to your top 20 tokens in an hour," and that hour pays off in everything built on them. It's the semantic-naming idea from [Token architecture](/ds101/token-architecture/), seen through an AI's eyes.
 
 Kavcic's fullest example shows what a described token can carry (trimmed here):
 
@@ -65,7 +65,7 @@ Kavcic's fullest example shows what a described token can carry (trimmed here):
 }
 ```
 
-Each field answers a question an agent would otherwise guess at: where the token goes (`usage`), where it doesn't (`doNot`), what it's used with (`pairedTokens`), and whether it's safe to use on white. Her example uses the older `value` and `type` keys. In the [DTCG format](/token-architecture/#store-tokens-in-the-shared-dtcg-format), those are `$value` and `$type`, the description goes in `$description`, and extra fields like these go under `$extensions`, the spec's place for tool-specific data.
+Each field answers a question an agent would otherwise guess at: where the token goes (`usage`), where it doesn't (`doNot`), what it's used with (`pairedTokens`), and whether it's safe to use on white. Her example uses the older `value` and `type` keys. In the [DTCG format](/ds101/token-architecture/#store-tokens-in-the-shared-dtcg-format), those are `$value` and `$type`, the description goes in `$description`, and extra fields like these go under `$extensions`, the spec's place for tool-specific data.
 
 ### Name components by their role
 
@@ -73,7 +73,7 @@ Each field answers a question an agent would otherwise guess at: where the token
 
 ### Build the rule into the component
 
-IBM Carbon ships its AI-transparency requirement as a component, not a policy page: "Each AI component is required to have an embedded AI label and explainability popover that alerts users to AI-generated content" ([Carbon for AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)). The documentation isn't a separate artifact describing the requirement. The requirement lives in the component, so it can't drift from what ships. [Agentic UI patterns](/agentic-ui-patterns/) has more on this approach.
+IBM Carbon ships its AI-transparency requirement as a component, not a policy page: "Each AI component is required to have an embedded AI label and explainability popover that alerts users to AI-generated content" ([Carbon for AI](https://carbondesignsystem.com/guidelines/carbon-for-ai/)). The documentation isn't a separate artifact describing the requirement. The requirement lives in the component, so it can't drift from what ships. [Agentic UI patterns](/ds101/agentic-ui-patterns/) has more on this approach.
 
 ## Common mistakes
 

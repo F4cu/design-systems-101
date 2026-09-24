@@ -82,13 +82,13 @@ The value is the question it forces. A system that's all System 1 (shipping comp
 
 ### Three clocks
 
-Use it to set measurement cadence. Awareness and perception (how the org *feels* about the system) is qualitative and slow, so check it every 6–9 months. Usability and discoverability moves faster, so check it quarterly. Adoption and contribution moves fastest, so check it monthly. [Measuring adoption](/measuring-adoption/) covers the metrics themselves. Checking perception monthly produces noise, and checking adoption twice a year is too slow to catch drift.
+Use it to set measurement cadence. Awareness and perception (how the org *feels* about the system) is qualitative and slow, so check it every 6–9 months. Usability and discoverability moves faster, so check it quarterly. Adoption and contribution moves fastest, so check it monthly. [Measuring adoption](/ds101/measuring-adoption/) covers the metrics themselves. Checking perception monthly produces noise, and checking adoption twice a year is too slow to catch drift.
 
 ## Practices
 
 ### Run all three horizons at once
 
-Running only the tactical horizon produces a system that's always fighting fires. Running only the normative one produces a beautiful mission statement with no delivery behind it. [Pilot strategy](/pilot-strategy/) shows the same risk from the other side: a pilot that ships is only "Now."
+Running only the tactical horizon produces a system that's always fighting fires. Running only the normative one produces a beautiful mission statement with no delivery behind it. [Pilot strategy](/ds101/pilot-strategy/) shows the same risk from the other side: a pilot that ships is only "Now."
 
 <div class="mermaid-wrap">
 
@@ -103,7 +103,7 @@ flowchart TD
 
 ### Revisit the mapping every planning cycle
 
-Don't build the quadrant, the horizon plan, or the LeanDS canvas once at launch and treat it as settled. [Business alignment](/business-alignment/) makes the same point about the roadmap: a case that was true at launch goes stale as fast as the organization changes. zeroheight's *Design Systems Report 2026* found staffing (56%) and stakeholder buy-in (31%) still among the top blockers for 147 practitioners, the same areas these tools exist to manage. That suggests most teams aren't revisiting often enough.
+Don't build the quadrant, the horizon plan, or the LeanDS canvas once at launch and treat it as settled. [Business alignment](/ds101/business-alignment/) makes the same point about the roadmap: a case that was true at launch goes stale as fast as the organization changes. zeroheight's *Design Systems Report 2026* found staffing (56%) and stakeholder buy-in (31%) still among the top blockers for 147 practitioners, the same areas these tools exist to manage. That suggests most teams aren't revisiting often enough.
 
 ## Common mistakes
 

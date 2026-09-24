@@ -37,7 +37,7 @@ flowchart TD
 
 ### Value differences: resolved in tokens
 
-San Francisco on iOS and Roboto on Android fill the same type role. That's a value difference, and [token layering](/token-architecture/) resolves it. The semantic token stays one thing, and platform becomes a dimension the build pipeline exports against.
+San Francisco on iOS and Roboto on Android fill the same type role. That's a value difference, and [token layering](/ds101/token-architecture/) resolves it. The semantic token stays one thing, and platform becomes a dimension the build pipeline exports against.
 
 [Curtis traces a token's path](https://medium.com/eightshapes-llc/reimagining-a-token-taxonomy-462d35b2b033) through a production pipeline. A value defined once in Style Dictionary doesn't reach a component directly. It flows through a build step into platform-specific output files, and design teams often don't know this middle layer exists. A `font.body` semantic token resolves to a different platform file, not a different token:
 
@@ -77,7 +77,7 @@ tokens/semantic.json
 
 A confirmation pattern might be a centered Dialog on iOS but a bottom-anchored sheet on Android for heavier content. There's no shared value to alias, so a token can't resolve it. It's handled one level up, in the component's definition.
 
-[Curtis's distinction](https://nathanacurtis.substack.com/p/component-contracts-and-schemas): "a description informs. A contract arbitrates." A description is documentation a team can interpret loosely. A contract states what a component *must* do, precisely enough that React, iOS, Android, Web Components, and Figma can each build against it on their own and still behave the same. For a confirmation pattern, the contract might say "block interaction until the user acknowledges or dismisses, present the heaviest content without truncation." Each platform decides *how*. It's the same reasoning behind the Dialog/BottomSheet example in [Component API design](/component-api-design/).
+[Curtis's distinction](https://nathanacurtis.substack.com/p/component-contracts-and-schemas): "a description informs. A contract arbitrates." A description is documentation a team can interpret loosely. A contract states what a component *must* do, precisely enough that React, iOS, Android, Web Components, and Figma can each build against it on their own and still behave the same. For a confirmation pattern, the contract might say "block interaction until the user acknowledges or dismisses, present the heaviest content without truncation." Each platform decides *how*. It's the same reasoning behind the Dialog/BottomSheet example in [Component API design](/ds101/component-api-design/).
 
 ## Practices
 

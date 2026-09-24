@@ -54,13 +54,13 @@ The notes specify the minimum fields for each component, and the key names below
 
 Asked for "user input with validation," an agent can match the `input` category, the description, and the `error` prop. `composedOf` and `composedIn` tell it what the field is built from and where it belongs. `status` tells it the component is safe to use. It gets all of this without opening a docs page.
 
-[Context engineering](/context-engineering/) covers task-specific versions of this manifest: Murphy Trueman's seven-blueprint **context engine**, and a second one built independently by Diana Wolosin.
+[Context engineering](/ds101/context-engineering/) covers task-specific versions of this manifest: Murphy Trueman's seven-blueprint **context engine**, and a second one built independently by Diana Wolosin.
 
 ### Describe tokens and components by purpose
 
 When an agent reads an undocumented token set, it sees "a wall of nested objects with no context about why these values exist or when to use them," the same ambiguity a new team member hits, with no one to ask. The same goes for component names: `BlueCard` or `CardBase` tells a machine nothing about its role, while `FeatureHighlight` or `OnboardingStep` does.
 
-For tokens, the [DTCG format](/token-architecture/#store-tokens-in-the-shared-dtcg-format) has a place for purpose built in: an optional `$description` next to the value.
+For tokens, the [DTCG format](/ds101/token-architecture/#store-tokens-in-the-shared-dtcg-format) has a place for purpose built in: an optional `$description` next to the value.
 
 ```json title="tokens/semantic.json"
 "color.feedback.error": {
@@ -72,7 +72,7 @@ For tokens, the [DTCG format](/token-architecture/#store-tokens-in-the-shared-dt
 
 The name says what the token is. The description says when to use it and when not to. That's the context a wall of nested objects leaves out.
 
-[Documentation for agents](/documentation-for-agents/) covers treating tokens and components as an API, from Romina Kavcic and Murphy Trueman.
+[Documentation for agents](/ds101/documentation-for-agents/) covers treating tokens and components as an API, from Romina Kavcic and Murphy Trueman.
 
 ### Document anti-patterns and edge cases
 
