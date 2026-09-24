@@ -2,83 +2,85 @@
 title: Component Governance
 ---
 
-<p class="eyebrow">The Principle</p>
+Governance is how a design system decides things on purpose: what gets in, what gets removed, and how those decisions are remembered. A governed system can tell you *why* it looks the way it does. An ungoverned one just accumulates. Governance matures in stages, and most teams aren't at the end state. That's fine, as long as they know which stage they're at.
 
-## Governance is deciding on purpose, not accumulating by default
+:::tip[Key takeaways]
+- Record every decision, including the proposals you declined
+- Sort each request into a lane before debating it
+- Write down who owns each decision, so someone can close it
+- Make accessibility everyone's standard, with a specialist as escalation
+- Know which governance maturity stage you're at
+:::
 
-Governance is how a design system decides things on purpose: what gets in, what gets removed, and how those decisions are remembered. A governed system can tell you *why* it looks the way it does; an ungoverned one just accumulates. And governance itself matures in stages — most teams aren't at the end state, and that's fine, as long as they know which stage they're at.
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
-
-## Undocumented decisions get re-litigated forever
-
-Without recorded decisions, teams re-litigate the same questions forever. One team's knowledge notes put it plainly: "A team that has maintained records for two years knows why their system looks the way it does. A team that has not is perpetually re-litigating the same questions." The fix is lightweight — a decision record needs only context, options considered, the decision, and its consequences — but it has to cover the decisions a new team member would need to understand, including *declined* proposals, so a future team doesn't reverse something without knowing it was already considered.
-
-— design-system-ops, knowledge-notes/component-governance.md
+Without recorded decisions, teams argue the same questions forever. The design-system-ops governance notes (`knowledge-notes/component-governance.md`) put it plainly: "A team that has maintained records for two years knows why their system looks the way it does. A team that has not is perpetually re-litigating the same questions."
 
 > "The biggest existential threat to any system is neglect."
 > — Alex Schleifer, Airbnb, quoted in Brad Frost, *Atomic Design*, Chapter 5
 
-Schleifer's line names the failure mode this page is about directly: governance doesn't die from a bad decision, it dies from decisions nobody bothered to make or record.
+Governance doesn't die from a bad decision. It dies from decisions nobody bothered to make or record.
 
----
+## Practices
 
-## In Practice
+### Record decisions, including declined ones
 
-Governance also matures in *direction*, not just rigor. Murphy Trueman argues that in a bidirectional system, "when a developer implements better error handling, that pattern informs the design system" — knowledge flows upstream from implementation, not only downstream from design. — [Murphy Trueman, "The bidirectional design system: When code talks back to design"](https://blog.murphytrueman.com/the-bidirectional-design-system/)
+The same notes keep the fix lightweight. A decision record needs only the context, the options considered, the decision, and its consequences. But it has to cover the decisions a new team member would need to understand, including *declined* proposals, so a future team doesn't reverse something without knowing it was already considered.
 
-Jina Bolton, describing the same dynamic from her time at Salesforce, puts it as a loop rather than a direction:
+### Sort each request into a lane first
+
+Inayaili de León Persson's **Canonical** Vanilla Framework sorts every incoming change into one of three lanes before anything else happens (Brad Frost, *Atomic Design*, Chapter 5):
+
+- **Modification**: feature additions, bug fixes, visual tweaks, or performance work on something that exists.
+- **Addition**: a new pattern filling a gap, with explicit safeguards against bloat.
+- **Removal**: deprecation shipped with advance notice, not a surprise.
+
+Sorting first keeps a "should we add a new component" conversation from being argued like a five-minute bug-fix review, or the reverse. What happens inside the addition and removal lanes is covered by the [criteria for adding a component](/contribution-models/#criteria-for-adding-a-component) and the [criteria for removing one](/contribution-models/#criteria-for-removing-a-component).
+
+### Write down who owns each decision
+
+When a role is implied rather than stated, every question gets re-decided informally, and differently, each time: who owns a proposal once it's submitted, who can approve a deprecation, who a contributor asks when a request stalls. Ambiguity that's tolerable with five product teams turns into real friction once a system serves dozens.
+
+A RACI matrix fixes this. It lists who is Responsible, Accountable, Consulted, and Informed for each recurring activity. [Design System Tactics](https://www.designsystemtactics.com/tactics/raci) builds one in five steps:
+
+1. Identify the roles (design, development, content, QA, leadership), plus an "influence mapping" pass to catch less obvious stakeholders.
+2. List the system's recurring activities: token updates, component reviews, releases, documentation, contribution workflows, QA, and governance decisions.
+3. Assign R, A, C, and I for each activity.
+4. Review the draft with the people it names.
+5. Publish it, and revisit it as the org grows.
+
+The guide stresses that RACI should follow the governance model you've already chosen (centralized, federated, or cyclical, see [Contribution models](/contribution-models/)), not replace that decision.
+
+[DesignX's enterprise governance guide](https://designx.co/design-system-governance-enterprise/) names the failure it prevents: "everyone gives feedback, but no one decides." A proposal collects opinions from everyone with a stake but never reaches one owner who can close it. Its worked example for a new component proposal, extended here to the other activities Design System Tactics names:
+
+- **New component proposal**: Responsible is the designer and engineer preparing it. Accountable is the design system owner. Consulted are the product champion, accessibility reviewer, and engineering lead. Informed are the affected product teams.
+- **Token update**: Responsible is a system designer. Accountable is the system owner. Consulted are the engineering lead and affected teams. Informed are all product teams.
+- **Component review**: Responsible is a system engineer. Accountable is the system owner. Consulted are the accessibility reviewer and product champion. Informed is the contributor.
+- **Release or deprecation**: Responsible is the system team. Accountable is the system owner. Consulted are product and engineering leads. Informed are adopting teams.
+- **Documentation update**: Responsible are the contributor and system team. Accountable is the system owner. Consulted are a content specialist and accessibility reviewer. Informed are system users.
+
+Only the first and fourth rows restate the sourced examples directly. The rest apply the same pattern to make a finished matrix concrete.
+
+### Make accessibility everyone's standard
+
+A common mistake at enterprise scale is routing every accessibility question to one specialist or a small team, on the theory that centralizing expertise centralizes quality. It does the opposite. Everyone else stops treating accessibility as their job, the specialist becomes a bottleneck on every release, and issues that should have been caught earlier surface at a late review nobody can act on cheaply. The [design-to-code contract](/design-to-code-contract/) puts accessibility in both the design and build contracts for this reason. Keep a specialist as the escalation path, not the only checkpoint.
+
+### Let knowledge flow upstream too
+
+Governance also matures in *direction*. [Murphy Trueman](https://blog.murphytrueman.com/the-bidirectional-design-system/) describes a bidirectional system: "when a developer implements better error handling, that pattern informs the design system." Jina Bolton, from her time at Salesforce, describes the same loop:
 
 > "The Design System informs our Product Design. Our Product Design informs the Design System."
 > — Jina Bolton, Salesforce, quoted in Brad Frost, *Atomic Design*, Chapter 5
 
-Two practitioners at different companies landing on the same shape of answer independently is worth noticing — it suggests this isn't a house style, it's what a governance process looks like once it's actually working in both directions.
+Two practitioners at different companies landing on the same shape suggests it isn't a house style. It's what governance looks like when it works in both directions.
 
-#### 1. Decision tree for proposals
+### Share ownership with the wider organization
 
-Rather than a general principle about recording decisions: Inayaili de León Persson's **Canonical** Vanilla Framework sorts every incoming pattern change into one of three lanes before it goes anywhere:
+[Jina Anne](https://24ways.org/2019/there-is-no-design-system/) argues a design system shouldn't be controlled by a small team dictating rules. It works when the wider organization feels real ownership: people can see how it works, learn from it, adopt it, contribute to it, and help it evolve.
 
-- **Modification** — feature additions, bug fixes, visual tweaks, performance improvements to something that already exists.
-- **Addition** — a genuinely new pattern filling a gap, with explicit safeguards against bloat.
-- **Removal** — deprecation shipped with advance notice, not a surprise.
+### Know which maturity stage you're at
 
-Sorting the request into a lane first, before debating its merits, keeps a "should we add a new component" conversation from accidentally being argued as if it were a five-minute bug-fix review, or vice versa. — Brad Frost, *Atomic Design*, Chapter 5
-
-This page covers the mechanics of recording and maturing decisions. The separate question of *who* gets to propose and decide — and the specific criteria for what enters or leaves the system — is covered in [Contribution models](/contribution-models/), where it can get the depth it deserves rather than being squeezed into a subsection here.
-
-#### 2. Shared, not assigned, accessibility governance
-
-A common structural mistake at enterprise scale is routing every accessibility question to one specialist or a small dedicated team, on the theory that centralizing expertise centralizes quality. In practice it does the opposite: everyone else stops treating accessibility as their job, the specialist team becomes a bottleneck on every release, and issues that should have been caught at design or build time surface instead at a late review nobody can act on cheaply. The [design-to-code contract](/design-to-code-contract/) makes this concrete already — accessibility is a line item in the design contract *and* the build contract, checked at both stages, precisely because leaving it for one team to catch at the end is how it quietly slips. Governance that treats accessibility as everyone's shared standard, with a specialist as an escalation path rather than the only checkpoint, is what keeps it from becoming the thing that's always someone else's job.
-
-#### 3. Clear roles reduce friction at scale
-
-The same failure mode shows up whenever a role is implied rather than stated: if it isn't written down who owns a proposal once it's submitted, who can approve a deprecation, or who a contributor asks when a request stalls, every one of those questions gets re-decided informally, differently, each time it comes up. That's the enterprise-scale version of the point [Contribution models](/contribution-models/) makes about stewardship — the ambiguity that's tolerable with five product teams compounds into real friction once a system serves dozens of them across a large org.
-
-#### 4. RACI matrix for role clarity
-
-**Design System Tactics'** guide walks through a five-step process for building one: identify the roles involved (design, development, content, QA, leadership — expanded with an "influence mapping" pass to catch stakeholder voices that aren't obvious upfront), list the system's recurring activities (token updates, component reviews, releases, documentation, contribution workflows, quality assurance, governance decisions), assign Responsible, Accountable, Consulted, and Informed against each one, review the draft with the stakeholders it names, then publish it and revisit as the org scales. The guide's own emphasis matters as much as the steps: RACI should follow whatever governance model the team has already chosen — centralized, federated, or the cyclical mix described in [Contribution models](/contribution-models/) — not substitute for that decision or get built before it's made. — [Design System Tactics, "RACI"](https://www.designsystemtactics.com/tactics/raci)
-
-**DesignX's** enterprise governance guide offers a worked example of what one activity looks like once it's assigned: for a new component proposal, it sets Responsible as the designer and engineer preparing the contribution, Accountable as the design system owner, Consulted as the product champion, accessibility reviewer, and engineering lead, and Informed as the product teams the change affects. The guide frames the point of doing this explicitly as avoiding a specific, common failure mode — "everyone gives feedback, but no one decides" — where a proposal collects opinions from everyone with a stake in it but never reaches a single owner empowered to close it out. — [DesignX, "Design System Governance: An Enterprise Guide"](https://designx.co/design-system-governance-enterprise/)
-
-That single row generalizes cleanly across the rest of the activities Design System Tactics names. Laid out as a matrix, extending the DesignX row across the recurring activity list, it looks something like this:
-
-| Activity | Responsible | Accountable | Consulted | Informed |
-| --- | --- | --- | --- | --- |
-| New component proposal | Designer + engineer preparing the contribution | Design system owner | Product champion, accessibility reviewer, engineering lead | Affected product teams |
-| Token update | Design system designer | Design system owner | Engineering lead, affected product teams | All product teams |
-| Component review | Design system engineer | Design system owner | Accessibility reviewer, product champion | Contributor |
-| Release / deprecation | Design system team | Design system owner | Product and engineering leads | Adopting teams |
-| Documentation update | Contributor + design system team | Design system owner | Content specialist, accessibility reviewer | System users |
-
-Two rows here — new component proposal and release/deprecation — restate the sourced examples above directly; the rest are the same pattern applied to Design System Tactics' other named activities, to make the shape of a finished matrix concrete rather than leaving it as a description of the process for building one.
-
-#### 5. Shared, not isolated, ownership
-
-Jina Anne argues that a design system shouldn't be controlled by a small team dictating rules to everyone else — it works when the wider organization feels real ownership of it: people can see how it works, learn from it, adopt it, contribute to it, and help it evolve, rather than just receive it from above. That's the same instinct behind the Common mistake below, stated as a positive practice instead of a failure mode: a governance process that reads as one team protecting the system from everyone else produces exactly the avoidance it's trying to prevent. — [Jina Anne, "There Is No Design System"](https://24ways.org/2019/there-is-no-design-system/), 24ways
-
-## Diagram
-
-The knowledge notes describe five stages of governance maturity — a progression, not a scorecard:
+The design-system-ops notes describe five stages of governance maturity. It's a progression, not a scorecard:
 
 <div class="mermaid-wrap">
 
@@ -92,18 +94,8 @@ graph TD
 
 </div>
 
-— design-system-ops, knowledge-notes/component-governance.md
-
-This ladder describes how governance *practices* accumulate within one team over time —
-it's a single linear track. [Design system maturity](/design-system-maturity/) covers a
-newer framework that treats governance as just one of six independent dimensions a
-system can score on, rather than collapsing everything into one stage.
-
----
+This ladder tracks how governance practices build up within one team over time. [Design system maturity](/design-system-maturity/) covers a newer framework that treats governance as one of six independent dimensions, instead of one linear track.
 
 ## Common mistakes
 
-- **Treating governance as gatekeeping.** A contribution process that exists to protect the system *from* contributors — rather than to help contributors build the system well — feels rigorous, but the signal it produces is the opposite: contribution rates drop, and teams quietly build locally instead. The system stays "pure" and becomes irrelevant. If nobody is contributing, the process isn't working; it's just being avoided.
-- **Routing every accessibility question to one specialist.** Centralizing expertise doesn't centralize quality — everyone else stops treating accessibility as their job, the specialist becomes a bottleneck on every release, and issues that should've been caught earlier surface at a late review nobody can act on cheaply.
-- **Leaving roles implied instead of written down.** If it isn't stated who owns a proposal, who can approve a deprecation, or who a stalled contributor asks, every one of those questions gets re-decided informally, differently, each time it comes up.
-- **Letting everyone weigh in without anyone owning the final decision.** A proposal that gathers opinions from every stakeholder but never reaches someone empowered to decide is governance that never actually governs.
+- **Treating governance as gatekeeping.** A contribution process that protects the system *from* contributors, instead of helping them build it well, feels rigorous. But contribution rates drop, and teams quietly build locally instead. The system stays "pure" and becomes irrelevant. If nobody is contributing, the process isn't working. It's being avoided.

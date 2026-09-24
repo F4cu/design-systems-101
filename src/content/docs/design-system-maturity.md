@@ -2,53 +2,62 @@
 title: Design System Maturity
 ---
 
-<p class="eyebrow">The Idea</p>
+Maturity isn't one score. The Nielsen Norman Group's newer framework rates a system on six separate dimensions, and a system can be a 5 on infrastructure and a 2 on governance at the same time. Collapsing that into one number hides exactly the gap a team most needs to see. Source: [Huei-Hsin Wang, "Design-System Maturity: A 6-Dimension Framework,"](https://www.nngroup.com/articles/design-system-maturity/) NN/g, 2026.
 
-## Maturity isn't one score — it's six dimensions that can each be strong or weak on their own
+:::tip[Key takeaways]
+- Score six dimensions separately, never as one blended number
+- Run the assessment as a cross-functional conversation, not a form
+- Prefer a small balanced shape over a big uneven one
+- Judge team effectiveness by its fit to your org's size
+:::
 
-Most maturity talk defaults to a single number or stage, as if a system is simply "further along" or "behind." The Nielsen Norman Group's newer framework scores a system on six separate dimensions instead: organizational alignment, team effectiveness, infrastructure robustness, governance, support, and adoption. A system can be a 5 on infrastructure and a 2 on governance at the same time — collapsing that into one score hides exactly the gap a team most needs to see. — [Huei-Hsin Wang, "Design-System Maturity: A 6-Dimension Framework,"](https://www.nngroup.com/articles/design-system-maturity/) Nielsen Norman Group, 2026
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+A blended score can average a strong dimension against a weak one and land in the comfortable middle. The team never sees which dimension needs attention, and the weak one keeps getting worse, with ungoverned contributions piling up or a well-built system losing its budget, while the total keeps saying "fine."
 
-## A single score tells a team it's "doing fine" while one dimension quietly rots
+## The model
 
-A blended score can average a strong dimension against a weak one and land in the comfortable middle, which is exactly wrong: the team never sees which specific dimension needs attention, and the weak one keeps compounding — ungoverned contributions pile up, or a well-built system nobody funds starts losing its budget — while the aggregate number keeps saying "fine." Treating six independent axes as six separate questions is what surfaces the one that's actually failing.
+NN/g's six dimensions aren't a new topic so much as names for territory this wiki already covers page by page. Each linked page goes deeper than a maturity framework can. The framework's value is naming all six side by side, so none gets forgotten.
 
----
+### Organizational alignment
 
-## In Practice
+Funding, sponsorship, and whether the roadmap stays legible to the business. See [Business alignment](/business-alignment/) and [Stakeholder alignment](/stakeholder-alignment/).
 
-#### 1. The six dimensions, and where this wiki already covers each one
+### Team effectiveness
 
-NN/g's dimensions aren't a new topic so much as a naming scheme for territory this wiki already treats separately:
+Capacity, makeup, and whether the team model fits the org's size. See [Contribution models](/contribution-models/) and [Fostering contribution](/fostering-contribution/).
 
-- **Organizational alignment** — funding, sponsorship, and whether the system's roadmap stays legible to the business. See [Business alignment](/business-alignment/) and [Stakeholder alignment](/stakeholder-alignment/).
-- **Team effectiveness** — capacity, composition, and whether the team model fits the org's size. See [Contribution models](/contribution-models/) and [Fostering contribution](/fostering-contribution/).
-- **Infrastructure robustness** — tokens, components, tooling, and the design-to-code contract underneath them. See [Token architecture](/token-architecture/) and [The design-to-code contract](/design-to-code-contract/).
-- **Governance** — how decisions get made, recorded, and revisited. See [Component governance](/component-governance/).
-- **Support** — documentation, onboarding, and how much a team actively equips people to use the system. See [Documentation coverage](/documentation-coverage/) and [Operating cadence](/operating-cadence/).
-- **Adoption** — whether teams actually use, trust, and rely on the system, measured rather than assumed. See [Measuring adoption](/adoption-measurement/) and [Dependency observability](/dependency-observability/).
+### Infrastructure robustness
 
-Each of those pages goes deeper on its dimension than a maturity framework can afford to; the framework's value is naming all six side by side so none of them gets forgotten. — [Wang, "Design-System Maturity: A 6-Dimension Framework"](https://www.nngroup.com/articles/design-system-maturity/)
+Tokens, components, tooling, and the handoff underneath them. See [Token architecture](/token-architecture/) and [The design-to-code contract](/design-to-code-contract/).
 
-#### 2. The assessment is the alignment, not the score
+### Governance
 
-Wang's recommended process: 4–8 evaluators — design-system team members across design, engineering, product, and content, plus product-team representatives and sponsors — score all six dimensions independently on a 1–5 scale, then meet to "triangulate and align," focusing the conversation on wherever their scores diverge rather than where they agree. The result plots as a hexagonal radar chart, reassessed quarterly or after major organizational change. Wang is explicit that the exercise's biggest value isn't the resulting shape — it's the discussion that happens because people had to justify their number to each other. — [Wang, "Design-System Maturity: A 6-Dimension Framework"](https://www.nngroup.com/articles/design-system-maturity/)
+How decisions get made, recorded, and revisited. See [Component governance](/component-governance/). Its five-stage ladder (ad hoc → managed → systematic → measured → optimised) tracks how governance practices build up within one team. It's one linear track, not six independent ones. A system can be advanced on that ladder and still score low on alignment or adoption here, because those depend on things governance alone doesn't control, like executive sponsorship and other teams' behavior.
 
-#### 3. A smaller shape isn't automatically a worse one
+### Support
 
-"A 10-person startup and a 10,000-person enterprise can both have a mature design system, but the conditions that define maturity can differ significantly." A small, balanced radar — modest scores across all six dimensions, none neglected — is a healthier reading than a large, uneven one where infrastructure is a 5 because someone built beautiful components solo, while governance and adoption sit at 1 because nobody else knows the system exists. — [Wang, "Design-System Maturity: A 6-Dimension Framework"](https://www.nngroup.com/articles/design-system-maturity/)
+Documentation, onboarding, and how actively the team equips people to use the system. See [Documentation coverage](/documentation-coverage/) and [Operating cadence](/operating-cadence/).
 
-This is the same caution [Component governance](/component-governance/) makes about its own five-stage ladder (ad hoc → managed → systematic → measured → optimised): that ladder is a useful description of how governance *practices* accumulate over time within one team, but it's a single linear track, not six independent ones. Read both frameworks side by side and the tension is informative rather than contradictory — a system can be genuinely advanced on the governance ladder while still scoring low on NN/g's organizational-alignment or adoption axes, because those depend on things (executive sponsorship, other teams' behavior) that a governance process alone doesn't control.
+### Adoption
 
-#### 4. The team-effectiveness dimension still has to match org size
+Whether teams actually use, trust, and rely on the system, measured rather than assumed. See [Measuring adoption](/adoption-measurement/) and [Dependency observability](/dependency-observability/).
 
-This wiki's deepest treatment of "team effectiveness" is Nathan Curtis's team-model taxonomy: a small org over-indexing on federated governance is paying for coordination overhead it doesn't need, and an enterprise still running solo-maintainer governance is understaffed for its scale. Curtis's own revision of his framing is the sharper point — federation is never a starting model, it's layered onto a funded centralized core once the org is large enough to need it. A "team effectiveness" score should be read against that fit, not against a universal ideal of what a fully staffed team looks like. See [Contribution models](/contribution-models/) for the full argument and the survey data behind it.
+## Practices
 
----
+### Run the assessment as a conversation
+
+Wang's process: 4–8 evaluators score all six dimensions independently on a 1–5 scale. They include design-system team members across design, engineering, product, and content, plus product-team representatives and sponsors. Then they meet to "triangulate and align," focusing on where their scores diverge rather than where they agree. The result is plotted as a hexagonal radar chart and reassessed quarterly, or after a major org change. Wang is explicit that the biggest value isn't the shape. It's the discussion that happens because people had to justify their number to each other.
+
+### Prefer a balanced shape over a big uneven one
+
+"A 10-person startup and a 10,000-person enterprise can both have a mature design system, but the conditions that define maturity can differ significantly." A small, balanced radar, with modest scores and nothing neglected, is healthier than a large, uneven one. Picture infrastructure at 5 because someone built beautiful components alone, while governance and adoption sit at 1 because nobody else knows the system exists.
+
+### Judge team effectiveness by fit to org size
+
+This wiki's deepest take on team effectiveness is Nathan Curtis's team-model taxonomy. A small org that over-invests in federated governance pays for coordination it doesn't need. An enterprise still running on one maintainer is understaffed for its scale. Curtis's revised view is sharper: federation is never a starting model. It's layered onto a funded central core once the org needs it. Read a team-effectiveness score against that fit, not a universal ideal. [Contribution models](/contribution-models/) has the full argument and survey data.
 
 ## Common mistakes
 
-- **Reading a low score on one dimension as a system-wide failure.** A startup scoring low on governance because it doesn't have a formal RFC process isn't failing — it may simply not need one yet at three product teams. Read every score against org size and stage, not a universal target.
-- **Treating the number as the deliverable.** The radar chart is a prompt for a conversation among evaluators with different vantage points, not a scoreboard to report upward. A team that fills out the six scores alone, without the cross-functional discussion, gets a number with none of the alignment that made the exercise worth running.
-- **Applying one governance or team model regardless of scale.** Mandating a federated contribution model at three teams, or staying solo-maintainer at thirty, both misread the team-effectiveness dimension the same way: treating a model choice as fixed instead of something that should grow with the org, per [Contribution models](/contribution-models/).
+- **Reading a low score on one dimension as a system-wide failure.** A startup scoring low on governance because it has no formal RFC process isn't failing. At three product teams, it may not need one yet. Read every score against org size and stage, not a universal target.
+- **Filling out the six scores alone.** A team that scores itself without the cross-functional discussion gets a number with none of the alignment that made the exercise worth running.

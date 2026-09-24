@@ -2,69 +2,56 @@
 title: Fostering Contribution
 ---
 
-<p class="eyebrow">The Idea</p>
+An open contribution door doesn't produce contributors on its own. [Contribution models](/contribution-models/) answer who decides what enters the system. This page answers what makes people actually show up. Amy Hupe's five lessons on enabling contribution and Inayaili de León's talk on fostering participation start from the same observation: contribution is a behavior you build on purpose, not a feature you ship once.
 
-## An open contribution door doesn't produce contributors — building that culture takes several deliberate practices, from how you recruit to how you frame the payoff
+:::tip[Key takeaways]
+- Actively recruit the quiet ones instead of waiting for volunteers
+- Keep standards high, and give contributors hands-on help to meet them
+- Model the behavior you want in the open, and triage every contribution
+- Make contribution part of people's goals, not just goodwill
+- Pitch contribution as better context, not more speed
+:::
 
-[Contribution models](/contribution-models/) answer a structural question: who gets to decide what enters the system. This page answers a different one — once the model exists, what makes people actually show up and use it. Publishing a "how to contribute" doc and leaving the door open produces almost nothing on its own. Amy Hupe's five lessons on enabling contribution, and Inayaili de León's talk on fostering participation, both start from the same observation: contribution is a behavior you cultivate deliberately, not a feature you ship once.
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+An open process that waits for pull requests selects for people who already have the confidence, spare time, and standing to show up unprompted. That's a narrow slice of the people who use the system every day. [Contribution models](/contribution-models/) shows how narrow: zeroheight's 2026 data found 82% of teams get contributions from ten or fewer designers, whatever the company's size. Leaving the door open isn't neutral. As [Amy Hupe](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/) argues, it quietly filters out exactly the people whose context the system most needs.
 
-## A passive door only reaches people who were already going to walk through it
+## Practices
 
-An open contribution process that just waits for pull requests selects for people who already have the confidence, spare time, and organizational standing to show up unprompted. That's a narrow slice of the people who actually use the system day to day, and [contribution models](/contribution-models/) already shows how narrow: zeroheight's 2026 data found 82% of teams get contributions from ten or fewer designers, regardless of company size. Leaving the door open isn't neutral — it quietly filters out exactly the people whose context the system most needs. — [Amy Hupe, "5 Lessons on Enabling Design System Contribution"](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)
+### Recruit the quiet ones
 
----
+A passive model only reaches people already equipped to push through friction. [Inayaili de León's talk](https://www.youtube.com/watch?v=6xZHHHgTt9A) (Design Systems London, 2018) names the fix: "listen to the quiet ones." Build spaces where people feel safe raising an issue, asking a question that's been asked before, or admitting they don't understand something, without being made to feel slow. A system used by a whole organization needs contributors who look like that organization, not just its most confident designers.
 
-## In Practice
+### Let teams diverge before converging
 
-#### 1. Divergence before convergence
+Hupe, citing Cathy Dutton, warns that "patterns should never sacrifice user context for efficiency and consistency." Converge too early and a shared pattern smooths over real differences in how teams need to solve a problem. Let teams solve it independently first. That's what reveals which parts of the problem were actually shared. Pushing everyone onto one answer too fast produces uniformity, not fit.
 
-Hupe, citing Cathy Dutton, warns that "patterns should never sacrifice user context for efficiency and consistency." Left to converge too early, a shared pattern smooths over the real differences between how teams actually need to solve a problem. Letting teams solve a problem independently first — divergence before convergence — is what surfaces which parts of the problem were actually shared and which weren't. Pushing everyone onto one answer too fast produces uniformity, not fit. — [Amy Hupe, "5 Lessons on Enabling Design System Contribution"](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)
+### Keep standards high, and help people meet them
 
-#### 2. Clear standards over a lowered bar
+Relaxing quality standards so more people can clear them backfires. A pattern published before it's ready erodes trust in the system faster than a slow review does. [Hupe](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)'s fix is clearer standards plus hands-on support. A contributor who knows exactly what "done" looks like, with someone helping them get there, clears a high bar faster than one facing a vague bar alone.
 
-The instinct to relax quality standards so more people can clear them backfires: a pattern published before it's ready erodes trust in the system faster than a slow review does. The fix isn't a lower bar, it's clearer standards plus hands-on support — a contributor who knows exactly what "done" looks like and has someone helping them get there clears a high bar faster than one facing a vague one alone. — [Amy Hupe, "5 Lessons on Enabling Design System Contribution"](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)
+### Model the behavior you want, in the open
 
-#### 3. Actively recruiting non-volunteers
+De León pairs three habits that reinforce each other:
 
-A passive model only reaches people already equipped to push through friction and ask for a seat. Inayaili de León's talk names the fix directly: "listen to the quiet ones" — build spaces where people feel safe raising an issue, asking a question that's already been asked before, or admitting they don't understand something, without being made to feel slow for it. A design system used by a whole organization needs a contributor base that looks like that organization, not just its most confident designers. — [Inayaili de León, "Design Systems: How to Foster Participation,"](https://www.youtube.com/watch?v=6xZHHHgTt9A) Design Systems London, 2018; via [Amy Hupe](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)
+- **Do it visibly yourself.** The core team should write docs the way it wants docs written and report bugs the way it wants bugs reported, so newcomers have a real example to copy.
+- **Mean it when you say help is welcome.** A proposed component or fix needs somewhere real to land, reviewed in good faith. If every outside PR sits unreviewed for months, people learn not to bother.
+- **Share work in progress.** Publishing only finished work means teams build in isolation until something lands, which is exactly when duplicated effort and conflicting assumptions surface, too late to fix cheaply. Early drafts and open questions let other teams say "we hit this already" while the direction is still easy to change.
 
-#### 4. Leading by example, visibly open to help
+### Meet teams where they work
 
-De León's talk pairs two habits that reinforce each other. The core team should do, visibly, the exact things it wants contributors to do — write the doc the way it wants docs written, report a bug the way it wants bugs reported — so newcomers have a real example to copy instead of an abstract standard to guess at. And the team has to actually mean it when it says outside help is welcome: a request for a new component or a proposed fix needs somewhere real to land, reviewed in good faith, not routed into a queue that never gets triaged. Saying contribution is open while every external PR sits unreviewed for months teaches people not to bother the next time. — Inayaili de León, "Design Systems: How to Foster Participation," Design Systems London, 2018
+[Ness Grixti](https://nessgrixti.com/articles/rethinking-contribution-lessons-from-the-messy-middle-of-design-systems/) found the highest-trust relationships came from sprint embedding and pairing directly with product teams. Sitting inside their work reveals context a submitted request never would, and turns a requester into someone who feels ownership. Accepting informal starting points helps too: a screenshot or a Loom video as a first draft lowers the bar to start without lowering the bar for what ships.
 
-#### 5. Sharing work in progress
+Language matters as much as presence. Grixti's own example: naming systems after sci-fi references (Sputnik, Orion Nebula, Neptune) felt playful inside the team but came across as elitist to people outside it. Dense diagrams and jargon-heavy docs do the same. A system's language is either an invitation or a filter, whether or not that's the intent.
 
-Publishing only the polished, shipped result means every team builds in isolation until the moment something lands — which is exactly when duplicated effort and conflicting assumptions surface, too late to cheaply fix. Sharing early drafts, open questions, and half-finished explorations gives other teams the chance to say "we hit this already" or "we need this to also handle X" while the direction is still easy to change. — Inayaili de León, "Design Systems: How to Foster Participation," Design Systems London, 2018
+### Make contribution part of people's goals
 
-#### 6. Language and naming as a barrier
+Nobody gets a bonus for filing a design-system PR, and it isn't in most contributors' job descriptions. [Hupe](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/) says the core team should expect to do most of the initial legwork: hunt for patterns that need standardizing instead of waiting for submissions, and keep offering hands-on support. [Grixti](https://nessgrixti.com/articles/rethinking-contribution-lessons-from-the-messy-middle-of-design-systems/) names the mechanism. If a product team is judged purely on shipped product work, system contribution isn't just unrewarded, it's dropped the moment a deadline gets tight. The fix has to be structural: contribution named explicitly in goals and roadmaps, not just encouragement from the system team.
 
-Ness Grixti's own retrospective example: naming systems after sci-fi references — Sputnik, Orion Nebula, Neptune — read as playful internally but landed as inadvertently elitist to people outside the team, adding distance instead of warmth. The same instinct shows up in dense diagrams and jargon-heavy documentation that contradicts a team's stated collaboration values. A system's language is either an invitation or a filter, whether or not that's the intent. — [Ness Grixti, "Rethinking Contribution: Lessons from the Messy Middle of Design Systems"](https://nessgrixti.com/articles/rethinking-contribution-lessons-from-the-messy-middle-of-design-systems/)
+### Pitch contribution as context, not speed
 
-#### 7. Embedding with product teams
-
-Beyond office hours and co-creation sessions, Grixti found the highest-trust relationships came from sprint embedding and pairing directly with product teams — sitting inside their actual work reveals context a submitted request never would, and it's what turns a team from a requester into someone who feels real ownership of the system. Accepting informal starting points helps too: a screenshot or a Loom video as a first draft lowers the bar to start without lowering the bar for what ships. — [Ness Grixti, "Rethinking Contribution: Lessons from the Messy Middle of Design Systems"](https://nessgrixti.com/articles/rethinking-contribution-lessons-from-the-messy-middle-of-design-systems/)
-
-#### 8. No real incentive behind contribution
-
-Nobody gets a bonus for filing a design-system PR, and it isn't in most contributors' job description. That means the core team should expect to do most of the initial legwork — hunting for patterns that need standardizing rather than waiting for someone to submit one, and sustaining hands-on support rather than assuming contributors will self-serve. Planning around volunteer bandwidth that isn't there is what turns a contribution model into a paper process nobody uses. — [Amy Hupe, "5 Lessons on Enabling Design System Contribution"](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)
-
-Grixti's version of the same point names the mechanism, not just the absence: if a product team is evaluated purely on shipped product work, systems contribution isn't just unrewarded, it's actively deprioritized the moment a deadline gets tight, no matter how much goodwill exists. The fix has to be structural — contribution named explicitly in goals and roadmaps — not just cultural encouragement from the systems team. — [Ness Grixti, "Rethinking Contribution: Lessons from the Messy Middle of Design Systems"](https://nessgrixti.com/articles/rethinking-contribution-lessons-from-the-messy-middle-of-design-systems/)
-
-#### 9. Payoff is representation, not speed
-
-It's tempting to pitch contribution as a way to grow the system faster — more hands, more components shipped. Hupe is blunt that this usually isn't true: reviewing and integrating someone else's work is often slower than the core team just building it themselves. The real payoff is that a contributor brings context the core team doesn't have, so the result actually works for teams and users the core team never sees day to day. That's also the point [Contribution models](/contribution-models/) makes about throughput: don't sell contribution to leadership as a capacity play, because the data doesn't back it up, and the pitch collapses the first time someone checks the numbers. — [Amy Hupe, "5 Lessons on Enabling Design System Contribution"](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/)
-
----
+It's tempting to pitch contribution as a way to grow the system faster. [Hupe](https://amyhupe.co.uk/articles/5-lessons-on-enabling-design-system-contribution/) is blunt that this usually isn't true: reviewing and integrating someone else's work is often slower than the core team building it. The real payoff is that a contributor brings context the core team doesn't have, so the result works for teams and users the core team never sees. [Contribution models](/contribution-models/) makes the same point with data. Don't sell contribution to leadership as extra capacity, because the pitch collapses the first time someone checks the numbers.
 
 ## Common mistakes
 
-Treating "we accept external contributions" as a policy statement instead of an ongoing practice. A CONTRIBUTING.md file and an open GitHub repo satisfy the letter of an open contribution model without doing any of the work this page describes:
-
-- **No one is modeling the behavior.** The core team isn't visibly writing docs or reporting bugs the way it wants contributors to, so newcomers have no real example to copy.
-- **Nobody's seeking out the quiet ones.** The process waits for people to show up rather than actively recruiting the contributors who'd never push through friction unprompted.
-- **Nothing in progress gets shared until it's finished.** Work stays invisible until it ships, so other teams only discover overlap or conflicting assumptions once it's too late to cheaply fix.
-- **The door being technically open isn't the same as someone believing it's worth walking through.** A repo that accepts PRs in principle but never triages them teaches people not to bother next time.
-
-See [Operating cadence](/operating-cadence/) for the channels and stewardship structure that carry this culture day to day once it exists.
+- **Treating "we accept contributions" as a policy instead of a practice.** A CONTRIBUTING.md file and an open GitHub repo meet the letter of an open model without doing any of the work on this page. A repo that accepts PRs in principle but never triages them teaches people not to bother next time. [Operating cadence](/operating-cadence/) covers the channels and stewardship that carry this culture day to day.

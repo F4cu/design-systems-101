@@ -2,75 +2,71 @@
 title: Operating Cadence
 ---
 
-<p class="eyebrow">The Idea</p>
+[Governance](/component-governance/) decides what's in the system and why. Operating cadence makes sure people outside the core team actually *know* that. It takes several channels working together: a release rhythm, a standing place to ask questions, a named guide for bigger work, advocates, and a route for feedback to get back in. A system can be perfectly governed and still fail if nobody hears about a change, knows who to ask, or has anywhere to complain.
 
-## Keeping a governed system legible to everyone outside the core team takes several deliberate channels working together, not one announcement
+:::tip[Key takeaways]
+- Organize channels by audience, not by topic
+- Release on a regular rhythm, and run big changes like a campaign
+- Hold recurring office hours with a stated purpose
+- Assign a steward to every larger contribution
+- Start with the smallest cadence your team can actually sustain
+:::
 
-[Governance](/component-governance/) decides what's in the system and why. Operating cadence is the separate, ongoing practice of making sure people actually *know* that — through channels, a release rhythm, a standing door to ask questions, a named person to guide bigger work, a program to build advocates, and a route for feedback to get back in. A system can be perfectly governed and still fail in practice if nobody outside the core team ever hears about a change, knows who to ask, or has anywhere to send a complaint.
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+[Nathan Curtis](https://medium.com/eightshapes-llc/design-system-communications-ca679ffc36d3) observes that "not every system team runs a predictable cadence... but every system has some kind of cadence to plan, work, critique, demo, and release things." The question isn't whether a rhythm exists. It's whether it's designed or accidental.
 
-## An undesigned rhythm defaults to whoever's in the room
+Left undesigned, communication defaults to whoever happens to be in the room. That's why [adoption measurement](/adoption-measurement/) keeps surfacing "weak communication" as a top blocker, even for systems people already trust. Trusting a system isn't the same as knowing what changed, who to ask, or where to send feedback.
 
-Nathan Curtis observes that "not every system team runs a predictable cadence... but every system has some kind of cadence to plan, work, critique, demo, and release things" — the question isn't whether a rhythm exists, it's whether it's designed or accidental. — [Nathan Curtis, "Design System Communications"](https://medium.com/eightshapes-llc/design-system-communications-ca679ffc36d3)
+## Practices
 
-Left undesigned, communication defaults to whoever happens to be in the room, which is also why [adoption measurement](/adoption-measurement/) keeps surfacing "weak communication" as a top blocker even on systems people already trust — trust isn't the same as knowing what changed, who to ask, or where to send feedback.
+### Organize channels by audience
 
----
+[Curtis](https://medium.com/eightshapes-llc/design-system-communications-ca679ffc36d3) recommends organizing around who needs to hear what, not around subject matter:
 
-## In Practice
+- `#system-design` for help, shared ideas, cross-product visibility, and critique notes.
+- `#system-development` for API and PR review calls and working-session summaries.
+- `#system-general` for major announcements, sprint reviews, and calls for planning input.
 
-#### 1. Channels organized by audience
+He also suggests a "message matrix" that plots problem, channel, audience, and frequency together, as a planning tool to keep the cadence intentional.
 
-Curtis recommends organizing around who needs to hear what, not around subject matter:
+### Release on a regular rhythm
 
-- `#system-design` for help, shared ideas, cross-product visibility, and critique-meeting notes.
-- `#system-development` for API/PR review calls and working-session summaries.
-- `#system-general` as the catch-all for major announcements, sprint reviews, and calls for planning participation.
+[EightShapes' account of release cadence](https://medium.com/eightshapes-llc/design-system-release-cadence-2e3e6694ba21) across **Morningstar**, **Discovery Ed's Comet**, **Adobe Spectrum**, and **Shopify** describes teams shipping regular minor releases about every sprint (commonly two weeks). They still allow irregular hotfix releases for browser defects, documentation typos, or broken elements, which ship outside the normal cycle.
 
-He also recommends a "message matrix" — plotting problem, channel, audience, and frequency together — as a planning tool for keeping cadence intentional rather than ad hoc. — [Nathan Curtis, "Design System Communications"](https://medium.com/eightshapes-llc/design-system-communications-ca679ffc36d3)
+For anything bigger than a routine release, like a redesign, a tool migration (Sketch to Figma), or a framework upgrade, [Curtis](https://medium.com/eightshapes-llc/design-system-communications-ca679ffc36d3) says to run the rollout "like a marketing campaign." Plan a sequence of messages before, during, and after the change, instead of one announcement and then silence. [Release management](/release-management/) covers the versioning and changelog side.
 
-#### 2. Regular release cadence, with hotfix exceptions
+### Hold recurring office hours
 
-**EightShapes'** account of release cadence across several production systems — **Morningstar**, **Discovery Ed's Comet**, **Adobe Spectrum**, and **Shopify** — describes teams aiming for regular minor releases roughly every sprint (commonly two weeks). They still allow irregular "hot fix" releases for browser defects, documentation typos, or malformed elements, which ship informally, outside the normal cycle, rather than waiting for the next planned release. — [Nathan Curtis, "Design System Release Cadence"](https://medium.com/eightshapes-llc/design-system-release-cadence-2e3e6694ba21)
+Three teams run the same idea at different rhythms:
 
-For anything bigger than a routine release — a redesign, a tool migration (Sketch to Figma), a framework upgrade — Curtis argues the team should shift mindset entirely, treating the rollout "like a marketing campaign," with a planned sequence of messages spanning before, during, and after the change, instead of one announcement and silence. — [Nathan Curtis, "Design System Communications"](https://medium.com/eightshapes-llc/design-system-communications-ca679ffc36d3)
+- **Twilio's** Paste runs [weekly office hours every Thursday](https://github.com/twilio-labs/paste/discussions/categories/office-hours) for planning UI needs, getting feedback, or debugging. A public `#help-design-system` Slack channel and an "Office Hours" category on GitHub Discussions cover other timezones.
+- **GOV.UK's** Design System runs a [monthly community chat](https://team-playbook.design-system.service.gov.uk/community/a-guide-to-the-design-system-monthly-chat), mixing show-and-tell with open discussion, on Zoom for up to 500 people. It's on a different weekday each month, so the same working pattern isn't always excluded.
+- **Mozilla's** Acorn runs [weekly office hours every Monday](https://acorn.firefox.com/latest/support/help-and-support/office-hours-UePgrNIe), alternating between 11:00 AM and 2:00 PM EST so US and EU timezones both get a turn. People sign up through a form so the team can prepare, but drop-ins are welcome. The team states the purpose outright: "provide an alternative communication avenue for teams to ask questions" and "foster collaboration between teams."
 
-#### 3. Scheduled, recurring office hours
+Brad Frost's *Atomic Design* (Chapter 5) pairs office hours with a second ritual: periodic "state of the union" meetings that bring makers, users, and stakeholders into one room to review what's working and discuss the roadmap.
 
-**Twilio's** Paste design system runs weekly office hours every Thursday, where teams can plan UI needs, get feedback on an implementation, or debug an issue — backed by a public `#help-design-system` Slack channel and an "Office Hours" category on GitHub Discussions for anyone in a different timezone. — [Twilio Paste, GitHub Discussions: Office Hours](https://github.com/twilio-labs/paste/discussions/categories/office-hours)
+### Assign a steward to larger contributions
 
-**GOV.UK's** Design System team runs the same idea at a slower cadence: a monthly community chat mixing show-and-tell with lean-coffee-style open discussion, hosted on Zoom with room for up to 500 attendees, deliberately scheduled on a different weekday each month so the same working pattern doesn't get excluded every time. — [GOV.UK Design System, "A guide to the design system monthly chat"](https://team-playbook.design-system.service.gov.uk/community/a-guide-to-the-design-system-monthly-chat)
+[Curtis](https://medium.com/eightshapes-llc/stewarding-design-system-contributions-817665b6c7dd) settles on "steward" for this role ("shepherd" was the other contender): someone "selfless, knowledgeable, attentive, and warm" who guides a contributor through work they don't yet know how to finish. A bug fix can be autonomous and fast. But "most prospective contributors don't know, or want to know, every step involved" in delivering something larger. Without a steward, that work stalls or never starts. See [Contribution models](/contribution-models/) for the size-based workflow this belongs to.
 
-**Mozilla's** Acorn Design System runs a third variant worth naming because it names its own purpose explicitly: weekly office hours every Monday, alternating between an 11:00 AM EST and 2:00 PM EST slot so both US and EU-friendly timezones get a regular turn. Attendees sign up ahead of time through an intake form so the team can prepare, but drop-ins are welcome and a team member stays in the room for last-minute visitors. The team states the goal directly — "provide an alternative communication avenue for teams to ask questions" and "foster collaboration between teams." That's a useful reminder that office hours are a communication channel with a stated purpose, not just a courtesy slot on a calendar. — [Acorn Design System, "Office hours"](https://acorn.firefox.com/latest/support/help-and-support/office-hours-UePgrNIe)
+### Build advocates deliberately
 
-Brad Frost's *Atomic Design* frames both cadences as part of the same idea: schedule regular office hours so makers are reliably available to field questions, and separately schedule periodic "state of the union" meetings that bring makers, users, and stakeholders into the same room to review what's working and discuss the roadmap together, rather than leaving each group to hear about the other secondhand. — Brad Frost, *Atomic Design*, Chapter 5
-
-#### 4. Named steward for larger contributions
-
-Curtis's language for this role — he settles on "steward," though "shepherd" was the other strong contender — describes someone "selfless, knowledgeable, attentive, and warm," whose job is to guide a contributor through work they don't yet know how to finish. The need is specific to scale: a bug fix or small enhancement can be autonomous and fast. But "most prospective contributors don't know, or want to know, every step involved" in delivering something larger, and without a steward attached, that work stalls or never starts. See [Contribution models](/contribution-models/) for how this connects to the size-tiered workflow it's part of. — [Nathan Curtis, "Stewarding Design System Contributions"](https://medium.com/eightshapes-llc/stewarding-design-system-contributions-817665b6c7dd)
-
-#### 5. Ongoing advocacy program
-
-Figma's Design Executive Council research lists concrete tactics teams use to build internal advocates:
+[Figma's Design Executive Council research](https://www.figma.com/blog/the-future-of-design-systems-is-marketing/) lists tactics teams use to build internal advocates:
 
 - hands-on workshops and FigJam working sessions
 - concise documentation over exhaustive documentation
-- short videos showing real use cases rather than abstract feature lists
-- presentations timed to land inside existing team meetings and quarterly planning rather than competing with them
-- for teams that want it to stick, a formal internal advocate program with recognition that shows up in performance reviews, not just a shout-out in Slack
+- short videos of real use cases, not feature lists
+- presentations timed to land inside existing team meetings and quarterly planning
+- a formal advocate program, with recognition that shows up in performance reviews, not just a Slack shout-out
 
-Two named examples from the same research. **Spotify's** team explicitly prioritized collaboration and feedback loops when reworking their design system implementation. **News UK** leaned on onboarding resources and empowered advocates to ship a multi-brand system. (Grammarly's ten-person advocate network, covered in more depth in [Governance case studies](/governance-case-studies/), is the same idea running at smaller, more sustainable scale.) — [Figma / Design Executive Council, "The Future of Design Systems is Marketing"](https://www.figma.com/blog/the-future-of-design-systems-is-marketing/)
+In the same research, **Spotify's** team prioritized collaboration and feedback loops when reworking their system, and **News UK** relied on onboarding resources and empowered advocates to ship a multi-brand system. [Governance case studies](/governance-case-studies/) covers Grammarly's ten-person advocate network.
 
-Two more named programs show what triggers the move to a formal ambassador structure, and what it buys once running. **Salesforce** built its Lightning Design System Ambassador program specifically because central support had become "centralized with a design systems team, and not scaling well" against company growth. Implementation was inconsistent, contribution paths were unclear, and response times from the core team were slow; ambassadors embedded in product teams closed that gap. — [Catriona Shedd, "Design Systems Ambassador at Salesforce"](http://www.catrionashedd.com/portfolio/design-systems-ambassador-at-salesforce/)
+Two larger programs show what triggers a formal ambassador structure. **Salesforce** built its Lightning Design System Ambassador program because support had become "centralized with a design systems team, and not scaling well." Implementation was inconsistent, contribution paths were unclear, and core-team responses were slow. Ambassadors embedded in product teams closed the gap ([Catriona Shedd](http://www.catrionashedd.com/portfolio/design-systems-ambassador-at-salesforce/)). **Thomson Reuters** runs the model across 150+ brands, organized into more than a dozen product "pods," each with an ambassador (usually lead level or higher) in a weekly meeting. Director Guy Segal describes the payoff as visibility in both directions. One ambassador called the meetings "the first time...we can all come together as a group and see what all the other teams are working on" ([Omlet](https://omlet.dev/blog/scaling-design-system-adoption-and-advocacy-with-guy-segal/)).
 
-**Thomson Reuters** runs a similar model at much larger scale — a system spanning 150+ brands, organized into more than a dozen product "pods," each with a dedicated ambassador (usually at lead level or higher) who joins a standing weekly ambassador meeting. Design + Design Systems director Guy Segal frames the payoff as bidirectional visibility rather than one-way broadcast: one ambassador described the meetings as "the first time...we can all come together as a group and see what all the other teams are working on." — [Omlet, "Scaling adoption and advocacy for an enterprise-wide design system with Guy Segal"](https://omlet.dev/blog/scaling-design-system-adoption-and-advocacy-with-guy-segal/)
+### Route feedback back in automatically
 
-#### 6. Dedicated feedback route
-
-Frost's list of mechanisms is deliberately plural rather than a single "the" feedback channel: issue trackers (GitHub, Jira), open forums for community-driven support, proactive outreach to developers already using the system, and periodic surveys or interviews rather than waiting for complaints to arrive unprompted.
-
-**Shyp's** Micah Sivitz automates the loop instead of relying on someone remembering to check: "whenever someone makes a pull request, it sends a notification to our `#Design` Slack channel." Feedback surfaces where the team already is, instead of requiring a separate trip to go looking for it. — Brad Frost, *Atomic Design*, Chapter 5
+Frost's list of feedback routes is deliberately plural: issue trackers (GitHub, Jira), open forums, proactive outreach to developers already using the system, and periodic surveys or interviews, rather than waiting for complaints. **Shyp's** Micah Sivitz automates it: "whenever someone makes a pull request, it sends a notification to our `#Design` Slack channel." Feedback shows up where the team already is (Brad Frost, *Atomic Design*, Chapter 5).
 
 <div class="mermaid-wrap">
 
@@ -85,12 +81,6 @@ graph LR
 
 </div>
 
----
-
 ## Common mistakes
 
-- **Designing a cadence for a team you don't have.** Weekly office hours, three audience-split Slack channels, a formal advocate program with performance-review recognition, and a monthly state-of-the-union meeting is a reasonable operating model — for a team with the headcount to sustain it. zeroheight's 2026 survey of 147 practitioners found 56% name staffing as their single biggest challenge, ahead of buy-in or tooling. 16% of design systems are maintained by one person, 61% of teams have five or fewer people, and only 23% feel they have adequate resources for the work in front of them. Layering the full version of everything on this page onto a one- or two-person team doesn't produce a well-run system — it produces obligations that get quietly dropped within a month, which damages trust worse than never having promised them. Start with the smallest cadence that covers releases and a standing way to ask a question, and add channels only once the existing ones are actually running without heroics.
-- **Leaving larger contributions without a named steward.** Most prospective contributors don't know, or want to know, every step involved in shipping something bigger than a small fix — without someone assigned to guide them through it, that work stalls or never starts.
-- **Relying on people to remember to check for feedback instead of an automated route.** A notification the moment a PR lands, for instance, surfaces feedback where the team already is, instead of requiring someone to go looking for it.
-
-— zeroheight, *Design Systems Report 2026*
+- **Designing a cadence for a team you don't have.** Everything on this page together is a reasonable operating model for a team with the headcount to sustain it. zeroheight's *Design Systems Report 2026* (147 practitioners) found 56% name staffing as their biggest challenge, ahead of buy-in or tooling. 16% of systems are maintained by one person, 61% of teams have five or fewer people, and only 23% feel adequately resourced. Layering all of it onto a one- or two-person team produces obligations that get quietly dropped within a month, which damages trust worse than never promising them. Start with releases and one standing way to ask a question. Add channels only once the existing ones run without heroics.
