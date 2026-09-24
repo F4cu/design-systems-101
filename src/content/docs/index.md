@@ -79,8 +79,9 @@ The wiki is organized into five Parts, roughly in reading order:
 1. **Foundations**: what a design system actually is, and how its building blocks are
    designed: token architecture, component taxonomy and APIs, the design-to-code
    handoff, working across platforms, and how to audit and pilot a first system.
-2. **Governance**: how decisions get made and recorded, which contribution model fits
-   which context, how to build a culture that contributes, the operating rhythm and
+2. **Governance**: who owns the system, how decisions get made and recorded, what
+   earns a place in the system and what leaves it, how other teams contribute and how
+   to build a culture that does, the operating rhythm and
    release practice that keep a system visible, and what changes at decades-long scale
    or when you inherit someone else's system.
 3. **Metrics**: whether the system is actually used, how components perform in real

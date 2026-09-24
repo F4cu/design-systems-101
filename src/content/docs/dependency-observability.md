@@ -47,7 +47,7 @@ Version tracking is a dashboard query. Parallel implementations require delibera
 
 ### Look for parallel implementations
 
-A team that built its own version of a component isn't visible in any import count, because it isn't importing the system's version at all. It's the sharpest form of the neglect named in [Component governance](/component-governance/): a team doesn't fork loudly, it just quietly stops asking. The only way to catch it is to look on purpose, for lookalike patterns in product codebases outside the system's own repositories.
+A team that built its own version of a component isn't visible in any import count, because it isn't importing the system's version at all. It's the sharpest form of the neglect named in [Decision governance](/decision-governance/): a team doesn't fork loudly, it just quietly stops asking. The only way to catch it is to look on purpose, for lookalike patterns in product codebases outside the system's own repositories.
 
 ### Borrow supply-chain inventory tools
 

@@ -41,7 +41,7 @@ Scoring it together, with product, engineering, and design in the room, keeps th
 
 ### 3. Mine the component list from real screens
 
-Mall collects screenshots and walkthroughs across the organization's existing apps, anywhere from 20 to 100 products, and looks for what recurs. "All of them have some sort of left-side navigation. That's a component that maybe we should start with." His threshold, three or more teams needing it *right now*, is now part of the wiki's [criteria for adding a component](/contribution-models/#criteria-for-adding-a-component). Run the [UI audit](/ui-audit/) first to get the inventory this step works from.
+Mall collects screenshots and walkthroughs across the organization's existing apps, anywhere from 20 to 100 products, and looks for what recurs. "All of them have some sort of left-side navigation. That's a component that maybe we should start with." His threshold, three or more teams needing it *right now*, is now part of the wiki's [criteria for adding a component](/component-lifecycle/#criteria-for-adding-a-component). Run the [UI audit](/ui-audit/) first to get the inventory this step works from.
 
 ### 4. Borrow before you build
 

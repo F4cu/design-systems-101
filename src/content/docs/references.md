@@ -59,7 +59,7 @@ prose.
 - [Dan Mall, via NTT Data, "Design that scales: Unlocking design system success with Dan Mall"](https://launch.nttdata.com/insights/design-that-scales-unlocking-design-system-success-with-dan-mall)
 - [Dan Mall, "Dan Mall: creating a sustainable design system practice,"](https://ellessmedia.com/csi/dan-mall/) Content Strategy Interviews
 
-## Component governance & contribution
+## Team models, decision governance, component lifecycle & contribution models
 
 - [Murphy Trueman, "The bidirectional design system: When code talks back to design"](https://blog.murphytrueman.com/the-bidirectional-design-system/)
 - [Nathan Curtis, "Team Models for Scaling a Design System"](https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0)

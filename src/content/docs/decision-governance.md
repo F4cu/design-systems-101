@@ -1,14 +1,14 @@
 ---
-title: Component Governance
+title: Decision Governance
 ---
 
-Governance is how a design system decides things on purpose: what gets in, what gets removed, and how those decisions are remembered. A governed system can tell you *why* it looks the way it does. An ungoverned one just accumulates. Governance matures in stages, and most teams aren't at the end state. That's fine, as long as they know which stage they're at.
+Governance is how a design system decides things on purpose, and how it remembers what it decided. A governed system can tell you *why* it looks the way it does. An ungoverned one just accumulates. This page covers who decides and how decisions get recorded. [Component lifecycle](/component-lifecycle/) covers the criteria for what enters and leaves the system. Governance matures in stages, and most teams aren't at the end state. That's fine, as long as they know which stage they're at.
 
 :::tip[Key takeaways]
 - Record every decision, including the proposals you declined
-- Sort each request into a lane before debating it
 - Write down who owns each decision, so someone can close it
 - Make accessibility everyone's standard, with a specialist as escalation
+- Let knowledge flow upstream from product teams, not only down
 - Know which governance maturity stage you're at
 :::
 
@@ -25,17 +25,7 @@ Governance doesn't die from a bad decision. It dies from decisions nobody bother
 
 ### Record decisions, including declined ones
 
-The same notes keep the fix lightweight. A decision record needs only the context, the options considered, the decision, and its consequences. But it has to cover the decisions a new team member would need to understand, including *declined* proposals, so a future team doesn't reverse something without knowing it was already considered.
-
-### Sort each request into a lane first
-
-Inayaili de León Persson's **Canonical** Vanilla Framework sorts every incoming change into one of three lanes before anything else happens (Brad Frost, *Atomic Design*, Chapter 5):
-
-- **Modification**: feature additions, bug fixes, visual tweaks, or performance work on something that exists.
-- **Addition**: a new pattern filling a gap, with explicit safeguards against bloat.
-- **Removal**: deprecation shipped with advance notice, not a surprise.
-
-Sorting first keeps a "should we add a new component" conversation from being argued like a five-minute bug-fix review, or the reverse. What happens inside the addition and removal lanes is covered by the [criteria for adding a component](/contribution-models/#criteria-for-adding-a-component) and the [criteria for removing one](/contribution-models/#criteria-for-removing-a-component).
+The same notes keep the fix lightweight. A decision record needs only the context, the options considered, the decision, and its consequences. But it has to cover the decisions a new team member would need to understand, including *declined* proposals, so a future team doesn't reverse something without knowing it was already considered. [Governance for AI](/governance-for-ai/) adds that each record also needs an owner who re-checks it against reality.
 
 ### Write down who owns each decision
 
@@ -49,7 +39,7 @@ A RACI matrix fixes this. It lists who is Responsible, Accountable, Consulted, a
 4. Review the draft with the people it names.
 5. Publish it, and revisit it as the org grows.
 
-The guide stresses that RACI should follow the governance model you've already chosen (centralized, federated, or cyclical, see [Contribution models](/contribution-models/)), not replace that decision.
+The guide stresses that RACI should follow the team model you've already chosen (centralized, federated, or cyclical, see [Team models](/team-models/)), not replace that decision.
 
 [DesignX's enterprise governance guide](https://designx.co/design-system-governance-enterprise/) names the failure it prevents: "everyone gives feedback, but no one decides." A proposal collects opinions from everyone with a stake but never reaches one owner who can close it. Its worked example for a new component proposal, extended here to the other activities Design System Tactics names:
 
@@ -98,4 +88,4 @@ This ladder tracks how governance practices build up within one team over time. 
 
 ## Common mistakes
 
-- **Treating governance as gatekeeping.** A contribution process that protects the system *from* contributors, instead of helping them build it well, feels rigorous. But contribution rates drop, and teams quietly build locally instead. The system stays "pure" and becomes irrelevant. If nobody is contributing, the process isn't working. It's being avoided.
+- **Treating governance as gatekeeping.** A contribution process that protects the system *from* contributors, instead of helping them build it well, feels rigorous. But contribution rates drop, and teams quietly build locally instead. The system stays "pure" and becomes irrelevant. If nobody is contributing, the process isn't working. It's being avoided. See [Contribution models](/contribution-models/).

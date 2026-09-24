@@ -63,7 +63,7 @@ Don't export a subcomponent so it can be imported on its own, outside its parent
 
 ### Split out a subcomponent only on a second real use
 
-The discipline that governs new components applies to subcomponents too: don't split one out until a real second use case shows up. See the [criteria for adding a component](/contribution-models/#criteria-for-adding-a-component).
+The discipline that governs new components applies to subcomponents too: don't split one out until a real second use case shows up. See the [criteria for adding a component](/component-lifecycle/#criteria-for-adding-a-component).
 
 ### Use the same names in Figma and in code
 

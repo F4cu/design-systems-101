@@ -51,7 +51,7 @@ In the same example, each level exposes only the properties that matter at that 
 
 ### Nest only after a second real reuse
 
-fourzerothree.in warns that nesting for flexibility nobody needs yet makes a component so deep that other designers can't find the layer they're supposed to edit. Wait for a second real reuse before splitting a piece into its own nested instance. It's the same discipline as the [criteria for adding a component](/contribution-models/#criteria-for-adding-a-component).
+fourzerothree.in warns that nesting for flexibility nobody needs yet makes a component so deep that other designers can't find the layer they're supposed to edit. Wait for a second real reuse before splitting a piece into its own nested instance. It's the same discipline as the [criteria for adding a component](/component-lifecycle/#criteria-for-adding-a-component).
 
 ## Choosing variants or nesting
 

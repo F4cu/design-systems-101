@@ -25,7 +25,7 @@ Funding, sponsorship, and whether the roadmap stays legible to the business. See
 
 ### Team effectiveness
 
-Capacity, makeup, and whether the team model fits the org's size. See [Contribution models](/contribution-models/) and [Fostering contribution](/fostering-contribution/).
+Capacity, makeup, and whether the team model fits the org's size. See [Team models](/team-models/), [Contribution models](/contribution-models/), and [Fostering contribution](/fostering-contribution/).
 
 ### Infrastructure robustness
 
@@ -33,7 +33,7 @@ Tokens, components, tooling, and the handoff underneath them. See [Token archite
 
 ### Governance
 
-How decisions get made, recorded, and revisited. See [Component governance](/component-governance/). Its five-stage ladder (ad hoc → managed → systematic → measured → optimised) tracks how governance practices build up within one team. It's one linear track, not six independent ones. A system can be advanced on that ladder and still score low on alignment or adoption here, because those depend on things governance alone doesn't control, like executive sponsorship and other teams' behavior.
+How decisions get made, recorded, and revisited. See [Decision governance](/decision-governance/). Its five-stage ladder (ad hoc → managed → systematic → measured → optimised) tracks how governance practices build up within one team. It's one linear track, not six independent ones. A system can be advanced on that ladder and still score low on alignment or adoption here, because those depend on things governance alone doesn't control, like executive sponsorship and other teams' behavior.
 
 ### Support
 
@@ -55,7 +55,7 @@ Wang's process: 4–8 evaluators score all six dimensions independently on a 1�
 
 ### Judge team effectiveness by fit to org size
 
-This wiki's deepest take on team effectiveness is Nathan Curtis's team-model taxonomy. A small org that over-invests in federated governance pays for coordination it doesn't need. An enterprise still running on one maintainer is understaffed for its scale. Curtis's revised view is sharper: federation is never a starting model. It's layered onto a funded central core once the org needs it. Read a team-effectiveness score against that fit, not a universal ideal. [Contribution models](/contribution-models/) has the full argument and survey data.
+This wiki's deepest take on team effectiveness is Nathan Curtis's team-model taxonomy. A small org that over-invests in federated governance pays for coordination it doesn't need. An enterprise still running on one maintainer is understaffed for its scale. Curtis's revised view is sharper: federation is never a starting model. It's layered onto a funded central core once the org needs it. Read a team-effectiveness score against that fit, not a universal ideal. [Team models](/team-models/) has the full argument and survey data.
 
 ## Common mistakes
 

@@ -79,17 +79,17 @@ as v1. See [Pilot strategy](/pilot-strategy/).
 choose which candidate project to pilot a design system on, so the choice isn't made by
 gut feel or seniority. See [Pilot strategy](/pilot-strategy/).
 
-**Governance** (component governance) — the decisions and processes that determine what
+**Governance** (decision governance) — the decisions and processes that determine what
 belongs in a design system, how it gets added, how it changes, and how it's removed. See
-[Component governance](/component-governance/).
+[Decision governance](/decision-governance/).
 
 **Decision record** — a written note capturing why a significant design-system decision
 was made, so it doesn't get silently re-litigated later. See
-[Component governance](/component-governance/).
+[Decision governance](/decision-governance/).
 
 **Maturity stage** — where a design system sits on a five-level spectrum from ad-hoc to
 optimised, describing the sophistication of its practices, not just its current health.
-See [Component governance](/component-governance/).
+See [Decision governance](/decision-governance/).
 
 **Maturity dimension** — one of six independent axes (organizational alignment, team
 effectiveness, infrastructure robustness, governance, support, adoption) a design system
@@ -98,44 +98,48 @@ can be scored on separately, rather than collapsed into one overall stage. See
 
 **RACI matrix** — a table assigning each governance decision one Responsible, one
 Accountable, and any number of Consulted or Informed parties, so it's clear who decides
-versus who's just weighing in. See [Component governance](/component-governance/).
+versus who's just weighing in. See [Decision governance](/decision-governance/).
 
-**Contribution model** — the structural answer to *who* gets to propose and build
-changes to a system, distinct from the mechanics of recording a decision once it's made.
-See [Contribution models](/contribution-models/).
+**Team model** — the structural answer to *who* builds and owns a design system: one
+dedicated team, several product teams together, or both informing each other. See
+[Team models](/team-models/).
+
+**Contribution model** — how people outside the core team propose, build, and ship
+changes to a system, distinct from who owns it and from the criteria a change has to
+clear. See [Contribution models](/contribution-models/).
 
 **Deprecation** — the formal process of retiring a component or token, on a timeline,
 with a documented migration path to its successor. See
-[Contribution models](/contribution-models/).
+[Component lifecycle](/component-lifecycle/).
 
 **Solitary model** — one team builds a system mostly for its own needs and makes the
 result available to others, without formal support for outside consumers. See
-[Contribution models](/contribution-models/).
+[Team models](/team-models/).
 
 **Centralized model** — a dedicated team produces and supports a system for other teams
-to use as part of their own work. See [Contribution models](/contribution-models/).
+to use as part of their own work. See [Team models](/team-models/).
 
 **Federated model** — designers and engineers from multiple product teams decide on and
 build the system together, rather than one team owning it centrally. See
-[Contribution models](/contribution-models/).
+[Team models](/team-models/).
 
 **Cyclical model** — a centralized core team and a federated contributor group that
 continuously inform each other, rather than one model replacing the other. See
-[Contribution models](/contribution-models/).
+[Team models](/team-models/).
 
 **Community backlog** — a public, working-group-reviewed queue of proposed components
-and patterns anyone can contribute to, used by GOV.UK's Design System as a fifth
-contribution model alongside Curtis's four. See
+and patterns anyone can contribute to, used by GOV.UK's Design System, which publishes
+what it wants built before anyone proposes it. See
 [Contribution models](/contribution-models/).
 
 **Rule of three** — the software-engineering principle that a duplicated pattern doesn't
 earn a shared abstraction until it's needed a third independent time; applied to design
 systems as a bar for when a one-off component becomes a system candidate. See
-[Contribution models](/contribution-models/).
+[Component lifecycle](/component-lifecycle/).
 
 **Canonical Vanilla Framework** — Inayaili de León Persson's decision tree for sorting
 an incoming pattern request into modification, addition, or removal before debating its
-merits. See [Component governance](/component-governance/).
+merits. See [Component lifecycle](/component-lifecycle/).
 
 **Contribution vs. participation** — a contribution is a proposal, design, code, doc, or
 asset released through the system for others to reuse; participation (feedback, bug

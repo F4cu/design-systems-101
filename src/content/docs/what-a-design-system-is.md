@@ -29,7 +29,7 @@ The assembled units built from that vocabulary. [Component taxonomy](/component-
 
 ### Governance
 
-The decisions about what belongs, how it changes, and how it leaves. [Component governance](/component-governance/) covers how to run it.
+The decisions about what belongs, how it changes, and how it leaves. [Decision governance](/decision-governance/) and [Component lifecycle](/component-lifecycle/) cover how to run it.
 
 ## Practices
 

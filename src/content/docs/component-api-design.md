@@ -42,7 +42,7 @@ The cost: consumers assemble more themselves, so they need good examples. [Compo
 
 ### Extend before adding a lookalike
 
-A new visual expression of something that already exists, like a new button color next to solid and outline, is usually a new variant value or a new property, not a new component. [Supernova](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems) puts it this way: if the need is general and reusable, it belongs inside the existing component's contract, not in a lookalike next to it. The full [criteria for adding a component](/contribution-models/#criteria-for-adding-a-component) live on Contribution models.
+A new visual expression of something that already exists, like a new button color next to solid and outline, is usually a new variant value or a new property, not a new component. [Supernova](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems) puts it this way: if the need is general and reusable, it belongs inside the existing component's contract, not in a lookalike next to it. The full [criteria for adding a component](/component-lifecycle/#criteria-for-adding-a-component) live on Component lifecycle.
 
 ### Name the same concept the same way everywhere
 

@@ -17,6 +17,7 @@ export default defineConfig({
 		'/foundations/': '/design-systems-101/what-a-design-system-is/',
 		'/governance-under-ai-consumption/': '/design-systems-101/governance-for-ai/',
 		'/scaling-ai-effort/': '/design-systems-101/scaling-ai-effort-to-risk/',
+		'/component-governance/': '/design-systems-101/decision-governance/',
 	},
 	integrations: [
 		mermaid({
@@ -48,12 +49,14 @@ export default defineConfig({
 				{
 					label: 'Governance',
 					items: [
-						'component-governance',
-						'operating-cadence',
-						'design-system-maturity',
+						'team-models',
+						'decision-governance',
+						'component-lifecycle',
 						'contribution-models',
 						'fostering-contribution',
+						'operating-cadence',
 						'release-management',
+						'design-system-maturity',
 						'governance-case-studies',
 						'scaling-across-decades',
 						'inheriting-a-legacy-system',

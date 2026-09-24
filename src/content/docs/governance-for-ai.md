@@ -43,7 +43,7 @@ Gaps a team has lived with for years, like an under-documented edge case or a co
 
 ### Give every decision record an owner
 
-[Component governance](/component-governance/) argues for decision records, so a system doesn't argue the same question every 18 months. [Williams pushes further](https://designsystemscollective.substack.com/p/drift-doesnt-announce-itself): writing a record solves the *memory* problem, not the *staleness* problem. "Every design system claims a source of truth. Fewer are honest about how long ago anyone last checked it." And: "writing something down is not the same as keeping it true."
+[Decision governance](/decision-governance/) argues for decision records, so a system doesn't argue the same question every 18 months. [Williams pushes further](https://designsystemscollective.substack.com/p/drift-doesnt-announce-itself): writing a record solves the *memory* problem, not the *staleness* problem. "Every design system claims a source of truth. Fewer are honest about how long ago anyone last checked it." And: "writing something down is not the same as keeping it true."
 
 What prevented drift in practice wasn't better tooling. It was a habit: "one origin for a fact, checked against reality instead of copied from memory." A rule survives because "someone rewrote it, in the open, reasoning intact," when reality proved the old version wrong. So a decision record needs an owner who re-checks it against the real system, not just an author who filed it once.
 
