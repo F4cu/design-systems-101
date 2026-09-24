@@ -2,29 +2,35 @@
 title: Measuring Adoption
 ---
 
-<p class="eyebrow">The Principle</p>
+Coverage and adoption answer different questions. Coverage asks whether the system *provides* what teams need. Adoption asks whether teams *actually use* it. The fixes are opposites: low coverage is a supply problem (build more), and low adoption with high coverage is a demand problem (find out why teams don't use what already exists).
 
-## Coverage measures supply; adoption measures demand
+:::tip[Key takeaways]
+- Track component imports and token compliance, and look at the long tail
+- Break every number down by team, never just system-wide
+- Match your help to each team's adoption stage
+- Measure trust and adoption separately: people can trust a system and still not use it
+- Watch for silence: disengaged teams stop complaining before they leave
+:::
 
-Coverage and adoption answer two different questions. Coverage asks whether the system *provides* what teams need; adoption asks whether teams *actually use* what's provided. A system can score high on one and low on the other, and the fixes are opposites: low coverage is a supply problem (build more), while low adoption with high coverage is a demand problem (figure out why teams aren't consuming what already exists).
+## The problem
 
-<p class="eyebrow">Why It Exists</p>
+Without this distinction, teams misdiagnose the problem and pour effort into the wrong fix. The classic case: a system has 100% component coverage but 20% adoption, because product teams keep building their own versions. The instinct is "we need more components," when the real question is why nobody wants the ones that already exist. The answer might be onboarding gaps, API friction, or missing docs. Shipping component number forty-one fixes none of them.
 
-## Confusing the two means fixing the wrong problem
+## Practices
 
-Without this distinction, teams misdiagnose the problem and pour effort into the wrong fix. The classic failure: a system has 100% component coverage but 20% adoption, because product teams keep building custom implementations instead of consuming the library. The instinctive response is "we need more components" — more supply — when the real question is why nobody wants the supply that's already there. That question might lead to onboarding gaps, API friction, or missing documentation, none of which get solved by shipping component number forty-one.
+### Track imports and token compliance
 
----
+The design-system-ops adoption notes (`knowledge-notes/adoption-measurement.md`) describe four signals, and two are especially concrete. The first is **component consumption**, measured by import analysis: scanning codebases to see which components teams pull in. The shape matters more than the headline: "a system where 5 components account for 90% of imports and 30 components are rarely used has an adoption problem in the tail, even if the headline number looks good."
 
-## In Practice
+The second is **token compliance**: whether teams use design tokens or hardcode raw color and spacing values. The notes call this "the adoption signal that most directly correlates with system value," because tokens are what make theming, rebranding, and consistency possible. A team can use every component and still undermine the system by hardcoding values around them.
 
-#### 1. Usage signals by team
+### Break every number down by team
 
-One practitioner's knowledge notes describe four signals worth tracking, and two of them are especially concrete. The first is **component consumption**, measured by import analysis — literally scanning codebases to see which components teams pull into their code. The shape of the distribution matters more than the headline: "a system where 5 components account for 90% of imports and 30 components are rarely used has an adoption problem in the tail, even if the headline number looks good."
+From the same notes: "a system with 85% overall token compliance might have three teams at 98% and two teams at 40%. The system-level number suggests health; the team-level numbers reveal a problem."
 
-The second is **token compliance** — whether teams reference design tokens or hardcode raw color and spacing values. The notes call this "the adoption signal that most directly correlates with system value," because token adoption is what makes theming, rebranding, and consistency actually possible. A team can use every component and still undermine the system by hardcoding values around them.
+### Match your help to each team's adoption stage
 
-Whatever you measure, break it down by team, not just system-wide: "a system with 85% overall token compliance might have three teams at 98% and two teams at 40%. The system-level number suggests health; the team-level numbers reveal a problem." The notes also describe five adoption stages — aware, installed, consuming, contributing, advocating — each with a different right intervention, from onboarding help at the start to governance involvement at the end:
+The notes describe five stages, each needing a different kind of help, from onboarding at the start to involving teams in governance at the end:
 
 <div class="mermaid-wrap">
 
@@ -38,40 +44,34 @@ graph LR
 
 </div>
 
-— design-system-ops, knowledge-notes/adoption-measurement.md
+### Measure trust and adoption separately
 
-#### 2. Trust vs. adoption as separate signals
+Trust usually isn't the bottleneck people assume. zeroheight's *Design Systems Report 2026* (147 practitioners) found 42% report high trust in their system and 49% moderate trust. Only 8% report low trust. Yet just 7% describe their system as fully adopted across all teams. People trust the system and still don't reach for it, so "build a better system and they'll come" isn't the fix. The bigger blockers are a missing mandate, incomplete coverage, and weak communication. [Murphy Trueman](https://murphytrueman.substack.com/p/the-component-adoption-gap-understanding) frames the psychology the same way: adoption gaps are often about friction and habit, not quality.
 
-Trust isn't usually the bottleneck people assume it is. zeroheight's 2026 survey of 147 practitioners found 42% report high trust in their system and 49% moderate — only 8% low. Adoption still lags: just 7% describe their system as fully adopted across all teams. People trust the system and still don't reach for it, which rules out "build a better system and they'll come" as the fix. The real blockers tend to be missing mandate, incomplete coverage, and weak communication, not trust. Murphy Trueman frames the underlying psychology similarly: adoption gaps are often about friction and habit, not quality. — [Murphy Trueman, "The component adoption gap: understanding the psychology behind design system success"](https://murphytrueman.substack.com/p/the-component-adoption-gap-understanding); zeroheight, *Design Systems Report 2026*
+### Earn adoption, and watch for silence
 
-#### 3. Purpose-built adoption tooling
+[Ness Grixti](https://nessgrixti.com/articles/the-hidden-work-behind-design-system-adoption/) says adoption is "earned. Slowly, through trust, relevance and usefulness," not through a launch event or a mandate. Trust builds through consistency: responding to feedback, delivering promised updates, pairing with teams on problems, and being open about changes. Her clearest evidence is **Wise's** rebuild (the token restructure covered in [Brand alignment](/brand-alignment/)). It was built on deep audits and open conversations with the teams who'd use it, and won Best Adoption at the 2023 zeroheight Design System Awards. The system that wins on adoption isn't necessarily the most polished. It's the one people helped build.
 
-**Pinterest** built FigStats to track component use directly from the Figma API. **Atlassian** built a custom adoption scanner for the same purpose. Both are examples of teams deciding that survey-based or manual tracking wasn't precise enough and investing in custom instrumentation instead. — via zeroheight help centre, "How to measure the dev side of a design system"
+Her sharpest warning sign: fading adoption shows up as quiet disengagement, like teams that stop asking questions or stop showing up, more than as complaints. A team still complaining still wants the system to work. A team gone silent may have already built around it.
 
-#### 4. Common measurement pitfalls
+## Choosing a measurement method
 
-The naive approaches fail in specific, well-documented ways, not just because it's hard. **Productboard** tried coloring every design-system component on a screen to see visual coverage at a glance — genuinely informative, but they found it couldn't be cleanly quantified as a single metric, because almost no real screen uses *only* system components. Every screen needed a manually-set, somewhat arbitrary coverage threshold.
+No method is solved. Each org below found a real limit, and knowing where each one breaks is more useful than treating any as the answer.
 
-**Mews** went further and tried building adoption measurement from production data, and found three specific reasons the obvious approaches broke:
+### Usage scanning
 
-- import-based measurement is inaccurate because components get extended and re-exported internally, so it's unclear what should even count
-- visual coverage is distorted because large container components dominate the visible area while representing a small fraction of actual component count
-- complexity goes unweighted — a simple tag counts the same as a complex datepicker in most naive metrics
+**Pinterest** built FigStats to track component use from the Figma API, and **Atlassian** built a custom adoption scanner for code (via the zeroheight help centre, "How to measure the dev side of a design system"). Both decided surveys and manual tracking weren't precise enough. The limit, found by **Mews**: import counts get unreliable once components are extended and re-exported internally, because it's unclear what should count.
 
-Citing these honestly, including where they failed, is more useful than presenting adoption measurement as solved. — [Productboard, "How we measure adoption of a design system at Productboard"](https://www.productboard.com/blog/how-we-measure-adoption-of-a-design-system-at-productboard/); [Mews Developers, "Building a design system adoption metric from production data"](https://developers.mews.com/design-system-adoption-metric-building/)
+### Visual coverage
 
-#### 5. Adoption earned over time
+[**Productboard**](https://www.productboard.com/blog/how-we-measure-adoption-of-a-design-system-at-productboard/) colored every system component on a screen to see coverage at a glance. It was informative, but it couldn't become one clean metric, because almost no real screen uses *only* system components. Each screen needed a manually set, somewhat arbitrary threshold. Mews adds that large container components dominate the visible area while being a small share of the actual component count.
 
-Ness Grixti frames it directly: adoption is "earned. Slowly, through trust, relevance and usefulness," not through a launch event or a mandate — trust compounds through consistency: responding to feedback, honoring promised updates, pairing with teams through problems, and being transparent about changes. The clearest evidence from her own work: **Wise's** rebuild — the same brand-driven token restructure covered in [Brand alignment](/brand-alignment/) — was built on deep audits and open conversation with the teams that would use it, and won Best Adoption at the 2023 zeroheight Design System Awards. The system that wins on adoption isn't necessarily the most polished one; it's the one people were involved in building. Her sharpest diagnostic for when it's slipping: fading adoption tends to show up as quiet disengagement — teams that stop asking questions or stop showing up — more than as active complaints. A team still complaining is still engaged enough to want the system to work; a team gone silent may have already built around it. — [Ness Grixti, "The Hidden Work Behind Design System Adoption"](https://nessgrixti.com/articles/the-hidden-work-behind-design-system-adoption/)
+### Production data
 
----
+[**Mews**](https://developers.mews.com/design-system-adoption-metric-building/) built its adoption metric from production data. The limit it hit: complexity goes unweighted. A simple tag counts the same as a complex date picker in most naive metrics.
 
 ## Common mistakes
 
-Turning team-level breakdowns into a competitive ranking. Publishing a league table of "best adopters" and "worst adopters":
+- **Turning team breakdowns into a public league table.** Ranking "best" and "worst" adopters makes people defensive instead of honest about their numbers. It flattens context: a team building a custom data-visualization library isn't failing to adopt, the system may just not cover their domain. And it blurs two findings a good report keeps apart, "chose not to use" and "needed something the system doesn't provide." Only the first is an adoption problem (design-system-ops adoption notes).
 
-- **Undermines trust.** Ranking teams publicly creates political dynamics that make people defensive instead of honest about their numbers.
-- **Flattens context that matters.** A team building a custom data-visualization library isn't failing to adopt; the system may simply not cover their domain.
-- **Conflates two different findings.** A good adoption report distinguishes "chose not to use" from "needed something the system doesn't provide," because only the first one is an adoption problem at all. — design-system-ops, knowledge-notes/adoption-measurement.md
-
-These numbers also stop at "is it used" — they don't say whether a used, adopted component is actually helping or hurting once it's live in a specific flow. See [Performance in context](/contextual-component-performance/) for that next layer.
+These numbers stop at "is it used." They don't say whether an adopted component is helping or hurting in a specific flow. [Performance in context](/contextual-component-performance/) covers that next layer.
