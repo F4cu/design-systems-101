@@ -64,6 +64,17 @@ Met when:
 
 A contract catches gaps at the stage where they're cheapest to fix. So treat each checklist above as the exit criteria for its stage, not as a final audit once everything is built.
 
+<div class="mermaid-wrap">
+
+```mermaid
+flowchart TD
+  D["Design"] -->|design contract met| B["Build"]
+  B -->|build contract met| Doc["Documentation"]
+  Doc -->|documentation contract met| R["Release"]
+```
+
+</div>
+
 ## Common mistakes
 
 Two handoff habits quietly break the design contract:

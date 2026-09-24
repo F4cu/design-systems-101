@@ -34,6 +34,21 @@ At 80+ teams, Grixti says the problem is visibility: the system team can't see w
 
 An icon, a missing variant, or a token fix should be close to self-serve: a clear template, fast review, and shipping in a normal release. A new component or a data-heavy pattern needs a steward, a defined scope, and the expectation that the contributor won't finish it alone. [Curtis](https://medium.com/eightshapes-llc/defining-design-system-contributions-eb48e00e8898) describes the steward's job: guide the contributor through the steps and pick up the rest if they stall. [Operating cadence](/operating-cadence/) covers the steward role in more depth.
 
+<div class="mermaid-wrap">
+
+```mermaid
+flowchart TD
+  C["Contribution"] --> Q{How big?}
+  Q -->|Small| T["Template"]
+  T --> R["Fast review"]
+  R --> Rel["Normal release"]
+  Q -->|Large| S["Steward assigned"]
+  S --> Sc["Defined scope"]
+  Sc --> F["Steward finishes<br/>if contributor stalls"]
+```
+
+</div>
+
 ### Publish what you want built
 
 The **GOV.UK** Design System runs a public community backlog on GitHub. Anyone in UK government can propose a component. A working group checks that it's useful and not a duplicate, and a named community designer runs weekly catch-ups with the contributor. [Chris Ballantine-Thomas](https://designnotes.blog.gov.uk/2023/05/31/iterating-the-gov-uk-design-system-contribution-model/) describes their key fix: publish what the team wants built *before* anyone proposes it, instead of waiting for proposals that didn't match what the community needed. Contributor effort then lands on something the system needs. The full story is in [Governance case studies](/governance-case-studies/).

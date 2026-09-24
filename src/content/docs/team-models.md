@@ -19,6 +19,18 @@ Pick the wrong model for your org's size and maturity, and you get one of two fa
 
 Start centralized, then add federation on purpose. [Curtis](https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542) has revised his own framing: treating centralized and federated as alternatives was a mistake. Federation is never pursued first, and it never succeeds without a funded centre underneath. Keep the core centralized (tokens, foundations, accessibility, component contracts), and layer federation on top deliberately.
 
+<div class="mermaid-wrap">
+
+```mermaid
+flowchart TD
+  Core["Central core team<br/>tokens, foundations,<br/>accessibility, contracts"] --> A["Product team A"]
+  Core --> B["Product team B"]
+  A -.->|contributes| Core
+  B -.->|contributes| Core
+```
+
+</div>
+
 The first three models come from Curtis's 2015 taxonomy. Share figures come from zeroheight's *Design Systems Report 2026* (147 practitioners).
 
 ### Solitary
