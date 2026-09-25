@@ -2,8 +2,6 @@
 title: References
 ---
 
-import { Badge } from '@astrojs/starlight/components';
-
 Every source cited across the wiki, grouped by page, in reading order. Inline
 citations within each page link the same sources at the point they're used — this page
 exists so the reading list can be scanned or followed up on without the surrounding
@@ -11,9 +9,8 @@ prose.
 
 Each entry ends with its publication year. "Living doc" marks documentation sites and
 repositories that are updated continuously rather than published once, and "n.d." marks
-a source with no findable date. A <Badge text="Dated" variant="caution" size="small" />
-badge marks a source that is old for its area and describes tools or examples that have
-since changed. Older sources used only for principles aren't flagged.
+a source with no findable date. A `Dated` tag marks a source that is old for its area
+and describes tools or examples that have since changed. Older sources used only for principles aren't flagged.
 
 ## Foundations, token architecture, design-to-code contract
 
@@ -144,7 +141,7 @@ since changed. Older sources used only for principles aren't flagged.
 
 ## Component property naming
 
-- [Nathan Curtis, "Crafting Component API, Together"](https://medium.com/eightshapes-llc/crafting-ui-component-api-together-81946d140371), 2021 <Badge text="Dated" variant="caution" size="small" /> — predates Figma's boolean, text, and instance-swap properties (2022) and slots; cited for the principles, with tool details from Curtis's 2026 posts
+- [Nathan Curtis, "Crafting Component API, Together"](https://medium.com/eightshapes-llc/crafting-ui-component-api-together-81946d140371), 2021 `Dated` — predates Figma's boolean, text, and instance-swap properties (2022) and slots; cited for the principles, with tool details from Curtis's 2026 posts
 - [Nathan Curtis, "Code Only" Props in Figma](https://nathanacurtis.substack.com/p/code-only-props-in-figma), 2026
 - [Nathan Curtis, "Component Contracts and Schemas"](https://nathanacurtis.substack.com/p/component-contracts-and-schemas), 2026: `READY_FOR_DEV` in place of a handoff meeting
 - [Supernova, "Building Durable Component APIs for Design Systems"](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems), 2023: consistent names and the `src`/`image` exception
@@ -161,7 +158,7 @@ since changed. Older sources used only for principles aren't flagged.
 - [Design Tokens Substack, "How to Manage Breaking Changes in Design Tokens"](https://designtokens.substack.com/p/how-to-manage-breaking-changes-in), 2026
 - [zeroheight, "Handling breaking changes in a design system without causing chaos"](https://zeroheight.com/blog/handling-breaking-changes-in-a-design-system-without-causing-chaos/), 2026 — Shaun Bent
 - [zeroheight, "Deprecating in design systems: When it's time to say goodbye"](https://help.zeroheight.com/hc/en-us/articles/36474257606555-Deprecating-in-design-systems-When-it-s-time-to-say-goodbye), n.d.
-- [Carbon Design System, migration guide](https://v10.carbondesignsystem.com/help/migration-guide/design/), archived v10 docs, n.d. <Badge text="Dated" variant="caution" size="small" /> — Carbon v11 replaced v10 in 2022
+- [Carbon Design System, migration guide](https://v10.carbondesignsystem.com/help/migration-guide/design/), archived v10 docs, n.d. `Dated` — Carbon v11 replaced v10 in 2022
 - [Keep a Changelog](https://keepachangelog.com), living doc
 - [UXPin, "How to Create a Design System Changelog"](https://www.uxpin.com/studio/blog/how-to-create-a-design-system-changelog/), 2025
 

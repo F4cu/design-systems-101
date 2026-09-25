@@ -43,10 +43,10 @@ npm run build   # production build to dist/
   `index.md` (originally `start-here.md`) is the homepage, served at `/`.
 - **`glossary.md`** — one line per term introduced anywhere in the wiki, links back to the
   page that explains it in context. Update when a page introduces new terminology.
-- **`references.mdx`** — every citation across the wiki, grouped by page/topic, mirroring
+- **`references.md`** — every citation across the wiki, grouped by page/topic, mirroring
   the inline citations, each with its publication year (see "Source freshness"). Keep in
-  sync when adding or changing a page's sources. It's the one `.mdx` page, so it can
-  import Starlight's `<Badge>` component; in MDX, a literal `{` or `<` must be escaped.
+  sync when adding or changing a page's sources. Plain markdown like every other page,
+  with no custom CSS or HTML.
 - **`.claude/handoff/`** — the original build brief, research digest, and execution plan
   from when this site was generated. Historical record of how sourcing/scope decisions
   were made, not something to keep updated going forward.
@@ -132,9 +132,9 @@ Other conventions:
   title, or source file — never blended into an unattributed "industry consensus" voice.
   Don't invent best practices without a traceable source; if a page needs a claim the
   sources don't support, flag it as an open question rather than asserting it. See
-  `index.md` (the homepage) for the full list of named sources and `references.mdx` for the citation
+  `index.md` (the homepage) for the full list of named sources and `references.md` for the citation
   index.
-- **Source freshness**: every entry in `references.mdx` ends with its publication year
+- **Source freshness**: every entry in `references.md` ends with its publication year
   (`, 2021`). Use `living doc` for docs sites and repos that are updated continuously,
   `updated 2024` when only a last-updated date exists, and `n.d.` when no date can be
   found. Never guess a year. Check `datePublished` or `firstPublishedAt`, not the
@@ -145,16 +145,16 @@ Other conventions:
   - *Concrete examples* (tool screenshots, Figma features, APIs, token formats, agent
     setups) must be current for their area:
     - **High risk**, the Agentic AI section: prefer the last ~18 months. Anything
-      before 2024 gets a badge and needs reconfirming before new use.
+      before 2024 gets a Dated tag and needs reconfirming before new use.
     - **Medium risk**, tokens, component architecture/API, multi-platform specs,
       release tooling, anything Figma-specific: flag sources before 2022 that describe
       tool behavior.
     - **Low risk**, governance, team/contribution models, business alignment,
       maturity, adoption, communication: no cutoff for principles. Flag only outdated
       tool examples.
-  - Flag with `<Badge text="Dated" variant="caution" size="small" />` after the year,
-    followed by a short note on what changed (e.g. "Carbon v11 replaced v10 in 2022").
-    Badges go only in `references.mdx`, never in page prose. If a source's age changes
+  - Flag with an inline-code `` `Dated` `` tag after the year, followed by a short note
+    on what changed (e.g. "Carbon v11 replaced v10 in 2022"). Dated tags go only in
+    `references.md`, never in page prose. If a source's age changes
     how a reader should read it, say so in the sentence instead ("Curtis's 2015
     post predates Figma variables…").
   - When researching, check the publication date before using a source. If the only
@@ -165,7 +165,7 @@ Other conventions:
   an open question), draw only from professionals/sources already used somewhere in the
   site — don't pull in a new author, blog, or report just because it's a good source on
   the topic. Before researching, scan `index.md`'s source list and every page's
-  citations (or `references.mdx`, which mirrors them) to know who's already in bounds. This
+  citations (or `references.md`, which mirrors them) to know who's already in bounds. This
   keeps the source pool deliberately narrow rather than widening with every new page. If a
   claim genuinely needs a source outside that pool, flag it to the user and ask before
   adding a new name — don't add one silently.
