@@ -8,6 +8,7 @@ A team model decides who builds and owns the design system: one dedicated team, 
 - Start centralized on the core, and add federation on top on purpose
 - Don't federate to fix a staffing shortage: it spreads the shortage out
 - Staff the core team across disciplines, not just design and engineering
+- Give the core team service levels, like any infrastructure
 - Revisit the model as the org grows
 :::
 
@@ -55,9 +56,13 @@ Designers from several product teams decide on the system together. Only 13% of 
 
 [Jina Anne](https://24ways.org/2017/design-systems-and-hybrids/) points out that design-systems work is often the natural home for hybrid practitioners, such as designer-coders who don't fit a pure design or pure engineering team. Build the model around cross-functional roles (design, code, content, accessibility, product). That gives hybrids a home instead of leaving them caught between two teams.
 
+### Give the core team service levels
+
+A centralized team that other teams depend on is running infrastructure, whether it says so or not. The design-system-ops contract notes ([`knowledge-notes/design-to-code-contract.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/design-to-code-contract.md)) spell out what that means for teams using the system. Upgrades shouldn't break them. Bug reports get an expected response time: "A system that takes three weeks to acknowledge a bug report is not functioning as infrastructure." Releases follow a predictable cadence, and nothing changes without documentation. The toolkit's [executive communication notes](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/executive-communication.md) use the same framing to argue for staffing: say "the infrastructure needs a defined service level: response time for bug reports, a predictable release cadence, documented API contracts" rather than "we need a dedicated team."
+
 ### Revisit the model as the org grows
 
-A small org that over-invests in federation pays for coordination it doesn't need. An enterprise still run by one maintainer is understaffed for its scale. Treat the model as something that grows with the org, not a one-time decision. [Design system maturity](/ds101/design-system-maturity/) scores this as "team effectiveness," read against the org's size.
+A small org that over-invests in federation pays for coordination it doesn't need. An enterprise still run by one maintainer is understaffed for its scale. Treat the model as something that grows with the org, not a one-time decision. ITVX's Mosaic shows a hybrid at scale: a central core of 3 people works with 14 cross-functional partners across 13 product workstreams (see [Stakeholder alignment](/ds101/stakeholder-alignment/)). [Design system maturity](/ds101/design-system-maturity/) scores this as "team effectiveness," read against the org's size.
 
 ## Common mistakes
 
