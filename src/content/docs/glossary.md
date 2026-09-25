@@ -173,6 +173,18 @@ intent across platforms while letting the implementation diverge to match each
 platform's conventions, rather than forcing one implementation to run everywhere
 identically. See [Component API design](/ds101/component-api-design/).
 
+**Anatomy** (component anatomy) — a component's named parts and how they nest, agreed
+once so Figma layers and code markup use the same names. See
+[Component property naming](/ds101/component-property-naming/).
+
+**Code-only prop** — a prop that exists in code but changes nothing visible, such as `id`
+or `ariaLabel`, so it has no natural place in Figma's properties panel. See
+[Component property naming](/ds101/component-property-naming/).
+
+**Instance override** (Figma) — an edit made to one instance of a component, such as
+changed text or a swapped icon, that Figma carries into another variant only if the
+layer names match. See [Component property naming](/ds101/component-property-naming/).
+
 **Components as data** — authoring a component's anatomy, props, styles, and variants
 directly as structured data (YAML/JSON) rather than a Figma file, so Figma and
 generated code for each platform become outputs of that data instead of the source

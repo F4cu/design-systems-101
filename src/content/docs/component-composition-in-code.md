@@ -135,7 +135,7 @@ The discipline that governs new components applies to subcomponents too: don't s
 
 What Curtis calls a subcomponent at the design and API level is what a frontend team builds as a compound component. Naming both sides the same way keeps a design file's nested components and a codebase's subcomponents mapped one-to-one. If Figma calls something a "part" and the code exports it as an unrelated component with a different name, the mapping breaks. That's the failure the [design-to-code contract](/ds101/design-to-code-contract/) exists to prevent.
 
-This applies to the parts, not to every prop. A prop can still follow each tool's own conventions, as [Component API design](/ds101/component-api-design/#respect-platform-native-names) explains.
+Props follow the same rule, with rare exceptions where a tool's own convention forces a different word. [Component property naming](/ds101/component-property-naming/#use-the-same-names-options-and-defaults-in-both-tools) covers both.
 
 ## Common mistakes
 

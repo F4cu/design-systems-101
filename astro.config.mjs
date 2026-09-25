@@ -60,6 +60,7 @@ export default defineConfig({
 						'component-composition-in-figma',
 						'component-composition-in-code',
 						'component-api-design',
+						'component-property-naming',
 						'component-accessibility',
 						'layout-accessibility',
 					],

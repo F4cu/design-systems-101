@@ -7,7 +7,6 @@ Every prop you ship is a promise you keep forever, or a breaking change you'll h
 :::tip[Key takeaways]
 - Make the common configurable, and the uncommon composable
 - Extend an existing component before adding a lookalike
-- Name the same concept the same way across every component
 - Prefer composition over style overrides
 - Share decisions across platforms, not implementations
 :::
@@ -64,24 +63,6 @@ The cost: consumers assemble more themselves, so they need good examples. [Compo
 
 A new visual expression of something that already exists, like a new button color next to solid and outline, is usually a new variant value or a new property, not a new component. [Supernova](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems) puts it this way: if the need is general and reusable, it belongs inside the existing component's contract, not in a lookalike next to it. The full [criteria for adding a component](/ds101/component-lifecycle/#criteria-for-adding-a-component) live on Component lifecycle.
 
-### Name the same concept the same way everywhere
-
-Don't mix `type`, `mode`, `variant`, and `style` for the same underlying concept across components. When the names vary, the whole API gets harder to predict. Source: [Supernova](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems).
-
-```tsx title="Mixed names"
-<Button variant="outline" />
-<Tag type="outline" />
-<Card mode="outlined" />
-```
-
-```tsx title="One name"
-<Button variant="outline" />
-<Tag variant="outline" />
-<Card variant="outline" />
-```
-
-In the first version, someone who knows Button still has to look up Tag and Card. Values drift the same way, so `outlined` shows up next to `outline`. In the second version, knowing one component means you can guess the others.
-
 ### Support only the prop combinations you document
 
 Supernova's warning: "if your system permits a certain usage, it will likely be used that way somewhere in the product." Undocumented combinations don't stay theoretical for long, so decide which ones you support and block the rest.
@@ -105,10 +86,6 @@ Supernova's warning: "if your system permits a certain usage, it will likely be 
 
 The severity tells tools what to do. With `error`, they should refuse to generate the combination. With `warning`, they flag it for review. Each rule also carries its reason, so a reviewer or an agent that hits it knows why, not just that it's blocked.
 
-### Respect platform-native names
-
-Don't force artificial uniformity across tools. It's `src` on the web and `image` in Figma, per the same Supernova guide. This applies to props, not to the parts themselves: a subcomponent should keep one name in both tools, as [Component composition in code](/ds101/component-composition-in-code/#match-part-names-across-figma-and-code) explains.
-
 ### Prefer composition over style overrides
 
 An override is a hidden dependency that can break silently on the next release. Composition stays part of the documented, versioned API. [Supernova](https://www.supernova.io/blog/building-durable-component-apis-for-design-systems) makes this case, and [MUI's API design guide](https://mui.com/material-ui/guides/api/) reaches the same split on its own from a component-engineering angle: props for styling, composition for structure.
@@ -127,6 +104,8 @@ An override is a hidden dependency that can break silently on the next release. 
 ```
 
 `.card__title` is an internal class name, not part of Card's API. If the system team renames it in a refactor, the promo loses its styling, and nothing in the release notes warned anyone, because no prop changed. The composed version puts the product team's own heading inside Card. The only thing it depends on is that Card accepts children, which is documented and versioned.
+
+When teams do need to restyle, give them a documented way in so they don't reach into internals. [MUI](https://mui.com/material-ui/guides/api/) passes undocumented props such as `className` to the root element, and every component accepts a `classes` prop keyed by documented names, with the root always called `root`. Because the names are documented, renaming one is a visible API change rather than a silent break like `.card__title`. To decide what stays locked, [Murphy Trueman](https://murphytrueman.substack.com/p/slots-and-the-control-paradox) asks what "must stay consistent for brand identity, accessibility, or technical reasons?" and treats everything else as a candidate for flexibility. [Component property naming](/ds101/component-property-naming/) covers how to name the props themselves.
 
 ### Share decisions across platforms, not implementations
 
