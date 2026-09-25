@@ -29,7 +29,7 @@ Met when the spec can be built without clarifying questions:
 - Edge cases like long strings and empty states are covered.
 - Token usage is explicit in the file.
 - The component API (props, types, defaults) is agreed before build.
-- Accessibility is handled now, not deferred: focus indicators, contrast, touch targets, and the ARIA contract (the component's role, keyboard pattern, and how it gets its label).
+- Accessibility is handled now, not deferred: focus indicators, contrast, touch targets, and the ARIA contract (the component's role, keyboard pattern, and how it gets its label). [Component accessibility](/ds101/component-accessibility/) covers what to check.
 
 ### Build contract
 

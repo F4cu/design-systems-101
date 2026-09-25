@@ -58,7 +58,7 @@ Only the first and fourth rows restate the sourced examples directly. The rest a
 
 ### Make accessibility everyone's standard
 
-A common mistake at enterprise scale is routing every accessibility question to one specialist or a small team, on the theory that centralizing expertise centralizes quality. It does the opposite. Everyone else stops treating accessibility as their job, the specialist becomes a bottleneck on every release, and issues that should have been caught earlier surface at a late review nobody can act on cheaply. The [design-to-code contract](/ds101/design-to-code-contract/) puts accessibility in both the design and build contracts for this reason. Keep a specialist as the escalation path, not the only checkpoint.
+A common mistake at enterprise scale is routing every accessibility question to one specialist or a small team, on the theory that centralizing expertise centralizes quality. It does the opposite. Everyone else stops treating accessibility as their job, the specialist becomes a bottleneck on every release, and issues that should have been caught earlier surface at a late review nobody can act on cheaply. The [design-to-code contract](/ds101/design-to-code-contract/) puts accessibility in both the design and build contracts for this reason. Keep a specialist as the escalation path, not the only checkpoint. [Component accessibility](/ds101/component-accessibility/) covers what everyone should be checking.
 
 ### Let knowledge flow upstream too
 

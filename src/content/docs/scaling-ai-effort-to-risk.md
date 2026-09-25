@@ -24,7 +24,7 @@ The design-system-ops notes ([`knowledge-notes/component-bestiary-reference.md`]
 
 - **Badges, CR 1–2**: misuse creates minor inconsistency, so basic usage guidelines are enough.
 - **Modals, CR 5–7**: misuse causes real user harm through accessibility regressions.
-- **Date pickers and data tables, CR 7–9**: these should trigger a mandatory accessibility audit before release.
+- **Date pickers and data tables, CR 7–9**: these should trigger a mandatory [accessibility audit](/ds101/component-accessibility/) before release.
 
 ## Practices
 

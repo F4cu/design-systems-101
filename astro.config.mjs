@@ -43,6 +43,7 @@ export default defineConfig({
 						'component-composition-in-code',
 						'component-composition-in-figma',
 						'design-to-code-contract',
+						'component-accessibility',
 						'component-api-design',
 						'multi-platform-component-specs',
 						'platform-divergence',

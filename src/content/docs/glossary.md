@@ -230,6 +230,19 @@ risk it removes, or what waste it recovers. See
 plus overheads, divided by working hours); used at one rate for both the cost and the
 benefit side of an ROI estimate. See [Estimating ROI](/ds101/estimating-roi/).
 
+**European Accessibility Act (EAA)** — the EU directive that has required many
+consumer-facing products and services to be accessible since 28 June 2025. Its technical
+standard, EN 301 549, currently points to WCAG 2.1 AA. See
+[Component accessibility](/ds101/component-accessibility/).
+
+**Evidence rule** (accessibility) — an audit criterion passes only with evidence from the
+running component or a computed contrast ratio; anything inferred from code alone is a
+warning, not a pass. See [Component accessibility](/ds101/component-accessibility/).
+
+**WCAG** (Web Content Accessibility Guidelines) — the W3C's accessibility standard,
+organized into A, AA, and AAA conformance levels; 2.2 AA is the usual audit baseline. See
+[Component accessibility](/ds101/component-accessibility/).
+
 **Metadata** — data *about* something, rather than the thing itself: not the component,
 but the facts describing it (its name, its props, its variants, its accessibility role)
 that let a person or an AI agent understand and use it correctly without having to
@@ -249,6 +262,15 @@ directly instead of parsing documentation pages. See
 **Agentic pass** — a run of an AI agent over a design, after it's marked ready for
 development, that fills in the behavior and accessibility details a Figma file can't
 hold. See [The design-to-code contract](/ds101/design-to-code-contract/).
+
+**APG** (ARIA Authoring Practices Guide) — the W3C's reference for how each widget type
+(menu, tabs, combobox, and so on) should behave for keyboard and screen-reader users.
+See [Component accessibility](/ds101/component-accessibility/).
+
+**ARIA** (Accessible Rich Internet Applications) — HTML attributes that tell assistive
+technology what a custom element is and what state it's in. First rule: don't use it
+where a native HTML element already has the right meaning. See
+[Component accessibility](/ds101/component-accessibility/).
 
 **ARIA contract** — the accessibility part of a component's design spec: its role, its
 keyboard pattern, and how it gets its accessible label. Agreed before build, not left

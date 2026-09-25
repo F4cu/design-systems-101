@@ -56,7 +56,7 @@ A CI job that re-reads a component's full prose docs on every run pays a real, r
 
 ### Make metadata completeness a merge gate
 
-The design-system-ops notes treat incomplete metadata as a release blocker: "before a component is considered release-ready, its metadata should pass a quality gate: all props documented, all interactive states defined, accessibility contract complete, structured JSON metadata in sync with text description... treating incomplete documentation with the same seriousness as failing tests." Wire that gate into CI instead of a manual pre-release checklist. A checklist item gets skipped under deadline pressure. A failing pipeline doesn't merge.
+The design-system-ops notes treat incomplete metadata as a release blocker: "before a component is considered release-ready, its metadata should pass a quality gate: all props documented, all interactive states defined, accessibility contract complete, structured JSON metadata in sync with text description... treating incomplete documentation with the same seriousness as failing tests." Wire that gate into CI instead of a manual pre-release checklist. A checklist item gets skipped under deadline pressure. A failing pipeline doesn't merge. Automated accessibility scans belong in the same pipeline. [Component accessibility](/ds101/component-accessibility/) covers what they catch and what still needs testing by hand.
 
 ## Common mistakes
 
