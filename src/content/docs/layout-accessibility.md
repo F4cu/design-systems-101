@@ -1,5 +1,7 @@
 ---
 title: Layout Accessibility
+reviewed: 2026-09-25
+reviewIn: 12
 ---
 
 A screen can be built entirely from components that pass their audits and still be hard to use with a screen reader. The problems come from how the components are put together: the order the page is read in, its heading structure, and the landmarks that let someone jump between regions. These all exist only once components are combined into a layout, so a design system has to handle them in its page templates and layout guidance, not in single components. An accessible layout still needs accessible components inside it, which [Component accessibility](/ds101/component-accessibility/) covers.

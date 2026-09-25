@@ -1,5 +1,7 @@
 ---
 title: Platform Divergence
+reviewed: 2026-09-23
+reviewIn: 12
 ---
 
 Some differences between iOS, Android, and web are legitimate, not drift. Every such difference is either a **value** (a different typeface for the same role) or a **structure** (a different control for the same intent), and each is fixed at a different layer. Value differences are resolved in tokens, and structural ones in component contracts.

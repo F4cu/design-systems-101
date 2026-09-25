@@ -1,5 +1,7 @@
 ---
 title: Brand Alignment
+reviewed: 2026-09-17
+reviewIn: 24
 ---
 
 A design system implements brand identity. It doesn't own it. The design system covers product UI, built and maintained by designers and engineers. Brand guidelines cover something wider: visual identity across digital and physical surfaces, for marketers, agencies, and vendors who will never open a component library. The system should stay visually aligned with the brand without trying to be the thing that owns it.

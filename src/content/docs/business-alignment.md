@@ -1,5 +1,7 @@
 ---
 title: Business Alignment
+reviewed: 2026-09-16
+reviewIn: 24
 ---
 
 A design system's roadmap should stay legible against what the company cares about *right now*, not run as a self-contained backlog the rest of the org has to take on faith. The work may barely change from one year to the next, but the reason you give for funding it should follow what the company is optimizing for. [Communicating value](/ds101/communicating-value/) is about making the case to each funder. Business alignment is about keeping that case current and carrying it through to a decision.

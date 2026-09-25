@@ -1,5 +1,7 @@
 ---
 title: Performance in Context
+reviewed: 2026-09-16
+reviewIn: 24
 ---
 
 A component's quality depends on where it's used. A component that passes isolated testing (accessibility checks, visual QA, token compliance) can still fail where it actually lives. [Measuring adoption](/ds101/measuring-adoption/) asks "does the system provide this?" and "do teams use it?" This page adds a third question: *does it perform in the specific context and journey it's placed in?*

@@ -1,5 +1,7 @@
 ---
 title: Measuring Adoption
+reviewed: 2026-07-02
+reviewIn: 24
 ---
 
 Coverage and adoption answer different questions. Coverage asks whether the system *provides* what teams need. Adoption asks whether teams *actually use* it. The fixes are opposites: low coverage is a supply problem (build more), and low adoption with high coverage is a demand problem (find out why teams don't use what already exists).

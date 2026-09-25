@@ -1,5 +1,7 @@
 ---
 title: Operating Cadence
+reviewed: 2026-09-16
+reviewIn: 24
 ---
 
 [Governance](/ds101/decision-governance/) decides what's in the system and why. Operating cadence makes sure people outside the core team actually *know* that. It takes several channels working together: a release rhythm, a standing place to ask questions, a named guide for bigger work, advocates, and a route for feedback to get back in. A system can be perfectly governed and still fail if nobody hears about a change, knows who to ask, or has anywhere to complain.

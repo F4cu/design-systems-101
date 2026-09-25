@@ -1,5 +1,7 @@
 ---
 title: Component Composition in Figma
+reviewed: 2026-09-18
+reviewIn: 12
 ---
 
 A component gets its flexibility from smaller components nested inside it, not from piling more variants and booleans onto one flat layer. This page covers how to build that structure in Figma. [Component composition in code](/ds101/component-composition-in-code/) defines the layers (primitives, subcomponents, slots) and how the same structure is built in code.

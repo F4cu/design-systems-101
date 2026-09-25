@@ -1,5 +1,7 @@
 ---
 title: Estimating ROI
+reviewed: 2026-09-25
+reviewIn: 24
 ---
 
 An ROI estimate for a design system is only as credible as its weakest input. Label where every figure came from, cost the work and value the savings at the same hourly rate, and count payback from running totals. Almost nobody does this: zeroheight's *Design Systems Report 2026* (147 practitioners) found only 5% of teams measure ROI at all, so an honest rough estimate already puts you ahead of most of the field.

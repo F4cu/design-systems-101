@@ -1,5 +1,7 @@
 ---
 title: Release Management
+reviewed: 2026-09-17
+reviewIn: 12
 ---
 
 A version number, a changelog entry, and a migration guide are three views of the same event: they tell consuming teams what upgrading will cost them. When all three tell the truth, teams keep upgrading. When they don't, teams stop.

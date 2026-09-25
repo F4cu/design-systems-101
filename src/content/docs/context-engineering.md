@@ -1,5 +1,7 @@
 ---
 title: Context Engineering
+reviewed: 2026-09-18
+reviewIn: 6
 ---
 
 A design system's context, meaning the structured facts an AI agent needs to use it correctly, doesn't appear for free once you've written good docs. It has to be built as its own artifact: scoped, structured, and tested against how agents actually use it. Murphy Trueman and Diana Wolosin, working independently, arrived at the same shape: context split into scoped units an agent loads per task. Wolosin calls it a **context engine**.

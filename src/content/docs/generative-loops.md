@@ -1,5 +1,7 @@
 ---
 title: Generative Loops
+reviewed: 2026-09-18
+reviewIn: 6
 ---
 
 A **generative loop** is any orchestration shape where an agent's output feeds back into another round of generation. This page is about the kind that includes review: a **generator/reviewer loop**, where one agent produces work and a reviewer agent evaluates it and sends it back for revision. Pairing a generator with a reviewer only improves quality if the loop has a defined stopping point and a real way to measure whether an iteration improved. Without both, it either runs forever or settles on something nobody checked.

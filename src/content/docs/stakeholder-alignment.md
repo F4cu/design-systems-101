@@ -1,5 +1,7 @@
 ---
 title: Stakeholder Alignment
+reviewed: 2026-09-16
+reviewIn: 24
 ---
 
 > "Design systems don't fail because of components. They fail because they lose alignment with the organisation."

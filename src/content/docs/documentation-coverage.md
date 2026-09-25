@@ -1,5 +1,7 @@
 ---
 title: Documentation Coverage
+reviewed: 2026-07-02
+reviewIn: 24
 ---
 
 Documentation is measured against the code, never the other way around. The code is the true answer to "what components exist." When code and docs disagree, that's drift, in one of two directions. A component in code with no docs is a coverage gap: the docs fell behind. A doc page for a component that no longer exists is an orphan: the docs missed a removal.

@@ -1,5 +1,7 @@
 ---
 title: Design System Maturity
+reviewed: 2026-09-19
+reviewIn: 24
 ---
 
 Maturity isn't one score. The Nielsen Norman Group's newer framework rates a system on six separate dimensions, and a system can be a 5 on infrastructure and a 2 on governance at the same time. Collapsing that into one number hides exactly the gap a team most needs to see. Source: [Huei-Hsin Wang, "Design-System Maturity: A 6-Dimension Framework,"](https://www.nngroup.com/articles/design-system-maturity/) NN/g, 2026.

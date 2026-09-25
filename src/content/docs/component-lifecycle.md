@@ -1,5 +1,7 @@
 ---
 title: Component Lifecycle
+reviewed: 2026-09-24
+reviewIn: 24
 ---
 
 Every component enters the system through a decision and should leave through one too. This page owns those decisions: how to sort a request, what a new component has to clear to get in, and when an existing one should go. [Release management](/ds101/release-management/) covers the mechanics of shipping and retiring it. [Decision governance](/ds101/decision-governance/) covers how the decision gets owned and recorded.

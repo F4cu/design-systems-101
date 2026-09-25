@@ -1,5 +1,7 @@
 ---
 title: Inheriting a Legacy System
+reviewed: 2026-09-18
+reviewIn: 24
 ---
 
 Most design-system writing assumes you're building from zero. Most real systems aren't met that way: someone else built this one, left, and now you're running it. In Murphy Trueman's framing, that has already happened two or three times at most organizations with a system old enough to matter. Walking in cold takes a different discipline than building fresh: **design system archaeology**, reading what's there to understand what was meant, before you touch anything.

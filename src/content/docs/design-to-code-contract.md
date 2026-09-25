@@ -1,5 +1,7 @@
 ---
 title: The Design-to-Code Contract
+reviewed: 2026-07-02
+reviewIn: 12
 ---
 
 "Done" isn't one thing. A component can be done in the sense of "design approved," "built," "documented," or "released," and each is a different bar. A design-to-code contract spells out each one, so a component isn't finished until every stage has met its own standard.

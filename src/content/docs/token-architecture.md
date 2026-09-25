@@ -1,5 +1,7 @@
 ---
 title: Token Architecture
+reviewed: 2026-07-02
+reviewIn: 12
 ---
 
 Tokens work in three layers: raw values, the intent those values serve, and optionally the components that use them. References only ever point one layer down. That's what makes a rebrand or a dark theme a one-line change instead of a search through the whole codebase.

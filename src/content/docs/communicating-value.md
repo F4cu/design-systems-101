@@ -1,5 +1,7 @@
 ---
 title: Communicating Value
+reviewed: 2026-09-16
+reviewIn: 24
 ---
 
 A design system has to justify itself in the funder's terms. "It's more consistent" and "it's more efficient" are true, but they read as nice-to-haves to anyone who doesn't use the system day to day. The bar is low industry-wide: zeroheight's *Design Systems Report 2026* (147 practitioners) found only **5%** of teams measure ROI at all. A team with any credible value story is already ahead of most of the field.

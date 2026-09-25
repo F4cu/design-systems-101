@@ -1,5 +1,7 @@
 ---
 title: Decision Governance
+reviewed: 2026-07-02
+reviewIn: 24
 ---
 
 Governance is how a design system decides things on purpose, and how it remembers what it decided. A governed system can tell you *why* it looks the way it does. An ungoverned one just accumulates. This page covers who decides and how decisions get recorded. [Component lifecycle](/ds101/component-lifecycle/) covers the criteria for what enters and leaves the system. Governance matures in stages, and most teams aren't at the end state. That's fine, as long as they know which stage they're at.

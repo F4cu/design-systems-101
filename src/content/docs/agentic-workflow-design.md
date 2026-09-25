@@ -1,5 +1,7 @@
 ---
 title: Agentic Workflow Design
+reviewed: 2026-07-02
+reviewIn: 6
 ---
 
 Agentic workflows are a coordination problem, not a capability problem. When you chain AI agents together (small automated workers, each doing one job), the hard part isn't making any one agent smarter. It's defining how they hand work to each other, and exactly where a human steps in. Skip either and you get output nobody can trust or explain.

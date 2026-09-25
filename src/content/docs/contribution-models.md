@@ -1,5 +1,7 @@
 ---
 title: Contribution Models
+reviewed: 2026-09-16
+reviewIn: 24
 ---
 
 A contribution model decides how people outside the core team propose, build, and ship changes to the system. It sits between two neighbors. [Team models](/ds101/team-models/) decide who owns the system. [Component lifecycle](/ds101/component-lifecycle/) decides what a contribution has to clear to get in. [Fostering contribution](/ds101/fostering-contribution/) covers the culture that makes people show up at all.

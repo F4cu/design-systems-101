@@ -1,5 +1,7 @@
 ---
 title: Governance for AI
+reviewed: 2026-09-16
+reviewIn: 6
 ---
 
 An agent treats every documentation gap as a rule to follow literally. [AI readiness](/ds101/ai-readiness/) asks whether a system's metadata is explicit enough for an agent to use. This page goes further: an agent treats every gap, stale doc, and "everyone just knows" convention as literal, because it has no instinct to fall back on when the written rule and the real one disagree. A human contributor papers over that gap without noticing. An agent executes exactly what's written, or exactly what it can infer from the code.

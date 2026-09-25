@@ -1,5 +1,7 @@
 ---
 title: Dependency Observability
+reviewed: 2026-09-17
+reviewIn: 24
 ---
 
 [Measuring adoption](/ds101/measuring-adoption/) tells you whether teams use the system at all. Dependency observability looks one layer down, at the teams that *are* using it. Which version are they on? Which props do they reach for? Which tokens do they quietly skip in favor of raw values? And who built their own version because the system's didn't fit? A system can have excellent adoption numbers and still be nearly blind on all four.

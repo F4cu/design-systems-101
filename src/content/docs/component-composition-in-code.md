@@ -1,5 +1,7 @@
 ---
 title: Component Composition in Code
+reviewed: 2026-09-18
+reviewIn: 12
 ---
 
 A component is rarely one indivisible thing. It's built from smaller pieces, and it may itself be a piece inside something bigger. Practitioners name these layers differently (primitive, atom, subcomponent, part, compound component, slot), and the words aren't synonyms for "small component." Each answers a different question: how generic is this piece, and where is it allowed to be used? This page covers how those layers are built in code. [Component composition in Figma](/ds101/component-composition-in-figma/) covers the same structure in the design file.

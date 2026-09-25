@@ -1,5 +1,7 @@
 ---
 title: Scaling Across Decades
+reviewed: 2026-09-18
+reviewIn: 24
 ---
 
 Most design-system advice assumes a normal software lifecycle: a few years, one deploy pipeline, one company that owns it end to end. Industrial products don't work that way. Factory automation software or a medical equipment interface can stay in the field for decades, be maintained by a team that has changed twice, and end up owned by a different company after an acquisition. At that scale, the system's job is holding one design language together across products that were never built at the same time, on the same stack, or by the same team.

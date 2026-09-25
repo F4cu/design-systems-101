@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "node scripts/check-freshness.mjs",
     "build": "astro build",
+    "freshness": "node scripts/check-freshness.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

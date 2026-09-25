@@ -1,5 +1,7 @@
 ---
 title: Governance Case Studies
+reviewed: 2026-09-16
+reviewIn: 24
 ---
 
 Almost every real governance failure, and every real success, only makes sense in context: what worked for one team's size, stage, and structure would have failed for another. These four cases are worked examples, not templates. Each ends with what made the outcome depend on its context.

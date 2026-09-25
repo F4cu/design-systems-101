@@ -1,5 +1,7 @@
 ---
 title: Component API Design
+reviewed: 2026-09-16
+reviewIn: 12
 ---
 
 Every prop you ship is a promise you keep forever, or a breaking change you'll have to schedule later. Whether a component stays durable under product pressure, or slowly turns into a pile of conditional flags, comes down to a few recurring decisions. The biggest one is when to configure with a prop and when to compose with smaller pieces.

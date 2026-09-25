@@ -1,5 +1,7 @@
 ---
 title: Onboarding Adopters
+reviewed: 2026-09-25
+reviewIn: 24
 ---
 
 A new designer or engineer decides in their first week whether to build with the system or around it. Onboarding that's specific to this system, honest about its gaps, and clear about what to do when a part is missing keeps them building with it. [Measuring adoption](/ds101/measuring-adoption/) places onboarding at the first stage of adoption, before a team is using the system day to day.

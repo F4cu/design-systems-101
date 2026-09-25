@@ -1,5 +1,7 @@
 ---
 title: UI Audit
+reviewed: 2026-09-16
+reviewIn: 24
 ---
 
 Audit what already exists before you design what should replace it. Two separate exercises come before the first token or component: an **interface inventory**, which catalogs every distinct UI treatment already shipping, and a **heuristic evaluation**, an expert usability review against a fixed set of principles. The inventory answers "what do we have, and where is it inconsistent?" The evaluation answers "where does it break known usability principles?"

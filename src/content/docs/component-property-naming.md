@@ -1,5 +1,7 @@
 ---
 title: Component Property Naming
+reviewed: 2026-09-25
+reviewIn: 12
 ---
 
 A property name is the word designers pick in Figma's properties panel and developers type in code. If both say the same thing, a spec moves from one tool to the other without translation. If they don't, every handoff turns into a lookup. Settle names, options, and defaults once, before anyone builds, and keep them identical in both tools.

@@ -22,6 +22,7 @@ deployed by `.github/workflows/deploy.yml` on push to `main`.
 npm install
 npm run dev     # serve locally to preview changes
 npm run build   # production build to dist/
+npm run freshness  # list pages overdue for a freshness review
 ```
 
 ## Architecture
@@ -157,6 +158,14 @@ Other conventions:
     `references.md`, never in page prose. If a source's age changes
     how a reader should read it, say so in the sentence instead ("Curtis's 2015
     post predates Figma variables…").
+  - **Review dates**: every content page (except `index.md`, `glossary.md`,
+    `references.md`) has `reviewed: YYYY-MM-DD` and `reviewIn: <months>` frontmatter.
+    `reviewIn` follows the risk tier above: 6 for the Agentic AI section, 12 for
+    medium-risk pages (Foundations, Components, `release-management`), 24 for the rest.
+    New pages get today's date and their tier. `npm run freshness` (also run before
+    every build) lists overdue pages; the `freshness-check` skill checks them and
+    reports findings. Bump `reviewed` only after a page's claims have actually been
+    re-checked, not on unrelated edits.
   - When researching, check the publication date before using a source. If the only
     in-pool source for an example is dated, tell the user rather than presenting it as
     current practice. It's fine to keep an old source for the principle and ask for a

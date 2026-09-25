@@ -1,5 +1,7 @@
 ---
 title: Fostering Contribution
+reviewed: 2026-09-17
+reviewIn: 24
 ---
 
 An open contribution door doesn't produce contributors on its own. [Contribution models](/ds101/contribution-models/) answer how outside teams propose and ship changes. This page answers what makes people actually show up. Amy Hupe's five lessons on enabling contribution and Inayaili de León's talk on fostering participation start from the same observation: contribution is a behavior you build on purpose, not a feature you ship once.

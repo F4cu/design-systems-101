@@ -1,5 +1,7 @@
 ---
 title: CI for Agentic Workflows
+reviewed: 2026-09-18
+reviewIn: 6
 ---
 
 [Agentic workflow design](/ds101/agentic-workflow-design/) sets an autonomy level per action: how much review it needs before it takes effect. CI (continuous integration, the automated pipeline that tests and ships code changes) is where most of those levels actually get enforced for anything touching code, tokens, or docs. An agent that can write files but can't merge them is only really constrained if something sits between "the agent produced this" and "this is live." That something is almost always a CI job.

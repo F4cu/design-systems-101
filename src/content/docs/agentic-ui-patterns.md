@@ -1,5 +1,7 @@
 ---
 title: Agentic UI Patterns
+reviewed: 2026-09-18
+reviewIn: 6
 ---
 
 The rest of this section treats AI as a consumer of the design system: an agent reading tokens, components, and docs. This page covers the other direction. Your product now ships chat interfaces, generated content, and agents that act on a user's behalf, and the design system needs real patterns for that surface: components, not just guidelines. A handful of mature systems have already published theirs.

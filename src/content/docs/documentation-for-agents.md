@@ -1,5 +1,7 @@
 ---
 title: Documentation for Agents
+reviewed: 2026-09-18
+reviewIn: 6
 ---
 
 A page of prose with a sidebar is a good shape for a person skimming for one fact. It's a poor shape for a model that has to parse the whole thing to find it. Documentation for agents needs structured metadata as a first-class artifact, not an appendix to the human docs.

@@ -1,5 +1,7 @@
 ---
 title: What a Design System Is
+reviewed: 2026-07-02
+reviewIn: 12
 ---
 
 A design system isn't a component library. It's three separate jobs that share one name: tokens, components, and governance. Most designers only ever touch the middle one, and each of the three fails in its own way when it's neglected.

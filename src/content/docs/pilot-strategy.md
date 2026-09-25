@@ -1,5 +1,7 @@
 ---
 title: Pilot Strategy
+reviewed: 2026-09-16
+reviewIn: 24
 ---
 
 > "I haven't done a design system where we didn't pilot it first."

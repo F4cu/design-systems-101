@@ -1,5 +1,7 @@
 ---
 title: Multi-Platform Component Specs
+reviewed: 2026-09-19
+reviewIn: 12
 ---
 
 Once a design system ships to several platforms, a component's source of truth has to be platform-neutral data, not one tool's file. That's the only way independent platform teams build the same thing without drifting apart.

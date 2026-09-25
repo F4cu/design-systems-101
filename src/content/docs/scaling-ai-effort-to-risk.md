@@ -1,5 +1,7 @@
 ---
 title: Scaling AI Effort to Risk
+reviewed: 2026-07-02
+reviewIn: 6
 ---
 
 Not every component deserves the same documentation depth, audit rigor, or level of AI access. Effort should scale with implementation risk, and agent access with proven value: scoped on purpose, not maximized by default. Knowing where to spend depth is itself a design-system skill.
