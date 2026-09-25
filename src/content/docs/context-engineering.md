@@ -2,7 +2,7 @@
 title: Context Engineering
 ---
 
-A design system's context, meaning the structured facts an AI agent needs to use it correctly, doesn't appear for free once you've written good docs. It has to be built as its own artifact: scoped, structured, and tested against how agents actually use it. Two practitioners working independently arrived at the same shape and the same name for it, a **context engine**: Murphy Trueman and Diana Wolosin.
+A design system's context, meaning the structured facts an AI agent needs to use it correctly, doesn't appear for free once you've written good docs. It has to be built as its own artifact: scoped, structured, and tested against how agents actually use it. Murphy Trueman and Diana Wolosin, working independently, arrived at the same shape: context split into scoped units an agent loads per task. Wolosin calls it a **context engine**.
 
 :::tip[Key takeaways]
 - Treat context as its own artifact, separate from human docs
@@ -33,9 +33,11 @@ Jan Six designs agent experiences for Copilot at GitHub and created Tokens Studi
 
 ### Load only the context each task needs
 
-Trueman's design-system-ops toolkit (`knowledge-notes/context-engine-blueprints.md`) builds its context engine from seven YAML blueprints: UX patterns, UI tokens, content voice, accessibility contracts, ethical guardrails (like bans on dark patterns), technical prop contracts, and business intelligence (what's safe to A/B test, and what never is). Not every task needs every blueprint. An agent generating a component loads technical, UI, and accessibility. One writing copy loads content and ethical. A full design review loads all seven.
+Trueman's design-system-ops orchestration guide ([`knowledge-notes/agent-orchestration-guide.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/agent-orchestration-guide.md)) calls this the minimal context principle: "Each agent should receive only the system context relevant to its task. A token auditor needs the token architecture but not the content guidelines." Loading everything into every agent, the guide notes, wastes tokens and can make agents perform worse.
 
-Wolosin built hers independently, for a different production system. Both land on the same shape: don't hand an agent everything at once, split context into scoped, loadable units, and treat that structuring as infrastructure, not documentation overhead. Two practitioners reaching the same design from separate starting points is stronger evidence than either alone.
+In practice the toolkit does this with files rather than one big bundle. Its [MCP guide](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/mcp-setup-guide.md) makes an `AGENTS.md` file in the repo "the entry point": it says where things live, and links out to the component inventory, per-component metadata, and lint rules. An agent follows only the links its task needs.
+
+Wolosin's context engine, built independently for a different production system, lands on the same shape: don't hand an agent everything at once, split context into scoped, loadable units, and treat that structuring as infrastructure, not documentation overhead. Two practitioners reaching the same design from separate starting points is stronger evidence than either alone.
 
 ## Common mistakes
 

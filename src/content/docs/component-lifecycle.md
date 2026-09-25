@@ -13,7 +13,7 @@ Every component enters the system through a decision and should leave through on
 
 ## The problem
 
-The design-system-ops governance notes (`knowledge-notes/component-governance.md`) warn that without deliberate decisions, "a design system accumulates components by inertia rather than by intent." A system with no way to remove things only grows, until it collapses under its own weight.
+The design-system-ops governance notes ([`knowledge-notes/component-governance.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/component-governance.md)) warn that without deliberate decisions, "a design system accumulates components by inertia rather than by intent." A system with no way to remove things only grows, until it collapses under its own weight.
 
 ## Practices
 

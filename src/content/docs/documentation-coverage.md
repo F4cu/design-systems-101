@@ -18,7 +18,7 @@ The tempting shortcut is to treat the documentation platform's component list as
 
 ## The model
 
-The design-system-ops documentation notes (`knowledge-notes/documentation-coverage.md`) split "documented" into three rungs instead of a yes/no.
+The design-system-ops documentation notes ([`knowledge-notes/documentation-coverage.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/documentation-coverage.md)) split "documented" into three rungs instead of a yes/no.
 
 ### Rung one: exists
 

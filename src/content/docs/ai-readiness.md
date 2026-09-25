@@ -2,7 +2,7 @@
 title: AI Readiness
 ---
 
-An AI-ready design system is one AI agents and tools can use, reason about, and generate from without needing knowledge nobody wrote down. Most systems assume a human who can infer intent from visual context or ask a colleague. An agent can't infer or ask. It only works with what's explicit. But the gap isn't new: the same unwritten knowledge has always confused new team members and outside contributors. The design-system-ops notes (`knowledge-notes/ai-readiness.md`) sum it up: AI readiness is design-system quality, applied with more precision.
+An AI-ready design system is one AI agents and tools can use, reason about, and generate from without needing knowledge nobody wrote down. Most systems assume a human who can infer intent from visual context or ask a colleague. An agent can't infer or ask. It only works with what's explicit. But the gap isn't new: the same unwritten knowledge has always confused new team members and outside contributors. The design-system-ops notes ([`knowledge-notes/ai-readiness.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/ai-readiness.md)) sum it up: AI readiness is design-system quality, applied with more precision.
 
 :::tip[Key takeaways]
 - Invest in context quality at the source, because errors compound downstream
@@ -23,7 +23,7 @@ Because the cascade compounds, the cheapest place to fix context is where it sta
 
 ### Publish a machine-readable component manifest
 
-The design-system-ops notes describe a **machine-readable component manifest**: a structured JSON index of every component, with its name, category, description, props, variants, composition relationships, token bindings, accessibility role, and status. An agent querying it can turn "I need a component for user input with validation" into a specific component, variant, and configuration, without reading documentation pages. That's the difference between a system that works with AI and one that's *legible* to it.
+The [design-system-ops notes](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/ai-readiness.md) describe a **machine-readable component manifest**: a structured JSON index of every component, with its name, category, description, props, variants, composition relationships, token bindings, accessibility role, and status. An agent querying it can turn "I need a component for user input with validation" into a specific component, variant, and configuration, without reading documentation pages. That's the difference between a system that works with AI and one that's *legible* to it.
 
 The notes specify the minimum fields for each component, and the key names below are theirs. The TextField values are illustrative, and each list is trimmed to one item:
 
@@ -54,7 +54,7 @@ The notes specify the minimum fields for each component, and the key names below
 
 Asked for "user input with validation," an agent can match the `input` category, the description, and the `error` prop. `composedOf` and `composedIn` tell it what the field is built from and where it belongs. `status` tells it the component is safe to use. It gets all of this without opening a docs page.
 
-[Context engineering](/ds101/context-engineering/) covers task-specific versions of this manifest: Murphy Trueman's seven-blueprint **context engine**, and a second one built independently by Diana Wolosin.
+[Context engineering](/ds101/context-engineering/) covers task-specific versions of this manifest: Murphy Trueman's per-task context loading, and a **context engine** built independently by Diana Wolosin.
 
 ### Describe tokens and components by purpose
 

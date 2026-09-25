@@ -13,7 +13,7 @@ A design system isn't a component library. It's three separate jobs that share o
 
 ## The problem
 
-Design systems drift. The design-system-ops toolkit's README puts it bluntly: tokens go stale, components fall out of spec, and governance documentation gets written once and never updated.
+Design systems drift. The [design-system-ops toolkit's README](https://github.com/murphytrueman/design-system-ops#readme) puts it bluntly: tokens go stale, components fall out of spec, and governance documentation gets written once and never updated.
 
 Each of those is a different failure at a different layer. Stale tokens mean the vocabulary no longer matches what the product ships: every "blue" in Figma is now a slightly different blue in code. Out-of-spec components have quietly drifted from their definitions. Dead governance means nobody knows how a change gets in, so changes either stop or happen everywhere at once with no record. If you think of the system as "a set of components," you only see one of these three failures coming.
 
@@ -53,7 +53,7 @@ Notice how little of that list is "design a component." Most of the work is the 
 
 ### Treat governance as what makes the system trustworthy
 
-The design-system-ops governance notes define it as "the set of decisions and processes that determine what belongs in a design system, how it gets there, how it changes, and how it leaves. Without it, a design system accumulates components by inertia rather than by intent... Governance is not bureaucracy. The goal is not to make contribution harder — it is to make the system trustworthy. A system that accepts anything is a system nobody trusts."
+The [design-system-ops governance notes](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/component-governance.md) define it as "the set of decisions and processes that determine what belongs in a design system, how it gets there, how it changes, and how it leaves. Without it, a design system accumulates components by inertia rather than by intent... Governance is not bureaucracy. The goal is not to make contribution harder — it is to make the system trustworthy. A system that accepts anything is a system nobody trusts."
 
 ### Judge the system by what it frees people to do
 

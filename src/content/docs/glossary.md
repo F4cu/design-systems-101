@@ -273,14 +273,14 @@ single connection becomes a bottleneck or a single point of failure. See
 [Scaling AI effort](/ds101/scaling-ai-effort-to-risk/).
 
 **Context engineering** — building a structured, machine-readable layer of scoped
-blueprints or metadata that gives an AI agent what prose documentation alone can't,
+metadata that gives an AI agent what prose documentation alone can't,
 treated as its own artifact rather than assumed to fall out of good docs; arrived at
 independently by two practitioners in the same shape. See
 [Context engineering](/ds101/context-engineering/).
 
 **Context engine** — the machine-readable layer context engineering produces: scoped,
-loadable units (Murphy Trueman's seven YAML blueprints; Diana Wolosin's benchmarked
-metadata format) that give an agent what it needs for a given task without handing it
+loadable units (Diana Wolosin's benchmarked metadata format; Murphy Trueman's
+`AGENTS.md` entry point linking out to per-task files) that give an agent what it needs for a given task without handing it
 everything at once. See [Context engineering](/ds101/context-engineering/).
 
 **Generative loop** — any orchestration shape where an agent's output feeds back into

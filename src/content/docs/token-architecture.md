@@ -18,7 +18,7 @@ If a button's background is hardcoded, or points straight at `color.blue.500`, t
 
 ## The model
 
-The three tiers come from the token notes in Murphy Trueman's design-system-ops toolkit (`knowledge-notes/token-architecture.md`).
+The three tiers come from the token notes in Murphy Trueman's design-system-ops toolkit ([`knowledge-notes/token-architecture.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/token-architecture.md)).
 
 <div class="mermaid-wrap">
 

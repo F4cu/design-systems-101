@@ -20,7 +20,7 @@ Time and attention are scarce. An over-documented badge burns the same hours tha
 
 ### Challenge Rating
 
-The design-system-ops notes (`knowledge-notes/component-bestiary-reference.md`) borrow a mechanic from a companion project, the Component Bestiary, which catalogues UI components as D&D-style creatures. A **Challenge Rating (CR)** ranks *implementation danger*, not visual complexity. A high-CR component "is not necessarily large or visually complex — it is dangerous to implement incorrectly."
+The design-system-ops notes ([`knowledge-notes/component-bestiary-reference.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/component-bestiary-reference.md)) borrow a mechanic from a companion project, the Component Bestiary, which catalogues UI components as D&D-style creatures. A **Challenge Rating (CR)** ranks *implementation danger*, not visual complexity. A high-CR component "is not necessarily large or visually complex — it is dangerous to implement incorrectly."
 
 - **Badges, CR 1–2**: misuse creates minor inconsistency, so basic usage guidelines are enough.
 - **Modals, CR 5–7**: misuse causes real user harm through accessibility regressions.
@@ -34,10 +34,10 @@ The rating calibrates everything downstream: documentation depth ("the cost of a
 
 ### Split agent access into layers
 
-The same notes (`knowledge-notes/mcp-setup-guide.md`) apply the same scoping to agent access through **MCP** (Model Context Protocol, the interface that lets an AI agent read component definitions and token values from their real sources instead of a stale copy). Instead of one giant connection, the setup has three separate **MCP layers**:
+The same notes ([`knowledge-notes/mcp-setup-guide.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/mcp-setup-guide.md)) apply the same scoping to agent access through **MCP** (Model Context Protocol, the interface that lets an AI agent read component definitions and token values from their real sources instead of a stale copy). Instead of one giant connection, the setup has three separate **MCP layers**, and only the outer two need a server:
 
 - **A design MCP, like Figma's**: the design source of truth, with names, variants, and token values, but no code-level props.
-- **The system's own MCP server**: a machine-readable inventory, governance rules, and decision trees, but no raw source code.
+- **The system's own knowledge**: a component inventory, per-component metadata, governance rules, and decision pages. The toolkit "does not ship a design system MCP server, and most teams don't need one," because coding agents read these files straight from the repo. A server only pays off for agents that don't have the repo open.
 - **Code Connect**: maps "this design uses a Button" to `import { Button } from '@system/components'`, but not the full source.
 
 Cross-layer questions like "what code component should I use for this Figma frame?" resolve one layer at a time, and no single layer becomes a bottleneck.
@@ -47,7 +47,7 @@ Cross-layer questions like "what code component should I use for this Figma fram
 ```mermaid
 flowchart TD
   Agent["AI agent"] --> Design["Design MCP<br/>names, variants,<br/>token values"]
-  Agent --> System["System MCP server<br/>inventory, rules,<br/>decision trees"]
+  Agent --> System["System knowledge<br/>repo files, or a<br/>server if needed"]
   Agent --> CC["Code Connect<br/>design-to-import<br/>mapping"]
 ```
 
@@ -68,7 +68,7 @@ The same scoping shows up in product UI. AWS Cloudscape's [user-authorized actio
 
 ### Fail honestly when a connection breaks
 
-From the design-system-ops MCP guide: "Never retry a failed [Figma MCP] call in a loop. If the first call fails, note it, proceed without Figma, and let the user fix the connection for the next run." A well-scoped workflow treats a missing layer as an unavailable data source and says so, rather than pretending or breaking.
+From the design-system-ops MCP guide: "Never retry a failed Figma call in a loop. If the first call fails, note it, proceed without Figma, and let the user fix the connection for the next run." A well-scoped workflow treats a missing layer as an unavailable data source and says so, rather than pretending or breaking.
 
 ## Common mistakes
 

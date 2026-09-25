@@ -20,7 +20,7 @@ Without this distinction, teams misdiagnose the problem and pour effort into the
 
 ### Track imports and token compliance
 
-The design-system-ops adoption notes (`knowledge-notes/adoption-measurement.md`) describe four signals, and two are especially concrete. The first is **component consumption**, measured by import analysis: scanning codebases to see which components teams pull in. The shape matters more than the headline: "a system where 5 components account for 90% of imports and 30 components are rarely used has an adoption problem in the tail, even if the headline number looks good."
+The design-system-ops adoption notes ([`knowledge-notes/adoption-measurement.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/adoption-measurement.md)) describe four signals, and two are especially concrete. The first is **component consumption**, measured by import analysis: scanning codebases to see which components teams pull in. The shape matters more than the headline: "a system where 5 components account for 90% of imports and 30 components are rarely used has an adoption problem in the tail, even if the headline number looks good."
 
 The second is **token compliance**: whether teams use design tokens or hardcode raw color and spacing values. The notes call this "the adoption signal that most directly correlates with system value," because tokens are what make theming, rebranding, and consistency possible. A team can use every component and still undermine the system by hardcoding values around them.
 

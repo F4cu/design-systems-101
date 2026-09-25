@@ -17,7 +17,7 @@ When "done" stays vague, everyone fills in their own definition. The designer me
 
 ## The model
 
-The design-system-ops toolkit (`knowledge-notes/design-to-code-contract.md`) splits "done" into four contracts, one per stage.
+The design-system-ops toolkit ([`knowledge-notes/design-to-code-contract.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/design-to-code-contract.md)) splits "done" into four contracts, one per stage.
 
 ### Design contract
 

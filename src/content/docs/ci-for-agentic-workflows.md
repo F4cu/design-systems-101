@@ -46,7 +46,7 @@ The tier follows the *change*, not the agent. The same agent can land in auto-me
 
 ### Run drift detection on a schedule
 
-The design-system-ops notes (`knowledge-notes/ai-readiness.md`) treat stale docs as something a pipeline should catch on its own: "a scheduled process (CI pipeline, GitHub Action, or recurring skill run) compares the component's current prop interface against its documented props. Mismatches are surfaced as findings, not silently ignored."
+The design-system-ops notes ([`knowledge-notes/ai-readiness.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/ai-readiness.md)) treat stale docs as something a pipeline should catch on its own: "a scheduled process (CI pipeline, GitHub Action, or recurring skill run) compares the component's current prop interface against its documented props. Mismatches are surfaced as findings, not silently ignored."
 
 Kavcic widens the inputs: a drift-scoring engine fed by "Figma API, CI hooks, and usage analytics" flags inconsistencies and opens the fix as a pull request automatically. It's the same read-only shape applied to drift. The engine proposes and doesn't merge, and the PR's tier depends on what kind of drift it fixes.
 

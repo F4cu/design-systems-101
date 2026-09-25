@@ -14,7 +14,7 @@ Governance is how a design system decides things on purpose, and how it remember
 
 ## The problem
 
-Without recorded decisions, teams argue the same questions forever. The design-system-ops governance notes (`knowledge-notes/component-governance.md`) put it plainly: "A team that has maintained records for two years knows why their system looks the way it does. A team that has not is perpetually re-litigating the same questions."
+Without recorded decisions, teams argue the same questions forever. The design-system-ops governance notes ([`knowledge-notes/component-governance.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/component-governance.md)) put it plainly: "A team that has maintained records for two years knows why their system looks the way it does. A team that has not is perpetually re-litigating the same questions."
 
 > "The biggest existential threat to any system is neglect."
 >
@@ -81,7 +81,7 @@ graph TD
   A["1. Ad-hoc<br/>components exist, no governance"] --> B["2. Managed<br/>library + informal process"]
   B --> C["3. Systematic<br/>enforced tokens, documented processes"]
   C --> D["4. Measured<br/>adoption tracked, drift detected"]
-  D --> E["5. Optimised<br/>platform infrastructure, versioned APIs"]
+  D --> E["5. Optimised<br/>metadata agents consume, CI quality gates"]
 ```
 
 </div>

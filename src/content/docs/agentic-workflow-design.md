@@ -14,7 +14,7 @@ Agentic workflows are a coordination problem, not a capability problem. When you
 
 ## The problem
 
-Two voices point at the same failure from different angles. The design-system-ops orchestration guide (`knowledge-notes/agent-orchestration-guide.md`) warns: "Never silently skip a failed step — a skipped audit is worse than a failed audit because the consumer assumes the audit passed." That's opacity without accountability. [Romina Kavcic](https://learn.thedesignsystem.guide/p/should-you-build-an-agent-for-your) comes at it from cost: "find the simplest solution possible, and only increase complexity when needed." Complexity without payoff on one side, hidden failures on the other: both come from building the automation before designing the coordination.
+Two voices point at the same failure from different angles. The design-system-ops orchestration guide ([`knowledge-notes/agent-orchestration-guide.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/agent-orchestration-guide.md)) warns: "Never silently skip a failed step — a skipped audit is worse than a failed audit because the consumer assumes the audit passed." That's opacity without accountability. [Romina Kavcic](https://learn.thedesignsystem.guide/p/should-you-build-an-agent-for-your) comes at it from cost: "find the simplest solution possible, and only increase complexity when needed." Complexity without payoff on one side, hidden failures on the other: both come from building the automation before designing the coordination.
 
 ## Choosing an orchestration pattern
 
@@ -29,13 +29,13 @@ graph LR
   B -- No, needs judgment --> D{Saves enough per run<br>to justify the cost?}
   D -- No --> E[Don't automate it]
   D -- Yes --> F{Mistake cheap<br>to catch and undo?}
-  F -- Yes --> G[Agent, Level 1–2<br>autonomous, logged]
-  F -- No --> H[Agent, Level 3<br>human approves each action]
+  F -- Yes --> G[Agent runs on its own<br>logged, spot-checked]
+  F -- No --> H[Agent stops at a human gate<br>a person approves the action]
 ```
 
 </div>
 
-The left branch is Kavcic's workflow-vs-agent test. The autonomy levels on the right come from the design-system-ops oversight framework (see the practices below). Then pick among the four patterns in the orchestration guide, which the [glossary](/ds101/glossary/) calls agentic workflow patterns:
+The left branch is Kavcic's workflow-vs-agent test. The two agent outcomes are the ends of per-action autonomy (see the practices below). Then pick among the four patterns in the orchestration guide, which the [glossary](/ds101/glossary/) calls agentic workflow patterns:
 
 ### Sequential chain
 
@@ -57,7 +57,7 @@ A generator paired with a reviewer that sends work back. The guide calls it the 
 
 ### Set autonomy per action, not per agent
 
-The design-system-ops oversight framework (`knowledge-notes/human-oversight-framework.md`) starts from "Agents execute; humans are accountable," and assigns an autonomy level to each *action*. At one end, Level 1 (fully autonomous) covers predictable work that can be checked automatically, like generating a prop list from a TypeScript interface. At the other useful end, Level 3 (human-in-the-loop) means the agent prepares the action but a person approves it first, like publishing a component update or applying a breaking token change.
+How much review an action needs depends on what it does, not on which agent does it. [Kavcic](https://www.intodesignsystems.com/blog/design-system-not-ready-for-ai-agents) sorts agent changes by confidence and risk: a lint fix or a doc typo can merge on its own, a token update opens a draft PR a person merges, and a new API or breaking change is only ever a suggestion. [CI for agentic workflows](/ds101/ci-for-agentic-workflows/) covers how a pipeline enforces those tiers. The design-system-ops orchestration guide builds the checkpoints into each chain as **human gates**, spelled out in the chain's definition rather than left to the agent's judgment.
 
 ### Never silently skip a failed step
 
@@ -65,8 +65,8 @@ From the orchestration guide: a skipped audit is worse than a failed one, "becau
 
 ### Scope claims to what was inspected
 
-Anything an agent publishes on its own should scope its claims to what it actually checked: "no X was found in the files scanned," never "the system has no X" (`knowledge-notes/output-discipline.md`). [AI output discipline](/ds101/ai-output-discipline/) has the fuller rule.
+Anything an agent publishes on its own should scope its claims to what it actually checked: "no X was found in the files scanned," never "the system has no X" ([`knowledge-notes/output-discipline.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/output-discipline.md)). [AI output discipline](/ds101/ai-output-discipline/) has the fuller rule.
 
 ## Common mistakes
 
-- **Treating "the agent *can* do X" as "the agent should do X unsupervised."** They're different questions. Teams that never draw the line end up in one of two places. Over-trusting the agent lets unchecked output quietly degrade the system. Under-trusting it layers on so much review that the productivity gain disappears (design-system-ops oversight framework).
+- **Treating "the agent *can* do X" as "the agent should do X unsupervised."** They're different questions. Teams that never draw the line end up in one of two places. Over-trusting the agent lets unchecked output quietly degrade the system. Under-trusting it layers on so much review that the productivity gain disappears. The [orchestration guide](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/agent-orchestration-guide.md) tracks the balance as a human intervention rate: if workflows stop at human gates too often, "the autonomy levels may be too conservative. If too low, the oversight may be insufficient."

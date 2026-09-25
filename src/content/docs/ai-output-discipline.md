@@ -2,7 +2,7 @@
 title: AI Output Discipline
 ---
 
-An AI tool auditing your tokens, components, or docs only knows what it found in the files it scanned, not what's in a Notion doc, another repo, or a teammate's head. Its output has to say so. "No documentation was found in the scanned files" is a scoped claim. "The system has no documentation" is an overreach the tool can't back up. The same discipline covers how findings are delivered. Every rule on this page comes from the design-system-ops output notes (`knowledge-notes/output-discipline.md`).
+An AI tool auditing your tokens, components, or docs only knows what it found in the files it scanned, not what's in a Notion doc, another repo, or a teammate's head. Its output has to say so. "No documentation was found in the scanned files" is a scoped claim. "The system has no documentation" is an overreach the tool can't back up. The same discipline covers how findings are delivered. Every rule on this page comes from the design-system-ops output notes ([`knowledge-notes/output-discipline.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/output-discipline.md)).
 
 :::tip[Key takeaways]
 - Scope every claim to the files the tool actually scanned
