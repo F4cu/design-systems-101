@@ -1,5 +1,7 @@
 ---
 title: AI Readiness
+reviewed: 2026-09-25
+reviewIn: 6
 ---
 
 An AI-ready design system is one AI agents and tools can use, reason about, and generate from without needing knowledge nobody wrote down. Most systems assume a human who can infer intent from visual context or ask a colleague. An agent can't infer or ask. It only works with what's explicit. But the gap isn't new: the same unwritten knowledge has always confused new team members and outside contributors. The design-system-ops notes ([`knowledge-notes/ai-readiness.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/ai-readiness.md)) sum it up: AI readiness is design-system quality, applied with more precision.
@@ -54,11 +56,13 @@ The notes specify the minimum fields for each component, and the key names below
 
 Asked for "user input with validation," an agent can match the `input` category, the description, and the `error` prop. `composedOf` and `composedIn` tell it what the field is built from and where it belongs. `status` tells it the component is safe to use. It gets all of this without opening a docs page.
 
+If your components already live in Storybook, you may not need to build the manifest from scratch. [Trueman](https://blog.murphytrueman.com/your-design-system-is-fragmenting-into-agent-files/) points out that Storybook 10.3 generates a Storybook Component Manifest automatically. It lists components, props, stories, and docs, and an MCP (Model Context Protocol) add-on lets agents query it before they generate UI. MCP is the standard interface AI agents use to read data from other tools. That generated list covers the basics, but the composition, token, and status fields above are still yours to add.
+
 [Context engineering](/ds101/context-engineering/) covers task-specific versions of this manifest: Murphy Trueman's per-task context loading, and a **context engine** built independently by Diana Wolosin.
 
 ### Describe tokens and components by purpose
 
-When an agent reads an undocumented token set, it sees "a wall of nested objects with no context about why these values exist or when to use them," the same ambiguity a new team member hits, with no one to ask. The same goes for component names: `BlueCard` or `CardBase` tells a machine nothing about its role, while `FeatureHighlight` or `OnboardingStep` does.
+[Kavcic](https://learn.thedesignsystem.guide/p/design-tokens-that-ai-can-actually) describes what an agent sees when it reads an undocumented token set: "a wall of nested objects with no context about why these values exist or when to use them." A new team member hits the same ambiguity, but can at least ask someone. The same goes for component names. In [Trueman's](https://blog.murphytrueman.com/your-next-design-system-user/) examples, `BlueCard` or `CardBase` tells a machine nothing about its role, while `FeatureHighlight` or `OnboardingStep` does.
 
 For tokens, the [DTCG format](/ds101/token-architecture/#store-tokens-in-the-shared-dtcg-format) has a place for purpose built in: an optional `$description` next to the value.
 

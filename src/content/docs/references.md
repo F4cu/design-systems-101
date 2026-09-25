@@ -246,6 +246,7 @@ and describes tools or examples that have since changed. Older sources used only
 - [Romina Kavcic, "Design tokens that AI can actually read"](https://learn.thedesignsystem.guide/p/design-tokens-that-ai-can-actually), 2025
 - [Romina Kavcic, "Should you build an agent for your design system"](https://learn.thedesignsystem.guide/p/should-you-build-an-agent-for-your), 2026
 - [Murphy Trueman, "Your next design system user is an agent"](https://blog.murphytrueman.com/your-next-design-system-user/), 2025
+- [Murphy Trueman, "Your design system is fragmenting into agent files"](https://blog.murphytrueman.com/your-design-system-is-fragmenting-into-agent-files/), 2026: the Storybook Component Manifest and its MCP add-on
 - Murphy Trueman, `design-system-ops` — `knowledge-notes/ai-readiness.md`, `agent-orchestration-guide.md`, `output-discipline.md`, `mcp-setup-guide.md`. Living doc. In September 2026 the MCP guide's middle layer changed from a system MCP server to repo files with an `AGENTS.md` entry point.
 - [Romina Kavcic, "5 MCP Connections Every Design System Team Needs Right Now"](https://learn.thedesignsystem.guide/p/5-mcp-connections-every-design-system), 2025
 - [Shane P Williams, "Legibility Is the New Governance"](https://designsystemscollective.substack.com/p/legibility-is-the-new-governance), 2026 — Design Systems Collective

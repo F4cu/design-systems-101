@@ -289,7 +289,8 @@ metadata produces hallucinated or broken output. See
 
 **Component manifest** — a structured, machine-readable index of every component in a
 system (names, props, relationships, status) that AI agents and tooling can query
-directly instead of parsing documentation pages. See
+directly instead of parsing documentation pages. Storybook 10.3 generates a basic
+one automatically, the **Storybook Component Manifest**. See
 [AI readiness](/ds101/ai-readiness/).
 
 **Agentic pass** — a run of an AI agent over a design, after it's marked ready for
