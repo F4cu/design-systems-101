@@ -7,8 +7,9 @@ title: The Design-to-Code Contract
 :::tip[Key takeaways]
 - Define "done" separately for design, build, docs, and release
 - Close each stage's contract before the next stage starts
-- Hand off the Figma file, never a screenshot
-- Spec new components from the design, not from the old component
+- Publish the contract where every team can see it
+- Keep the contract cheap to keep current
+- Change the contract only through recorded decisions
 :::
 
 ## The problem
@@ -28,7 +29,7 @@ Met when the spec can be built without clarifying questions:
 - Edge cases like long strings and empty states are covered.
 - Token usage is explicit in the file.
 - The component API (props, types, defaults) is agreed before build.
-- Accessibility (focus indicators, contrast, touch targets) is handled now, not deferred.
+- Accessibility is handled now, not deferred: focus indicators, contrast, touch targets, and the ARIA contract (the component's role, keyboard pattern, and how it gets its label).
 
 ### Build contract
 
@@ -75,9 +76,23 @@ flowchart TD
 
 </div>
 
+The exit can be a single signal. [Nathan Curtis](https://nathanacurtis.substack.com/p/component-contracts-and-schemas) describes how design handoff works on his team now: designers "simply mark a component `READY_FOR_DEV`, conduct an agentic pass to compose the behaviors and accessibility Figma can't, and field occasional Slack threads to clarify requirements as needed." An agentic pass is a run of an AI agent over the design, filling in what a Figma file can't hold. Before, he notes, delivering a component "would require a handoff meeting per platform team."
+
+### Publish the contract where every team can see it
+
+The toolkit calls the contract "not primarily a quality gate. It is a communication tool." It gives the system team and product teams a shared answer to what the system covers and what's the product team's job, so less gets negotiated at each handoff. That only works if people can find it: "Teams that know what the standard is can work toward it. Teams that are guessing cannot."
+
+### Keep the contract cheap to keep current
+
+A contract that lags behind the components does more harm than no contract. Curtis: "A rotted contract is worse than no contract at all, because people trust contracts." His test is whether "the cost of bringing the contract current is close to zero – in time, in tokens, and in human attention." If updating it takes a meeting, it will fall behind. The toolkit makes the same point about docs: they should describe the version that's released now, because "stale documentation is a reliability problem."
+
+### Change the contract through recorded decisions
+
+Strict doesn't mean frozen. Curtis: "A contract that can't change dies, and a contract that changes without governance was never actually a contract." He calls architectural decision records (ADRs), short notes on what changed and why, "the machinery to evolve component specs." [Decision governance](/ds101/decision-governance/) covers how to keep those records.
+
 ## Common mistakes
 
-Two handoff habits quietly break the design contract:
-
-- **Delivering designs as screenshots.** A developer can't inspect token references or check spacing and states from a flat image. A screenshot is a visual reference, not a contract. The real spec lives in the Figma file, where every value can be inspected.
+- **Delivering designs as screenshots.** A developer can't inspect token references or check spacing and states from a flat image. The toolkit is blunt: a screenshot "is not a design contract — it is a visual reference." The Figma file is the minimum. Curtis goes further: a definition taken straight from one party's tool, "like a Figma file," is "testimony, not a contract." [Multi-platform component specs](/ds101/multi-platform-component-specs/) covers writing the platform-neutral version.
 - **Saying "just copy the existing component."** That makes the old implementation the spec, so every problem in it (missing states, hardcoded values, accessibility gaps) gets faithfully copied into the new one. If the old component were a reliable spec, you probably wouldn't be building a new one.
+- **Deferring accessibility to QA.** Per the toolkit, accessibility issues found in QA "cost significantly more to fix than issues caught in design." That's why the design contract requires them before build starts.
+- **Writing the docs after release.** Docs written under pressure after shipping "tend to describe the component as built rather than as intended," and they reach the teams who needed them after those teams have already worked it out for themselves, "sometimes incorrectly."

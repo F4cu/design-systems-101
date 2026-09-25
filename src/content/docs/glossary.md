@@ -246,6 +246,14 @@ system (names, props, relationships, status) that AI agents and tooling can quer
 directly instead of parsing documentation pages. See
 [AI readiness](/ds101/ai-readiness/).
 
+**Agentic pass** — a run of an AI agent over a design, after it's marked ready for
+development, that fills in the behavior and accessibility details a Figma file can't
+hold. See [The design-to-code contract](/ds101/design-to-code-contract/).
+
+**ARIA contract** — the accessibility part of a component's design spec: its role, its
+keyboard pattern, and how it gets its accessible label. Agreed before build, not left
+to QA. See [The design-to-code contract](/ds101/design-to-code-contract/).
+
 **Agentic workflow pattern** — one of several ways multiple AI agents coordinate on a
 task: sequential chain, parallel agents (what design-system-ops calls a parallel
 fan-out), supervisor, or generator/reviewer loop (what design-system-ops calls the
