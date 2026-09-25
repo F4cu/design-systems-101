@@ -29,9 +29,9 @@ npm run build   # production build to dist/
 - **`astro.config.mjs`** — Starlight config: site metadata, the `sidebar` array (the only
   page ordering/navigation source — add new pages here or they won't appear in the nav),
   and the `astro-mermaid` integration for rendering Mermaid diagrams client-side
-  (including re-rendering on Starlight's view-transition page swaps). Organized into five
-  sidebar groups: Foundations, Governance, Metrics, Business alignment, Agentic AI,
-  followed by Glossary and References. A sidebar item is a bare filename slug
+  (including re-rendering on Starlight's view-transition page swaps). Organized into seven
+  sidebar groups: Getting started, Foundations, Components, Governance, Metrics,
+  Business alignment, Agentic AI, followed by Glossary and References. A sidebar item is a bare filename slug
   (`'token-architecture'`) unless its nav label needs to differ from the page's `title`
   frontmatter, in which case use `{ slug: '...', label: '...' }`.
 - **`src/styles/custom.css`** — the only custom CSS on top of Starlight's stock theme:
@@ -132,7 +132,7 @@ Other conventions:
   title, or source file — never blended into an unattributed "industry consensus" voice.
   Don't invent best practices without a traceable source; if a page needs a claim the
   sources don't support, flag it as an open question rather than asserting it. See
-  `start-here.md` for the full list of named sources and `references.mdx` for the citation
+  `index.md` (the homepage) for the full list of named sources and `references.mdx` for the citation
   index.
 - **Source freshness**: every entry in `references.mdx` ends with its publication year
   (`, 2021`). Use `living doc` for docs sites and repos that are updated continuously,
@@ -164,14 +164,17 @@ Other conventions:
 - **Research boundary**: when doing research for this wiki (new claims, new pages, filling
   an open question), draw only from professionals/sources already used somewhere in the
   site — don't pull in a new author, blog, or report just because it's a good source on
-  the topic. Before researching, scan `start-here.md`'s source list and every page's
+  the topic. Before researching, scan `index.md`'s source list and every page's
   citations (or `references.mdx`, which mirrors them) to know who's already in bounds. This
   keeps the source pool deliberately narrow rather than widening with every new page. If a
   claim genuinely needs a source outside that pool, flag it to the user and ask before
   adding a new name — don't add one silently.
-- **Voice**: explain the *why* before the *what*; assume Figma/design fluency but zero
-  assumed knowledge of build tooling, CI, or agent orchestration — define such terms on
-  first use. Prefer plain prose over bullet-dense reference tables except in the
+- **Voice**: explain the *why* before the *what*. Assume the reader knows design system
+  basics beyond Figma: coded components, how they ship to production, and how a team
+  maintains them. Still define specialist terms (CI, agent orchestration) on first use.
+  Most sources describe large organizations (see the scale note on `index.md`); when a
+  practice clearly only pays off at that scale, say so rather than presenting it as
+  universal. Prefer plain prose over bullet-dense reference tables except in the
   established "Common mistakes" and glossary sections. Avoid AI-writing tics ("load-bearing,"
   "blast radius," "north star," etc.) — use the plain word the sentence actually needs,
   even when drafting quickly. See the `ux-writing-review` skill for the full checklist.

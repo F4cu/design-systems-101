@@ -2,98 +2,74 @@
 title: Start here
 ---
 
-## Who this is for
+This wiki covers the layer above day-to-day design system work: the operational and
+architectural calls nobody hands you a manual for. Why split tokens into layers? What
+makes a component governed rather than just in a library? When does AI help, and when
+does it add a new kind of mess?
 
-You know the day-to-day of working with a design system: Figma, component specs,
-probably some tokens already. This wiki is for the layer above that — the operational
-and architectural judgment calls nobody hands you a manual for. Why does a team split
-tokens into layers instead of just naming colors? What actually makes a component
-"governed" instead of just "in a library"? When does bringing AI into the workflow help,
-and when does it just add a new kind of mess?
+It assumes you already know the basics of building and running a design system: not
+just Figma libraries, but coded components, how they ship to production, and how a
+team keeps them in shape.
 
-There's no assumed knowledge of build tooling, CI (continuous integration — the
-automated pipeline that tests and ships code changes), or how AI agents get wired up to
-software. Every term like that gets defined the first time it's used.
+:::caution[Scale these practices to your team]
+Most of the practices here come from large organizations and design systems, such as
+IBM Carbon, Wise, ITVX, Siemens iX, GOV.UK, Atlassian, and Salesforce Lightning, with
+hundreds of engineers and designers. Not every practice fits every system. For a small
+or mid-sized team, some approaches are more process than the problem needs. Take the
+reasoning, and scale the practice to fit your team.
+:::
 
-## How this wiki is built
+## Sources
 
-The foundations section is grounded in one real toolkit: **Design System Ops**, a skill
-pack for AI coding assistants written by Murphy Trueman from 14 years of production
-design-systems work. It isn't used here as a template to copy — its knowledge notes are
-evidence for the *principles* behind running a system, not a set of settings to adopt
-wholesale. Every claim traced to it names and links the source in the sentence, so you
-can go read the original.
+Every claim names the person or report it came from, with a link. Where sources agree,
+the page says so. Where they disagree, both views stay. Ordered by how much of the wiki
+draws on them:
 
-The rest of the wiki widens the source pool deliberately. A single toolkit can't cover
-contribution models, component-API judgment calls, or how to argue for a system's
-budget — those need more than one practitioner's experience to triangulate. You'll also
-meet, cited individually by name and post/report title:
+- **Murphy Trueman**, *Design System Ops*: the backbone of the foundations and most
+  governance pages, used as evidence for principles, not settings to copy
+- **Nathan Curtis**, EightShapes: team models, contribution, component APIs, cadence
+- **zeroheight's Design Systems Report** and **Figma's Design Executive Council**:
+  survey data and company case studies
+- **Ness Grixti**: contribution, onboarding, and Wise's multi-brand system
+- **Romina Kavcic**: tokens as machine-readable assets, scoping AI access
+- **Brad Frost**: governance decision trees and feedback loops
+- **IBM Carbon**, **AWS Cloudscape**, **Atlassian**, **Microsoft**, **GitLab Pajamas**:
+  published AI interaction patterns
+- **Diana Wolosin**, **Shane P Williams**, **Jan Six**: documentation and context for
+  AI agents
+- **GOV.UK Design System**: accessibility strategy, contribution, and community rhythm
+- **Supernova**: business cases, ROI, API durability, and versioning
+- **Dan Mall**: pilot strategy
+- **Amy Hupe** and **Inayaili de León**: getting people to contribute
+- **Jina Anne**: cyclical team models and shared ownership
+- **Nielsen Norman Group**: maturity assessment and heuristic evaluation
+- **W3C**: WCAG, ARIA patterns, and the design tokens spec
+- **Cathy Dutton**: what really deserves to be a shared pattern
+- **Marianne Ashton-Booth**: stakeholder mapping and three-horizon planning
+- **Workday Canvas**, **Radix Primitives**, **fourzerothree.in**, **story.to.design**:
+  subcomponents in code and in Figma
 
-- **Romina Kavcic**, [learn.thedesignsystem.guide](https://learn.thedesignsystem.guide/) — design tokens as machine-readable assets, how AI agents consume design systems, and scoping MCP access deliberately.
-- **Nathan Curtis**, EightShapes — team models, contribution criteria, component-API design (the "configuration collapse" problem), and operating cadence.
-- **Jina Anne**, Salesforce UX / 24ways — the "cyclical" team model, structuring teams around cross-functional "hybrid" practitioners, and the case for treating a design system as something the org owns together rather than a rulebook handed down from one team.
-- **Marianne Ashton-Booth** — stakeholder mapping by influence and frequency, planning on three horizons at once, and borrowing frameworks (LeanDS, Stafford Beer's Viable System Model) to keep a system legible to the organization around it.
-- **Dan Mall**, Superfriendly — pilot strategy and the scorecard method for deciding what to build first.
-- **Brad Frost**, *Atomic Design* — decision-tree governance, feedback-loop mechanics, and office-hours/cadence practice, cited across several pages.
-- **Amy Hupe** and **Inayaili de León** — what actually gets people to contribute once a contribution model exists, not just whether the door is open.
-- **Cathy Dutton** — the case against mistaking organizational convenience for genuine reusability when deciding what becomes a shared pattern.
-- **Radix Primitives** and **Workday Canvas Design System** — named, citable code-level implementations of subcomponents (as "parts" and "compound components," respectively), used to show how the design-facing vocabulary maps onto a real codebase.
-- **story.to.design** — a design-tooling perspective on subcomponents and slots, cited for how the same pattern shows up as a Figma detachment problem rather than a code problem.
-- **fourzerothree.in** — the Figma-side mechanics of nested instances and exposed properties: how subcomponents actually get built and wired up inside a component file.
-- **zeroheight's annual Design Systems Report** — survey data from 147 practitioners, used where a claim benefits from being backed by numbers rather than one person's experience.
-- **Figma's Design Executive Council research** and a handful of named companies (Freshworks, SAP, Grammarly, Wise, Mews, and others) who've published specifics about what worked and what broke for them.
-- **Shane P Williams**, founding editor of the [Design Systems Collective](https://designsystemscollective.substack.com/) — governance and documentation under AI consumption, and the emerging job of reconciling design, code, and production as separate sources of truth.
-- **Diana Wolosin**, design systems practitioner (ex-Indeed) — the "context engine" as machine-readable infrastructure, and empirically benchmarking metadata formats against real agent behavior rather than assuming one is correct.
-- **Jan Six**, GitHub — designs agent experiences for Copilot and created Tokens Studio; on treating agent context as environment design, not just instructions.
-- Published AI-pattern guidance from **IBM Carbon**, **AWS Cloudscape**, **GitLab Pajamas**, **Atlassian Design System**, and **Microsoft** — named, citable examples of how mature systems design transparency, authorization, and agent-interaction patterns as shipped components.
-
-No source is blended into a single "what the industry thinks" voice — each claim is
-attributed to whoever made it, by name, with a link. Where sources agree, that's noted
-as two people independently landing on the same conclusion; where they diverge, both
-views are left standing rather than resolved for you. Every page's citations are also
-collected in one place in the [references](/ds101/references/) page, if you want the reading
-list without the surrounding prose.
+The [references](/ds101/references/) page collects every citation in one place.
 
 ## How to read a page
 
-Every topic page has the same shape, so you can scan any of them the same way:
+Every page has the same shape: a lead with the main takeaway, a **Key takeaways** box,
+**The problem**, then **Practices** written as advice, so the "On this page" menu works
+as a checklist. Some pages add **Choosing …** for real alternatives or **The model** for
+a structure to understand first. Every page ends with **Common mistakes**.
 
-- **A one- or two-sentence lead** with the page's main takeaway, and a **Key takeaways** box
-  with up to five of its most important practices.
-- **The problem**: what actually breaks without this practice area.
-- **Practices**: things to do, each heading written as the advice itself. The "On this
-  page" menu lists them, so the menu alone works as a checklist.
-- **Choosing …** (on some pages): alternatives where orgs and practitioners take
-  different routes, such as team models or versioning strategies. Each option says when
-  it fits and what it costs.
-- **The model** (on some pages): a structure you need to understand first, like token
-  layers, before the practices that build on it.
-- **Common mistakes**: the errors a beginner is most likely to make.
+## How the wiki is organized
 
-Every claim names the person or report it came from. If something needs a claim the
-sources don't support, the page says so as an open question rather than inventing an
-answer.
+1. **Getting started**: auditing, piloting, inheriting a system, assessing maturity.
+2. **Foundations**: what a design system is, token layers, the design-to-code contract,
+   and multiple platforms.
+3. **Components**: composition, API design, and accessibility.
+4. **Governance**: ownership, decisions, contribution, lifecycle, releases, cadence.
+5. **Metrics**: adoption, performance in context, dependencies, doc coverage.
+6. **Business alignment**: the business case, brand, and stakeholders.
+7. **Agentic AI**: making the system usable by agents, designing agent workflows, and
+   designing AI features in your product.
 
-The wiki is organized into five Parts, roughly in reading order:
-
-1. **Foundations**: what a design system actually is, and how its building blocks are
-   designed: token architecture, component composition and APIs, the design-to-code
-   handoff, working across platforms, and how to audit and pilot a first system.
-2. **Governance**: who owns the system, how decisions get made and recorded, what
-   earns a place in the system and what leaves it, how other teams contribute and how
-   to build a culture that does, the operating rhythm and
-   release practice that keep a system visible, and what changes at decades-long scale
-   or when you inherit someone else's system.
-3. **Metrics**: whether the system is actually used, how components perform in real
-   contexts, what consumers depend on, and whether the docs keep up.
-4. **Business alignment**: building a business case, staying in sync with brand and
-   company priorities, and keeping stakeholders aligned, separate from running the
-   system well.
-5. **Agentic AI**: two directions at once. Making the system legible to AI as a
-   consumer (context engineering, documentation built for agents, governance under AI
-   consumption), and designing AI as a product surface the system has to support
-   (agentic UI patterns, generative loops, workflow orchestration, scaling access to risk).
-
-Start with [What a design system is](/ds101/what-a-design-system-is/), or jump straight to whatever section you need
-using the sidebar. A [glossary](/ds101/glossary/) at the end collects every term introduced
-along the way.
+Start with [What a design system is](/ds101/what-a-design-system-is/), or jump to any
+section from the sidebar. The [glossary](/ds101/glossary/) defines every term along the
+way.
