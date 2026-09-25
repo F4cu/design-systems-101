@@ -20,13 +20,30 @@ If a button's background is hardcoded, or points straight at `color.blue.500`, t
 
 The three tiers come from the token notes in Murphy Trueman's design-system-ops toolkit ([`knowledge-notes/token-architecture.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/token-architecture.md)).
 
+Each tier only points at the tier directly inside it, and only the innermost one holds a real value.
+
 <div class="mermaid-wrap">
 
 ```mermaid
-graph TD
-  C["Component tier (optional)<br/>button.background.default"] -->|references| S["Semantic tier<br/>color.action.primary"]
-  S -->|references| P["Primitive tier<br/>color.blue.500"]
-  P --> V["Raw value<br/>#2563EB"]
+---
+config:
+  flowchart:
+    padding: 6
+    nodeSpacing: 20
+---
+flowchart TD
+  subgraph C["Component (optional)"]
+    CT["button.<br/>background.<br/>default"]
+    subgraph S["Semantic"]
+      ST["color.action.<br/>primary"]
+      subgraph P["Primitive"]
+        PT["color.blue.500"]
+        V(["Raw value<br/>#2563EB"])
+      end
+    end
+  end
+  CT --> ST --> PT --> V
+  style C fill:transparent,stroke-dasharray:5 4
 ```
 
 </div>

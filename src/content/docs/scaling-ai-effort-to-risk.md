@@ -32,6 +32,32 @@ The design-system-ops notes ([`knowledge-notes/component-bestiary-reference.md`]
 
 The rating calibrates everything downstream: documentation depth ("the cost of an AI tool getting a modal wrong is higher than the cost of it getting a badge wrong"), audit order, and contribution standards. A high-CR component contributed without enough expertise "is worse than no component, because it provides false confidence while introducing real risk." The rating isn't fixed per component, either. The same component's effective CR shifts with where it's placed. See [Performance in context](/ds101/performance-in-context/).
 
+<div class="mermaid-wrap">
+
+```mermaid
+---
+config:
+  quadrantChart:
+    chartWidth: 320
+    chartHeight: 320
+    quadrantLabelFontSize: 13
+    pointLabelFontSize: 12
+    axisLabelFontSize: 13
+---
+quadrantChart
+  x-axis Low danger --> High danger
+  y-axis Light effort --> Deep effort
+  quadrant-1 Deep docs and audit
+  quadrant-2 Over-documented
+  quadrant-3 Basic guidelines
+  quadrant-4 Under-documented
+  Badge: [0.2, 0.25]
+  Modal: [0.6, 0.6]
+  Date picker: [0.8, 0.75]
+```
+
+</div>
+
 ### Split agent access into layers
 
 The same notes ([`knowledge-notes/mcp-setup-guide.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/mcp-setup-guide.md)) apply the same scoping to agent access through **MCP** (Model Context Protocol, the interface that lets an AI agent read component definitions and token values from their real sources instead of a stale copy). Instead of one giant connection, the setup has three separate **MCP layers**, and only the outer two need a server:
