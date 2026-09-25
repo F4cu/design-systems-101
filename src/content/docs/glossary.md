@@ -243,6 +243,27 @@ warning, not a pass. See [Component accessibility](/ds101/component-accessibilit
 organized into A, AA, and AAA conformance levels; 2.2 AA is the usual audit baseline. See
 [Component accessibility](/ds101/component-accessibility/).
 
+**Landmark** (landmark region) — a named region of a page, such as the header,
+navigation, main content, or footer, that screen reader users can list and jump to. See
+[Layout accessibility](/ds101/layout-accessibility/).
+
+**Skip link** — a link at the very start of a page that moves keyboard focus past the
+header and navigation to the main content. See
+[Layout accessibility](/ds101/layout-accessibility/).
+
+**Page shell** (page template) — the frame a design system provides around every page,
+with its landmarks and skip link already built in. See
+[Layout accessibility](/ds101/layout-accessibility/).
+
+**Heading level vs. H tag** — Curtis's split between how big a heading looks (its level,
+a visual style) and where it sits in the page outline (its HTML tag, `h1` to `h6`), so a
+component can take its tag from the page it's used on. See
+[Layout accessibility](/ds101/layout-accessibility/).
+
+**Source order** — the order of elements in the code, which sets what a screen reader
+reads and where the Tab key goes next, whatever CSS does to their position on screen.
+See [Layout accessibility](/ds101/layout-accessibility/).
+
 **Metadata** — data *about* something, rather than the thing itself: not the component,
 but the facts describing it (its name, its props, its variants, its accessibility role)
 that let a person or an AI agent understand and use it correctly without having to

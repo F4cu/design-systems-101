@@ -2,7 +2,7 @@
 title: Component Accessibility
 ---
 
-An accessible component library doesn't make an accessible product, but it's still the cheapest place to fix most accessibility problems, because every fix in a component reaches every product that uses it. This page covers what to check on each component, how to prove it works, and what the system can't do for the teams using it. When those checks happen is owned by [The design-to-code contract](/ds101/design-to-code-contract/), and who owns them by [Decision governance](/ds101/decision-governance/).
+An accessible component library doesn't make an accessible product, but it's still the cheapest place to fix most accessibility problems, because every fix in a component reaches every product that uses it. Accessible components still need an accessible layout around them, which [Layout accessibility](/ds101/layout-accessibility/) covers. This page covers what to check on each component, how to prove it works, and what the system can't do for the teams using it. When those checks happen is owned by [The design-to-code contract](/ds101/design-to-code-contract/), and who owns them by [Decision governance](/ds101/decision-governance/).
 
 :::tip[Key takeaways]
 - Automate the scan in CI, then test with real assistive technology
@@ -32,7 +32,7 @@ The legal baseline can lag too. In the EU, the [European Accessibility Act](http
 - **Screen reader experience:** the component announces its role, state, and a name that makes sense out of context.
 - **Colour and contrast:** text, borders, and focus indicators meet WCAG contrast in every state, and colour never carries meaning alone. It's the one dimension you can check from token values before anything is built.
 - **Focus management:** focus moves into a layer when it opens, stays inside a modal, and returns to the trigger when it closes.
-- **ARIA implementation:** roles match what the component does and carry their required attributes, and no ARIA is used where a native HTML element already has the right meaning.
+- **ARIA implementation:** roles match what the component does and carry their required attributes, and no ARIA is used where a native HTML element already has the right meaning. A component that fills a large region of the page, such as a navigation or a main content area, sits inside the right landmark.
 
 The toolkit's example of a screen reader failure is an icon button with no accessible name, which "announces only as 'button'":
 
@@ -72,6 +72,8 @@ Configuring a single component is still the adopting team's job, like setting a 
 Adopting teams, Curtis writes, "must also compose interfaces made of many system parts — inputs, labels, groups, images, and more — in an accessible manner." That means the right HTML tags, a sensible field order, and content that reads clearly through a screen reader. A system can help by demoing composition in page samples, such as a data-entry form. It can also document how elements used together fit: a checkbox and its label linked by IDs, field groups, and the microcopy and error text around them. Values that change with state need describing too, like a loader's `aria-busy`.
 
 To show a team why this is hard, Curtis quotes Adam Rowe of the Morningstar Design System: "Challenge them to experience their work through a screenreader. As it flows from one element to the next, they'll quickly get how hard this is to do well and how much can go wrong."
+
+Some of this goes beyond any single component: the order a page is read in, its heading outline, and its landmarks. [Layout accessibility](/ds101/layout-accessibility/) covers how a system can build those into its page templates.
 
 ### Publish known issues where adopting teams will see them
 
