@@ -59,6 +59,7 @@ export default defineConfig({
 						'component-lifecycle',
 						'contribution-models',
 						'fostering-contribution',
+						'onboarding-adopters',
 						'operating-cadence',
 						'release-management',
 						'design-system-maturity',
