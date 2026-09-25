@@ -217,6 +217,11 @@ objective with a small number of measurable key results, commonly used by compan
 track priorities a design system's roadmap can be mapped against. See
 [Business alignment](/ds101/business-alignment/).
 
+**Growth, risk, and cost framing** — the three ways to lead a funding case, chosen by
+what leadership is focused on this cycle: what the system lets the company scale, what
+risk it removes, or what waste it recovers. See
+[Business alignment](/ds101/business-alignment/).
+
 **Metadata** — data *about* something, rather than the thing itself: not the component,
 but the facts describing it (its name, its props, its variants, its accessibility role)
 that let a person or an AI agent understand and use it correctly without having to
