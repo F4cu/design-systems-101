@@ -38,7 +38,7 @@ A CFO cares about cost and time saved, in real numbers. A CTO cares about veloci
 
 ### Put a dollar figure on it
 
-"It saves us time" is easy to dismiss. A dollar figure, even a crude one, is something a finance stakeholder can evaluate and repeat to someone else. [Mike Fortuna's account](https://medium.com/@m4tuna/how-i-calculated-the-business-case-for-a-design-system-549def283eb5) walks through turning design-system time savings into an actual dollar figure.
+"It saves us time" is easy to dismiss. A dollar figure, even a crude one, is something a finance stakeholder can evaluate and repeat to someone else. [Mike Fortuna's account](https://medium.com/@m4tuna/how-i-calculated-the-business-case-for-a-design-system-549def283eb5) walks through turning design-system time savings into an actual dollar figure. [Estimating ROI](/ds101/estimating-roi/) covers keeping that figure honest once it goes into a business case.
 
 A simpler illustration, meant to persuade rather than measure: if a moderately complex component takes three days to design, build, and test, and fifty product teams each build their own, that's 150 days of duplicated work for something built once and shared. The arithmetic is rough, but executives find it persuasive because it's easy to hold in your head.
 

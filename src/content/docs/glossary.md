@@ -210,17 +210,25 @@ than in the system's own internal metrics. See
 **ROI** (return on investment) — a measure of value returned relative to cost; in design
 systems, notoriously under-measured — only a small fraction of teams calculate it at all,
 which is part of why a credible one stands out. See
-[Communicating value](/ds101/communicating-value/).
+[Estimating ROI](/ds101/estimating-roi/).
 
 **OKR** (Objectives and Key Results) — a goal-setting framework pairing a qualitative
 objective with a small number of measurable key results, commonly used by companies to
 track priorities a design system's roadmap can be mapped against. See
 [Business alignment](/ds101/business-alignment/).
 
+**Payback** — the first month in which a design system's cumulative benefit is at least its
+cumulative cost, counted from running totals rather than one year's figures. See
+[Estimating ROI](/ds101/estimating-roi/).
+
 **Growth, risk, and cost framing** — the three ways to lead a funding case, chosen by
 what leadership is focused on this cycle: what the system lets the company scale, what
 risk it removes, or what waste it recovers. See
 [Business alignment](/ds101/business-alignment/).
+
+**Loaded hourly rate** — what an hour of someone's time really costs the company (salary
+plus overheads, divided by working hours); used at one rate for both the cost and the
+benefit side of an ROI estimate. See [Estimating ROI](/ds101/estimating-roi/).
 
 **Metadata** — data *about* something, rather than the thing itself: not the component,
 but the facts describing it (its name, its props, its variants, its accessibility role)

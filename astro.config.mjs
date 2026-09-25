@@ -77,7 +77,13 @@ export default defineConfig({
 				},
 				{
 					label: 'Business alignment',
-					items: ['communicating-value', 'business-alignment', 'brand-alignment', 'stakeholder-alignment'],
+					items: [
+						'communicating-value',
+						'estimating-roi',
+						'business-alignment',
+						'brand-alignment',
+						'stakeholder-alignment',
+					],
 				},
 				{
 					label: 'Agentic AI',
