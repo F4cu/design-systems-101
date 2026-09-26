@@ -115,6 +115,7 @@ export default defineConfig({
 						'agentic-ui-patterns',
 					],
 				},
+				{ label: 'Tooling', link: '/tooling/' },
 				{ label: 'Glossary', link: '/glossary/' },
 				{ label: 'References', link: '/references/' },
 			],

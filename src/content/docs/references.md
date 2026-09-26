@@ -285,6 +285,33 @@ and describes tools or examples that have since changed. Older sources used only
 - [Atlassian, "Atlassian Design System: building the context engine for the AI era"](https://www.atlassian.com/blog/ai-at-work/atlassian-design-system-building-the-context-engine-for-the-ai-era), 2026
 - [Microsoft Learn, "Human-centered design for agents"](https://learn.microsoft.com/en-us/agents/design-guidelines/human-centered-design), living doc — flagged on the source page as AI-generated content on an official Microsoft doc, not an individually authored piece
 
+## Tooling
+
+Vendor docs and pricing pages, used only for plan, seat, and license details.
+
+- [Figma Learn, "Code Connect"](https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect), living doc: Organization and Enterprise plans, Full or Dev seat
+- [Figma Learn, "Guide to the Figma MCP server"](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server), living doc: remote vs. desktop server availability
+- [Figma Learn, "Claude Code and Figma: Set up the MCP server"](https://help.figma.com/hc/en-us/articles/39888612464151-Claude-Code-and-Figma-Set-up-the-MCP-server), living doc: the Figma plugin for Claude Code
+- [Figma Learn, "Figma skills for MCP"](https://help.figma.com/hc/en-us/articles/39166810751895-Figma-skills-for-MCP), living doc: the skill list, and the Organization or Enterprise requirement for `figma-code-connect`
+- [Figma Developer Docs, "Write to canvas"](https://developers.figma.com/docs/figma-mcp-server/write-to-canvas/), living doc: Full seat to write, Dev seat read-only
+- [Figma, "Agents, Meet the Figma Canvas"](https://www.figma.com/blog/the-figma-canvas-is-now-open-to-agents/), 2026: free during beta, usage-based later
+- [Figma Developer Docs, "Rate limits & access" (MCP server)](https://developers.figma.com/docs/figma-mcp-server/rate-limits-access/), living doc
+- [Figma Developer Docs, "Rate limits" (REST API)](https://developers.figma.com/docs/rest-api/rate-limits/), living doc: Starter plan file-read limits
+- [Figma Developer Docs, "Variables"](https://developers.figma.com/docs/rest-api/variables/), living doc: Enterprise only
+- [Figma Developer Docs, "Library Analytics"](https://developers.figma.com/docs/rest-api/library-analytics-intro/), living doc: Enterprise only
+- [Figma Learn, "View and explore library analytics"](https://help.figma.com/hc/en-us/articles/360039238353-View-and-explore-library-analytics), living doc: Organization and Enterprise plans
+- [Tokens Studio documentation](https://docs.tokens.studio/), living doc: Pro-only features
+- [Specs plugin documentation](https://www.specsplugin.com/), living doc: Pro features
+- [Style Dictionary](https://styledictionary.com/), living doc
+- [Terrazzo](https://terrazzo.app/), living doc: MIT license
+- [Storybook, "Manifests"](https://storybook.js.org/docs/ai/manifests), living doc: AI features in preview
+- [GitHub Agentic Workflows](https://github.github.com/gh-aw/), living doc: supported engines and billing
+- [Claude Code, "Advanced setup"](https://code.claude.com/docs/en/setup), living doc: required plans
+- [Chromatic pricing](https://www.chromatic.com/pricing), living doc: free plan snapshot allowance, paid plan prices
+- [Changesets](https://github.com/changesets/changesets), living doc: MIT license
+- [Airtable pricing](https://airtable.com/pricing), living doc
+- [PostHog pricing](https://posthog.com/pricing), living doc
+
 ## A note on sourcing discipline
 
 Every claim on this site is attributed to a specific person, post, report, or named
