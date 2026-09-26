@@ -53,7 +53,7 @@ A team that built its own version of a component isn't visible in any import cou
 
 ### Borrow supply-chain inventory tools
 
-Tools like [**Dependency-Track**](https://docs.dependencytrack.org/) exist to answer "which version of which component is running where" for security risk. They read a Software Bill of Materials (SBOM, a machine-readable list of every dependency an application ships with) and turn it into a searchable inventory across a whole portfolio of apps. The pattern transfers directly. Design-system observability asks the same question (which version, where, at what risk) about UI components instead of security vulnerabilities.
+Tools like [**Dependency-Track**](https://docs.dependencytrack.org/) exist to answer "which version of which component is running where" for security risk. They read a Software Bill of Materials (SBOM, a machine-readable list of every dependency an application ships with) and turn it into a searchable inventory across a whole portfolio of apps. The pattern transfers directly. Design-system observability asks the same question (which version, where, at what risk) about UI components instead of security vulnerabilities. For the inward view, what depends on what inside the system itself, see [System inventory](/ds101/system-inventory/).
 
 ## Common mistakes
 

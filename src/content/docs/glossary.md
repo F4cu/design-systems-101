@@ -141,6 +141,18 @@ systems as a bar for when a one-off component becomes a system candidate. See
 an incoming pattern request into modification, addition, or removal before debating its
 merits. See [Component lifecycle](/ds101/component-lifecycle/).
 
+**System inventory** — a record of the design system's own tokens and components, with
+each item's status, version, and dependencies, generated from the repo rather than kept
+by hand. Distinct from an interface inventory, which catalogs what products already
+ship. See [System inventory](/ds101/system-inventory/).
+
+**High-fan-in component** — a component rendered by many other system components, so a
+change to it reaches all of them. See [System inventory](/ds101/system-inventory/).
+
+**Doneness matrix** — Nathan Curtis's grid for tracking many parts through the same
+stages: parts as rows, stages or outputs as columns. See
+[System inventory](/ds101/system-inventory/).
+
 **Contribution vs. participation** — a contribution is a proposal, design, code, doc, or
 asset released through the system for others to reuse; participation (feedback, bug
 reports, office-hours attendance) is valuable but isn't a contribution. See

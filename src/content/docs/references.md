@@ -151,6 +151,17 @@ and describes tools or examples that have since changed. Older sources used only
 - [Figma Learn, "Use slots to build flexible components in Figma"](https://help.figma.com/hc/en-us/articles/38231200344599-Use-slots-to-build-flexible-components-in-Figma), living doc: one slot property across variants
 - [Murphy Trueman, "What your components look like as data"](https://blog.murphytrueman.com/what-your-components-look-like-as-data/), 2026: descriptive layer names and enum properties
 
+## System inventory
+
+- Murphy Trueman, `design-system-ops` — [`knowledge-notes/component-governance.md`](https://github.com/murphytrueman/design-system-ops/blob/main/knowledge-notes/component-governance.md), living doc: token-to-component coupling, composition mapping, cross-system dependencies, and the eight lifecycle stages
+- Murphy Trueman, `design-system-ops` — [`skills/codebase-index/SKILL.md`](https://github.com/murphytrueman/design-system-ops/blob/main/skills/codebase-index/SKILL.md), living doc: the generated inventory with token bindings, the uses/usedBy graph, and the Tooltip example
+- [Romina Kavcic, "Gamechanger: Automatically sync design tokens from GitHub to Airtable"](https://learn.thedesignsystem.guide/p/gamechanger-automatically-sync-design), 2025
+- [Romina Kavcic, "Building an Agentic Flows Inventory in Airtable"](https://learn.thedesignsystem.guide/p/building-an-agentic-flows-inventory), 2025
+- [Nathan Curtis, "Reimagining a Token Taxonomy"](https://nathanacurtis.substack.com/p/reimagining-a-token-taxonomy-462d35b2b033), 2022: the component audit sheet, the proposed-tokens sheet, and the Airtable preference
+- [Nathan Curtis, "The Figma Component Review"](https://nathanacurtis.substack.com/p/the-figma-component-review-f42114450b4d), 2022: the status and version check
+- [Nathan Curtis, "Planning a Design System Generation"](https://nathanacurtis.substack.com/p/planning-a-design-system-generation-ce4120393557), 2024: the dependency chain and the generation's doneness matrix
+- [Nathan Curtis, "Doneness Matrices"](https://nathanacurtis.substack.com/p/doneness-matrices-c7f0a026365f), 2010: the definition and when not to use one
+
 ## Release management: versioning, changelogs & migration guides
 
 - [Nathan Curtis, "Versioning Design Systems"](https://medium.com/eightshapes-llc/versioning-design-systems-48cceb5ace4d), 2018

@@ -66,4 +66,4 @@ Every deprecation needs a timeline and a migration path, not just a warning. **I
 
 ## Common mistakes
 
-- **Deprecating a component without tracing its usage first.** Murphy Trueman warns that a component's riskiest users are often the invisible ones: low-priority internal tools nobody thinks to check. See [Inheriting a legacy system](/ds101/inheriting-a-legacy-system/) and [Dependency observability](/ds101/dependency-observability/) for how to find them.
+- **Deprecating a component without tracing its usage first.** Murphy Trueman warns that a component's riskiest users are often the invisible ones: low-priority internal tools nobody thinks to check. See [Inheriting a legacy system](/ds101/inheriting-a-legacy-system/) and [Dependency observability](/ds101/dependency-observability/) for how to find them, and [System inventory](/ds101/system-inventory/) for which system components render it.

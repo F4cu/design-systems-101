@@ -64,7 +64,7 @@ a structure to understand first. Every page ends with **Common mistakes**.
 2. **Foundations**: what a design system is, token layers, the design-to-code contract,
    and multiple platforms.
 3. **Components**: composition, API design, and accessibility.
-4. **Governance**: ownership, decisions, contribution, lifecycle, releases, cadence.
+4. **Governance**: ownership, decisions, contribution, lifecycle, inventory, releases, cadence.
 5. **Metrics**: adoption, performance in context, dependencies, doc coverage.
 6. **Business alignment**: the business case, brand, and stakeholders.
 7. **Agentic AI**: making the system usable by agents, designing agent workflows, and
